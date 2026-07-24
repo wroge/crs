@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=mals09-irf bbox=-2.26,51.45,-0.05,52.91
+conversion=geographic datum=mals09-irf bbox=-2.26,51.45,-0.05,52.91

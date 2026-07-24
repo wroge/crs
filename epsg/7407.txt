@@ -1,1 +1,1 @@
-coordinate_system=lambert_conformal_conic_2sp datum=nad27_nationalgeodeticverticaldatum1929 eastf=609601.219202438 latf=34.0 lonf=-101.5 sp1=34.65 sp2=36.1833333333333 bbox=-103.03,34.3,-99.99,36.5
+conversion=lambert_conformal_conic_2sp datum=nad27_nationalgeodeticverticaldatum1929 eastf=609601.219202438 latf=34.0 lonf=-101.5 sp1=34.65 sp2=36.1833333333333 bbox=-103.03,34.3,-99.99,36.5

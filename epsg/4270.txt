@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=nahrwan1967 bbox=50.55,22.63,57.13,27.05
+conversion=geographic datum=nahrwan1967 bbox=50.55,22.63,57.13,27.05

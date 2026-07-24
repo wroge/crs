@@ -1,1 +1,1 @@
-coordinate_system=polar_stereographic_a eastf=2000000.0 latf=-90.0 northf=2000000.0 scale=0.994 datum=wgs84 bbox=-180,-90,180,-60
+conversion=polar_stereographic_a eastf=2000000.0 latf=-90.0 northf=2000000.0 scale=0.994 datum=wgs84 bbox=-180,-90,180,-60

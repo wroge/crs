@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=sapperhill1943 bbox=-61.55,-52.51,-57.6,-50.96
+conversion=geographic datum=sapperhill1943 bbox=-61.55,-52.51,-57.6,-50.96

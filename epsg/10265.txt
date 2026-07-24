@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=kk-irf bbox=12.23,55.51,12.73,55.82
+conversion=geographic datum=kk-irf bbox=12.23,55.51,12.73,55.82

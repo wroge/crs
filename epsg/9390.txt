@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=europeanverticalreferenceframe2019meantide bbox=-9.56,35.95,69.15,77.07
+conversion=geographic datum=europeanverticalreferenceframe2019meantide bbox=-9.56,35.95,69.15,77.07

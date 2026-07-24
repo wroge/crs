@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=cape bbox=16.45,-34.88,32.95,-17.78
+conversion=geographic datum=cape bbox=16.45,-34.88,32.95,-17.78

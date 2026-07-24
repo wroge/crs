@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=nivellementgeneralduluxembourg1995 bbox=5.73,49.44,6.53,50.19
+conversion=geographic datum=nivellementgeneralduluxembourg1995 bbox=5.73,49.44,6.53,50.19

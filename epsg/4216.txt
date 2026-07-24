@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=bermuda1957 bbox=-64.89,32.21,-64.61,32.43
+conversion=geographic datum=bermuda1957 bbox=-64.89,32.21,-64.61,32.43

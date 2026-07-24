@@ -1,1 +1,1 @@
-coordinate_system=transverse_mercator eastf=30000.0 latf=13.1763888888889 lonf=-59.5597222222222 northf=75000.0 scale=0.9999986 datum=barbados1938 bbox=-59.71,13,-59.37,13.39
+conversion=transverse_mercator eastf=30000.0 latf=13.1763888888889 lonf=-59.5597222222222 northf=75000.0 scale=0.9999986 datum=barbados1938 bbox=-59.71,13,-59.37,13.39

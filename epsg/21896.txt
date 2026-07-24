@@ -1,1 +1,1 @@
-coordinate_system=transverse_mercator eastf=1000000.0 latf=4.59904722222222 lonf=-77.0809166666667 northf=1000000.0 scale=1.0 datum=bogota1975 bbox=-79.1,0.03,-75.58,10.21
+conversion=transverse_mercator eastf=1000000.0 latf=4.59904722222222 lonf=-77.0809166666667 northf=1000000.0 scale=1.0 datum=bogota1975 bbox=-79.1,0.03,-75.58,10.21

@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=tristan1968 bbox=-12.76,-40.42,-9.8,-37
+conversion=geographic datum=tristan1968 bbox=-12.76,-40.42,-9.8,-37

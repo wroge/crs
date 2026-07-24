@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=etrs89_chartdatumukandirelandvorf08 bbox=-16.1,47.42,3.4,63.89
+conversion=geographic datum=etrs89_chartdatumukandirelandvorf08 bbox=-16.1,47.42,3.4,63.89

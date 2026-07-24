@@ -1,1 +1,1 @@
-coordinate_system=transverse_mercator eastf=500000.0 lonf=99.0 scale=0.9996 datum=srgi2013 bbox=96,0,102,7.49
+conversion=transverse_mercator eastf=500000.0 lonf=99.0 scale=0.9996 datum=srgi2013 bbox=96,0,102,7.49

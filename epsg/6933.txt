@@ -1,1 +1,1 @@
-coordinate_system=lambert_cylindrical_equal_area sp1=30.0 datum=wgs84 bbox=-180,-86,180,86
+conversion=lambert_cylindrical_equal_area sp1=30.0 datum=wgs84 bbox=-180,-86,180,86

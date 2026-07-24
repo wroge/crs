@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=ign1962kerguelen bbox=68.69,-49.78,70.62,-48.6
+conversion=geographic datum=ign1962kerguelen bbox=68.69,-49.78,70.62,-48.6

@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=wakeisland1952 bbox=166.55,19.22,166.72,19.38
+conversion=geographic datum=wakeisland1952 bbox=166.55,19.22,166.72,19.38

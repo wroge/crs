@@ -1,1 +1,1 @@
-coordinate_system=geocentric datum=csrnepoch2025.0nad832011 bbox=-124.45,32.53,-114.12,42.01
+conversion=geocentric datum=csrnepoch2025.0nad832011 bbox=-124.45,32.53,-114.12,42.01

@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=fuerteventura bbox=-14.58,27.99,-13.75,28.81
+conversion=geographic datum=fuerteventura bbox=-14.58,27.99,-13.75,28.81

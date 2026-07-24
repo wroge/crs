@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=prs92 bbox=116.04,3,129.95,22.18
+conversion=geographic datum=prs92 bbox=116.04,3,129.95,22.18

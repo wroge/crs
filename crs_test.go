@@ -41,7 +41,7 @@ type transformCase struct {
 
 var transformCases = []transformCase{
 	{
-		Name:     "cs_geographic",
+		Name:     "conv_geographic",
 		FromEPSG: 4326,
 		ToEPSG:   4258,
 		CoversCS: "geographic",
@@ -60,7 +60,7 @@ var transformCases = []transformCase{
 		},
 	},
 	{
-		Name:     "cs_geocentric",
+		Name:     "conv_geocentric",
 		FromEPSG: 4326,
 		ToEPSG:   4978,
 		CoversCS: "geocentric",
@@ -79,7 +79,7 @@ var transformCases = []transformCase{
 		},
 	},
 	{
-		Name:     "cs_transverse_mercator",
+		Name:     "conv_transverse_mercator",
 		FromEPSG: 4326,
 		ToEPSG:   32632,
 		CoversCS: "transverse_mercator",
@@ -98,7 +98,7 @@ var transformCases = []transformCase{
 		},
 	},
 	{
-		Name:     "cs_web_mercator",
+		Name:     "conv_web_mercator",
 		FromEPSG: 4326,
 		ToEPSG:   3857,
 		CoversCS: "web_mercator",
@@ -117,7 +117,7 @@ var transformCases = []transformCase{
 		},
 	},
 	{
-		Name:     "cs_lambert_conformal_conic",
+		Name:     "conv_lambert_conformal_conic",
 		FromEPSG: 4807,
 		ToEPSG:   27561,
 		CoversCS: "lambert_conformal_conic",
@@ -136,7 +136,7 @@ var transformCases = []transformCase{
 		},
 	},
 	{
-		Name:     "cs_lambert_conformal_conic_1sp_variant_b",
+		Name:     "conv_lambert_conformal_conic_1sp_variant_b",
 		FromEPSG: 4326,
 		ToEPSG:   9549,
 		CoversCS: "lambert_conformal_conic_1sp_variant_b",
@@ -155,7 +155,7 @@ var transformCases = []transformCase{
 		},
 	},
 	{
-		Name:     "cs_lambert_conformal_conic_2sp",
+		Name:     "conv_lambert_conformal_conic_2sp",
 		FromEPSG: 4326,
 		ToEPSG:   2154,
 		CoversCS: "lambert_conformal_conic_2sp",
@@ -174,7 +174,7 @@ var transformCases = []transformCase{
 		},
 	},
 	{
-		Name:     "cs_lambert_conformal_conic_2sp_belgium",
+		Name:     "conv_lambert_conformal_conic_2sp_belgium",
 		FromEPSG: 4313,
 		ToEPSG:   31300,
 		CoversCS: "lambert_conformal_conic_2sp_belgium",
@@ -193,7 +193,7 @@ var transformCases = []transformCase{
 		},
 	},
 	{
-		Name:     "cs_lambert_conformal_conic_2sp_michigan",
+		Name:     "conv_lambert_conformal_conic_2sp_michigan",
 		FromEPSG: 4326,
 		ToEPSG:   6201,
 		CoversCS: "lambert_conformal_conic_2sp_michigan",
@@ -212,7 +212,7 @@ var transformCases = []transformCase{
 		},
 	},
 	{
-		Name:     "cs_lambert_conic_near_conformal",
+		Name:     "conv_lambert_conic_near_conformal",
 		FromEPSG: 4227,
 		ToEPSG:   22700,
 		CoversCS: "lambert_conic_near_conformal",
@@ -231,7 +231,7 @@ var transformCases = []transformCase{
 		},
 	},
 	{
-		Name:     "cs_lambert_azimuthal_equal_area",
+		Name:     "conv_lambert_azimuthal_equal_area",
 		FromEPSG: 4326,
 		ToEPSG:   3035,
 		CoversCS: "lambert_azimuthal_equal_area",
@@ -250,7 +250,7 @@ var transformCases = []transformCase{
 		},
 	},
 	{
-		Name:     "cs_lambert_azimuthal_equal_area_spherical",
+		Name:     "conv_lambert_azimuthal_equal_area_spherical",
 		FromEPSG: 4326,
 		ToEPSG:   3408,
 		CoversCS: "lambert_azimuthal_equal_area_spherical",
@@ -269,7 +269,7 @@ var transformCases = []transformCase{
 		},
 	},
 	{
-		Name:     "cs_lambert_cylindrical_equal_area",
+		Name:     "conv_lambert_cylindrical_equal_area",
 		FromEPSG: 4326,
 		ToEPSG:   6933,
 		CoversCS: "lambert_cylindrical_equal_area",
@@ -288,7 +288,7 @@ var transformCases = []transformCase{
 		},
 	},
 	{
-		Name:     "cs_lambert_cylindrical_equal_area_spherical",
+		Name:     "conv_lambert_cylindrical_equal_area_spherical",
 		FromEPSG: 4326,
 		ToEPSG:   3410,
 		CoversCS: "lambert_cylindrical_equal_area_spherical",
@@ -307,7 +307,7 @@ var transformCases = []transformCase{
 		},
 	},
 	{
-		Name:     "cs_albers_equal_area",
+		Name:     "conv_albers_equal_area",
 		FromEPSG: 4269,
 		ToEPSG:   5070,
 		CoversCS: "albers_equal_area",
@@ -326,7 +326,7 @@ var transformCases = []transformCase{
 		},
 	},
 	{
-		Name:     "cs_krovak",
+		Name:     "conv_krovak",
 		FromEPSG: 4156,
 		ToEPSG:   5514,
 		CoversCS: "krovak",
@@ -345,7 +345,7 @@ var transformCases = []transformCase{
 		},
 	},
 	{
-		Name:     "cs_krovak_modified",
+		Name:     "conv_krovak_modified",
 		FromEPSG: 4326,
 		ToEPSG:   5515,
 		CoversCS: "krovak_modified",
@@ -364,7 +364,7 @@ var transformCases = []transformCase{
 		},
 	},
 	{
-		Name:     "cs_hotine_oblique_mercator_a",
+		Name:     "conv_hotine_oblique_mercator_a",
 		FromEPSG: 4326,
 		ToEPSG:   3375,
 		CoversCS: "hotine_oblique_mercator_a",
@@ -383,7 +383,7 @@ var transformCases = []transformCase{
 		},
 	},
 	{
-		Name:     "cs_swiss_oblique_mercator",
+		Name:     "conv_swiss_oblique_mercator",
 		FromEPSG: 4326,
 		ToEPSG:   2056,
 		CoversCS: "swiss_oblique_mercator",
@@ -402,7 +402,7 @@ var transformCases = []transformCase{
 		},
 	},
 	{
-		Name:     "cs_laborde_oblique_mercator",
+		Name:     "conv_laborde_oblique_mercator",
 		FromEPSG: 4326,
 		ToEPSG:   8441, // tananarive (Greenwich); 29701 is tananariveparis
 		CoversCS: "laborde_oblique_mercator",
@@ -421,7 +421,7 @@ var transformCases = []transformCase{
 		},
 	},
 	{
-		Name:     "cs_cassini_soldner",
+		Name:     "conv_cassini_soldner",
 		FromEPSG: 4326,
 		ToEPSG:   24500,
 		CoversCS: "cassini_soldner",
@@ -440,7 +440,7 @@ var transformCases = []transformCase{
 		},
 	},
 	{
-		Name:     "cs_hyperbolic_cassini_soldner",
+		Name:     "conv_hyperbolic_cassini_soldner",
 		FromEPSG: 4326,
 		ToEPSG:   3139,
 		CoversCS: "hyperbolic_cassini_soldner",
@@ -459,7 +459,7 @@ var transformCases = []transformCase{
 		},
 	},
 	{
-		Name:     "cs_polar_stereographic_a",
+		Name:     "conv_polar_stereographic_a",
 		FromEPSG: 4326,
 		ToEPSG:   5041,
 		CoversCS: "polar_stereographic_a",
@@ -478,7 +478,7 @@ var transformCases = []transformCase{
 		},
 	},
 	{
-		Name:     "cs_polar_stereographic_b",
+		Name:     "conv_polar_stereographic_b",
 		FromEPSG: 4326,
 		ToEPSG:   3031,
 		CoversCS: "polar_stereographic_b",
@@ -497,7 +497,7 @@ var transformCases = []transformCase{
 		},
 	},
 	{
-		Name:     "cs_polar_stereographic_c",
+		Name:     "conv_polar_stereographic_c",
 		FromEPSG: 4636,
 		ToEPSG:   2985,
 		CoversCS: "polar_stereographic_c",
@@ -516,7 +516,7 @@ var transformCases = []transformCase{
 		},
 	},
 	{
-		Name:     "cs_oblique_stereographic",
+		Name:     "conv_oblique_stereographic",
 		FromEPSG: 4289,
 		ToEPSG:   28992,
 		CoversCS: "oblique_stereographic",
@@ -535,7 +535,7 @@ var transformCases = []transformCase{
 		},
 	},
 	{
-		Name:     "cs_mercator_a",
+		Name:     "conv_mercator_a",
 		FromEPSG: 4326,
 		ToEPSG:   3395,
 		CoversCS: "mercator_a",
@@ -554,7 +554,7 @@ var transformCases = []transformCase{
 		},
 	},
 	{
-		Name:     "cs_mercator_b",
+		Name:     "conv_mercator_b",
 		FromEPSG: 4326,
 		ToEPSG:   3388,
 		CoversCS: "mercator_b",
@@ -573,7 +573,7 @@ var transformCases = []transformCase{
 		},
 	},
 	{
-		Name:     "cs_azimuthal_equidistant",
+		Name:     "conv_azimuthal_equidistant",
 		FromEPSG: 4326,
 		ToEPSG:   27701,
 		CoversCS: "azimuthal_equidistant",
@@ -592,7 +592,7 @@ var transformCases = []transformCase{
 		},
 	},
 	{
-		Name:     "cs_modified_azimuthal_equidistant",
+		Name:     "conv_modified_azimuthal_equidistant",
 		FromEPSG: 4675,
 		ToEPSG:   3295,
 		CoversCS: "modified_azimuthal_equidistant",
@@ -611,7 +611,7 @@ var transformCases = []transformCase{
 		},
 	},
 	{
-		Name:     "cs_american_polyconic",
+		Name:     "conv_american_polyconic",
 		FromEPSG: 4326,
 		ToEPSG:   5472,
 		CoversCS: "american_polyconic",
@@ -630,7 +630,7 @@ var transformCases = []transformCase{
 		},
 	},
 	{
-		Name:     "cs_bonne_south_orientated",
+		Name:     "conv_bonne_south_orientated",
 		FromEPSG: 4666,
 		ToEPSG:   5017,
 		CoversCS: "bonne_south_orientated",
@@ -649,7 +649,7 @@ var transformCases = []transformCase{
 		},
 	},
 	{
-		Name:     "cs_equal_earth",
+		Name:     "conv_equal_earth",
 		FromEPSG: 4326,
 		ToEPSG:   8857,
 		CoversCS: "equal_earth",
@@ -668,7 +668,7 @@ var transformCases = []transformCase{
 		},
 	},
 	{
-		Name:     "cs_equidistant_cylindrical",
+		Name:     "conv_equidistant_cylindrical",
 		FromEPSG: 4326,
 		ToEPSG:   4087,
 		CoversCS: "equidistant_cylindrical",
@@ -687,7 +687,7 @@ var transformCases = []transformCase{
 		},
 	},
 	{
-		Name:     "cs_colombia_urban",
+		Name:     "conv_colombia_urban",
 		FromEPSG: 4326,
 		ToEPSG:   6247,
 		CoversCS: "colombia_urban",
@@ -706,7 +706,7 @@ var transformCases = []transformCase{
 		},
 	},
 	{
-		Name:     "cs_guam_projection",
+		Name:     "conv_guam_projection",
 		FromEPSG: 4675,
 		ToEPSG:   3993,
 		CoversCS: "guam_projection",
@@ -725,7 +725,7 @@ var transformCases = []transformCase{
 		},
 	},
 	{
-		Name:     "cs_local_orthographic",
+		Name:     "conv_local_orthographic",
 		FromEPSG: 4326,
 		ToEPSG:   10622,
 		CoversCS: "local_orthographic",
@@ -744,7 +744,7 @@ var transformCases = []transformCase{
 		},
 	},
 	{
-		Name:     "cs_tunisia_mining_grid",
+		Name:     "conv_tunisia_mining_grid",
 		FromEPSG: 4816,
 		ToEPSG:   22300,
 		CoversCS: "tunisia_mining_grid",
@@ -763,7 +763,7 @@ var transformCases = []transformCase{
 		},
 	},
 	{
-		Name:     "cs_new_zealand_map_grid",
+		Name:     "conv_new_zealand_map_grid",
 		FromEPSG: 4326,
 		ToEPSG:   27200,
 		CoversCS: "new_zealand_map_grid",
@@ -1075,7 +1075,7 @@ func isGeographicEPSG(code int) bool {
 		return false
 	}
 	line, _, _ := strings.Cut(string(b), "\n")
-	return strings.Contains(line, "coordinate_system=geographic")
+	return strings.Contains(line, "conversion=geographic")
 }
 
 func checkHeight(op string) bool {

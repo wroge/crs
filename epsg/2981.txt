@@ -1,1 +1,1 @@
-coordinate_system=transverse_mercator eastf=500000.0 lonf=165.0 northf=10000000.0 scale=0.9996 datum=ign56lifou bbox=166.98,-21.24,167.52,-20.62
+conversion=transverse_mercator eastf=500000.0 lonf=165.0 northf=10000000.0 scale=0.9996 datum=ign56lifou bbox=166.98,-21.24,167.52,-20.62

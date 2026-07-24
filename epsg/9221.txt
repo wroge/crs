@@ -1,1 +1,1 @@
-coordinate_system=albers_equal_area eastf=1400000.0 latf=-30.0 lonf=25.0 northf=1300000.0 sp1=-22.0 sp2=-38.0 datum=hartebeesthoek94 bbox=13.33,-38.17,36.54,-22.13
+conversion=albers_equal_area eastf=1400000.0 latf=-30.0 lonf=25.0 northf=1300000.0 sp1=-22.0 sp2=-38.0 datum=hartebeesthoek94 bbox=13.33,-38.17,36.54,-22.13

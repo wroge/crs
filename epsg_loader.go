@@ -96,7 +96,7 @@ func (p epsgParams) float(keys ...string) float64 {
 	return 0
 }
 
-func buildCoordinateSystem(name string, fields map[string]string) (CoordinateSystem, error) {
+func buildConversion(name string, fields map[string]string) (Conversion, error) {
 	p := newEPSGParams(fields)
 
 	switch name {
@@ -335,5 +335,5 @@ func buildCoordinateSystem(name string, fields map[string]string) (CoordinateSys
 		}, nil
 	}
 
-	return nil, fmt.Errorf("unknown coordinate_system: %s", name)
+	return nil, fmt.Errorf("unknown conversion: %s", name)
 }

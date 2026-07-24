@@ -1,1 +1,1 @@
-coordinate_system=lambert_conformal_conic latf=76.5 lonf=-64.0 scale=1.0 datum=qoornoq1927 bbox=-72.79,75,-56.31,78
+conversion=lambert_conformal_conic latf=76.5 lonf=-64.0 scale=1.0 datum=qoornoq1927 bbox=-72.79,75,-56.31,78

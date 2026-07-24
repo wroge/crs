@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=afgooye bbox=40.98,-1.71,51.47,12.03
+conversion=geographic datum=afgooye bbox=40.98,-1.71,51.47,12.03

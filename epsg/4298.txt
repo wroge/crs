@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=timbalai1948 bbox=109.31,0.85,119.61,7.67
+conversion=geographic datum=timbalai1948 bbox=109.31,0.85,119.61,7.67

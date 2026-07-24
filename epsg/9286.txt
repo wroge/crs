@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=etrs89_normaalamsterdamspeil bbox=2.53,50.75,7.22,55.77
+conversion=geographic datum=etrs89_normaalamsterdamspeil bbox=2.53,50.75,7.22,55.77

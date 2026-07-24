@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=albanian1987 bbox=19.22,39.64,21.06,42.67
+conversion=geographic datum=albanian1987 bbox=19.22,39.64,21.06,42.67

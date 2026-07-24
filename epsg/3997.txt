@@ -1,1 +1,1 @@
-coordinate_system=transverse_mercator eastf=500000.0 lonf=55.3333333333333 scale=1.0 datum=wgs84 bbox=54.84,24.85,55.55,25.34
+conversion=transverse_mercator eastf=500000.0 lonf=55.3333333333333 scale=1.0 datum=wgs84 bbox=54.84,24.85,55.55,25.34

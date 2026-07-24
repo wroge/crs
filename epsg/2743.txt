@@ -1,1 +1,1 @@
-coordinate_system=transverse_mercator eastf=500000.0 lonf=147.0 scale=1.0 datum=pulkovo1995 bbox=145.5,43.6,148.5,76.76
+conversion=transverse_mercator eastf=500000.0 lonf=147.0 scale=1.0 datum=pulkovo1995 bbox=145.5,43.6,148.5,76.76

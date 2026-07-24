@@ -1,1 +1,1 @@
-coordinate_system=transverse_mercator eastf=200000.0 latf=39.6666666666667 lonf=1.0 northf=300000.0 scale=1.0 datum=lisbonlisbon bbox=-9.56,36.95,-6.19,42.16
+conversion=transverse_mercator eastf=200000.0 latf=39.6666666666667 lonf=1.0 northf=300000.0 scale=1.0 datum=lisbonlisbon bbox=-9.56,36.95,-6.19,42.16

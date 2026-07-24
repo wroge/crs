@@ -1,1 +1,1 @@
-coordinate_system=transverse_mercator datum=ewr2-irf_ordnancedatumnewlyn eastf=192519.9715 latf=51.95 lonf=-0.9 northf=146942.6806 scale=1.0 bbox=-1.43,51.7,-0.36,52.24
+conversion=transverse_mercator datum=ewr2-irf_ordnancedatumnewlyn eastf=192519.9715 latf=51.95 lonf=-0.9 northf=146942.6806 scale=1.0 bbox=-1.43,51.7,-0.36,52.24

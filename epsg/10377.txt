@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=caisdafigueirinha bbox=-27.44,38.57,-26.97,38.86
+conversion=geographic datum=caisdafigueirinha bbox=-27.44,38.57,-26.97,38.86

@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=fatuiva72 bbox=-138.75,-10.6,-138.54,-10.36
+conversion=geographic datum=fatuiva72 bbox=-138.75,-10.6,-138.54,-10.36

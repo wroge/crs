@@ -1,1 +1,1 @@
-coordinate_system=transverse_mercator eastf=500000.0 lonf=-69.0 scale=0.9996 datum=lacanoa bbox=-72,0.73,-66,12.25
+conversion=transverse_mercator eastf=500000.0 lonf=-69.0 scale=0.9996 datum=lacanoa bbox=-72,0.73,-66,12.25

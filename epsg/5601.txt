@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=ign1966 bbox=-149.7,-17.93,-149.09,-17.44
+conversion=geographic datum=ign1966 bbox=-149.7,-17.93,-149.09,-17.44

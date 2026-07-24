@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=rgspm06lon-lat bbox=-57.1,43.41,-55.9,47.37
+conversion=geographic datum=rgspm06lon-lat bbox=-57.1,43.41,-55.9,47.37

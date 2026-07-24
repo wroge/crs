@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=kudams bbox=47.78,29.17,48.16,29.45
+conversion=geographic datum=kudams bbox=47.78,29.17,48.16,29.45

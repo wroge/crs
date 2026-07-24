@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=canadiangeodeticverticaldatumof1928 bbox=-141.01,41.67,-52.54,69.81
+conversion=geographic datum=canadiangeodeticverticaldatumof1928 bbox=-141.01,41.67,-52.54,69.81

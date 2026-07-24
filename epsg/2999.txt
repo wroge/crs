@@ -1,1 +1,1 @@
-coordinate_system=transverse_mercator eastf=500000.0 lonf=45.0 northf=10000000.0 scale=0.9996 datum=grandcomoros bbox=43.16,-11.99,43.55,-11.31
+conversion=transverse_mercator eastf=500000.0 lonf=45.0 northf=10000000.0 scale=0.9996 datum=grandcomoros bbox=43.16,-11.99,43.55,-11.31

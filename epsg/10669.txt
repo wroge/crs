@@ -1,1 +1,1 @@
-coordinate_system=geocentric datum=rgm23 bbox=43.68,-14.49,46.7,-11.33
+conversion=geocentric datum=rgm23 bbox=43.68,-14.49,46.7,-11.33

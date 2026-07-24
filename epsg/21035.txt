@@ -1,1 +1,1 @@
-coordinate_system=transverse_mercator eastf=500000.0 lonf=27.0 northf=10000000.0 scale=0.9996 datum=arc1960 bbox=29.34,-6.81,30,0
+conversion=transverse_mercator eastf=500000.0 lonf=27.0 northf=10000000.0 scale=0.9996 datum=arc1960 bbox=29.34,-6.81,30,0

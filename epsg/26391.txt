@@ -1,1 +1,1 @@
-coordinate_system=transverse_mercator eastf=230738.26 latf=4.0 lonf=4.5 scale=0.99975 datum=minna bbox=2.69,3.57,6.5,13.9
+conversion=transverse_mercator eastf=230738.26 latf=4.0 lonf=4.5 scale=0.99975 datum=minna bbox=2.69,3.57,6.5,13.9

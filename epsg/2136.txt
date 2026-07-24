@@ -1,1 +1,1 @@
-coordinate_system=transverse_mercator eastf=274319.73916335806 latf=4.66666666666667 lonf=-1.0 scale=0.99975 datum=accra bbox=-3.25,4.67,1.23,11.16
+conversion=transverse_mercator eastf=274319.73916335806 latf=4.66666666666667 lonf=-1.0 scale=0.99975 datum=accra bbox=-3.25,4.67,1.23,11.16

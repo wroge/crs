@@ -1,1 +1,1 @@
-coordinate_system=geocentric datum=rgtaaf07 bbox=37.98,-67.13,142,-20.91
+conversion=geocentric datum=rgtaaf07 bbox=37.98,-67.13,142,-20.91

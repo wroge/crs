@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=etrs89_catania1965 bbox=12.36,36.59,15.71,38.35
+conversion=geographic datum=etrs89_catania1965 bbox=12.36,36.59,15.71,38.35

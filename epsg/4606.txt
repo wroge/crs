@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=st.lucia1955 bbox=-61.13,13.66,-60.82,14.16
+conversion=geographic datum=st.lucia1955 bbox=-61.13,13.66,-60.82,14.16

@@ -1,1 +1,1 @@
-coordinate_system=transverse_mercator datum=fnl22-irf_ordnancedatumnewlyn eastf=139618.9493 latf=58.0 lonf=-3.8 northf=183110.794 scale=1.0 bbox=-4.6,57.4,-3,58.64
+conversion=transverse_mercator datum=fnl22-irf_ordnancedatumnewlyn eastf=139618.9493 latf=58.0 lonf=-3.8 northf=183110.794 scale=1.0 bbox=-4.6,57.4,-3,58.64

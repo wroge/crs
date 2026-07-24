@@ -1,1 +1,1 @@
-coordinate_system=transverse_mercator eastf=93720.394 latf=55.75 lonf=-4.35 northf=113870.493 scale=1.0 datum=gbk19-irf bbox=-4.65,55.55,-4.05,55.95
+conversion=transverse_mercator eastf=93720.394 latf=55.75 lonf=-4.35 northf=113870.493 scale=1.0 datum=gbk19-irf bbox=-4.65,55.55,-4.05,55.95

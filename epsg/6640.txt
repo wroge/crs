@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=northernmarianasverticaldatumof2003 bbox=145.06,14.06,145.89,15.35
+conversion=geographic datum=northernmarianasverticaldatumof2003 bbox=145.06,14.06,145.89,15.35

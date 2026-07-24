@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=lyttelton1937 bbox=168.95,-44.92,173.77,-41.6
+conversion=geographic datum=lyttelton1937 bbox=168.95,-44.92,173.77,-41.6

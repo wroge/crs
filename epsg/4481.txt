@@ -1,1 +1,1 @@
-coordinate_system=geocentric datum=mexicoitrf92 bbox=-122.19,12.1,-84.64,32.72
+conversion=geocentric datum=mexicoitrf92 bbox=-122.19,12.1,-84.64,32.72

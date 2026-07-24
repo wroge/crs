@@ -1,1 +1,1 @@
-coordinate_system=lambert_conformal_conic latf=65.0 lonf=-19.022125 scale=1.0 datum=reykjavik1900 bbox=-24.66,63.34,-13.38,66.59
+conversion=lambert_conformal_conic latf=65.0 lonf=-19.022125 scale=1.0 datum=reykjavik1900 bbox=-24.66,63.34,-13.38,66.59

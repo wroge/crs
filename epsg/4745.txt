@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=rdslash83 bbox=11.89,50.2,15.04,51.66
+conversion=geographic datum=rdslash83 bbox=11.89,50.2,15.04,51.66

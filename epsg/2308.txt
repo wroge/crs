@@ -1,1 +1,1 @@
-coordinate_system=transverse_mercator eastf=500000.0 lonf=109.0 northf=10000000.0 scale=0.9996 datum=batavia bbox=105.77,-6.89,110.01,-4.07
+conversion=transverse_mercator eastf=500000.0 lonf=109.0 northf=10000000.0 scale=0.9996 datum=batavia bbox=105.77,-6.89,110.01,-4.07

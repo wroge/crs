@@ -1,1 +1,1 @@
-coordinate_system=geocentric datum=magna-sirgas2018 bbox=-84.77,-4.23,-66.87,15.51
+conversion=geocentric datum=magna-sirgas2018 bbox=-84.77,-4.23,-66.87,15.51

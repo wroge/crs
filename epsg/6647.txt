@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=canadiangeodeticverticaldatumof2013cgg2013 bbox=-141.01,38.21,-40.73,86.46
+conversion=geographic datum=canadiangeodeticverticaldatumof2013cgg2013 bbox=-141.01,38.21,-40.73,86.46

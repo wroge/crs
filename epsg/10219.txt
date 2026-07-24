@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=gwwwa22-irf bbox=-5.16,51.55,-3.6,52.06
+conversion=geographic datum=gwwwa22-irf bbox=-5.16,51.55,-3.6,52.06

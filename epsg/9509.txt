@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=etrs89_menorca bbox=3.73,39.75,4.39,40.15
+conversion=geographic datum=etrs89_menorca bbox=3.73,39.75,4.39,40.15

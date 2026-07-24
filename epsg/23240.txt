@@ -1,1 +1,1 @@
-coordinate_system=transverse_mercator eastf=500000.0 lonf=57.0 scale=0.9996 datum=fahud bbox=54,16.89,59.91,26.42
+conversion=transverse_mercator eastf=500000.0 lonf=57.0 scale=0.9996 datum=fahud bbox=54,16.89,59.91,26.42

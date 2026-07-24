@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=napier1962 bbox=175.8,-40.57,178.07,-38.87
+conversion=geographic datum=napier1962 bbox=175.8,-40.57,178.07,-38.87

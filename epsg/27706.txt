@@ -1,1 +1,1 @@
-coordinate_system=azimuthal_equidistant eastf=6988408.536 latf=-19.5 lonf=131.5 northf=7654884.537 datum=wgs84 bbox=72.37,-60.56,-121.05,21.57
+conversion=azimuthal_equidistant eastf=6988408.536 latf=-19.5 lonf=131.5 northf=7654884.537 datum=wgs84 bbox=72.37,-60.56,-121.05,21.57

@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=tahiti79 bbox=-149.7,-17.93,-149.09,-17.44
+conversion=geographic datum=tahiti79 bbox=-149.7,-17.93,-149.09,-17.44

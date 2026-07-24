@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=kalianpur1975 bbox=68.13,8.02,97.42,35.51
+conversion=geographic datum=kalianpur1975 bbox=68.13,8.02,97.42,35.51

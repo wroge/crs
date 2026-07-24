@@ -1,1 +1,1 @@
-coordinate_system=lambert_conformal_conic eastf=500000.0 latf=8.41666666666667 lonf=-80.0 northf=294865.303 scale=0.99989909 datum=panama-colon1911 bbox=-83.04,7.15,-77.19,9.68
+conversion=lambert_conformal_conic eastf=500000.0 latf=8.41666666666667 lonf=-80.0 northf=294865.303 scale=0.99989909 datum=panama-colon1911 bbox=-83.04,7.15,-77.19,9.68

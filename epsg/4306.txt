@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=bern1938 bbox=5.95,45.81,10.5,47.81
+conversion=geographic datum=bern1938 bbox=5.95,45.81,10.5,47.81

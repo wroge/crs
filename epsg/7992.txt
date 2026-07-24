@@ -1,1 +1,1 @@
-coordinate_system=transverse_mercator eastf=500000.0 lonf=15.0 northf=10000000.0 scale=0.9996 datum=malongo1987 bbox=11.79,-6.04,12.37,-5.79
+conversion=transverse_mercator eastf=500000.0 lonf=15.0 northf=10000000.0 scale=0.9996 datum=malongo1987 bbox=11.79,-6.04,12.37,-5.79

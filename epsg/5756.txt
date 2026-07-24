@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=martinique1987 bbox=-61.29,14.35,-60.76,14.93
+conversion=geographic datum=martinique1987 bbox=-61.29,14.35,-60.76,14.93

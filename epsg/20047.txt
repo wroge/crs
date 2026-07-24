@@ -1,1 +1,1 @@
-coordinate_system=transverse_mercator eastf=150000.0 latf=-28.0 lonf=153.0 northf=200000.0 scale=0.99999 datum=gda2020 bbox=152.37,-29.36,153.69,-24.64
+conversion=transverse_mercator eastf=150000.0 latf=-28.0 lonf=153.0 northf=200000.0 scale=0.99999 datum=gda2020 bbox=152.37,-29.36,153.69,-24.64

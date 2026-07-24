@@ -1,1 +1,1 @@
-coordinate_system=transverse_mercator eastf=500000.0 lonf=28.0 northf=10000000.0 scale=0.9999 datum=igc19626thparallelsouth bbox=27,-7.36,29,-4.24
+conversion=transverse_mercator eastf=500000.0 lonf=28.0 northf=10000000.0 scale=0.9999 datum=igc19626thparallelsouth bbox=27,-7.36,29,-4.24

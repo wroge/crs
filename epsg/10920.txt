@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=csrnepoch2025.0nad832011_derivedcaliforniaorthometricheightsof1988epoch2025 bbox=-124.45,32.53,-114.12,42.01
+conversion=geographic datum=csrnepoch2025.0nad832011_derivedcaliforniaorthometricheightsof1988epoch2025 bbox=-124.45,32.53,-114.12,42.01

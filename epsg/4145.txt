@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=kalianpur1962 bbox=60.86,21.05,77.83,37.07
+conversion=geographic datum=kalianpur1962 bbox=60.86,21.05,77.83,37.07

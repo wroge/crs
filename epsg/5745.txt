@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=northrona bbox=-5.92,59.07,-5.73,59.19
+conversion=geographic datum=northrona bbox=-5.92,59.07,-5.73,59.19

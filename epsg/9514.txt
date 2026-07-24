@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=regcan95_lapalma bbox=-18.06,28.4,-17.66,28.9
+conversion=geographic datum=regcan95_lapalma bbox=-18.06,28.4,-17.66,28.9

@@ -1,1 +1,1 @@
-coordinate_system=lambert_azimuthal_equal_area latf=45.0 lonf=100.0 datum=wgs84 bbox=31.45,-10.8,-168.43,83.67
+conversion=lambert_azimuthal_equal_area latf=45.0 lonf=100.0 datum=wgs84 bbox=31.45,-10.8,-168.43,83.67

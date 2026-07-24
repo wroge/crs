@@ -1,1 +1,1 @@
-coordinate_system=transverse_mercator eastf=500000.0 lonf=-15.0 scale=0.9996 datum=bissau bbox=-16.77,10.87,-13.64,12.69
+conversion=transverse_mercator eastf=500000.0 lonf=-15.0 scale=0.9996 datum=bissau bbox=-16.77,10.87,-13.64,12.69

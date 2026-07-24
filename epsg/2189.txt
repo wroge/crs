@@ -1,1 +1,1 @@
-coordinate_system=transverse_mercator eastf=500000.0 lonf=-27.0 scale=0.9996 datum=azorescentral1948 bbox=-28.9,38.32,-26.97,39.14
+conversion=transverse_mercator eastf=500000.0 lonf=-27.0 scale=0.9996 datum=azorescentral1948 bbox=-28.9,38.32,-26.97,39.14

@@ -1,1 +1,1 @@
-coordinate_system=laborde_oblique_mercator azimuth=18.9 eastf=400000.0 latf=-18.9 lonf=46.4372291666667 northf=800000.0 scale=0.9995 datum=tananarive bbox=43.18,-25.64,50.56,-11.89
+conversion=laborde_oblique_mercator azimuth=18.9 eastf=400000.0 latf=-18.9 lonf=46.4372291666667 northf=800000.0 scale=0.9995 datum=tananarive bbox=43.18,-25.64,50.56,-11.89

@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=svalbardverticaldatum2024 bbox=6.49005,74.3208,33.50985,81.8504
+conversion=geographic datum=svalbardverticaldatum2024 bbox=6.49005,74.3208,33.50985,81.8504

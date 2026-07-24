@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=nivellementgeneraldenouvellecaledonie bbox=163.92,-22.45,167.09,-20.03
+conversion=geographic datum=nivellementgeneraldenouvellecaledonie bbox=163.92,-22.45,167.09,-20.03

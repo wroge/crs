@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=atfparis bbox=-4.87,42.33,8.23,51.14
+conversion=geographic datum=atfparis bbox=-4.87,42.33,8.23,51.14

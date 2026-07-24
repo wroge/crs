@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=sweref99 bbox=10.03,54.96,24.17,69.07
+conversion=geographic datum=sweref99 bbox=10.03,54.96,24.17,69.07

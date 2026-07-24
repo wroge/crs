@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=southyemen bbox=43.37,12.54,53.14,19
+conversion=geographic datum=southyemen bbox=43.37,12.54,53.14,19

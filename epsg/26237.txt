@@ -1,1 +1,1 @@
-coordinate_system=transverse_mercator eastf=500000.0 lonf=39.0 scale=0.9996 datum=massawa bbox=36.44,12.36,43.31,18.1
+conversion=transverse_mercator eastf=500000.0 lonf=39.0 scale=0.9996 datum=massawa bbox=36.44,12.36,43.31,18.1

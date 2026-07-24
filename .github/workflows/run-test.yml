@@ -4,6 +4,9 @@ on:
   push:
   pull_request:
 
+permissions:
+  contents: write # nötig für Push nach gh-pages
+
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -15,5 +18,28 @@ jobs:
         with:
           go-version-file: go.mod
 
-      - name: Test
-        run: go test -count=1 -timeout 30m ./...
+      - name: Test with coverage
+        run: |
+          go test -count=1 -timeout 30m -coverprofile=coverage.out ./...
+          go tool cover -html=coverage.out -o coverage.html
+
+      - name: Generate coverage badge
+        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+        uses: tj-actions/coverage-badge-go@v2
+        with:
+          filename: coverage.out
+
+      # Action legt z.B. coverage_badge.svg im Workspace ab — ggf. Dateiname prüfen
+      - name: Prepare pages folder
+        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+        run: |
+          mkdir -p pages/badges
+          cp coverage_badge.svg pages/badges/coverage.svg
+          cp coverage.html pages/index.html
+
+      - name: Publish to GitHub Pages
+        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages
+          folder: pages

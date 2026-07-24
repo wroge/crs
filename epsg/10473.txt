@@ -1,1 +1,1 @@
-coordinate_system=geocentric datum=bbt2000 bbox=11.04,46.45,11.91,47.33
+conversion=geocentric datum=bbt2000 bbox=11.04,46.45,11.91,47.33

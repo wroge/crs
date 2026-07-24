@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=moturiki1953 bbox=174.57,-40.59,177.26,-37.52
+conversion=geographic datum=moturiki1953 bbox=174.57,-40.59,177.26,-37.52

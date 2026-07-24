@@ -1,1 +1,1 @@
-coordinate_system=lambert_conformal_conic eastf=500000.0 latf=35.99999999999986 lonf=2.6999999999999886 northf=300000.0 scale=0.999625544 datum=voirol1879 bbox=-2.22,34.64,8.64,37.14
+conversion=lambert_conformal_conic eastf=500000.0 latf=35.99999999999986 lonf=2.6999999999999886 northf=300000.0 scale=0.999625544 datum=voirol1879 bbox=-2.22,34.64,8.64,37.14

@@ -1,1 +1,1 @@
-coordinate_system=geocentric datum=isn93 bbox=-30.87,59.96,-5.55,69.59
+conversion=geocentric datum=isn93 bbox=-30.87,59.96,-5.55,69.59

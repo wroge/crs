@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=nivellementgeneralguyanais1977 bbox=-54.61,2.11,-51.61,5.81
+conversion=geographic datum=nivellementgeneralguyanais1977 bbox=-54.61,2.11,-51.61,5.81

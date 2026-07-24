@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=dunedin1958 bbox=167.73,-46.4,171.28,-43.82
+conversion=geographic datum=dunedin1958 bbox=167.73,-46.4,171.28,-43.82

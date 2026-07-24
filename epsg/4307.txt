@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=nordsahara1959 bbox=-8.67,18.97,11.99,38.8
+conversion=geographic datum=nordsahara1959 bbox=-8.67,18.97,11.99,38.8

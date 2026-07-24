@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=asseverticaldatum2025 bbox=10.6,52.11,10.7,52.16
+conversion=geographic datum=asseverticaldatum2025 bbox=10.6,52.11,10.7,52.16

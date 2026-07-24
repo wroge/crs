@@ -1,1 +1,1 @@
-coordinate_system=cassini_soldner latf=48.0384638888889 lonf=31.8041805555556 datum=gusterbergferro bbox=12.07,46.93,16.83,51.06
+conversion=cassini_soldner latf=48.0384638888889 lonf=31.8041805555556 datum=gusterbergferro bbox=12.07,46.93,16.83,51.06

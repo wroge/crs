@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=regcan95_fuerteventura bbox=-14.58,27.99,-13.75,28.81
+conversion=geographic datum=regcan95_fuerteventura bbox=-14.58,27.99,-13.75,28.81

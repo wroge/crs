@@ -1,1 +1,1 @@
-coordinate_system=transverse_mercator lonf=31.0 scale=1.0 datum=hartebeesthoek94 bbox=29.99,-31.38,32.02,-22.22
+conversion=transverse_mercator lonf=31.0 scale=1.0 datum=hartebeesthoek94 bbox=29.99,-31.38,32.02,-22.22

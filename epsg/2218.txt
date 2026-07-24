@@ -1,1 +1,1 @@
-coordinate_system=lambert_conformal_conic latf=70.5 lonf=-24.0 scale=1.0 datum=scoresbysund1952 bbox=-29.69,69,-21.32,72
+conversion=lambert_conformal_conic latf=70.5 lonf=-24.0 scale=1.0 datum=scoresbysund1952 bbox=-29.69,69,-21.32,72

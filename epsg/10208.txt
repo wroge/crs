@@ -1,1 +1,1 @@
-coordinate_system=transverse_mercator datum=diba15-irf_ordnancedatumnewlyn eastf=511622.854 latf=51.85 lonf=-1.3 northf=324737.4633 scale=1.0 bbox=-1.46,51.57,-1.15,52.11
+conversion=transverse_mercator datum=diba15-irf_ordnancedatumnewlyn eastf=511622.854 latf=51.85 lonf=-1.3 northf=324737.4633 scale=1.0 bbox=-1.46,51.57,-1.15,52.11

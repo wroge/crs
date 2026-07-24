@@ -1,1 +1,1 @@
-coordinate_system=geocentric datum=rsao13 bbox=8.2,-18.02,24.09,-4.38
+conversion=geocentric datum=rsao13 bbox=8.2,-18.02,24.09,-4.38

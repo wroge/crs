@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=helsinki1943 bbox=20.95,59.75,31.59,66.73
+conversion=geographic datum=helsinki1943 bbox=20.95,59.75,31.59,66.73

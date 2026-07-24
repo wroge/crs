@@ -1,1 +1,1 @@
-coordinate_system=cassini_soldner eastf=-242.005 latf=2.71228333333333 lonf=101.941166666667 northf=-948.547 datum=kertau1968 bbox=101.7,2.03,102.71,3.28
+conversion=cassini_soldner eastf=-242.005 latf=2.71228333333333 lonf=101.941166666667 northf=-948.547 datum=kertau1968 bbox=101.7,2.03,102.71,3.28

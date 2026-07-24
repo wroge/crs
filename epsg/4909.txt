@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=gr96 bbox=-75,56.38,7.99,87.02
+conversion=geographic datum=gr96 bbox=-75,56.38,7.99,87.02

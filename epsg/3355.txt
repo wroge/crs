@@ -1,1 +1,1 @@
-coordinate_system=transverse_mercator eastf=615000.0 latf=30.0 lonf=31.0 northf=810000.0 scale=1.0 datum=egyptgulfofsuezs-650tl bbox=32.34,27.19,34.27,30.01
+conversion=transverse_mercator eastf=615000.0 latf=30.0 lonf=31.0 northf=810000.0 scale=1.0 datum=egyptgulfofsuezs-650tl bbox=32.34,27.19,34.27,30.01

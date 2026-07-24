@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=bda2000 bbox=-68.83,28.91,-60.7,35.73
+conversion=geographic datum=bda2000 bbox=-68.83,28.91,-60.7,35.73

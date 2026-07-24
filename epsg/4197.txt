@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=garoua bbox=12.9,8.92,14.19,9.87
+conversion=geographic datum=garoua bbox=12.9,8.92,14.19,9.87

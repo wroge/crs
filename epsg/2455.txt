@@ -1,1 +1,1 @@
-coordinate_system=transverse_mercator latf=44.0 lonf=144.25 scale=0.9999 datum=jgd2000 bbox=142.61,41.87,145.87,44.4
+conversion=transverse_mercator latf=44.0 lonf=144.25 scale=0.9999 datum=jgd2000 bbox=142.61,41.87,145.87,44.4

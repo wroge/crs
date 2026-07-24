@@ -1,1 +1,1 @@
-coordinate_system=lambert_conformal_conic eastf=1600200.0 latf=28.0 lonf=-90.0 northf=533400.0 scale=0.9996 datum=natrf2022 bbox=-97.22,23.82,-81.17,30.25
+conversion=lambert_conformal_conic eastf=1600200.0 latf=28.0 lonf=-90.0 northf=533400.0 scale=0.9996 datum=natrf2022 bbox=-97.22,23.82,-81.17,30.25

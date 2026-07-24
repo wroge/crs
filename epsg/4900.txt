@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=lgd2006 bbox=9.31,19.5,26.21,35.23
+conversion=geographic datum=lgd2006 bbox=9.31,19.5,26.21,35.23

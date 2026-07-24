@@ -1,1 +1,1 @@
-coordinate_system=transverse_mercator datum=db_ref_gntrans2016 eastf=2500000.0 lonf=6.0 scale=1.0 bbox=5.86,49.11,7.51,53.81
+conversion=transverse_mercator datum=db_ref_gntrans2016 eastf=2500000.0 lonf=6.0 scale=1.0 bbox=5.86,49.11,7.51,53.81

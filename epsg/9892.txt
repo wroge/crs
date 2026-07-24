@@ -1,1 +1,1 @@
-coordinate_system=geocentric datum=luref bbox=5.73,49.44,6.53,50.19
+conversion=geocentric datum=luref bbox=5.73,49.44,6.53,50.19

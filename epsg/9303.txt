@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=hs2verticalreferenceframe bbox=-2.75,51.45,0,53.3
+conversion=geographic datum=hs2verticalreferenceframe bbox=-2.75,51.45,0,53.3

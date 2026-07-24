@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=sad69 bbox=-91.72,-55.96,-25.28,12.52
+conversion=geographic datum=sad69 bbox=-91.72,-55.96,-25.28,12.52

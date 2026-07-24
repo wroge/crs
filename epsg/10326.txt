@@ -1,1 +1,1 @@
-coordinate_system=geocentric datum=bh_etrs89 bbox=15.74,42.56,19.62,45.27
+conversion=geocentric datum=bh_etrs89 bbox=15.74,42.56,19.62,45.27

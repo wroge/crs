@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=ordnancedatumnewlyn bbox=-7.06,49.93,1.8,58.71
+conversion=geographic datum=ordnancedatumnewlyn bbox=-7.06,49.93,1.8,58.71

@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=sistemadereferenciaverticalnacional2016 bbox=-73.59,-55.11,-53.65,-21.78
+conversion=geographic datum=sistemadereferenciaverticalnacional2016 bbox=-73.59,-55.11,-53.65,-21.78

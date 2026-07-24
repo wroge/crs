@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=est92 bbox=21.74,57.52,28.2,59.75
+conversion=geographic datum=est92 bbox=21.74,57.52,28.2,59.75

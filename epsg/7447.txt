@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=png08 bbox=140,-12,158.01,0.01
+conversion=geographic datum=png08 bbox=140,-12,158.01,0.01

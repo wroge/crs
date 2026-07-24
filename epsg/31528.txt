@@ -1,1 +1,1 @@
-coordinate_system=transverse_mercator eastf=500000.0 lonf=-15.0 scale=0.9996 datum=conakry1905 bbox=-15.13,9.01,-12,12.68
+conversion=transverse_mercator eastf=500000.0 lonf=-15.0 scale=0.9996 datum=conakry1905 bbox=-15.13,9.01,-12,12.68

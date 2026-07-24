@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=voirol1875paris bbox=-2.95,31.99,9.09,37.14
+conversion=geographic datum=voirol1875paris bbox=-2.95,31.99,9.09,37.14

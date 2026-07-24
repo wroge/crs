@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=bioko bbox=8.37,3.14,9.02,3.82
+conversion=geographic datum=bioko bbox=8.37,3.14,9.02,3.82

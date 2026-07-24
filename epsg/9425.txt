@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=etrs89_ordnancedatumnewlynoffshore bbox=-9.01,49.75,2.01,61.01
+conversion=geographic datum=etrs89_ordnancedatumnewlynoffshore bbox=-9.01,49.75,2.01,61.01

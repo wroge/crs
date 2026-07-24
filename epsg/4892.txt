@@ -1,1 +1,1 @@
-coordinate_system=geocentric datum=nad83nsrs2007 bbox=167.65,14.92,-63.88,74.71
+conversion=geocentric datum=nad83nsrs2007 bbox=167.65,14.92,-63.88,74.71

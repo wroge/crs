@@ -1,1 +1,1 @@
-coordinate_system=polar_stereographic_b latf=75.0 datum=wgs84 bbox=-180,60,180,90
+conversion=polar_stereographic_b latf=75.0 datum=wgs84 bbox=-180,60,180,90

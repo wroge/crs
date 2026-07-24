@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=etrs89_st.marys bbox=-6.41,49.86,-6.23,49.99
+conversion=geographic datum=etrs89_st.marys bbox=-6.41,49.86,-6.23,49.99

@@ -1,1 +1,1 @@
-coordinate_system=cassini_soldner eastf=-1.769 latf=4.85906302222222 lonf=100.815410586111 northf=133454.779 datum=gdm2000 bbox=100.07,3.66,102,5.92
+conversion=cassini_soldner eastf=-1.769 latf=4.85906302222222 lonf=100.815410586111 northf=133454.779 datum=gdm2000 bbox=100.07,3.66,102,5.92

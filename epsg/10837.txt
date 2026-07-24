@@ -1,1 +1,1 @@
-coordinate_system=transverse_mercator eastf=500000.0 lonf=45.0 scale=0.9996 datum=georgiageodeticdatum bbox=41.99,41.04,46.72,43.24
+conversion=transverse_mercator eastf=500000.0 lonf=45.0 scale=0.9996 datum=georgiageodeticdatum bbox=41.99,41.04,46.72,43.24

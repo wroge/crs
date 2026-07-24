@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=merchich bbox=-17.16,20.71,-1.01,35.97
+conversion=geographic datum=merchich bbox=-17.16,20.71,-1.01,35.97

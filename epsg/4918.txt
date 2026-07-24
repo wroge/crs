@@ -1,1 +1,1 @@
-coordinate_system=geocentric datum=itrf97 bbox=-180,-90,180,90
+conversion=geocentric datum=itrf97 bbox=-180,-90,180,90

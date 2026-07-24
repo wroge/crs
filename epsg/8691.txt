@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=serbianverticalreferencesystem2012 bbox=18.81,42.23,23.01,46.19
+conversion=geographic datum=serbianverticalreferencesystem2012 bbox=18.81,42.23,23.01,46.19

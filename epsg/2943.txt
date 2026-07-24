@@ -1,1 +1,1 @@
-coordinate_system=transverse_mercator eastf=500000.0 lonf=-15.0 scale=0.9996 datum=selvagemgrande bbox=-16.11,29.98,-15.79,30.21
+conversion=transverse_mercator eastf=500000.0 lonf=-15.0 scale=0.9996 datum=selvagemgrande bbox=-16.11,29.98,-15.79,30.21

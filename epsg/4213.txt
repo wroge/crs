@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=beduaram bbox=7.81,12.8,14.9,16.7
+conversion=geographic datum=beduaram bbox=7.81,12.8,14.9,16.7

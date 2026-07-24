@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=australianheightdatum bbox=96.76,-43.7,153.69,-9.86
+conversion=geographic datum=australianheightdatum bbox=96.76,-43.7,153.69,-9.86

@@ -1,1 +1,1 @@
-coordinate_system=transverse_mercator datum=jgd2011_japanesegeodeticdatum2011vertical latf=36.0 lonf=137.166666666667 scale=0.9999 bbox=136.22,34.51,137.84,37.58
+conversion=transverse_mercator datum=jgd2011_japanesegeodeticdatum2011vertical latf=36.0 lonf=137.166666666667 scale=0.9999 bbox=136.22,34.51,137.84,37.58

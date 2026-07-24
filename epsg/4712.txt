@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=ascensionisland1958 bbox=-14.46,-8.03,-14.24,-7.83
+conversion=geographic datum=ascensionisland1958 bbox=-14.46,-8.03,-14.24,-7.83

@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=etrs89_melilla bbox=-2.98,35.26,-2.88,35.38
+conversion=geographic datum=etrs89_melilla bbox=-2.98,35.26,-2.88,35.38

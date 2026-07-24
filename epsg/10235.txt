@@ -1,1 +1,1 @@
-coordinate_system=transverse_mercator eastf=134791.6965 latf=51.95 lonf=-1.7 northf=121872.5056 scale=1.0 datum=oxwo08-irf bbox=-2.31,51.65,-1.15,52.26
+conversion=transverse_mercator eastf=134791.6965 latf=51.95 lonf=-1.7 northf=121872.5056 scale=1.0 datum=oxwo08-irf bbox=-2.31,51.65,-1.15,52.26

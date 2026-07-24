@@ -1,1 +1,1 @@
-coordinate_system=geocentric datum=moldref99 bbox=26.63,45.44,30.13,48.47
+conversion=geocentric datum=moldref99 bbox=26.63,45.44,30.13,48.47

@@ -1,1 +1,1 @@
-coordinate_system=geocentric datum=igm95 bbox=5.93,34.76,18.99,47.1
+conversion=geocentric datum=igm95 bbox=5.93,34.76,18.99,47.1

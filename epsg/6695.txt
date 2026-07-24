@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=japanesegeodeticdatum2011vertical bbox=129.3,30.94,145.87,45.54
+conversion=geographic datum=japanesegeodeticdatum2011vertical bbox=129.3,30.94,145.87,45.54

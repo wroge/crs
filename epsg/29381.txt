@@ -1,1 +1,1 @@
-coordinate_system=transverse_mercator latf=-22.0 lonf=21.0 scale=1.0 datum=schwarzeck bbox=19.99,-22.01,22,-17.85
+conversion=transverse_mercator latf=-22.0 lonf=21.0 scale=1.0 datum=schwarzeck bbox=19.99,-22.01,22,-17.85

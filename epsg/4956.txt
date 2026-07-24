@@ -1,1 +1,1 @@
-coordinate_system=geocentric datum=nad83harn bbox=144.58,-14.59,-64.51,71.4
+conversion=geocentric datum=nad83harn bbox=144.58,-14.59,-64.51,71.4

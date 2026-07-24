@@ -1,1 +1,1 @@
-coordinate_system=lambert_conformal_conic_2sp datum=gwwwa22-irf_ordnancedatumnewlyn eastf=168854.016 latf=51.65 lonf=-2.65 northf=193447.117 sp1=51.4 sp2=51.9 bbox=-5.16,51.55,-3.6,52.06
+conversion=lambert_conformal_conic_2sp datum=gwwwa22-irf_ordnancedatumnewlyn eastf=168854.016 latf=51.65 lonf=-2.65 northf=193447.117 sp1=51.4 sp2=51.9 bbox=-5.16,51.55,-3.6,52.06

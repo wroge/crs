@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=portmoresby1996 bbox=144.4,-10.42,149.67,-6.67
+conversion=geographic datum=portmoresby1996 bbox=144.4,-10.42,149.67,-6.67

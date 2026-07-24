@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=igc19626thparallelsouth bbox=12.17,-7.36,29.64,-3.29
+conversion=geographic datum=igc19626thparallelsouth bbox=12.17,-7.36,29.64,-3.29

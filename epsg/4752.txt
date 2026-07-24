@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=vitilevu1912 bbox=177.19,-18.32,178.75,-17.25
+conversion=geographic datum=vitilevu1912 bbox=177.19,-18.32,178.75,-17.25

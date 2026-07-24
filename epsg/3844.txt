@@ -1,1 +1,1 @@
-coordinate_system=oblique_stereographic eastf=500000.0 latf=46.0 lonf=25.0 northf=500000.0 scale=0.99975 datum=pulkovo194258 bbox=20.26,43.44,31.41,48.27
+conversion=oblique_stereographic eastf=500000.0 latf=46.0 lonf=25.0 northf=500000.0 scale=0.99975 datum=pulkovo194258 bbox=20.26,43.44,31.41,48.27

@@ -1,1 +1,1 @@
-coordinate_system=transverse_mercator eastf=200000.0 lonf=33.0 northf=-3500000.0 scale=0.99995 datum=cgrs93 bbox=32.2,34.59,34.65,35.74
+conversion=transverse_mercator eastf=200000.0 lonf=33.0 northf=-3500000.0 scale=0.99995 datum=cgrs93 bbox=32.2,34.59,34.65,35.74

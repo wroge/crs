@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=denmarklowestastronomictide2023 bbox=3.25,54.36,16.51,58.27
+conversion=geographic datum=denmarklowestastronomictide2023 bbox=3.25,54.36,16.51,58.27

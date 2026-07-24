@@ -1,1 +1,1 @@
-coordinate_system=transverse_mercator eastf=3500000.0 lonf=-178.0 northf=10000000.0 scale=1.0 datum=nzgd2000 bbox=-179.07,-31.56,-177.62,-29.03
+conversion=transverse_mercator eastf=3500000.0 lonf=-178.0 northf=10000000.0 scale=1.0 datum=nzgd2000 bbox=-179.07,-31.56,-177.62,-29.03

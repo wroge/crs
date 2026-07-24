@@ -1,1 +1,1 @@
-coordinate_system=transverse_mercator eastf=500000.0 lonf=-141.0 northf=10000000.0 scale=0.9996 datum=ign72nukuhiva bbox=-140.31,-9.57,-139.44,-8.72
+conversion=transverse_mercator eastf=500000.0 lonf=-141.0 northf=10000000.0 scale=0.9996 datum=ign72nukuhiva bbox=-140.31,-9.57,-139.44,-8.72

@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=serindung bbox=108.79,0.06,109.78,2.13
+conversion=geographic datum=serindung bbox=108.79,0.06,109.78,2.13

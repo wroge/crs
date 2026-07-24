@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=lagomera bbox=-17.39,27.95,-17.03,28.26
+conversion=geographic datum=lagomera bbox=-17.39,27.95,-17.03,28.26

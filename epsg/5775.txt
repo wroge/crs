@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=antalya bbox=25.62,35.81,44.83,42.15
+conversion=geographic datum=antalya bbox=25.62,35.81,44.83,42.15

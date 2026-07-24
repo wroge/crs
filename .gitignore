@@ -4,5 +4,6 @@ cmd/
 docs/
 tmp/
 coverage.txt
+coverage.out
 testgrids/
 .cache/

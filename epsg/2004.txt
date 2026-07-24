@@ -1,1 +1,1 @@
-coordinate_system=transverse_mercator eastf=400000.0 lonf=-62.0 scale=0.9995 datum=montserrat1958 bbox=-62.29,16.62,-62.08,16.87
+conversion=transverse_mercator eastf=400000.0 lonf=-62.0 scale=0.9995 datum=montserrat1958 bbox=-62.29,16.62,-62.08,16.87

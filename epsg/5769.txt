@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=taranaki1970 bbox=173.68,-39.92,174.95,-38.41
+conversion=geographic datum=taranaki1970 bbox=173.68,-39.92,174.95,-38.41

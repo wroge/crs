@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=observatario bbox=31.29,-26.87,35.65,-19.84
+conversion=geographic datum=observatario bbox=31.29,-26.87,35.65,-19.84

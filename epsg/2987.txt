@@ -1,1 +1,1 @@
-coordinate_system=transverse_mercator eastf=500000.0 lonf=-57.0 scale=0.9996 datum=saintpierreetmiquelon1950 bbox=-56.48,46.69,-56.07,47.19
+conversion=transverse_mercator eastf=500000.0 lonf=-57.0 scale=0.9996 datum=saintpierreetmiquelon1950 bbox=-56.48,46.69,-56.07,47.19

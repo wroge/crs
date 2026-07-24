@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=kgd2002 bbox=122.71,28.6,134.28,40.27
+conversion=geographic datum=kgd2002 bbox=122.71,28.6,134.28,40.27

@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=aratu bbox=-53.38,-35.71,-26,4.26
+conversion=geographic datum=aratu bbox=-53.38,-35.71,-26,4.26

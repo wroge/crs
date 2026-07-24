@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=segarajakarta bbox=114.55,-4.24,119.06,4.29
+conversion=geographic datum=segarajakarta bbox=114.55,-4.24,119.06,4.29

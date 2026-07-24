@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=nahrwan1934 bbox=38.79,29.06,51.06,37.39
+conversion=geographic datum=nahrwan1934 bbox=38.79,29.06,51.06,37.39

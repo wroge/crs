@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=nivellementgeneraldelafrance-ign69 bbox=-4.87,42.33,8.23,51.14
+conversion=geographic datum=nivellementgeneraldelafrance-ign69 bbox=-4.87,42.33,8.23,51.14

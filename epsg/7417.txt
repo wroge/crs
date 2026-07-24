@@ -1,1 +1,1 @@
-coordinate_system=transverse_mercator datum=etrs89_dvr90height eastf=500000.0 lonf=15.0 scale=0.9996 bbox=12,54.51,15.25,56.18
+conversion=transverse_mercator datum=etrs89_dvr90height eastf=500000.0 lonf=15.0 scale=0.9996 bbox=12,54.51,15.25,56.18

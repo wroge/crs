@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=azoresoccidental1939 bbox=-31.34,39.3,-31.02,39.77
+conversion=geographic datum=azoresoccidental1939 bbox=-31.34,39.3,-31.02,39.77

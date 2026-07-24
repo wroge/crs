@@ -1,1 +1,1 @@
-coordinate_system=transverse_mercator eastf=500000.0 lonf=9.0 scale=0.9996 datum=nordsahara1959 bbox=6,19.6,11.99,38.8
+conversion=transverse_mercator eastf=500000.0 lonf=9.0 scale=0.9996 datum=nordsahara1959 bbox=6,19.6,11.99,38.8

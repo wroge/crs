@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=regcan95_grancanaria bbox=-15.88,27.68,-15.31,28.23
+conversion=geographic datum=regcan95_grancanaria bbox=-15.88,27.68,-15.31,28.23

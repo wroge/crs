@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=lisbon1890lisbon bbox=-9.56,36.95,-6.19,42.16
+conversion=geographic datum=lisbon1890lisbon bbox=-9.56,36.95,-6.19,42.16

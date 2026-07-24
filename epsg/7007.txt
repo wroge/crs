@@ -1,1 +1,1 @@
-coordinate_system=transverse_mercator eastf=500000.0 lonf=51.0 scale=0.9996 datum=nahrwan1934 bbox=48,29.6,48.75,31
+conversion=transverse_mercator eastf=500000.0 lonf=51.0 scale=0.9996 datum=nahrwan1934 bbox=48,29.6,48.75,31

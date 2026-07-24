@@ -1,1 +1,1 @@
-coordinate_system=transverse_mercator datum=feh2010_fehmarnbeltverticalreference2010 eastf=1000000.0 lonf=11.3333333333333 scale=1.0 bbox=11.17,54.42,11.51,54.76
+conversion=transverse_mercator datum=feh2010_fehmarnbeltverticalreference2010 eastf=1000000.0 lonf=11.3333333333333 scale=1.0 bbox=11.17,54.42,11.51,54.76

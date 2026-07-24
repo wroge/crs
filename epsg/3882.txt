@@ -1,1 +1,1 @@
-coordinate_system=transverse_mercator eastf=28500000.0 lonf=28.0 scale=1.0 datum=euref-fin bbox=27.5,60.42,28.5,70.09
+conversion=transverse_mercator eastf=28500000.0 lonf=28.0 scale=1.0 datum=euref-fin bbox=27.5,60.42,28.5,70.09

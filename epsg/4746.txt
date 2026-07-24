@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=pdslash83 bbox=9.87,50.2,12.66,51.65
+conversion=geographic datum=pdslash83 bbox=9.87,50.2,12.66,51.65

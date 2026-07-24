@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=etrf93 bbox=-16.1,33.26,38.01,84.73
+conversion=geographic datum=etrf93 bbox=-16.1,33.26,38.01,84.73

@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=cr05 bbox=-90.45,2.15,-81.43,11.77
+conversion=geographic datum=cr05 bbox=-90.45,2.15,-81.43,11.77

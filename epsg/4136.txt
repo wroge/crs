@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=st.lawrenceisland bbox=-171.97,62.89,-168.59,63.84
+conversion=geographic datum=st.lawrenceisland bbox=-171.97,62.89,-168.59,63.84

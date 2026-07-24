@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=ecml14_nb-irf bbox=-1.9,54.85,-1.3,55.3
+conversion=geographic datum=ecml14_nb-irf bbox=-1.9,54.85,-1.3,55.3

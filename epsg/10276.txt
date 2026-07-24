@@ -1,1 +1,1 @@
-coordinate_system=transverse_mercator datum=smitb20-irf_ordnancedatumnewlyn eastf=110693.666 latf=50.75 lonf=-3.85 northf=102089.2943 scale=1.0 bbox=-4.11,50.65,-3.6,50.86
+conversion=transverse_mercator datum=smitb20-irf_ordnancedatumnewlyn eastf=110693.666 latf=50.75 lonf=-3.85 northf=102089.2943 scale=1.0 bbox=-4.11,50.65,-3.6,50.86

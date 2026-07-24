@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=lomaquintana bbox=-73.38,7.75,-59.8,12.25
+conversion=geographic datum=lomaquintana bbox=-73.38,7.75,-59.8,12.25

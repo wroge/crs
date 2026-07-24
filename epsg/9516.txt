@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=regcan95_tenerife bbox=-16.96,27.93,-16.08,28.63
+conversion=geographic datum=regcan95_tenerife bbox=-16.96,27.93,-16.08,28.63

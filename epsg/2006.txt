@@ -1,1 +1,1 @@
-coordinate_system=transverse_mercator eastf=400000.0 lonf=-62.0 scale=0.9995 datum=st.lucia1955 bbox=-61.13,13.66,-60.82,14.16
+conversion=transverse_mercator eastf=400000.0 lonf=-62.0 scale=0.9995 datum=st.lucia1955 bbox=-61.13,13.66,-60.82,14.16

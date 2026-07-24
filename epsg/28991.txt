@@ -1,1 +1,1 @@
-coordinate_system=oblique_stereographic latf=52.1561605555556 lonf=5.38763888888889 scale=0.9999079 datum=amersfoort bbox=3.2,50.75,7.22,53.7
+conversion=oblique_stereographic latf=52.1561605555556 lonf=5.38763888888889 scale=0.9999079 datum=amersfoort bbox=3.2,50.75,7.22,53.7

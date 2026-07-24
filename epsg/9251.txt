@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=mmn bbox=-68.64,-55.11,-63.73,-52.59
+conversion=geographic datum=mmn bbox=-68.64,-55.11,-63.73,-52.59

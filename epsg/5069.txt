@@ -1,1 +1,1 @@
-coordinate_system=albers_equal_area latf=23.0 lonf=-96.0 sp1=29.5 sp2=45.5 datum=nad27 bbox=-124.79,24.41,-66.91,49.38
+conversion=albers_equal_area latf=23.0 lonf=-96.0 sp1=29.5 sp2=45.5 datum=nad27 bbox=-124.79,24.41,-66.91,49.38

@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=nepal1981 bbox=80.06,26.34,88.21,30.43
+conversion=geographic datum=nepal1981 bbox=80.06,26.34,88.21,30.43

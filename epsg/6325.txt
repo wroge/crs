@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=nad83ma11 bbox=129.48,1.64,149.55,23.9
+conversion=geographic datum=nad83ma11 bbox=129.48,1.64,149.55,23.9

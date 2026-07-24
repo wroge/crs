@@ -1,1 +1,1 @@
-coordinate_system=transverse_mercator datum=tpen11-irf_ordnancedatumnewlyn eastf=203252.175 latf=53.5 lonf=-2.25 northf=407512.765 scale=1.0 bbox=-3.14,53.32,-1.34,53.9
+conversion=transverse_mercator datum=tpen11-irf_ordnancedatumnewlyn eastf=203252.175 latf=53.5 lonf=-2.25 northf=407512.765 scale=1.0 bbox=-3.14,53.32,-1.34,53.9

@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=nad27 bbox=167.65,7.15,-47.74,83.17
+conversion=geographic datum=nad27 bbox=167.65,7.15,-47.74,83.17

@@ -1,1 +1,1 @@
-coordinate_system=geocentric datum=wgs84g873 bbox=-180,-90,180,90
+conversion=geocentric datum=wgs84g873 bbox=-180,-90,180,90

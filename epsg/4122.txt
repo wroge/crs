@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=ats77 bbox=-69.05,43.41,-59.73,48.07
+conversion=geographic datum=ats77 bbox=-69.05,43.41,-59.73,48.07

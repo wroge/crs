@@ -1,1 +1,1 @@
-coordinate_system=transverse_mercator eastf=500000.0 lonf=107.0 scale=0.9999 datum=vn-2000 bbox=105.88,15.99,108.24,21.63
+conversion=transverse_mercator eastf=500000.0 lonf=107.0 scale=0.9999 datum=vn-2000 bbox=105.88,15.99,108.24,21.63

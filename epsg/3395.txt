@@ -1,1 +1,1 @@
-coordinate_system=mercator_a scale=1.0 datum=wgs84 bbox=-180,-80,180,84
+conversion=mercator_a scale=1.0 datum=wgs84 bbox=-180,-80,180,84

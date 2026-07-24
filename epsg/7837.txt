@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=deutscheshaupthoehennetz2016 bbox=3.34,47.27,15.04,55.92
+conversion=geographic datum=deutscheshaupthoehennetz2016 bbox=3.34,47.27,15.04,55.92

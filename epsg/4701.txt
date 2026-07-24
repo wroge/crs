@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=igcb1955 bbox=12.17,-6.04,16.28,-4.28
+conversion=geographic datum=igcb1955 bbox=12.17,-6.04,16.28,-4.28

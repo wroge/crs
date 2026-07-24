@@ -1,1 +1,1 @@
-coordinate_system=lambert_conformal_conic_2sp lonf=16.5 sp1=45.9166666666667 sp2=43.0833333333333 datum=htrs96 bbox=13,41.62,19.43,46.54
+conversion=lambert_conformal_conic_2sp lonf=16.5 sp1=45.9166666666667 sp2=43.0833333333333 datum=htrs96 bbox=13,41.62,19.43,46.54

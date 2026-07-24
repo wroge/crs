@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=gcgd59 bbox=-81.46,19.21,-81.04,19.41
+conversion=geographic datum=gcgd59 bbox=-81.46,19.21,-81.04,19.41

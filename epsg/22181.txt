@@ -1,1 +1,1 @@
-coordinate_system=transverse_mercator eastf=1500000.0 latf=-90.0 lonf=-72.0 scale=1.0 datum=posgar94 bbox=-73.59,-52,-70.5,-36.16
+conversion=transverse_mercator eastf=1500000.0 latf=-90.0 lonf=-72.0 scale=1.0 datum=posgar94 bbox=-73.59,-52,-70.5,-36.16

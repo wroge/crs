@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=jamaica1875 bbox=-78.43,17.64,-76.17,18.58
+conversion=geographic datum=jamaica1875 bbox=-78.43,17.64,-76.17,18.58

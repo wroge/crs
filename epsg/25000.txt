@@ -1,1 +1,1 @@
-coordinate_system=transverse_mercator eastf=274319.51 latf=4.66666666666667 lonf=-1.0 scale=0.99975 datum=leigon bbox=-3.79,1.4,2.1,11.16
+conversion=transverse_mercator eastf=274319.51 latf=4.66666666666667 lonf=-1.0 scale=0.99975 datum=leigon bbox=-3.79,1.4,2.1,11.16

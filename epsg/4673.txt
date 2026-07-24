@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=chathamislands1979 bbox=-177.25,-44.64,-175.54,-43.3
+conversion=geographic datum=chathamislands1979 bbox=-177.25,-44.64,-175.54,-43.3

@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=etrs89_danskvertikalreference19902002 bbox=7.98,54.5,15.28,57.81
+conversion=geographic datum=etrs89_danskvertikalreference19902002 bbox=7.98,54.5,15.28,57.81

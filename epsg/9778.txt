@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=rgf93v2lon-lat bbox=-9.86,41.15,10.38,51.56
+conversion=geographic datum=rgf93v2lon-lat bbox=-9.86,41.15,10.38,51.56

@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=gulshan303 bbox=88.01,18.56,92.67,26.64
+conversion=geographic datum=gulshan303 bbox=88.01,18.56,92.67,26.64

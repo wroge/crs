@@ -20,20 +20,20 @@ func (f Func) RoundAxis(decA, decB, decC int) Func {
 	}
 }
 
-type CoordinateSystem interface {
+type Conversion interface {
 	ToGeographic(s Spheroid, a, b, c float64) (lon, lat, h float64)
 	FromGeographic(s Spheroid, lon, lat, h float64) (a, b, c float64)
 }
 
 type CoordinateReferenceSystem struct {
-	CoordinateSystem CoordinateSystem
-	Datum            Datum
-	BoundingBox      BoundingBox
+	Conversion  Conversion
+	Datum       Datum
+	BoundingBox BoundingBox
 }
 
 func (crs CoordinateReferenceSystem) String() string {
 	return build("").addAll(
-		"coordinate_system", crs.CoordinateSystem,
+		"conversion", crs.Conversion,
 		"bbox", crs.BoundingBox,
 		"datum", crs.Datum.Name,
 	).String()
@@ -41,7 +41,7 @@ func (crs CoordinateReferenceSystem) String() string {
 
 func (crs CoordinateReferenceSystem) TransformTo(to CoordinateReferenceSystem) Func {
 	return func(a, b, c float64) (float64, float64, float64, error) {
-		lon, lat, h := crs.CoordinateSystem.ToGeographic(crs.Datum.Spheroid, a, b, c)
+		lon, lat, h := crs.Conversion.ToGeographic(crs.Datum.Spheroid, a, b, c)
 
 		if crs.Datum.Name != to.Datum.Name {
 			var err error
@@ -51,7 +51,7 @@ func (crs CoordinateReferenceSystem) TransformTo(to CoordinateReferenceSystem) F
 			}
 		}
 
-		a1, b1, c1 := to.CoordinateSystem.FromGeographic(to.Datum.Spheroid, lon, lat, h)
+		a1, b1, c1 := to.Conversion.FromGeographic(to.Datum.Spheroid, lon, lat, h)
 		return a1, b1, c1, nil
 	}
 }

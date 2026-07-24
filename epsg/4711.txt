@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=marcusisland1952 bbox=153.91,24.22,154.05,24.35
+conversion=geographic datum=marcusisland1952 bbox=153.91,24.22,154.05,24.35

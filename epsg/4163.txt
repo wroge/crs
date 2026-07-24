@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=yemenngn96 bbox=41.08,8.95,57.96,19
+conversion=geographic datum=yemenngn96 bbox=41.08,8.95,57.96,19

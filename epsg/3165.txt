@@ -1,1 +1,1 @@
-coordinate_system=lambert_conformal_conic_2sp eastf=0.66 latf=-22.26969175 lonf=166.44242575 northf=1.02 sp1=-22.24469175 sp2=-22.29469175 datum=nea74noumea bbox=166.35,-22.37,166.54,-22.19
+conversion=lambert_conformal_conic_2sp eastf=0.66 latf=-22.26969175 lonf=166.44242575 northf=1.02 sp1=-22.24469175 sp2=-22.29469175 datum=nea74noumea bbox=166.35,-22.37,166.54,-22.19

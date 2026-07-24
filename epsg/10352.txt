@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=formentera bbox=1.31,38.59,1.65,38.86
+conversion=geographic datum=formentera bbox=1.31,38.59,1.65,38.86

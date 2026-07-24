@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=tutuilaverticaldatumof1962 bbox=-170.88,-14.43,-170.51,-14.2
+conversion=geographic datum=tutuilaverticaldatumof1962 bbox=-170.88,-14.43,-170.51,-14.2

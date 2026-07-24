@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=st.vincent1945 bbox=-61.52,12.54,-61.07,13.44
+conversion=geographic datum=st.vincent1945 bbox=-61.52,12.54,-61.07,13.44

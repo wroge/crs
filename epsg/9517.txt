@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=shgd2015_st.helenaverticaldatum2015 bbox=-5.85,-16.08,-5.59,-15.85
+conversion=geographic datum=shgd2015_st.helenaverticaldatum2015 bbox=-5.85,-16.08,-5.59,-15.85

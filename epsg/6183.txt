@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=santacruzdagraciosa bbox=-28.13,38.97,-27.88,39.14
+conversion=geographic datum=santacruzdagraciosa bbox=-28.13,38.97,-27.88,39.14

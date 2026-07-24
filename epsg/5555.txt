@@ -1,1 +1,1 @@
-coordinate_system=transverse_mercator datum=etrs89_deutscheshaupthoehennetz1992 eastf=500000.0 lonf=9.0 scale=0.9996 bbox=6,47.27,12,55.09
+conversion=transverse_mercator datum=etrs89_deutscheshaupthoehennetz1992 eastf=500000.0 lonf=9.0 scale=0.9996 bbox=6,47.27,12,55.09

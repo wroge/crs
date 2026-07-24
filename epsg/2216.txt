@@ -1,1 +1,1 @@
-coordinate_system=transverse_mercator eastf=500000.0 lonf=-51.0 scale=0.9996 datum=qoornoq1927 bbox=-54,60.63,-48,73.05
+conversion=transverse_mercator eastf=500000.0 lonf=-51.0 scale=0.9996 datum=qoornoq1927 bbox=-54,60.63,-48,73.05

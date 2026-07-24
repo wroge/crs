@@ -1,1 +1,1 @@
-coordinate_system=transverse_mercator eastf=500000.0 lonf=-15.0 scale=0.9996 datum=ptra08 bbox=-18,29.24,-12.48,36.46
+conversion=transverse_mercator eastf=500000.0 lonf=-15.0 scale=0.9996 datum=ptra08 bbox=-18,29.24,-12.48,36.46

@@ -1,1 +1,1 @@
-coordinate_system=hyperbolic_cassini_soldner eastf=251727.91554240003 latf=-16.25 lonf=179.333333333333 northf=334519.953768 datum=vanualevu1915 bbox=178.42,-17.07,-179.77,-16.1
+conversion=hyperbolic_cassini_soldner eastf=251727.91554240003 latf=-16.25 lonf=179.333333333333 northf=334519.953768 datum=vanualevu1915 bbox=178.42,-17.07,-179.77,-16.1

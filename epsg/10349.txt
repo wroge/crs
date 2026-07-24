@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=chartdatumportugal bbox=-35.58,29.24,-7.25,43.07
+conversion=geographic datum=chartdatumportugal bbox=-35.58,29.24,-7.25,43.07

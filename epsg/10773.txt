@@ -1,1 +1,1 @@
-coordinate_system=transverse_mercator eastf=15000.0 latf=-21.2 lonf=-47.7833333333333 northf=25000.0 scale=1.000092 datum=sirgas2000 bbox=-47.99,-21.37,-47.64,-21.06
+conversion=transverse_mercator eastf=15000.0 latf=-21.2 lonf=-47.7833333333333 northf=25000.0 scale=1.000092 datum=sirgas2000 bbox=-47.99,-21.37,-47.64,-21.06

@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=massawa bbox=36.44,12.36,43.31,18.1
+conversion=geographic datum=massawa bbox=36.44,12.36,43.31,18.1

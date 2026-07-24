@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=alboran bbox=-3.1,35.88,-2.96,36
+conversion=geographic datum=alboran bbox=-3.1,35.88,-2.96,36

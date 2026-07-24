@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=st71belep bbox=163.54,-19.85,163.75,-19.5
+conversion=geographic datum=st71belep bbox=163.54,-19.85,163.75,-19.5

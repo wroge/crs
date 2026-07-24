@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=johnstonisland1961 bbox=-169.59,16.67,-169.47,16.79
+conversion=geographic datum=johnstonisland1961 bbox=-169.59,16.67,-169.47,16.79

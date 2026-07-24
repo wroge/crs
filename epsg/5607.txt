@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=boraborasau2001 bbox=-151.86,-16.62,-151.61,-16.39
+conversion=geographic datum=boraborasau2001 bbox=-151.86,-16.62,-151.61,-16.39

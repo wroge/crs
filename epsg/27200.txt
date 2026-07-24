@@ -1,1 +1,1 @@
-coordinate_system=new_zealand_map_grid eastf=2510000.0 latf=-41.0 lonf=173.0 northf=6023150.0 datum=nzgd49 bbox=166.37,-47.33,178.63,-34.1
+conversion=new_zealand_map_grid eastf=2510000.0 latf=-41.0 lonf=173.0 northf=6023150.0 datum=nzgd49 bbox=166.37,-47.33,178.63,-34.1

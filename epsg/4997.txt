@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=magna-sirgas bbox=-84.77,-4.23,-66.87,15.51
+conversion=geographic datum=magna-sirgas bbox=-84.77,-4.23,-66.87,15.51

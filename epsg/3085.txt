@@ -1,1 +1,1 @@
-coordinate_system=albers_equal_area eastf=1500000.0 latf=18.0 lonf=-100.0 northf=6000000.0 sp1=27.5 sp2=35.0 datum=nad83harn bbox=-106.66,25.83,-93.5,36.5
+conversion=albers_equal_area eastf=1500000.0 latf=18.0 lonf=-100.0 northf=6000000.0 sp1=27.5 sp2=35.0 datum=nad83harn bbox=-106.66,25.83,-93.5,36.5

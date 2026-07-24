@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=guam1963 bbox=144.58,13.18,146.12,20.61
+conversion=geographic datum=guam1963 bbox=144.58,13.18,146.12,20.61

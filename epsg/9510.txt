@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=regcan95_elhierro bbox=-18.22,27.58,-17.83,27.9
+conversion=geographic datum=regcan95_elhierro bbox=-18.22,27.58,-17.83,27.9

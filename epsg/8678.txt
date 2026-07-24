@@ -1,1 +1,1 @@
-coordinate_system=transverse_mercator eastf=6500000.0 lonf=18.0 scale=0.9999 datum=mgi1901 bbox=16.5,41.79,19.51,46.55
+conversion=transverse_mercator eastf=6500000.0 lonf=18.0 scale=0.9999 datum=mgi1901 bbox=16.5,41.79,19.51,46.55

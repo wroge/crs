@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=kertaurso bbox=99.59,1.13,104.6,6.72
+conversion=geographic datum=kertaurso bbox=99.59,1.13,104.6,6.72

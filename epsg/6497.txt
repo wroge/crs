@@ -1,1 +1,1 @@
-coordinate_system=hotine_oblique_mercator_a azimuth=337.25556 eastf=2546731.496 gamma=337.25556 latf=45.3091666666667 lonf=-86.0 northf=-4354009.816 scale=0.9996 datum=nad832011 bbox=-90.42,41.69,-82.13,48.32
+conversion=hotine_oblique_mercator_a azimuth=337.25556 eastf=2546731.496 gamma=337.25556 latf=45.3091666666667 lonf=-86.0 northf=-4354009.816 scale=0.9996 datum=nad832011 bbox=-90.42,41.69,-82.13,48.32

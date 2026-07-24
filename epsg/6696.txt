@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=jgd2000_japanesegeodeticdatum2000vertical bbox=129.3,30.94,145.87,45.54
+conversion=geographic datum=jgd2000_japanesegeodeticdatum2000vertical bbox=129.3,30.94,145.87,45.54

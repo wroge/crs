@@ -1,1 +1,1 @@
-coordinate_system=transverse_mercator eastf=500000.0 lonf=33.0 northf=10000000.0 scale=0.9996 datum=tete bbox=30.21,-26.87,36,-11.41
+conversion=transverse_mercator eastf=500000.0 lonf=33.0 northf=10000000.0 scale=0.9996 datum=tete bbox=30.21,-26.87,36,-11.41

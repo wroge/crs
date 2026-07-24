@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=rasghumays bbox=51.56,22.63,56.03,24.95
+conversion=geographic datum=rasghumays bbox=51.56,22.63,56.03,24.95

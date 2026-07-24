@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=saintpierreetmiquelon1950 bbox=-56.48,46.69,-56.07,47.19
+conversion=geographic datum=saintpierreetmiquelon1950 bbox=-56.48,46.69,-56.07,47.19

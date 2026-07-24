@@ -1,1 +1,1 @@
-coordinate_system=transverse_mercator eastf=152399.85509075448 latf=6.66666666666667 lonf=-12.0 scale=1.0 datum=sierraleone1924 bbox=-13.34,8.32,-13.13,8.55
+conversion=transverse_mercator eastf=152399.85509075448 latf=6.66666666666667 lonf=-12.0 scale=1.0 datum=sierraleone1924 bbox=-13.34,8.32,-13.13,8.55

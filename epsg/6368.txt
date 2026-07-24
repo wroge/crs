@@ -1,1 +1,1 @@
-coordinate_system=transverse_mercator eastf=500000.0 lonf=-105.0 scale=0.9996 datum=mexicoitrf2008 bbox=-108,14.05,-102,31.79
+conversion=transverse_mercator eastf=500000.0 lonf=-105.0 scale=0.9996 datum=mexicoitrf2008 bbox=-108,14.05,-102,31.79

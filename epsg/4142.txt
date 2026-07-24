@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=locodjo1965 bbox=-8.61,1.02,-2.48,10.74
+conversion=geographic datum=locodjo1965 bbox=-8.61,1.02,-2.48,10.74

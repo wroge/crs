@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=norwegianchartdatum bbox=-13.63,56.08,38.01,84.73
+conversion=geographic datum=norwegianchartdatum bbox=-13.63,56.08,38.01,84.73

@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=karbala1979 bbox=38.79,29.06,48.61,37.39
+conversion=geographic datum=karbala1979 bbox=38.79,29.06,48.61,37.39

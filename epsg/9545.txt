@@ -1,1 +1,1 @@
-coordinate_system=geocentric datum=ltf2004g bbox=4.65,44.87,7.88,45.89
+conversion=geocentric datum=ltf2004g bbox=4.65,44.87,7.88,45.89

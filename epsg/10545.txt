@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=etrs89_cascais bbox=-9.56,36.95,-6.19,42.16
+conversion=geographic datum=etrs89_cascais bbox=-9.56,36.95,-6.19,42.16

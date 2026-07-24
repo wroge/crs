@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=caspiansea bbox=46.95,37.35,53.93,46.97
+conversion=geographic datum=caspiansea bbox=46.95,37.35,53.93,46.97

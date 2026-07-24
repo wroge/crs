@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=portosanto1995 bbox=-17.31,32.35,-16.23,33.15
+conversion=geographic datum=portosanto1995 bbox=-17.31,32.35,-16.23,33.15

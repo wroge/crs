@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=cocosislands1965 bbox=96.76,-12.27,96.99,-11.76
+conversion=geographic datum=cocosislands1965 bbox=96.76,-12.27,96.99,-11.76

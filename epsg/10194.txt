@@ -1,1 +1,1 @@
-coordinate_system=lambert_conformal_conic_2sp eastf=212548.8756 latf=53.25 lonf=-3.5 northf=495230.9254 sp1=53.1 sp2=53.4 datum=cnh22-irf bbox=-4.71,53.02,-2.28,53.46
+conversion=lambert_conformal_conic_2sp eastf=212548.8756 latf=53.25 lonf=-3.5 northf=495230.9254 sp1=53.1 sp2=53.4 datum=cnh22-irf bbox=-4.71,53.02,-2.28,53.46

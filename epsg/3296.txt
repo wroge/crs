@@ -1,1 +1,1 @@
-coordinate_system=transverse_mercator eastf=500000.0 lonf=-153.0 northf=10000000.0 scale=0.9996 datum=rgpf bbox=-158.13,-26.7,-150,-12.5
+conversion=transverse_mercator eastf=500000.0 lonf=-153.0 northf=10000000.0 scale=0.9996 datum=rgpf bbox=-158.13,-26.7,-150,-12.5

@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=mooreasau1981 bbox=-150,-17.63,-149.73,-17.41
+conversion=geographic datum=mooreasau1981 bbox=-150,-17.63,-149.73,-17.41

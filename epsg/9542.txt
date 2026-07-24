@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=rraf1991_ign2008ld bbox=-61.13,16.26,-60.97,16.38
+conversion=geographic datum=rraf1991_ign2008ld bbox=-61.13,16.26,-60.97,16.38

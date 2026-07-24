@@ -1,1 +1,1 @@
-coordinate_system=transverse_mercator eastf=500000.0 lonf=165.0 northf=10000000.0 scale=0.9996 datum=nea74noumea bbox=166.35,-22.37,166.54,-22.19
+conversion=transverse_mercator eastf=500000.0 lonf=165.0 northf=10000000.0 scale=0.9996 datum=nea74noumea bbox=166.35,-22.37,166.54,-22.19

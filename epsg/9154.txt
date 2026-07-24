@@ -1,1 +1,1 @@
-coordinate_system=transverse_mercator eastf=500000.0 lonf=-75.0 northf=10000000.0 scale=0.9996 datum=sirgas-chile2016 bbox=-78,-59.36,-71.99,-18.35
+conversion=transverse_mercator eastf=500000.0 lonf=-75.0 northf=10000000.0 scale=0.9996 datum=sirgas-chile2016 bbox=-78,-59.36,-71.99,-18.35

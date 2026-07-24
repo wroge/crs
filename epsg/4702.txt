@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=mauritania1999 bbox=-20.04,14.72,-4.8,27.3
+conversion=geographic datum=mauritania1999 bbox=-20.04,14.72,-4.8,27.3

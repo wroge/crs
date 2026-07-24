@@ -1,1 +1,1 @@
-coordinate_system=transverse_mercator eastf=66220.02833082761 latf=17.0612419444444 lonf=-88.6318575 northf=135779.5099885299 scale=1.0 datum=sibungorge1922 bbox=-89.22,15.88,-87.72,18.49
+conversion=transverse_mercator eastf=66220.02833082761 latf=17.0612419444444 lonf=-88.6318575 northf=135779.5099885299 scale=1.0 datum=sibungorge1922 bbox=-89.22,15.88,-87.72,18.49

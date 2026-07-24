@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=feh2010 bbox=10.66,54.33,12.01,54.83
+conversion=geographic datum=feh2010 bbox=10.66,54.33,12.01,54.83

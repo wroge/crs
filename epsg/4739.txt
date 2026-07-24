@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=hongkong196367 bbox=113.76,22.13,114.51,22.58
+conversion=geographic datum=hongkong196367 bbox=113.76,22.13,114.51,22.58

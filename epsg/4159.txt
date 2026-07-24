@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=eld79 bbox=9.31,19.5,26.21,35.23
+conversion=geographic datum=eld79 bbox=9.31,19.5,26.21,35.23

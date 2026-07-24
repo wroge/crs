@@ -1,1 +1,1 @@
-coordinate_system=transverse_mercator eastf=1500000.0 lonf=3.0 scale=1.0 datum=dhdn bbox=3.34,55.24,4.51,55.92
+conversion=transverse_mercator eastf=1500000.0 lonf=3.0 scale=1.0 datum=dhdn bbox=3.34,55.24,4.51,55.92

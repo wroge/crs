@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=greenlandverticalreference2016 bbox=-75,58,-6.99,85.01
+conversion=geographic datum=greenlandverticalreference2016 bbox=-75,58,-6.99,85.01

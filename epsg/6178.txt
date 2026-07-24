@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=caisdapontinha bbox=-17.31,32.35,-16.4,32.93
+conversion=geographic datum=caisdapontinha bbox=-17.31,32.35,-16.4,32.93

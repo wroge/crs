@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=raiateasau2001 bbox=-151.55,-16.96,-151.3,-16.68
+conversion=geographic datum=raiateasau2001 bbox=-151.55,-16.96,-151.3,-16.68

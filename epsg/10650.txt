@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=greenlandlowestastronomictide2023 bbox=-75,56.38,7.99,87.03
+conversion=geographic datum=greenlandlowestastronomictide2023 bbox=-75,56.38,7.99,87.03

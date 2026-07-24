@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=cigd11_caymanbracverticaldatum1961 bbox=-79.92,19.66,-79.69,19.78
+conversion=geographic datum=cigd11_caymanbracverticaldatum1961 bbox=-79.92,19.66,-79.69,19.78

@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=etrf2000-pl_europeanverticalreferenceframe2007poland bbox=14.14,49,24.15,54.89
+conversion=geographic datum=etrf2000-pl_europeanverticalreferenceframe2007poland bbox=14.14,49,24.15,54.89

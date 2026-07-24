@@ -1,1 +1,1 @@
-coordinate_system=cassini_soldner eastf=109435.392 latf=-18.0 lonf=178.0 northf=141622.272 datum=vitilevu1912 bbox=177.19,-18.32,178.75,-17.25
+conversion=cassini_soldner eastf=109435.392 latf=-18.0 lonf=178.0 northf=141622.272 datum=vitilevu1912 bbox=177.19,-18.32,178.75,-17.25

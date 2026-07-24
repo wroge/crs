@@ -1,1 +1,1 @@
-coordinate_system=transverse_mercator eastf=500000.0 lonf=27.0 scale=0.9996 datum=adindan bbox=23.99,4.21,30.01,22.01
+conversion=transverse_mercator eastf=500000.0 lonf=27.0 scale=0.9996 datum=adindan bbox=23.99,4.21,30.01,22.01

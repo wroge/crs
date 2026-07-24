@@ -1,1 +1,1 @@
-coordinate_system=mercator_b lonf=100.0 sp1=-41.0 datum=wgs84 bbox=155,-60,-169.99,-25
+conversion=mercator_b lonf=100.0 sp1=-41.0 datum=wgs84 bbox=155,-60,-169.99,-25

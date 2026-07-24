@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=moznet bbox=30.21,-27.71,43.03,-10.09
+conversion=geographic datum=moznet bbox=30.21,-27.71,43.03,-10.09

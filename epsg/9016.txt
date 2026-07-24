@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=igb08 bbox=-180,-90,180,90
+conversion=geographic datum=igb08 bbox=-180,-90,180,90

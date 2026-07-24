@@ -1,1 +1,1 @@
-coordinate_system=transverse_mercator eastf=500000.0 lonf=165.0 northf=10000000.0 scale=0.9996 datum=st87ouvea bbox=166.44,-20.77,166.71,-20.34
+conversion=transverse_mercator eastf=500000.0 lonf=165.0 northf=10000000.0 scale=0.9996 datum=st87ouvea bbox=166.44,-20.77,166.71,-20.34

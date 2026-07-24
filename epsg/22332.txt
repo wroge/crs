@@ -1,1 +1,1 @@
-coordinate_system=transverse_mercator eastf=500000.0 lonf=9.0 scale=0.9996 datum=carthage bbox=7.81,33.22,13.67,38.41
+conversion=transverse_mercator eastf=500000.0 lonf=9.0 scale=0.9996 datum=carthage bbox=7.81,33.22,13.67,38.41

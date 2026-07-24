@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=caisdaviladoporto bbox=-25.26,36.87,-24.72,37.34
+conversion=geographic datum=caisdaviladoporto bbox=-25.26,36.87,-24.72,37.34

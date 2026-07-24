@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=st.stephenferro bbox=14.41,47.42,18.86,50.45
+conversion=geographic datum=st.stephenferro bbox=14.41,47.42,18.86,50.45

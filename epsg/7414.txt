@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=tokyo_japanesestandardlevellingdatum1969 bbox=129.3,30.94,142.14,41.58
+conversion=geographic datum=tokyo_japanesestandardlevellingdatum1969 bbox=129.3,30.94,142.14,41.58

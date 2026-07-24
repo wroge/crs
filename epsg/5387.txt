@@ -1,1 +1,1 @@
-coordinate_system=transverse_mercator eastf=500000.0 lonf=-75.0 northf=10000000.0 scale=0.9996 datum=peru96 bbox=-78,-21.05,-72,-0.03
+conversion=transverse_mercator eastf=500000.0 lonf=-75.0 northf=10000000.0 scale=0.9996 datum=peru96 bbox=-78,-21.05,-72,-0.03

@@ -1,1 +1,1 @@
-coordinate_system=transverse_mercator eastf=500000.0 lonf=121.0 scale=0.99995 datum=prs92 bbox=119.7,3,122.21,21.62
+conversion=transverse_mercator eastf=500000.0 lonf=121.0 scale=0.99995 datum=prs92 bbox=119.7,3,122.21,21.62

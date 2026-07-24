@@ -1,1 +1,1 @@
-coordinate_system=transverse_mercator datum=cr-sirgasepoch2014.59_datumaltimetricodecostarica1952 eastf=500000.0 lonf=-84.0 scale=0.9999 bbox=-85.97,7.98,-82.53,11.22
+conversion=transverse_mercator datum=cr-sirgasepoch2014.59_datumaltimetricodecostarica1952 eastf=500000.0 lonf=-84.0 scale=0.9999 bbox=-85.97,7.98,-82.53,11.22

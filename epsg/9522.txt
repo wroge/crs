@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=nad832011_puertoricoverticaldatumof2002 bbox=-67.97,17.87,-65.19,18.57
+conversion=geographic datum=nad832011_puertoricoverticaldatumof2002 bbox=-67.97,17.87,-65.19,18.57

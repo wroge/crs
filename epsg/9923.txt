@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=gntrans bbox=5.86,47.27,15.04,55.09
+conversion=geographic datum=gntrans bbox=5.86,47.27,15.04,55.09

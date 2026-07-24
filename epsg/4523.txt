@@ -1,1 +1,1 @@
-coordinate_system=transverse_mercator eastf=35500000.0 lonf=105.0 scale=1.0 datum=chinageodeticcoordinatesystem2000 bbox=103.5,22.5,106.51,42.21
+conversion=transverse_mercator eastf=35500000.0 lonf=105.0 scale=1.0 datum=chinageodeticcoordinatesystem2000 bbox=103.5,22.5,106.51,42.21

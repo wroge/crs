@@ -205,8 +205,8 @@ func (pp parts) asCRS() (CoordinateReferenceSystem, error) {
 		return c, fmt.Errorf("empty crs")
 	}
 
-	if !pp.hasKey("coordinate_system") {
-		return c, fmt.Errorf("missing coordinate_system")
+	if !pp.hasKey("conversion") {
+		return c, fmt.Errorf("missing conversion")
 	}
 
 	expanded := pp.hasKey("accuracy")
@@ -229,9 +229,9 @@ func (pp parts) asCRSCompact() (CoordinateReferenceSystem, error) {
 		fields[p.key] = p.value
 	}
 
-	csName, ok := fields["coordinate_system"]
+	csName, ok := fields["conversion"]
 	if !ok {
-		return c, fmt.Errorf("missing coordinate_system")
+		return c, fmt.Errorf("missing conversion")
 	}
 
 	if bboxStr, ok := fields["bbox"]; ok {
@@ -244,12 +244,12 @@ func (pp parts) asCRSCompact() (CoordinateReferenceSystem, error) {
 		c.BoundingBox = World
 	}
 
-	cs, err := buildCoordinateSystem(csName, fields)
+	cs, err := buildConversion(csName, fields)
 	if err != nil {
 		return c, err
 	}
 
-	c.CoordinateSystem = cs
+	c.Conversion = cs
 
 	switch {
 	case fields["datum"] != "":
@@ -314,9 +314,9 @@ func (pp parts) asCRSExpanded() (CoordinateReferenceSystem, error) {
 		fields[p.key] = p.value
 	}
 
-	csName, ok := fields["coordinate_system"]
+	csName, ok := fields["conversion"]
 	if !ok {
-		return c, fmt.Errorf("missing coordinate_system")
+		return c, fmt.Errorf("missing conversion")
 	}
 
 	if bboxStr, ok := fields["bbox"]; ok {
@@ -329,12 +329,12 @@ func (pp parts) asCRSExpanded() (CoordinateReferenceSystem, error) {
 		c.BoundingBox = World
 	}
 
-	cs, err := buildCoordinateSystem(csName, fields)
+	cs, err := buildConversion(csName, fields)
 	if err != nil {
 		return c, err
 	}
 
-	c.CoordinateSystem = cs
+	c.Conversion = cs
 
 	c.Datum, err = rest.asDatum()
 	if err != nil {

@@ -1,1 +1,1 @@
-coordinate_system=geocentric datum=rgrdc2005 bbox=11.79,-13.46,29.81,-3.41
+conversion=geocentric datum=rgrdc2005 bbox=11.79,-13.46,29.81,-3.41

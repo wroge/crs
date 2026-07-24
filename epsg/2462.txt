@@ -1,1 +1,1 @@
-coordinate_system=transverse_mercator eastf=4500000.0 lonf=21.0 scale=1.0 datum=albanian1987 bbox=19.22,39.64,21.06,42.67
+conversion=transverse_mercator eastf=4500000.0 lonf=21.0 scale=1.0 datum=albanian1987 bbox=19.22,39.64,21.06,42.67

@@ -1,1 +1,1 @@
-coordinate_system=geocentric datum=feh2010 bbox=10.66,54.33,12.01,54.83
+conversion=geocentric datum=feh2010 bbox=10.66,54.33,12.01,54.83

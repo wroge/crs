@@ -1,1 +1,1 @@
-coordinate_system=geocentric datum=sirgas-rou98 bbox=-58.49,-37.77,-50.01,-30.09
+conversion=geocentric datum=sirgas-rou98 bbox=-58.49,-37.77,-50.01,-30.09

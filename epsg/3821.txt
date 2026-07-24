@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=twd67 bbox=119.25,21.87,122.06,25.34
+conversion=geographic datum=twd67 bbox=119.25,21.87,122.06,25.34

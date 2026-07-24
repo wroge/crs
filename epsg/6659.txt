@@ -1,1 +1,1 @@
-coordinate_system=transverse_mercator datum=nad83csrs_canadiangeodeticverticaldatumof2013cgg2013 eastf=500000.0 lonf=-87.0 scale=0.9996 bbox=-90,46.11,-84,84
+conversion=transverse_mercator datum=nad83csrs_canadiangeodeticverticaldatumof2013cgg2013 eastf=500000.0 lonf=-87.0 scale=0.9996 bbox=-90,46.11,-84,84

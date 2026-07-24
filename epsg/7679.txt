@@ -1,1 +1,1 @@
-coordinate_system=geocentric datum=pz-90.11 bbox=-180,-90,180,90
+conversion=geocentric datum=pz-90.11 bbox=-180,-90,180,90

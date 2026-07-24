@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=regcan95 bbox=-21.93,24.6,-11.75,32.76
+conversion=geographic datum=regcan95 bbox=-21.93,24.6,-11.75,32.76

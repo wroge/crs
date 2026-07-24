@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=iwojima1945 bbox=141.2,24.67,141.42,24.89
+conversion=geographic datum=iwojima1945 bbox=141.2,24.67,141.42,24.89

@@ -1,1 +1,1 @@
-coordinate_system=lambert_conformal_conic eastf=500000.0 latf=14.9 lonf=-90.3333333333333 northf=325992.681 scale=0.99989906 datum=ocotepeque1935 bbox=-92.29,13.69,-88.19,15.86
+conversion=lambert_conformal_conic eastf=500000.0 latf=14.9 lonf=-90.3333333333333 northf=325992.681 scale=0.99989906 datum=ocotepeque1935 bbox=-92.29,13.69,-88.19,15.86

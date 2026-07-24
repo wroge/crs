@@ -1,1 +1,1 @@
-coordinate_system=transverse_mercator eastf=500000.0 lonf=-9.0 scale=0.9996 datum=rgsh2020 bbox=-8.67,25.73,-6,29.85
+conversion=transverse_mercator eastf=500000.0 lonf=-9.0 scale=0.9996 datum=rgsh2020 bbox=-8.67,25.73,-6,29.85

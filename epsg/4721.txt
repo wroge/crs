@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=fiji1956 bbox=176.81,-19.22,-179.77,-16.1
+conversion=geographic datum=fiji1956 bbox=176.81,-19.22,-179.77,-16.1

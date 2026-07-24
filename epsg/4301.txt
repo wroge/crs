@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=tokyo bbox=122.83,20.37,154.05,45.54
+conversion=geographic datum=tokyo bbox=122.83,20.37,154.05,45.54

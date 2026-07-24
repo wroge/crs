@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=katanga1955 bbox=21.74,-13.46,30.78,-4.99
+conversion=geographic datum=katanga1955 bbox=21.74,-13.46,30.78,-4.99

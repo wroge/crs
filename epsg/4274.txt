@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=datum73 bbox=-9.56,36.95,-6.19,42.16
+conversion=geographic datum=datum73 bbox=-9.56,36.95,-6.19,42.16

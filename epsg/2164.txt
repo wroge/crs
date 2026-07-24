@@ -1,1 +1,1 @@
-coordinate_system=transverse_mercator eastf=500000.0 lonf=-5.0 scale=0.9996 datum=locodjo1965 bbox=-7.55,1.02,-3.11,5.19
+conversion=transverse_mercator eastf=500000.0 lonf=-5.0 scale=0.9996 datum=locodjo1965 bbox=-7.55,1.02,-3.11,5.19

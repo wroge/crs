@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=scm22-irf bbox=-4.4,55.7,-3.3,57.55
+conversion=geographic datum=scm22-irf bbox=-4.4,55.7,-3.3,57.55

@@ -1,1 +1,1 @@
-coordinate_system=lambert_conformal_conic eastf=500135.0 latf=33.29999999999986 lonf=2.6999999999999886 northf=300090.0 scale=0.999625769 datum=nordsahara1959 bbox=-3.85,31.49,9.22,34.66
+conversion=lambert_conformal_conic eastf=500135.0 latf=33.29999999999986 lonf=2.6999999999999886 northf=300090.0 scale=0.999625769 datum=nordsahara1959 bbox=-3.85,31.49,9.22,34.66

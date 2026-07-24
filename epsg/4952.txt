@@ -1,1 +1,1 @@
-coordinate_system=geocentric datum=moznet bbox=30.21,-27.71,43.03,-10.09
+conversion=geocentric datum=moznet bbox=30.21,-27.71,43.03,-10.09

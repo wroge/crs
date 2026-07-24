@@ -1,1 +1,1 @@
-coordinate_system=transverse_mercator lonf=16.3333333333333 scale=1.0 datum=mgi bbox=14.83,46.56,17.17,49.02
+conversion=transverse_mercator lonf=16.3333333333333 scale=1.0 datum=mgi bbox=14.83,46.56,17.17,49.02

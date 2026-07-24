@@ -1,1 +1,1 @@
-coordinate_system=transverse_mercator eastf=500000.0 lonf=-9.0 scale=0.9996 datum=dabola1981 bbox=-12,7.19,-7.65,12.51
+conversion=transverse_mercator eastf=500000.0 lonf=-9.0 scale=0.9996 datum=dabola1981 bbox=-12,7.19,-7.65,12.51

@@ -1,1 +1,1 @@
-coordinate_system=lambert_conformal_conic_2sp eastf=4000000.0 latf=41.5 lonf=-84.3666666666667 sp1=43.6666666666667 sp2=42.1 datum=nad83harn bbox=-87.2,41.69,-82.13,44.22
+conversion=lambert_conformal_conic_2sp eastf=4000000.0 latf=41.5 lonf=-84.3666666666667 sp1=43.6666666666667 sp2=42.1 datum=nad83harn bbox=-87.2,41.69,-82.13,44.22

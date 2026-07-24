@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=kusaie1951 bbox=162.85,5.21,163.1,5.43
+conversion=geographic datum=kusaie1951 bbox=162.85,5.21,163.1,5.43

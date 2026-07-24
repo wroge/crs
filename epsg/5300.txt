@@ -1,1 +1,1 @@
-coordinate_system=transverse_mercator eastf=250000.0 lonf=91.35 northf=-2500000.0 scale=1.0 datum=drukref03 bbox=91,26.78,91.56,27.18
+conversion=transverse_mercator eastf=250000.0 lonf=91.35 northf=-2500000.0 scale=1.0 datum=drukref03 bbox=91,26.78,91.56,27.18

@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=etrs89-noreuref89_norwegianchartdatum bbox=4.08,57.75,31.77,71.39
+conversion=geographic datum=etrs89-noreuref89_norwegianchartdatum bbox=4.08,57.75,31.77,71.39

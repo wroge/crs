@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=ggrs87 bbox=19.57,34.88,28.3,41.75
+conversion=geographic datum=ggrs87 bbox=19.57,34.88,28.3,41.75

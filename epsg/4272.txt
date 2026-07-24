@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=nzgd49 bbox=165.87,-47.65,179.27,-33.89
+conversion=geographic datum=nzgd49 bbox=165.87,-47.65,179.27,-33.89

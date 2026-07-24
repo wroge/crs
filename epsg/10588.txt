@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=canadiangeodeticverticaldatumof1928heighttransformationversion2.0 bbox=-141.01,41,-48,84
+conversion=geographic datum=canadiangeodeticverticaldatumof1928heighttransformationversion2.0 bbox=-141.01,41,-48,84

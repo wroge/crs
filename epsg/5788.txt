@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=kuwaitpwd bbox=46.54,28.53,48.48,30.09
+conversion=geographic datum=kuwaitpwd bbox=46.54,28.53,48.48,30.09

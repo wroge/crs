@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=ternisland1961 bbox=-166.36,23.69,-166.03,23.93
+conversion=geographic datum=ternisland1961 bbox=-166.36,23.69,-166.03,23.93

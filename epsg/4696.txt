@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=kasai1953 bbox=21.5,-7.31,26.26,-5.01
+conversion=geographic datum=kasai1953 bbox=21.5,-7.31,26.26,-5.01

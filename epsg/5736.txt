@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=yellowsea1956 bbox=73.62,18.11,134.77,53.56
+conversion=geographic datum=yellowsea1956 bbox=73.62,18.11,134.77,53.56

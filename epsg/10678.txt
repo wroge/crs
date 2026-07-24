@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=balticseachartdatum2000 bbox=8.5,53.88,30.23,65.92
+conversion=geographic datum=balticseachartdatum2000 bbox=8.5,53.88,30.23,65.92

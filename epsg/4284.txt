@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=pulkovo1942 bbox=19.57,35.14,-168.97,81.91
+conversion=geographic datum=pulkovo1942 bbox=19.57,35.14,-168.97,81.91

@@ -1,1 +1,1 @@
-coordinate_system=transverse_mercator datum=rgaf09_martinique1987 eastf=500000.0 lonf=-63.0 scale=0.9996 bbox=-61.29,14.35,-60.76,14.93
+conversion=transverse_mercator datum=rgaf09_martinique1987 eastf=500000.0 lonf=-63.0 scale=0.9996 bbox=-61.29,14.35,-60.76,14.93

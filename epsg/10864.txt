@@ -1,1 +1,1 @@
-coordinate_system=transverse_mercator datum=wspg-irf_ordnancedatumnewlyn eastf=39630.9213 latf=54.5 lonf=-0.85 northf=36016.293 scale=1.0 bbox=-1.25,54.35,-0.45,54.7
+conversion=transverse_mercator datum=wspg-irf_ordnancedatumnewlyn eastf=39630.9213 latf=54.5 lonf=-0.85 northf=36016.293 scale=1.0 bbox=-1.25,54.35,-0.45,54.7

@@ -1,1 +1,1 @@
-coordinate_system=geocentric datum=ptra08 bbox=-35.58,29.24,-12.48,43.07
+conversion=geocentric datum=ptra08 bbox=-35.58,29.24,-12.48,43.07

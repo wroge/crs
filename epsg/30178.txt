@@ -1,1 +1,1 @@
-coordinate_system=transverse_mercator latf=20.0 lonf=136.0 scale=0.9999 datum=tokyo bbox=136.02,20.37,136.16,20.48
+conversion=transverse_mercator latf=20.0 lonf=136.0 scale=0.9999 datum=tokyo bbox=136.02,20.37,136.16,20.48

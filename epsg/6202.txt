@@ -1,1 +1,1 @@
-coordinate_system=lambert_conformal_conic_2sp_michigan eastf=609601.219202438 latf=41.5 lonf=-84.3333333333333 sp1=42.1 sp2=43.6666666666667 datum=nad27 bbox=-87.2,41.69,-82.13,44.22
+conversion=lambert_conformal_conic_2sp_michigan eastf=609601.219202438 latf=41.5 lonf=-84.3333333333333 sp1=42.1 sp2=43.6666666666667 datum=nad27 bbox=-87.2,41.69,-82.13,44.22

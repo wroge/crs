@@ -1,1 +1,1 @@
-coordinate_system=transverse_mercator eastf=836694.05 latf=22.3121333333333 lonf=114.178555555556 northf=819069.8 scale=1.0 datum=hongkong1980 bbox=113.76,22.13,114.51,22.58
+conversion=transverse_mercator eastf=836694.05 latf=22.3121333333333 lonf=114.178555555556 northf=819069.8 scale=1.0 datum=hongkong1980 bbox=113.76,22.13,114.51,22.58

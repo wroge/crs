@@ -1,1 +1,1 @@
-coordinate_system=geocentric datum=peru96 bbox=-84.68,-21.05,-68.67,-0.03
+conversion=geocentric datum=peru96 bbox=-84.68,-21.05,-68.67,-0.03

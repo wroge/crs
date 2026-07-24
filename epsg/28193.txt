@@ -1,1 +1,1 @@
-coordinate_system=cassini_soldner eastf=170251.555 latf=31.7340969444444 lonf=35.2120805555556 northf=1126867.909 datum=palestine1923 bbox=34.17,29.45,35.69,33.28
+conversion=cassini_soldner eastf=170251.555 latf=31.7340969444444 lonf=35.2120805555556 northf=1126867.909 datum=palestine1923 bbox=34.17,29.45,35.69,33.28

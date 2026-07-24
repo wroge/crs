@@ -1,1 +1,1 @@
-coordinate_system=swiss_oblique_mercator azimuth=90.0 eastf=2600000.0 gamma=90.0 latf=46.9524055555556 lonf=7.43958333333333 northf=1200000.0 scale=1.0 datum=ch1903plus bbox=5.95,45.81,10.5,47.81
+conversion=swiss_oblique_mercator azimuth=90.0 eastf=2600000.0 gamma=90.0 latf=46.9524055555556 lonf=7.43958333333333 northf=1200000.0 scale=1.0 datum=ch1903plus bbox=5.95,45.81,10.5,47.81

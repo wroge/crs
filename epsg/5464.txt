@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=sibungorge1922 bbox=-89.22,15.88,-87.72,18.49
+conversion=geographic datum=sibungorge1922 bbox=-89.22,15.88,-87.72,18.49

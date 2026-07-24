@@ -1,1 +1,1 @@
-coordinate_system=lambert_azimuthal_equal_area eastf=4321000.0 latf=52.0 lonf=10.0 northf=3210000.0 datum=regcan95 bbox=-21.93,24.6,-11.75,32.76
+conversion=lambert_azimuthal_equal_area eastf=4321000.0 latf=52.0 lonf=10.0 northf=3210000.0 datum=regcan95 bbox=-21.93,24.6,-11.75,32.76

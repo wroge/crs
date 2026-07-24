@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=petrels1972 bbox=139.44,-66.78,141.5,-66.1
+conversion=geographic datum=petrels1972 bbox=139.44,-66.78,141.5,-66.1

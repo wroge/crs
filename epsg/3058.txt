@@ -1,1 +1,1 @@
-coordinate_system=transverse_mercator eastf=50000.0 lonf=-8.5 northf=-7800000.0 scale=1.0 datum=helle1954 bbox=-9.17,70.75,-7.87,71.24
+conversion=transverse_mercator eastf=50000.0 lonf=-8.5 northf=-7800000.0 scale=1.0 datum=helle1954 bbox=-9.17,70.75,-7.87,71.24

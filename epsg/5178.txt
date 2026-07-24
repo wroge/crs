@@ -1,1 +1,1 @@
-coordinate_system=transverse_mercator eastf=1000000.0 latf=38.0 lonf=127.5 northf=2000000.0 scale=0.9996 datum=korean1985 bbox=124.53,33.14,131.01,38.64
+conversion=transverse_mercator eastf=1000000.0 latf=38.0 lonf=127.5 northf=2000000.0 scale=0.9996 datum=korean1985 bbox=124.53,33.14,131.01,38.64

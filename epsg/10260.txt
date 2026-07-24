@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=gsb-irf bbox=14.59,54.94,15.25,55.38
+conversion=geographic datum=gsb-irf bbox=14.59,54.94,15.25,55.38

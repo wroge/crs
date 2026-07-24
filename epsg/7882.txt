@@ -1,1 +1,1 @@
-coordinate_system=transverse_mercator eastf=299483.737 latf=-15.9666666666667 lonf=-5.71666666666667 northf=2000527.879 scale=1.0 datum=st.helenatritan bbox=-5.85,-16.08,-5.59,-15.85
+conversion=transverse_mercator eastf=299483.737 latf=-15.9666666666667 lonf=-5.71666666666667 northf=2000527.879 scale=1.0 datum=st.helenatritan bbox=-5.85,-16.08,-5.59,-15.85

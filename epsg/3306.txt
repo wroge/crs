@@ -1,1 +1,1 @@
-coordinate_system=transverse_mercator eastf=500000.0 lonf=-153.0 northf=10000000.0 scale=0.9996 datum=maupiti83 bbox=-152.39,-16.57,-152.14,-16.34
+conversion=transverse_mercator eastf=500000.0 lonf=-153.0 northf=10000000.0 scale=0.9996 datum=maupiti83 bbox=-152.39,-16.57,-152.14,-16.34

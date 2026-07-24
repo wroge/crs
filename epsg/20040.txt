@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=sirgas-chile2021 bbox=-113.21,-59.87,-65.72,-17.5
+conversion=geographic datum=sirgas-chile2021 bbox=-113.21,-59.87,-65.72,-17.5

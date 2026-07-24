@@ -1,1 +1,1 @@
-coordinate_system=transverse_mercator eastf=200000.0 latf=-9.0 lonf=30.0 northf=500000.0 scale=1.0 datum=katanga1955 bbox=28.5,-13.46,30.78,-4.99
+conversion=transverse_mercator eastf=200000.0 latf=-9.0 lonf=30.0 northf=500000.0 scale=1.0 datum=katanga1955 bbox=28.5,-13.46,30.78,-4.99

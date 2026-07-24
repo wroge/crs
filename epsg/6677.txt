@@ -1,1 +1,1 @@
-coordinate_system=transverse_mercator latf=36.0 lonf=139.833333333333 scale=0.9999 datum=jgd2011 bbox=138.4,29.31,141.11,37.98
+conversion=transverse_mercator latf=36.0 lonf=139.833333333333 scale=0.9999 datum=jgd2011 bbox=138.4,29.31,141.11,37.98

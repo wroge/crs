@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=ibiza bbox=1.12,38.77,1.68,39.17
+conversion=geographic datum=ibiza bbox=1.12,38.77,1.68,39.17

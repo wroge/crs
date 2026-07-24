@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=svalbardverticaldatum2006 bbox=-3.35,76.16,38.01,81.17
+conversion=geographic datum=svalbardverticaldatum2006 bbox=-3.35,76.16,38.01,81.17

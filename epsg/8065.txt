@@ -1,1 +1,1 @@
-coordinate_system=swiss_oblique_mercator azimuth=45.0 eastf=48768.0 gamma=45.0 latf=32.25 lonf=-111.4 northf=243840.0 scale=1.00011 datum=nad832011 bbox=-111.57,31.43,-110.44,32.52
+conversion=swiss_oblique_mercator azimuth=45.0 eastf=48768.0 gamma=45.0 latf=32.25 lonf=-111.4 northf=243840.0 scale=1.00011 datum=nad832011 bbox=-111.57,31.43,-110.44,32.52

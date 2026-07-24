@@ -1,1 +1,1 @@
-coordinate_system=transverse_mercator eastf=500000.0 lonf=93.0 scale=0.9996 datum=kalianpur1937 bbox=90,20.52,92.67,25.29
+conversion=transverse_mercator eastf=500000.0 lonf=93.0 scale=0.9996 datum=kalianpur1937 bbox=90,20.52,92.67,25.29

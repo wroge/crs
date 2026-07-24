@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=oxwo08-irf bbox=-2.31,51.65,-1.15,52.26
+conversion=geographic datum=oxwo08-irf bbox=-2.31,51.65,-1.15,52.26

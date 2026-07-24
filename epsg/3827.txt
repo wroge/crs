@@ -1,1 +1,1 @@
-coordinate_system=transverse_mercator eastf=250000.0 lonf=119.0 scale=0.9999 datum=twd67 bbox=119.25,23.13,119.78,23.82
+conversion=transverse_mercator eastf=250000.0 lonf=119.0 scale=0.9999 datum=twd67 bbox=119.25,23.13,119.78,23.82

@@ -1,1 +1,1 @@
-coordinate_system=cassini_soldner eastf=37718.66159325 latf=11.2521786111111 lonf=-60.6860088888889 northf=36209.91512952 datum=mountdillon bbox=-60.9,11.08,-60.44,11.41
+conversion=cassini_soldner eastf=37718.66159325 latf=11.2521786111111 lonf=-60.6860088888889 northf=36209.91512952 datum=mountdillon bbox=-60.9,11.08,-60.44,11.41

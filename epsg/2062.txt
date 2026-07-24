@@ -1,1 +1,1 @@
-coordinate_system=lambert_conformal_conic eastf=600000.0 latf=40.0 northf=600000.0 scale=0.9988085293 datum=madrid1870madrid bbox=-9.37,35.95,3.39,43.82
+conversion=lambert_conformal_conic eastf=600000.0 latf=40.0 northf=600000.0 scale=0.9988085293 datum=madrid1870madrid bbox=-9.37,35.95,3.39,43.82

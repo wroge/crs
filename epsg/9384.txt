@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=abinva96_2020-irf bbox=-4.31,57.1,-2.1,57.71
+conversion=geographic datum=abinva96_2020-irf bbox=-4.31,57.1,-2.1,57.71

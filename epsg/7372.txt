@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=ongd14 bbox=51.99,14.33,63.38,26.74
+conversion=geographic datum=ongd14 bbox=51.99,14.33,63.38,26.74

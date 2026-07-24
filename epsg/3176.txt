@@ -1,1 +1,1 @@
-coordinate_system=transverse_mercator eastf=500000.0 lonf=106.0 scale=0.9996 datum=indian1960 bbox=106.54,7.99,110,11.15
+conversion=transverse_mercator eastf=500000.0 lonf=106.0 scale=0.9996 datum=indian1960 bbox=106.54,7.99,110,11.15

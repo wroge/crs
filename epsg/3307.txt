@@ -1,1 +1,1 @@
-coordinate_system=transverse_mercator eastf=500000.0 lonf=51.0 scale=0.9996 datum=nakhl-eghanem bbox=51.8,27.3,53.01,28.2
+conversion=transverse_mercator eastf=500000.0 lonf=51.0 scale=0.9996 datum=nakhl-eghanem bbox=51.8,27.3,53.01,28.2

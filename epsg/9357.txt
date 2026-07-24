@@ -1,1 +1,1 @@
-coordinate_system=transverse_mercator eastf=500000.0 lonf=39.0 scale=0.9996 datum=ksa-grf17 bbox=36,16.29,42,32.16
+conversion=transverse_mercator eastf=500000.0 lonf=39.0 scale=0.9996 datum=ksa-grf17 bbox=36,16.29,42,32.16

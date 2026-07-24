@@ -1,1 +1,1 @@
-coordinate_system=transverse_mercator datum=bonaire_bonaireverticaldatum eastf=23209.56 latf=12.180658675 lonf=-68.2518022805556 northf=21423.99 scale=1.0 bbox=-68.47,11.97,-68.14,12.36
+conversion=transverse_mercator datum=bonaire_bonaireverticaldatum eastf=23209.56 latf=12.180658675 lonf=-68.2518022805556 northf=21423.99 scale=1.0 bbox=-68.47,11.97,-68.14,12.36

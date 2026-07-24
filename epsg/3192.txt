@@ -1,1 +1,1 @@
-coordinate_system=transverse_mercator eastf=200000.0 lonf=13.0 scale=0.99995 datum=lgd2006 bbox=12,22.8,14,33.06
+conversion=transverse_mercator eastf=200000.0 lonf=13.0 scale=0.99995 datum=lgd2006 bbox=12,22.8,14,33.06

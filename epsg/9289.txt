@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=etrs89_lowestastronomicaltidenetherlands bbox=2.53,51.32,7.21,55.77
+conversion=geographic datum=etrs89_lowestastronomicaltidenetherlands bbox=2.53,51.32,7.21,55.77

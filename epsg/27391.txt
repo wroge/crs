@@ -1,1 +1,1 @@
-coordinate_system=transverse_mercator latf=58.0 lonf=-4.66666666666667 scale=1.0 datum=ngo1948oslo bbox=4.39,57.92,7.23,63.17
+conversion=transverse_mercator latf=58.0 lonf=-4.66666666666667 scale=1.0 datum=ngo1948oslo bbox=4.39,57.92,7.23,63.17

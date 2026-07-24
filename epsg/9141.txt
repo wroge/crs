@@ -1,1 +1,1 @@
-coordinate_system=transverse_mercator eastf=7500000.0 lonf=21.0 scale=0.9999 datum=kosovaref01 bbox=19.97,41.85,21.8,43.25
+conversion=transverse_mercator eastf=7500000.0 lonf=21.0 scale=0.9999 datum=kosovaref01 bbox=19.97,41.85,21.8,43.25

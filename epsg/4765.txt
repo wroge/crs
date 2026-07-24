@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=slovenia1996 bbox=13.38,45.42,16.61,46.88
+conversion=geographic datum=slovenia1996 bbox=13.38,45.42,16.61,46.88

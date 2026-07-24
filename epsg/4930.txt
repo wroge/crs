@@ -1,1 +1,1 @@
-coordinate_system=geocentric datum=australianantarctic bbox=45,-90,160,-60
+conversion=geocentric datum=australianantarctic bbox=45,-90,160,-60

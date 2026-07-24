@@ -1,1 +1,1 @@
-coordinate_system=oblique_stereographic datum=amersfoort_normaalamsterdamspeil eastf=155000.0 latf=52.1561605555556 lonf=5.38763888888889 northf=463000.0 scale=0.9999079 bbox=3.2,50.75,7.22,53.7
+conversion=oblique_stereographic datum=amersfoort_normaalamsterdamspeil eastf=155000.0 latf=52.1561605555556 lonf=5.38763888888889 northf=463000.0 scale=0.9999079 bbox=3.2,50.75,7.22,53.7

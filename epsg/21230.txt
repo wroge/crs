@@ -1,1 +1,1 @@
-coordinate_system=transverse_mercator eastf=30250000.0 lonf=90.0 scale=1.0 datum=gsk-2011 bbox=88.5,49.44,91.5,81.28
+conversion=transverse_mercator eastf=30250000.0 lonf=90.0 scale=1.0 datum=gsk-2011 bbox=88.5,49.44,91.5,81.28

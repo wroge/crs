@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=sinteustatius bbox=-63.05,17.41,-62.88,17.58
+conversion=geographic datum=sinteustatius bbox=-63.05,17.41,-62.88,17.58

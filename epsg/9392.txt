@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=mallorca bbox=2.23,39.07,3.55,40.02
+conversion=geographic datum=mallorca bbox=2.23,39.07,3.55,40.02

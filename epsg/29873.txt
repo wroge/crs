@@ -1,1 +1,1 @@
-coordinate_system=swiss_oblique_mercator azimuth=53.3158204722222 eastf=590476.87 gamma=53.1301023611111 latf=4.0 lonf=115.0 northf=442857.65 scale=0.99984 datum=timbalai1948 bbox=109.31,0.85,119.61,7.67
+conversion=swiss_oblique_mercator azimuth=53.3158204722222 eastf=590476.87 gamma=53.1301023611111 latf=4.0 lonf=115.0 northf=442857.65 scale=0.99984 datum=timbalai1948 bbox=109.31,0.85,119.61,7.67

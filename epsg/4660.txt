@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=helle1954 bbox=-9.17,70.75,-7.87,71.24
+conversion=geographic datum=helle1954 bbox=-9.17,70.75,-7.87,71.24

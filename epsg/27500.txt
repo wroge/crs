@@ -1,1 +1,1 @@
-coordinate_system=lambert_conformal_conic eastf=500000.0 latf=49.499999999999794 lonf=5.399999999999977 northf=300000.0 scale=0.99950908 datum=atfparis bbox=6.84,47.42,8.23,49.07
+conversion=lambert_conformal_conic eastf=500000.0 latf=49.499999999999794 lonf=5.399999999999977 northf=300000.0 scale=0.99950908 datum=atfparis bbox=6.84,47.42,8.23,49.07

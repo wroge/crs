@@ -1,1 +1,1 @@
-coordinate_system=albers_equal_area lonf=132.0 sp1=-18.0 sp2=-36.0 datum=gda94 bbox=112.85,-43.7,153.69,-9.86
+conversion=albers_equal_area lonf=132.0 sp1=-18.0 sp2=-36.0 datum=gda94 bbox=112.85,-43.7,153.69,-9.86

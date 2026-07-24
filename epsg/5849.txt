@@ -1,1 +1,1 @@
-coordinate_system=transverse_mercator datum=sweref99_riketshojdsystem2000 eastf=150000.0 lonf=16.5 scale=1.0 bbox=15.41,56.15,17.63,62.26
+conversion=transverse_mercator datum=sweref99_riketshojdsystem2000 eastf=150000.0 lonf=16.5 scale=1.0 bbox=15.41,56.15,17.63,62.26

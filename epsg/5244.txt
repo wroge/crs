@@ -1,1 +1,1 @@
-coordinate_system=geocentric datum=gdbd2009 bbox=112.37,4.01,115.37,6.31
+conversion=geocentric datum=gdbd2009 bbox=112.37,4.01,115.37,6.31

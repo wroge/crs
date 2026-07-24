@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=onetreepoint1964 bbox=172.61,-36.41,174.83,-34.36
+conversion=geographic datum=onetreepoint1964 bbox=172.61,-36.41,174.83,-34.36

@@ -1,1 +1,1 @@
-coordinate_system=transverse_mercator eastf=500000.0 lonf=-63.0 scale=0.9996 datum=rraf1991 bbox=-63.66,14.08,-60,18.32
+conversion=transverse_mercator eastf=500000.0 lonf=-63.0 scale=0.9996 datum=rraf1991 bbox=-63.66,14.08,-60,18.32

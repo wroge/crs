@@ -1,1 +1,1 @@
-coordinate_system=geocentric datum=sref98 bbox=18.81,42.23,23.01,46.19
+conversion=geocentric datum=sref98 bbox=18.81,42.23,23.01,46.19

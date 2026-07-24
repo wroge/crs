@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=southeastisland1943 bbox=55.15,-4.86,56.01,-3.66
+conversion=geographic datum=southeastisland1943 bbox=55.15,-4.86,56.01,-3.66

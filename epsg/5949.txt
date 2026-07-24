@@ -1,1 +1,1 @@
-coordinate_system=transverse_mercator datum=etrs89-noreuref89_norwaynormalnull2000 eastf=100000.0 latf=58.0 lonf=9.5 northf=1000000.0 scale=1.0 bbox=9,58.44,10.01,64.25
+conversion=transverse_mercator datum=etrs89-noreuref89_norwaynormalnull2000 eastf=100000.0 latf=58.0 lonf=9.5 northf=1000000.0 scale=1.0 bbox=9,58.44,10.01,64.25

@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=combani1950 bbox=44.98,-13.05,45.35,-12.61
+conversion=geographic datum=combani1950 bbox=44.98,-13.05,45.35,-12.61

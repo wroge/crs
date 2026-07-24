@@ -1,1 +1,1 @@
-coordinate_system=transverse_mercator eastf=500000.0 lonf=51.0 scale=0.9996 datum=afgooye bbox=48,4.44,51.47,12.03
+conversion=transverse_mercator eastf=500000.0 lonf=51.0 scale=0.9996 datum=afgooye bbox=48,4.44,51.47,12.03

@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=conakry1905 bbox=-15.13,7.19,-7.65,12.68
+conversion=geographic datum=conakry1905 bbox=-15.13,7.19,-7.65,12.68

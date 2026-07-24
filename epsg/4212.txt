@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=barbados1938 bbox=-59.71,13,-59.37,13.39
+conversion=geographic datum=barbados1938 bbox=-59.71,13,-59.37,13.39

@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=srgi2013_indonesiangeoid2020version2 bbox=92.01,-13.95,141.46,7.79
+conversion=geographic datum=srgi2013_indonesiangeoid2020version2 bbox=92.01,-13.95,141.46,7.79

@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=helsinki1960 bbox=19.24,59.75,31.59,70.09
+conversion=geographic datum=helsinki1960 bbox=19.24,59.75,31.59,70.09

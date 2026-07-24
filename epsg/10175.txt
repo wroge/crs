@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=dopw22-irf bbox=-4.51,52.45,-3.8,53.01
+conversion=geographic datum=dopw22-irf bbox=-4.51,52.45,-3.8,53.01

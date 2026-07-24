@@ -1,1 +1,1 @@
-coordinate_system=transverse_mercator eastf=511622.854 latf=51.85 lonf=-1.3 northf=324737.4633 scale=1.0 datum=diba15-irf bbox=-1.46,51.57,-1.15,52.11
+conversion=transverse_mercator eastf=511622.854 latf=51.85 lonf=-1.3 northf=324737.4633 scale=1.0 datum=diba15-irf bbox=-1.46,51.57,-1.15,52.11

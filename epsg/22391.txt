@@ -1,1 +1,1 @@
-coordinate_system=lambert_conformal_conic eastf=500000.0 latf=35.99999999999986 lonf=9.89999999999996 northf=300000.0 scale=0.999625544 datum=carthage bbox=8.18,34.65,11.37,37.4
+conversion=lambert_conformal_conic eastf=500000.0 latf=35.99999999999986 lonf=9.89999999999996 northf=300000.0 scale=0.999625544 datum=carthage bbox=8.18,34.65,11.37,37.4

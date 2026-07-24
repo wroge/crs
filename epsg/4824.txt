@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=principe bbox=7.27,1.48,7.52,1.76
+conversion=geographic datum=principe bbox=7.27,1.48,7.52,1.76

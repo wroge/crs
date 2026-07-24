@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=ngo1948oslo bbox=4.39,57.9,31.32,71.24
+conversion=geographic datum=ngo1948oslo bbox=4.39,57.9,31.32,71.24

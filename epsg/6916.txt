@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=singaporeheightdatum bbox=103.59,1.13,104.07,1.47
+conversion=geographic datum=singaporeheightdatum bbox=103.59,1.13,104.07,1.47

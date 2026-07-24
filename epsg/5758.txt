@@ -1,1 +1,1 @@
-coordinate_system=geographic datum=reunion1989 bbox=55.16,-21.42,55.91,-20.81
+conversion=geographic datum=reunion1989 bbox=55.16,-21.42,55.91,-20.81
