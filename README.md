@@ -4,7 +4,7 @@
 [![go.dev reference](https://img.shields.io/badge/go.dev-reference-007d9c?logo=go&logoColor=white)](https://pkg.go.dev/github.com/wroge/crs@v0.0.1)
 
 ```sh
-go get github.com/wroge/crs@v0.0.1
+go get github.com/wroge/crs@v0.0.2
 ```
 
 Go library for coordinate reference systems, map projections, and datum
