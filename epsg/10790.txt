@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=ugrf bbox=29.57,-1.48,35.01,4.23

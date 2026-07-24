@@ -1,0 +1,1 @@
+coordinate_system=cassini_soldner eastf=100000.0 latf=25.3823611111111 lonf=50.7613888888889 northf=100000.0 datum=qatar1948 bbox=50.69,24.55,51.68,26.2

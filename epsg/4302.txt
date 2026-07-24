@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=trinidad1903 bbox=-62.09,9.83,-60,11.51

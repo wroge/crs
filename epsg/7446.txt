@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=famagusta1960 bbox=32.2,34.59,34.65,35.74

@@ -1,0 +1,1 @@
+coordinate_system=transverse_mercator eastf=1000000.0 latf=38.0 lonf=127.5 northf=2000000.0 scale=0.9996 datum=kgd2002 bbox=122.71,28.6,134.28,40.27

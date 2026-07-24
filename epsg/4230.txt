@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=ed50 bbox=-16.1,25.71,48.61,84.73

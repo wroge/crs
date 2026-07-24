@@ -1,0 +1,1 @@
+coordinate_system=transverse_mercator datum=nad83_northamericanverticaldatum1988 eastf=164999.9999999999 latf=31.0 lonf=-104.333333333333 scale=0.999909091 bbox=-105.72,32,-102.99,37

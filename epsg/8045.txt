@@ -1,0 +1,1 @@
+coordinate_system=cassini_soldner latf=48.2087611111111 lonf=34.0409222222222 datum=st.stephenferro bbox=14.41,47.42,18.86,50.45

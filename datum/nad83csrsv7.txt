@@ -1,0 +1,7 @@
+spheroid=grs1980
+accuracy=1.6 bbox=-110,49,-109.98,60 target=nad83 operation=horizontal_grid grid=ABCSRSV7.GSB inverse
+accuracy=1.6 bbox=-120,48.99,-109.98,60 target=nad83 operation=horizontal_grid grid=ABCSRSV7.GSB inverse
+accuracy=2.1 bbox=-113,48.99,-109.98,49.01 target=nad83 operation=horizontal_grid grid=ABCSRSV7.GSB inverse
+accuracy=2.1 bbox=-117.24,48.99,-113,49.01 target=nad83 operation=horizontal_grid grid=ABCSRSV7.GSB inverse
+accuracy=2.1 bbox=-120,48.99,-116.47,49.05 target=nad83 operation=horizontal_grid grid=ABCSRSV7.GSB inverse
+bbox=-180,-90,180,90 target=nad832011 operation=geocentric_translations

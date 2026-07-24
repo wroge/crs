@@ -1,0 +1,1 @@
+coordinate_system=transverse_mercator eastf=500000.0 lonf=-63.0 scale=0.9996 datum=fortmarigot bbox=-63.21,17.82,-62.73,18.17

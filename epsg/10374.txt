@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=caisdamadalena bbox=-28.61,38.32,-27.98,38.61

@@ -1,0 +1,2 @@
+spheroid=besselmodified
+accuracy=3.0 bbox=4.39,57.9,31.32,71.24 operation=position_vector tx=278.3 ty=93.0 tz=474.5 rx=7.889000000000001 ry=0.05000000000000001 rz=-6.609999999999999 ds=6.21

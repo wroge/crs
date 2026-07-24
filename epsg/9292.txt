@@ -1,0 +1,1 @@
+coordinate_system=geocentric datum=ongd17 bbox=51.99,14.33,63.38,26.74

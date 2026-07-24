@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=deceptionisland bbox=-60.89,-63.08,-60.35,-62.82

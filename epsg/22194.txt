@@ -1,0 +1,1 @@
+coordinate_system=transverse_mercator eastf=4500000.0 latf=-90.0 lonf=-63.0 scale=1.0 datum=campoinchauspe bbox=-64.5,-43.14,-61.49,-21.99

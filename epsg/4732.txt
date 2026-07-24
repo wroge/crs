@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=marshallislands1960 bbox=162.27,8.66,167.82,19.38

@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=hitoxviii1963 bbox=-74.83,-55.96,-63.73,-51.65

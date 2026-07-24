@@ -1,0 +1,1 @@
+coordinate_system=hotine_oblique_mercator_a azimuth=53.3158204722222 eastf=2000000.0 gamma=53.1301023611111 latf=4.0 lonf=115.0 northf=5000000.0 scale=0.99984 datum=timbalai1948 bbox=109.54,0.85,115.69,5.03

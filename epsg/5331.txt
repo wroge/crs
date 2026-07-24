@@ -1,0 +1,1 @@
+coordinate_system=mercator_a eastf=3900000.0 lonf=3.19228055555556 northf=900000.0 scale=0.997 datum=makassarjakarta bbox=118.71,-6.54,120.78,-1.88

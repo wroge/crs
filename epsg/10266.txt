@@ -1,0 +1,1 @@
+coordinate_system=lambert_conformal_conic_1sp_variant_b lat0=56.0 latf=55.0 lonf=10.37775 scale=1.0 datum=kk-irf bbox=12.23,55.51,12.73,55.82

@@ -1,0 +1,12 @@
+spheroid=international1924
+accuracy=0.2 bbox=-73,4.75,-72.25,5.68 operation=geocentric_translations tx=304.5 ty=306.5 tz=-318.1
+accuracy=1.0 bbox=-77.48,8,-74.39,9.4 operation=coordinate_frame tx=336.026 ty=348.565 tz=252.978 rx=-17.2412894390071 ry=-6.306492822155347 rz=1.5620497719182544 ds=-5.771909
+accuracy=1.0 bbox=-73,9.8,-71.06,12.52 operation=coordinate_frame tx=-806.413 ty=-263.5 tz=-622.671 rx=12.414218563770678 ry=-2.99084175323096 rz=-39.034686390634874 ds=-20.81616
+accuracy=1.0 bbox=-77.68,3,-74.39,5.01 operation=coordinate_frame tx=-0.562 ty=244.299 tz=-456.938 rx=6.866870985119395 ry=-8.252673461778887 rz=-9.296779723057503 ds=3.74656
+accuracy=1.0 bbox=-76.08,9.39,-73,11.59 operation=coordinate_frame tx=100.783 ty=187.382 tz=-47.0 rx=-9.223830049032092 ry=2.423803299673192 rz=-8.30827832824698 ds=-13.56561
+accuracy=1.0 bbox=-74.4,5,-71.99,9.4 operation=coordinate_frame tx=963.273 ty=486.386 tz=190.997 rx=-16.485036028086625 ry=-1.6688258428441574 rz=21.6928490465265 ds=-13.89914
+accuracy=1.0 bbox=-77.92,5,-74.39,8.01 operation=coordinate_frame tx=-90.29 ty=247.559 tz=-21.989 rx=-8.696885348512634 ry=-4.188033628410044 rz=-12.808266849625133 ds=2.181658
+accuracy=1.0 bbox=-79.1,-1.13,-74,3.01 operation=coordinate_frame tx=-305.356 ty=222.004 tz=-30.023 rx=-9.690493859925834 ry=1.0319681962253915 rz=-19.75739417682781 ds=6.325747
+accuracy=1.0 bbox=-74.4,-4.23,-66.87,7.1 operation=coordinate_frame tx=221.899 ty=274.136 tz=-397.554 rx=2.808445910362777 ry=-0.44850858891268003 rz=-2.8101723467910658 ds=-2.199943
+accuracy=10.0 bbox=-79.1,-4.23,-66.87,12.52 operation=geocentric_translations tx=307.0 ty=304.0 tz=-318.0
+accuracy=10.0 bbox=-79.1,-4.23,-66.87,13.68 operation=geocentric_translations tx=307.0 ty=304.0 tz=-318.0

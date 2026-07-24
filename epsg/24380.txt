@@ -1,0 +1,1 @@
+coordinate_system=lambert_conformal_conic eastf=2743195.5 latf=26.0 lonf=90.0 northf=914398.5 scale=0.99878641 datum=kalianpur1975 bbox=82,21,97.42,29.47

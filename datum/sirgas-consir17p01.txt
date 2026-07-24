@@ -1,0 +1,2 @@
+spheroid=grs1980
+accuracy=0.02 bbox=-122.19,-59.87,-25.28,32.72 target=sirgas2000 operation=horizontal_grid grid=SIRGAS2000-to-SIRGAS-CONSIR17P01.gsb inverse

@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=latvianheightsystem2000 bbox=20.87,55.67,28.24,58.09

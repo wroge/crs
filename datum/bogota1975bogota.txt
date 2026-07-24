@@ -1,0 +1,2 @@
+spheroid=international1924
+accuracy=0.0 bbox=-79.1,-4.23,-66.87,12.52 target=bogota1975 operation=longitude_rotation lon=-74.0809166666667

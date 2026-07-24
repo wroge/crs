@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=datumaltimetricodecostarica1952 bbox=-85.97,7.98,-82.53,11.22

@@ -1,0 +1,3 @@
+spheroid=grs1980
+accuracy=0.05 bbox=38.79,29.06,48.75,37.39 target=igrs operation=position_vector tx=-0.214 ty=0.119 tz=0.156 rx=-0.01182 ry=0.00811 rz=-0.01677 ds=-0.0059
+accuracy=0.05 bbox=38.79,29.06,48.75,37.39 target=igrs operation=molodensky_badekas_pv_geocentric tx=0.208 ty=-0.012 tz=-0.229 rx=-0.01182 ry=0.00811 rz=-0.01677 ds=-0.0059 px=3777505.028 py=3779254.396 pz=3471111.632

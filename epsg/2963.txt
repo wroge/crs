@@ -1,0 +1,1 @@
+coordinate_system=bonne_south_orientated latf=39.6666666666667 lonf=1.0 datum=lisbon1890lisbon bbox=-9.56,36.95,-6.19,42.16

@@ -1,0 +1,2 @@
+spheroid=wgs84
+accuracy=1.0 bbox=-180,-90,180,90 operation=vertical_grid grid=DIRACC.DAT

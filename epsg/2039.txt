@@ -1,0 +1,1 @@
+coordinate_system=transverse_mercator eastf=219529.584 latf=31.7343936111111 lonf=35.2045169444444 northf=626907.39 scale=1.0000067 datum=israel1993 bbox=34.17,29.45,35.69,33.28

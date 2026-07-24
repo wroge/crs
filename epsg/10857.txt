@@ -1,0 +1,1 @@
+coordinate_system=albers_equal_area eastf=5000000.0 latf=-12.0 lonf=-54.0 northf=10000000.0 sp1=-2.0 sp2=-22.0 datum=sirgas2000 bbox=-74.01,-33.78,-34.74,5.28

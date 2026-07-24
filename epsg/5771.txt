@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=waitangichathamisland1959 bbox=-176.92,-44.18,-176.2,-43.67

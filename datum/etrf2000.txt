@@ -1,0 +1,8 @@
+spheroid=grs1980
+accuracy=0.01 bbox=16.11,45.74,22.9,48.58 target=hd72 operation=horizontal_grid grid=hu_sgo_hd72corr.gsb inverse
+accuracy=0.015 bbox=16.11,45.74,22.9,48.58 target=hd72 operation=horizontal_grid grid=hu_bme_hd72corr.tif inverse
+accuracy=0.1 bbox=-16.1,33.26,38.01,84.73 target=etrs89 operation=geocentric_translations
+accuracy=1.025 bbox=19.02,53.89,26.82,56.45 target=lks94 operation=velocity_grid grid=eur_nkg_nkgrf03vel_realigned.tif dt=3.75
+bbox=-180,-90,180,90 target=lks94 operation=velocity_grid grid=eur_nkg_nkgrf17vel.tif dt=3.75
+bbox=-180,-90,180,90 target=lks94 operation=velocity_grid grid=eur_nkg_nkgrf03vel_realigned.tif dt=3.75
+bbox=-180,-90,180,90 target=lks94 operation=geocentric_translations

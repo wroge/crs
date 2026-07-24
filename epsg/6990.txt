@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=ig05slash12intermediatecrs bbox=34.17,29.45,35.69,33.28

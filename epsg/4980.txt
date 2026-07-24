@@ -1,0 +1,1 @@
+coordinate_system=geocentric datum=yemenngn96 bbox=41.08,8.95,57.96,19

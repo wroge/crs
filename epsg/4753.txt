@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=fk89 bbox=-7.49,61.33,-6.33,62.41

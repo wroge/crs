@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=grandcaymanverticaldatum1954 bbox=-81.46,19.21,-81.04,19.41

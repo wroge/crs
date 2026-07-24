@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=ign53mare bbox=167.75,-21.71,168.19,-21.32

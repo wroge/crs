@@ -1,0 +1,4 @@
+spheroid=indonesiannationalspheroid
+accuracy=3.0 bbox=95.16,-10.98,141.01,5.97 operation=coordinate_frame tx=-1.977 ty=-13.06 tz=-9.993 rx=-0.364 ry=-0.254 rz=-0.689 ds=-1.037
+accuracy=25.0 bbox=95.16,-10.98,141.01,5.97 operation=position_vector tx=2.691 ty=-14.757 tz=4.724 rz=0.774 ds=-0.6
+accuracy=44.0 bbox=95.16,-10.98,141.01,5.97 operation=geocentric_translations tx=-24.0 ty=-15.0 tz=5.0

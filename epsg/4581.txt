@@ -1,0 +1,1 @@
+coordinate_system=transverse_mercator eastf=500000.0 lonf=87.0 scale=1.0 datum=newbeijing bbox=84,27.32,90,49.18

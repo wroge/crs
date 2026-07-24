@@ -1,0 +1,1 @@
+coordinate_system=geocentric datum=etrf2020 bbox=-16.1,33.26,38.01,84.73

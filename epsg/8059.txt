@@ -1,0 +1,1 @@
+coordinate_system=lambert_conformal_conic_2sp eastf=1000000.0 latf=-32.0 lonf=135.0 northf=2000000.0 sp1=-28.0 sp2=-36.0 datum=gda2020 bbox=128.99,-38.13,141.01,-25.99

@@ -1,0 +1,2 @@
+spheroid=grs1980
+accuracy=0.03 bbox=14.14,49,24.15,54.89 target=etrf2000-pl operation=vertical_grid grid=pl_gugik_geoid2011-PL-KRON86-NH.tif

@@ -1,0 +1,4 @@
+spheroid=helmert1906
+accuracy=1.2 bbox=24.7,21.89,37.91,33.82 operation=molodensky_badekas tx=-127.535 ty=113.495 tz=-12.7 rx=1.6037469999999998 ry=-0.153612 rz=-5.364408 ds=5.33745 px=4854969.728 py=2945552.013 pz=2868447.61
+accuracy=5.0 bbox=24.7,21.89,37.91,33.82 target=wgs72 operation=geocentric_translations tx=-121.8 ty=98.1 tz=-15.2
+accuracy=11.0 bbox=24.7,21.89,37.91,33.82 operation=geocentric_translations tx=-130.0 ty=110.0 tz=-13.0

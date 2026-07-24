@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=etrs89_ordnancedatumnewlyn bbox=-7.06,49.93,1.8,58.71

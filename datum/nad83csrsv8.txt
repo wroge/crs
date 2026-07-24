@@ -1,0 +1,2 @@
+spheroid=grs1980
+bbox=-180,-90,180,90 target=nad832011 operation=geocentric_translations

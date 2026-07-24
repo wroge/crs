@@ -1,0 +1,1 @@
+coordinate_system=lambert_conformal_conic eastf=300000.0 latf=34.65 lonf=37.35 northf=300000.0 scale=0.9996256 datum=deirezzor bbox=35.04,32.31,42.38,37.3

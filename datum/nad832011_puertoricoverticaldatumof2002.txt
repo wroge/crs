@@ -1,0 +1,3 @@
+spheroid=grs1980
+accuracy=0.015 bbox=-67.97,17.87,-65.19,18.57 target=nad832011 operation=vertical_grid grid=us_noaa_g2018p0.tif
+accuracy=0.05 bbox=-67.97,17.87,-65.19,18.57 target=nad832011 operation=vertical_grid grid=us_noaa_g2009p01.tif

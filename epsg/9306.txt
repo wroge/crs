@@ -1,0 +1,1 @@
+coordinate_system=transverse_mercator datum=hs2-irf_hs2verticalreferenceframe eastf=198873.0046 latf=52.3 lonf=-1.5 northf=375064.3871 scale=1.0 bbox=-2.75,51.45,0,53.3

@@ -1,0 +1,1 @@
+coordinate_system=transverse_mercator eastf=250000.0 lonf=90.15 northf=-2500000.0 scale=1.0 datum=drukref03 bbox=88.9,27.02,89.39,27.62

@@ -1,0 +1,2 @@
+spheroid=clarke1880rgs
+accuracy=10.0 bbox=-63.22,18.11,-62.92,18.33 operation=geographic_offset lat=-18.0 lon=4.4

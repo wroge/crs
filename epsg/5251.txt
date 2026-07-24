@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=turef bbox=25.62,34.42,44.83,43.45

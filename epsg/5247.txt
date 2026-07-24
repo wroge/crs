@@ -1,0 +1,1 @@
+coordinate_system=hotine_oblique_mercator_a azimuth=53.31580995 gamma=53.1301023611111 latf=4.0 lonf=115.0 scale=0.99984 datum=gdbd2009 bbox=112.37,4.01,115.37,6.31

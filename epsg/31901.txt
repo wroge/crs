@@ -1,0 +1,1 @@
+coordinate_system=transverse_mercator eastf=500000.0 lonf=48.0 scale=1.0 datum=kudams bbox=47.78,29.17,48.16,29.45

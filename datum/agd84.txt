@@ -1,0 +1,5 @@
+spheroid=australiannationalspheroid
+accuracy=2.9 bbox=109.23,-38.53,153.61,-9.37 operation=horizontal_grid grid=au_icsm_National_84_02_07_01.tif
+accuracy=3.0 bbox=109.23,-38.53,153.61,-9.37 operation=coordinate_frame tx=-117.763 ty=-51.51 tz=139.061 rx=-0.292 ry=-0.44299999999999995 rz=-0.277 ds=-0.191
+accuracy=4.0 bbox=109.23,-38.53,153.61,-9.37 operation=geocentric_translations tx=-134.0 ty=-48.0 tz=149.0
+accuracy=5.0 bbox=109.23,-38.53,153.61,-9.37 operation=geocentric_translations tx=-128.5 ty=-53.0 tz=153.4

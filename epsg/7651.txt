@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=kumul34 bbox=142.24,-8.28,144.75,-5.59

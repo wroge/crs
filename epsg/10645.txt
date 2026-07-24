@@ -1,0 +1,1 @@
+coordinate_system=transverse_mercator datum=saba_sabaverticaldatum eastf=29973.97 lonf=-63.0 northf=-1947925.94 scale=0.9996 bbox=-63.31,17.56,-63.16,17.71

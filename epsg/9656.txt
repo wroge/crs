@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=etrf2000-pl_baltic1986 bbox=14.14,49,24.15,54.89

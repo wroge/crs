@@ -1,0 +1,2 @@
+spheroid=grs1980
+accuracy=0.15 bbox=96.76,-43.7,153.69,-9.86 target=gda2020 operation=vertical_grid grid=au_ga_AUSGeoid2020_20180201.tif

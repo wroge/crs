@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=scoresbysund1952 bbox=-29.69,68.66,-19.89,74.58

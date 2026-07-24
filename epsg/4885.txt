@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=rsrgd2000 bbox=144.99,-90,-144.99,-59.99

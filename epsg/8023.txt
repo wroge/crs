@@ -1,0 +1,1 @@
+coordinate_system=transverse_mercator eastf=50000.0 lonf=114.583333333333 northf=3450000.0 scale=1.00000628 datum=gda2020 bbox=114.51,-29.1,115,-28.48

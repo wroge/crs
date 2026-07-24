@@ -1,0 +1,1 @@
+coordinate_system=mercator_b eastf=5000000.0 lonf=-43.0 northf=10000000.0 sp1=-2.0 datum=sirgas2000 bbox=-51.64,-5.74,-32.43,7.04

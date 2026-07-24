@@ -1,0 +1,2 @@
+spheroid=international1924
+accuracy=0.0 bbox=43.18,-25.64,50.56,-11.89 target=tananarive operation=longitude_rotation lon=2.3372291699999908

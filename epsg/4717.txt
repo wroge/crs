@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=capecanaveral bbox=-82.33,20.86,-72.68,30.83

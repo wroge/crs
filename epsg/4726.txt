@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=sigd61 bbox=-80.14,19.63,-79.69,19.78

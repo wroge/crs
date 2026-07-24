@@ -1,0 +1,2 @@
+spheroid=wgs84
+accuracy=0.0 bbox=34.17,29.45,35.69,33.28 target=ig05slash12intermediatecrs operation=coordinate_frame tx=-24.0024 ty=-17.1032 tz=-17.8444 rx=-0.33009 ry=-1.85269 rz=1.6696900000000001 ds=5.4248

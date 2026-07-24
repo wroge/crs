@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=liberia1964 bbox=-11.52,4.29,-7.36,8.52

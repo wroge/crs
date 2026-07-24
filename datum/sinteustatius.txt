@@ -1,0 +1,2 @@
+spheroid=international1924
+accuracy=1 bbox=-63.05,17.41,-62.88,17.58 operation=coordinate_frame_full_matrix tx=1276.2485 ty=-2016.6406 tz=667.4403 rx=-101.00528799999998 ry=212.913401 rz=-68.43277 ds=-431.59604

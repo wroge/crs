@@ -1,0 +1,12 @@
+spheroid=krassowsky1940
+accuracy=2.0 bbox=48.93,38.31,50.4,40.33 operation=position_vector tx=926.4 ty=-715.9 tz=-186.4 rx=-10.364 ry=-20.78 rz=26.452 ds=-7.224
+accuracy=2.0 bbox=48.9,41.15,53.15,46.97 operation=position_vector tx=43.822 ty=-108.842 tz=-119.585 rx=1.455 ry=-0.761 rz=0.737 ds=0.549
+accuracy=3.0 bbox=19.58,41.19,-168.97,81.91 operation=coordinate_frame tx=23.57 ty=-140.95 tz=-79.8 ry=-0.35 rz=-0.7899999999999999 ds=-0.22
+accuracy=4.0 bbox=20.87,55.67,28.24,58.09 operation=geocentric_translations tx=24.0 ty=-124.0 tz=-82.0
+accuracy=4.5 bbox=19.57,35.14,-168.97,81.91 operation=coordinate_frame tx=25.0 ty=-141.0 tz=-78.5 ry=-0.35 rz=-0.736
+accuracy=5.0 bbox=21.74,57.52,28.2,59.75 operation=geocentric_translations tx=22.0 ty=-126.0 tz=-85.0
+accuracy=5.0 bbox=39.99,37.89,51.73,43.59 operation=position_vector tx=686.1 ty=-123.5 tz=-574.4 rx=8.045 ry=-23.366 rz=10.791 ds=-2.926
+accuracy=9.0 bbox=21.74,57.52,28.2,59.75 operation=coordinate_frame tx=21.58719 ty=-97.54127 tz=-60.92546 rx=-1.01378 ry=-0.58117 rz=-0.2348 ds=-4.6121
+accuracy=9.0 bbox=20.86,53.89,26.82,56.45 operation=coordinate_frame tx=-40.595 ty=-18.55 tz=-69.339 rx=-2.508 ry=-1.832 rz=2.611 ds=-4.299
+accuracy=44.0 bbox=46.49,40.59,87.35,55.45 operation=geocentric_translations tx=15.0 ty=-130.0 tz=-84.0
+bbox=19.58,41.19,-168.97,81.91 operation=geocentric_translations tx=28.0 ty=-130.0 tz=-95.0

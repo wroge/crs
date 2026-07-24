@@ -1,0 +1,1 @@
+coordinate_system=geocentric datum=sweref99 bbox=10.03,54.96,24.17,69.07

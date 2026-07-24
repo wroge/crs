@@ -1,0 +1,1 @@
+coordinate_system=transverse_mercator eastf=500000.0 lonf=69.0 northf=10000000.0 scale=0.9996 datum=ign1962kerguelen bbox=68.69,-49.78,70.62,-48.6

@@ -1,0 +1,1 @@
+coordinate_system=mercator_a lonf=150.0 scale=1.0 datum=wgs84 bbox=98.69,-60,-68,66.67

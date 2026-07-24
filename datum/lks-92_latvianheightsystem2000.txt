@@ -1,0 +1,2 @@
+spheroid=grs1980
+accuracy=0.04 bbox=20.87,55.67,28.24,58.09 target=lks-92 operation=vertical_grid grid=lv_lgia_lv14.tif

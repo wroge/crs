@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=aden1925 bbox=43.37,12.54,53.14,19

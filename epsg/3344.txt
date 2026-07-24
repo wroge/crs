@@ -1,0 +1,1 @@
+coordinate_system=transverse_mercator eastf=500000.0 lonf=-9.0 scale=0.9996 datum=mauritania1999 bbox=-12,14.75,-6,27.3

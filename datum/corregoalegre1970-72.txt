@@ -1,0 +1,4 @@
+spheroid=international1924
+accuracy=2.0 bbox=-58.16,-33.78,-34.74,-2.68 operation=horizontal_grid grid=br_ibge_CA7072_003.tif
+accuracy=5.0 bbox=-58.16,-33.78,-34.74,-2.68 operation=geocentric_translations tx=-206.05 ty=168.28 tz=-3.82
+accuracy=8.0 bbox=-58.16,-33.78,-34.74,-2.68 operation=geocentric_translations tx=-206.0 ty=172.0 tz=-6.0

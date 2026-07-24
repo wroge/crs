@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=rgaf09_ign1988ls bbox=-61.68,15.8,-61.52,15.94

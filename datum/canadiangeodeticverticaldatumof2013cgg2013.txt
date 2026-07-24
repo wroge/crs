@@ -1,0 +1,3 @@
+spheroid=grs1980
+accuracy=0.03 bbox=-141.01,38.21,-40.73,86.46 target=itrf2008 operation=vertical_grid grid=ca_nrc_CGG2013i08.tif
+accuracy=0.03 bbox=-141.01,38.21,-40.73,86.46 target=nad83csrsv6 operation=vertical_grid grid=ca_nrc_CGG2013n83.tif

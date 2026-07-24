@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=amersfoort bbox=3.2,50.75,7.22,53.7

@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=baltic1977 bbox=19.57,35.14,-168.97,81.91

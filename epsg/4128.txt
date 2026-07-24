@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=madzansua bbox=30.21,-17.76,35.37,-14.01

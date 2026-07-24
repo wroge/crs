@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=rgtaaf07lon-lat bbox=37.98,-67.13,142,-20.91

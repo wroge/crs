@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=wellington1953 bbox=174.52,-41.67,176.55,-40.12

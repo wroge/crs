@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=stornoway bbox=-7.72,56.76,-6.1,58.54

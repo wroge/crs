@@ -1,0 +1,3 @@
+spheroid=grs1967modified
+accuracy=1.0 bbox=-60.58,-33.78,-34.74,4.44 operation=horizontal_grid grid=br_ibge_SAD96_003.tif
+accuracy=5.0 bbox=-74.01,-35.71,-25.28,7.04 operation=geocentric_translations tx=-67.35 ty=3.88 tz=-38.22

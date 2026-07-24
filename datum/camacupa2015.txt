@@ -1,0 +1,2 @@
+spheroid=clarke1880rgs
+accuracy=3.0 bbox=8.2,-18.02,24.09,-4.38 operation=coordinate_frame tx=-93.799 ty=-132.737 tz=-219.073 rx=1.844 ry=-0.648 rz=6.37 ds=-0.169

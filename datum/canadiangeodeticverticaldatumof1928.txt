@@ -1,0 +1,4 @@
+spheroid=grs1980
+accuracy=0.05 bbox=-141.01,41.67,-52.54,69.81 target=nad83csrs operation=vertical_grid grid=ca_nrc_HT2_1997.tif
+accuracy=0.05 bbox=-141.01,41.67,-52.54,69.81 target=nad83csrsv8 operation=vertical_grid grid=ca_nrc_HT2_2010v70.tif
+accuracy=0.05 bbox=-141.01,41.67,-52.54,69.81 target=nad83csrsv4 operation=vertical_grid grid=ca_nrc_HT2_2002v70.tif

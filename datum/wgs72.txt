@@ -1,0 +1,5 @@
+spheroid=wgs72
+accuracy=2.0 bbox=-180,-90,180,90 operation=position_vector tz=4.5 rz=0.554 ds=0.219
+accuracy=2.0 bbox=-180,-90,180,90 operation=position_vector tz=4.5 rz=0.554 ds=0.2263
+accuracy=6.0 bbox=24.7,21.89,37.91,33.82 operation=position_vector tz=4.5 rz=0.554 ds=0.2263
+accuracy=26.0 bbox=-20.22,10.64,-11.36,16.7 operation=position_vector tz=4.5 rz=0.554 ds=0.219

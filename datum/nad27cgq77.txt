@@ -1,0 +1,2 @@
+spheroid=clarke1866
+accuracy=1.5 bbox=-79.85,44.99,-57.1,62.62 operation=horizontal_grid grid=ca_que_mern_cq77na83.tif

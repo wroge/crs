@@ -1,0 +1,2 @@
+spheroid=international1924
+accuracy=0.03 bbox=19.24,59.75,31.59,70.09 target=kkj operation=vertical_grid grid=fi_nls_fin2000.tif

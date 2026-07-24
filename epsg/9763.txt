@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=ewr2-irf bbox=-1.43,51.7,-0.36,52.24

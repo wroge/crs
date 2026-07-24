@@ -1,0 +1,3 @@
+spheroid=grs1980
+accuracy=0.03 bbox=163.54,-22.73,168.19,-19.5 target=rgnc15lon-lat operation=vertical_grid grid=nc_dittt_RANC15.tif
+accuracy=0.03 bbox=163.54,-22.73,168.19,-19.5 target=rgnc91-93 operation=vertical_grid grid=nc_dittt_Ranc08_Circe.tif

@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=dabola1981 bbox=-15.13,7.19,-7.65,12.68

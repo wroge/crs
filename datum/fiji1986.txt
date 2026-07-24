@@ -1,0 +1,3 @@
+spheroid=wgs72
+accuracy=2.0 bbox=176.81,-20.81,-178.15,-12.42 operation=position_vector tz=4.5 rz=0.554 ds=0.2263
+accuracy=40.0 bbox=176.81,-19.22,-179.77,-16.1 operation=coordinate_frame tx=-35.173 ty=136.571 tz=-36.964 rx=1.37 ry=-0.8419999999999999 rz=-4.718 ds=-1.537

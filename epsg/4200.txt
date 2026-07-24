@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=pulkovo1995 bbox=18.92,39.87,-168.97,85.19

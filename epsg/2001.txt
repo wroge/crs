@@ -1,0 +1,1 @@
+coordinate_system=transverse_mercator eastf=400000.0 lonf=-62.0 scale=0.9995 datum=antigua1943 bbox=-61.95,16.94,-61.61,17.22

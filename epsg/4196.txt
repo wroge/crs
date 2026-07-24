@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=ammassalik1958 bbox=-38.86,65.52,-36.81,65.91

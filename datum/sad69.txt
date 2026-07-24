@@ -1,0 +1,36 @@
+spheroid=grs1967modified
+accuracy=2.0 bbox=-60.58,-33.78,-34.74,4.44 operation=horizontal_grid grid=br_ibge_SAD69_003.tif
+accuracy=4.0 bbox=-72.87,-36,-69.77,-31.99 operation=geocentric_translations tx=-64.0 tz=-32.0
+accuracy=4.0 bbox=-71.77,-32,-67,-17.5 operation=geocentric_translations tx=-59.0 ty=-11.0 tz=-52.0
+accuracy=5.0 bbox=-74.01,-35.71,-25.28,7.04 operation=geocentric_translations tx=-67.35 ty=3.88 tz=-38.22
+accuracy=6.0 bbox=-74.83,-55.96,-66.33,-51.99 operation=geocentric_translations tx=-79.0 ty=13.0 tz=-14.0
+accuracy=6.0 bbox=-81.03,-5.01,-75.21,1.45 operation=geocentric_translations tx=-48.0 ty=3.0 tz=-44.0
+accuracy=7.0 bbox=-74.48,-43.5,-70.39,-35.99 operation=geocentric_translations tx=-72.0 ty=10.0 tz=-32.0
+accuracy=8.0 bbox=-73.38,0.64,-59.8,12.25 operation=geocentric_translations tx=-45.0 ty=8.0 tz=-33.0
+accuracy=8.0 bbox=-60.58,-33.78,-34.74,4.44 operation=geocentric_translations tx=-60.0 ty=-2.0 tz=-41.0
+accuracy=9 bbox=-71.77,-32,-69.77,-31.99 operation=geocentric_translations tx=-59.0 ty=-11.0 tz=-52.0
+accuracy=9 bbox=-71.77,-32,-69.77,-31.99 operation=geocentric_translations tx=-64.0 tz=-32.0
+accuracy=9 bbox=-72.87,-36,-70.39,-35.99 operation=geocentric_translations tx=-64.0 tz=-32.0
+accuracy=9.0 bbox=-81.41,-18.35,-68.67,-0.03 operation=geocentric_translations tx=-58.0 tz=-44.0
+accuracy=9.0 bbox=-73.59,-52.43,-53.65,-21.78 operation=geocentric_translations tx=-62.0 ty=-1.0 tz=-37.0
+accuracy=10 bbox=-72.87,-35.71,-69.77,-31.99 operation=geocentric_translations tx=-67.35 ty=3.88 tz=-38.22
+accuracy=10 bbox=-72.87,-35.71,-69.77,-31.99 operation=geocentric_translations tx=-66.87 ty=4.37 tz=-38.52
+accuracy=10 bbox=-71.77,-32,-67,-17.5 operation=geocentric_translations tx=-67.35 ty=3.88 tz=-38.22
+accuracy=10 bbox=-71.77,-32,-67,-17.5 operation=geocentric_translations tx=-66.87 ty=4.37 tz=-38.52
+accuracy=10.0 bbox=-79.1,-4.23,-66.87,12.52 operation=geocentric_translations tx=-44.0 ty=6.0 tz=-36.0
+accuracy=12 bbox=-72.87,-36,-70.39,-35.99 operation=geocentric_translations tx=-72.0 ty=10.0 tz=-32.0
+accuracy=12.0 bbox=-61.39,1.18,-56.47,8.58 operation=geocentric_translations tx=-53.0 ty=3.0 tz=-47.0
+accuracy=14 bbox=-71.77,-18.35,-68.67,-17.5 operation=geocentric_translations tx=-58.0 tz=-44.0
+accuracy=14 bbox=-73.59,-52.43,-66.33,-51.99 operation=geocentric_translations tx=-62.0 ty=-1.0 tz=-37.0
+accuracy=14 bbox=-72.87,-36,-69.77,-31.99 operation=geocentric_translations tx=-62.0 ty=-1.0 tz=-37.0
+accuracy=14 bbox=-73.59,-43.5,-70.39,-35.99 operation=geocentric_translations tx=-62.0 ty=-1.0 tz=-37.0
+accuracy=14 bbox=-71.77,-32,-67,-21.78 operation=geocentric_translations tx=-62.0 ty=-1.0 tz=-37.0
+accuracy=19.0 bbox=-81.41,-45,-34.74,12.52 operation=geocentric_translations tx=-57.0 ty=1.0 tz=-41.0
+accuracy=24 bbox=-72.87,-36,-69.77,-31.99 operation=geocentric_translations tx=-57.0 ty=1.0 tz=-41.0
+accuracy=24 bbox=-74.48,-43.5,-70.39,-35.99 operation=geocentric_translations tx=-57.0 ty=1.0 tz=-41.0
+accuracy=24 bbox=-71.77,-32,-67,-17.5 operation=geocentric_translations tx=-57.0 ty=1.0 tz=-41.0
+accuracy=26.0 bbox=-62.65,-27.59,-54.24,-19.29 operation=geocentric_translations tx=-61.0 ty=2.0 tz=-33.0
+accuracy=26.0 bbox=-69.66,-22.91,-57.52,-9.67 operation=geocentric_translations tx=-61.0 ty=2.0 tz=-48.0
+accuracy=31 bbox=-69.66,-22.91,-67,-17.5 operation=geocentric_translations tx=-61.0 ty=2.0 tz=-48.0
+accuracy=44.0 bbox=-61.98,9.99,-60.85,10.9 operation=geocentric_translations tx=-45.0 ty=12.0 tz=-33.0
+accuracy=44.0 bbox=-91.72,-1.41,-89.19,0.18 operation=geocentric_translations tx=-47.0 ty=26.0 tz=-42.0

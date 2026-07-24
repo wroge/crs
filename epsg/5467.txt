@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=panama-colon1911 bbox=-83.04,7.15,-77.19,9.68

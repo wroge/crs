@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=mop78 bbox=-176.25,-13.41,-176.07,-13.16

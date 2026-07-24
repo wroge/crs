@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=lerwick bbox=-1.78,59.83,-0.67,60.87

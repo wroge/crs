@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=biheight bbox=-10.85,49.75,2.01,61.01

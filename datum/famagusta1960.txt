@@ -1,0 +1,2 @@
+spheroid=wgs84
+accuracy=0.043 bbox=32.2,34.59,34.65,35.74 target=cgrs93 operation=vertical_grid grid=SEPARATION.TXT

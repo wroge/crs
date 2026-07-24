@@ -1,0 +1,1 @@
+coordinate_system=transverse_mercator datum=etrs89-noreuref89_norwaynormalnull2000 eastf=500000.0 lonf=33.0 scale=0.9996 bbox=30,69.46,31.32,70.77

@@ -1,0 +1,1 @@
+coordinate_system=transverse_mercator eastf=4300000.0 latf=0.133333333333333 lonf=56.7666666666667 scale=1.0 datum=pulkovo1942 bbox=55.26,41.26,58.27,51.14

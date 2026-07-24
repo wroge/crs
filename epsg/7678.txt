@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=pz-90.02 bbox=-180,-90,180,90

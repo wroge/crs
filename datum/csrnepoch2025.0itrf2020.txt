@@ -1,0 +1,2 @@
+spheroid=grs1980
+accuracy=0.0 bbox=-124.45,32.53,-114.12,42.01 target=csrnepoch2025.0nad832011 operation=coordinate_frame tx=1.01575 ty=-1.92011 tz=-0.55977 rx=0.027781430000000003 ry=-0.01178187 rz=0.01016211 ds=-0.0011312400000000002

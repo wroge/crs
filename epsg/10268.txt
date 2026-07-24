@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=ostenfeld-irf bbox=8.37,54.8,10.16,55.47

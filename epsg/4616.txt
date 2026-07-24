@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=selvagemgrande bbox=-16.11,29.98,-15.79,30.21

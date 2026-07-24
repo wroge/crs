@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=hd72 bbox=16.11,45.74,22.9,48.58

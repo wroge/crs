@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=rraf1991 bbox=-63.66,14.08,-57.52,18.54

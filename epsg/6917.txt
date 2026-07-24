@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=svy21_singaporeheightdatum bbox=103.59,1.13,104.07,1.47

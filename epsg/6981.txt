@@ -1,0 +1,1 @@
+coordinate_system=geocentric datum=ig05intermediatecrs bbox=34.17,29.45,35.69,33.28

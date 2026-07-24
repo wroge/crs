@@ -1,0 +1,2 @@
+spheroid=clarke1880ign
+accuracy=7.0 bbox=-13.24,27.66,-1.01,35.97 operation=geocentric_translations tx=31.0 ty=146.0 tz=47.0

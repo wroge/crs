@@ -1,0 +1,1 @@
+coordinate_system=transverse_mercator latf=33.0 lonf=133.5 scale=0.9999 datum=tokyo bbox=131.95,32.69,134.81,34.45

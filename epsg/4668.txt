@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=ed79 bbox=-10.56,34.88,38.01,84.73

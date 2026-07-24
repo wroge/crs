@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=staatlichennivellementnetzes1976 bbox=9.92,50.2,15.04,54.74

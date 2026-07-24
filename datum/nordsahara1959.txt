@@ -1,0 +1,11 @@
+spheroid=clarke1880rgs
+accuracy=1.0 bbox=-8.67,18.97,11.99,38.8 operation=position_vector tx=-267.407 ty=-47.068 tz=446.357 rx=-0.179423 ry=5.577661 rz=-1.27762 ds=1.204866
+accuracy=5.0 bbox=0,29.25,1.25,31 operation=geocentric_translations tx=-169.559 ty=-72.34 tz=303.102
+accuracy=5.0 bbox=1.24,26.06,2.92,27.51 operation=geocentric_translations tx=-168.52 ty=-72.05 tz=304.3
+accuracy=5.0 bbox=1,25,3.3,32 operation=position_vector tx=-152.9 ty=43.8 tz=358.3 rx=2.714 ry=1.386 rz=-2.788 ds=-6.743
+accuracy=9.0 bbox=5.59,31.48,6.5,32.09 target=wgs72be operation=geocentric_translations tx=-156.5 ty=-87.2 tz=285.9
+accuracy=44.0 bbox=-2.95,31.99,9.09,37.14 operation=geocentric_translations tx=-123.0 ty=-206.0 tz=219.0
+accuracy=44.0 bbox=-8.67,18.97,11.99,37.14 operation=geocentric_translations tx=-186.0 ty=-93.0 tz=310.0
+accuracy=100.0 bbox=7.66,27.4,8.27,28.1 operation=geocentric_translations tx=-181.7 ty=64.7 tz=247.2
+accuracy=100.0 bbox=7.16,31.75,8,32.42 operation=geocentric_translations tx=-165.914 ty=-70.607 tz=305.009
+accuracy=100.0 bbox=8.83,27.5,9.92,28.3 operation=geocentric_translations tx=-95.7 ty=10.2 tz=158.9

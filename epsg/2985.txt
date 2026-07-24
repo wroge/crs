@@ -1,0 +1,1 @@
+coordinate_system=polar_stereographic_c eastf=300000.0 latf=-67.0 lonf=140.0 northf=200000.0 datum=petrels1972 bbox=139.44,-66.78,141.5,-66.1

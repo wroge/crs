@@ -1,0 +1,7 @@
+spheroid=krassowsky1940
+accuracy=1.0 bbox=107,35,110.01,39 operation=geocentric_translations tx=11.911 ty=-154.833 tz=-80.079
+accuracy=1.0 bbox=107,35,110.01,39 operation=geocentric_translations tx=12.646 ty=-155.176 tz=-80.863
+accuracy=1.0 bbox=77.45,37,88,41.99 operation=geocentric_translations tx=15.8 ty=-154.4 tz=-82.3
+accuracy=10.0 bbox=107.15,17.81,110.17,21.69 operation=position_vector tx=18.0 ty=-136.8 tz=-73.7 rz=0.8139999999999998 ds=-0.38
+accuracy=15.0 bbox=110.13,18.31,116.76,22.89 operation=position_vector tx=31.4 ty=-144.3 tz=-74.8 rz=0.8139999999999998 ds=-0.38
+accuracy=15.0 bbox=119.23,31.23,125.06,37.4 operation=position_vector tx=15.53 ty=-113.82 tz=-41.38 rz=0.8139999999999998 ds=-0.38

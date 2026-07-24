@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=sirgas_es2007.8 bbox=-91.43,9.97,-87.65,14.44

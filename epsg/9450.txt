@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=etrs89_belfastlough bbox=-8.18,53.96,-5.34,55.36

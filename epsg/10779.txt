@@ -1,0 +1,1 @@
+coordinate_system=geocentric datum=itrf2020-u2023 bbox=-180,-90,180,90

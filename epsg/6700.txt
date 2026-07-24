@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=tokyo_japanesestandardlevellingdatum1972 bbox=139.7,41.34,145.87,45.54

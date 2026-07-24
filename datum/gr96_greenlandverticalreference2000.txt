@@ -1,0 +1,2 @@
+spheroid=grs1980
+accuracy=0.1 bbox=-75,59,-10,84.01 target=gr96 operation=vertical_grid grid=dk_sdfe_gvr2000.tif

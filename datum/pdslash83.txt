@@ -1,0 +1,2 @@
+spheroid=bessel1841
+accuracy=1.0 bbox=9.87,50.2,12.66,51.65 operation=horizontal_grid grid=de_adv_BETA2007.tif

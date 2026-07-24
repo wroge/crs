@@ -1,0 +1,1 @@
+coordinate_system=albers_equal_area latf=-40.0 lonf=175.0 sp1=-30.0 sp2=-50.0 datum=wgs84 bbox=155,-60,-169.99,-25

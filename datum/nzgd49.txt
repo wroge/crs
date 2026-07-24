@@ -1,0 +1,5 @@
+spheroid=international1924
+accuracy=1.0 bbox=165.87,-47.65,179.27,-33.89 operation=horizontal_grid grid=nz_linz_nzgd2kgrid0005.tif
+accuracy=4.0 bbox=165.87,-47.65,179.27,-33.89 operation=coordinate_frame tx=59.47 ty=-5.04 tz=187.44 rx=-0.47 ry=0.10000000000000002 rz=-1.024 ds=-4.5993
+accuracy=5.0 bbox=165.87,-47.65,179.27,-33.89 operation=geocentric_translations tx=54.4 ty=-20.1 tz=183.1
+accuracy=8.0 bbox=165.87,-47.65,179.27,-33.89 operation=geocentric_translations tx=84.0 ty=-22.0 tz=209.0

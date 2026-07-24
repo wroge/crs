@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=fd58 bbox=47.13,26.21,53.61,33.22

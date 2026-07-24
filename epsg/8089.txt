@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=landshaedarkerfiislands2004 bbox=-24.66,63.24,-13.38,66.62

@@ -1,0 +1,2 @@
+spheroid=gsk-2011
+accuracy=1 bbox=18.92,39.87,-168.97,85.19 operation=geocentric_translations

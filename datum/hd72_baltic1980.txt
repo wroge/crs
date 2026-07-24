@@ -1,0 +1,3 @@
+spheroid=grs1967
+accuracy=0.05 bbox=16.11,45.74,22.9,48.58 target=hd72 operation=vertical_grid grid=hu_sgo_vitel2014.tif
+accuracy=0.06 bbox=16.11,45.74,22.9,48.58 target=hd72 operation=vertical_grid grid=hu_bme_geoid2014.tif

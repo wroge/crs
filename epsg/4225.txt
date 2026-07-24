@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=corregoalegre1970-72 bbox=-58.16,-33.78,-34.74,-2.68

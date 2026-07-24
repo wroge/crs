@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=st.kitts1955 bbox=-62.92,17.06,-62.5,17.46

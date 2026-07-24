@@ -1,0 +1,1 @@
+coordinate_system=albers_equal_area eastf=1000000.0 latf=45.568977 lonf=-84.455955 northf=1000000.0 sp1=42.122774 sp2=49.01518 datum=nad83 bbox=-93.17,40.99,-74.47,50.74

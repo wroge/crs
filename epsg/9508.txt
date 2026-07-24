@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=etrs89_mallorca bbox=2.23,39.07,3.55,40.02

@@ -1,0 +1,2 @@
+spheroid=wgs84
+accuracy=1 bbox=32.2,34.59,34.65,35.74 operation=coordinate_frame tx=8.846 ty=-4.394 tz=-1.122 rx=0.00237 ry=0.146528 rz=-0.130428 ds=0.783926

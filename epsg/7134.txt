@@ -1,0 +1,1 @@
+coordinate_system=geocentric datum=igd05 bbox=32.99,29.45,35.69,33.53

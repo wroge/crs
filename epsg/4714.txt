@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=bellevue bbox=168.09,-20.31,169.95,-17.37

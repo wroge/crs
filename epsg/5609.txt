@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=internationalgreatlakesdatum1985 bbox=-93.17,40.99,-54.75,52.22

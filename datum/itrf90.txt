@@ -1,0 +1,2 @@
+spheroid=grs1980
+accuracy=1.0 bbox=-180,-90,180,90 target=wgs84transit operation=position_vector tx=-0.06 ty=0.517 tz=0.223 rx=-0.0183 ry=0.0003 rz=-0.007000000000000001 ds=0.011 inverse

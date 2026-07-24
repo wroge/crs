@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=chosmalal1914 bbox=-72.14,-43.41,-65.86,-31.91

@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=smitb20-irf bbox=-4.11,50.65,-3.6,50.86

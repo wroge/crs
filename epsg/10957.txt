@@ -1,0 +1,1 @@
+coordinate_system=geocentric datum=gr962021 bbox=-75,56.38,7.99,87.02

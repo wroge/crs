@@ -1,0 +1,1 @@
+coordinate_system=transverse_mercator eastf=500000.0 lonf=45.0 scale=0.9996 datum=yemenngn96 bbox=42,11.57,48.01,17.95

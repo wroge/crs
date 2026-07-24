@@ -1,0 +1,2 @@
+spheroid=clarke1880ign
+accuracy=0.0 bbox=-2.95,31.99,9.09,37.14 target=voirol1875 operation=longitude_rotation lon=2.3372291699999908

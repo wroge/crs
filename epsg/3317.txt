@@ -1,0 +1,1 @@
+coordinate_system=transverse_mercator eastf=500000.0 lonf=24.0 northf=10000000.0 scale=0.9999 datum=kasai1953 bbox=23,-6.99,25,-5.01

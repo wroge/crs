@@ -1,0 +1,2 @@
+spheroid=airy1830
+accuracy=1.0 bbox=-8.18,53.96,-5.34,55.36 operation=position_vector tx=482.5 ty=-130.6 tz=564.6 rx=-1.042 ry=-0.214 rz=-0.631 ds=8.15

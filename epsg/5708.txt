@@ -1,0 +1,1 @@
+coordinate_system=lambert_conformal_conic datum=ntfparis_nivellementgeneraldelafrance-ign78 eastf=234.358 latf=42.16499999999983 northf=4185861.369 scale=0.99994471 bbox=8.5,41.31,9.63,43.07

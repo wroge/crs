@@ -1,0 +1,1 @@
+coordinate_system=cassini_soldner latf=4.94614166666667 lonf=102.895208333333 datum=kertau1968 bbox=102.38,3.89,103.72,5.9

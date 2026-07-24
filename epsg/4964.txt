@@ -1,0 +1,1 @@
+coordinate_system=geocentric datum=rgf93v1 bbox=-9.86,41.15,10.38,51.56

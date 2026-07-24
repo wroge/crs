@@ -1,0 +1,1 @@
+coordinate_system=transverse_mercator eastf=500000.0 lonf=13.0 scale=0.9996 datum=beduaram bbox=7.81,12.8,14.9,16.7

@@ -1,0 +1,2 @@
+spheroid=clarke1866
+accuracy=1.5 bbox=-169.88,56.49,-169.38,56.67 operation=horizontal_grid grid=us_noaa_stgeorge.tif

@@ -1,0 +1,1 @@
+coordinate_system=transverse_mercator eastf=4500000.0 lonf=21.0 scale=1.0 datum=ucs-2000 bbox=22.15,47.95,24,51.66

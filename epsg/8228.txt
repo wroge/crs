@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=northamericanverticaldatum1988 bbox=-124.6,31.33,-78.52,49.01

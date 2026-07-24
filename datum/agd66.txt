@@ -1,0 +1,13 @@
+spheroid=australiannationalspheroid
+accuracy=2.0 bbox=142.24,-8.28,144.75,-5.59 operation=geocentric_translations tx=-124.0 ty=-60.0 tz=154.0
+accuracy=2.9 bbox=112.85,-43.7,153.69,-9.86 operation=horizontal_grid grid=au_icsm_A66_National_13_09_01.tif
+accuracy=3.0 bbox=148.76,-35.93,149.4,-35.12 operation=coordinate_frame tx=-129.193 ty=-41.212 tz=130.73 rx=-0.246 ry=-0.374 rz=-0.329 ds=-2.955
+accuracy=3.0 bbox=143.77,-43.7,148.55,-39.52 operation=coordinate_frame tx=-120.271 ty=-64.543 tz=161.632 rx=-0.21700000000000003 ry=0.067 rz=0.129 ds=2.499
+accuracy=3.0 bbox=128.99,-26.01,138,-10.86 operation=coordinate_frame tx=-124.133 ty=-42.003 tz=137.4 rx=0.008 ry=-0.557 rz=-0.178 ds=-1.854
+accuracy=3.0 bbox=140.96,-39.2,153.69,-28.15 operation=coordinate_frame tx=-119.353 ty=-48.301 tz=139.484 rx=-0.41500000000000004 ry=-0.26 rz=-0.43700000000000006 ds=-0.613
+accuracy=3.0 bbox=109.23,-47.2,163.2,-8.88 operation=coordinate_frame tx=-117.808 ty=-51.536 tz=137.784 rx=-0.303 ry=-0.446 rz=-0.234 ds=-0.29
+accuracy=4.0 bbox=140.89,-6.6,141.54,-5.05 operation=geocentric_translations tx=-137.4 ty=-58.9 tz=150.4
+accuracy=4.0 bbox=142.24,-8.28,144.75,-5.59 operation=geocentric_translations tx=-131.3 ty=-55.3 tz=151.8
+accuracy=5.0 bbox=140.85,-10.76,150.96,-2.53 operation=geocentric_translations tx=-129.0 ty=-58.0 tz=152.0
+accuracy=5.0 bbox=112.85,-43.7,153.69,-9.86 operation=geocentric_translations tx=-127.8 ty=-52.3 tz=152.9
+accuracy=9.0 bbox=112.85,-43.7,153.69,-9.86 operation=geocentric_translations tx=-128.0 ty=-52.0 tz=153.0

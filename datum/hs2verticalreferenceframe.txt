@@ -1,0 +1,2 @@
+spheroid=grs1980
+accuracy=0.001 bbox=-2.75,51.45,0,53.3 target=etrs89 operation=vertical_grid grid=HS2GM15W.grd

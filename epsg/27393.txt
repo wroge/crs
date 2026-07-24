@@ -1,0 +1,1 @@
+coordinate_system=transverse_mercator latf=58.0 scale=1.0 datum=ngo1948oslo bbox=9.55,58.78,11.98,67.58

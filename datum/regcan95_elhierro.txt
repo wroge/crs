@@ -1,0 +1,2 @@
+spheroid=grs1980
+accuracy=0.05 bbox=-18.22,27.58,-17.83,27.9 target=regcan95 operation=vertical_grid grid=es_ign_egm08-rednap-canarias.tif

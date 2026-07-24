@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=azoresoriental1995 bbox=-25.92,36.87,-24.72,37.96

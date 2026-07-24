@@ -1,0 +1,1 @@
+coordinate_system=transverse_mercator eastf=350000.0 latf=-44.0 lonf=-176.5 northf=650000.0 scale=1.0 datum=chathamislands1971 bbox=-177.25,-44.64,-175.54,-43.3

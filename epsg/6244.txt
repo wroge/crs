@@ -1,0 +1,1 @@
+coordinate_system=colombia_urban eastf=1035263.443 h0=100.0 latf=7.08760639166667 lonf=-70.7583096555555 northf=1275526.621 datum=magna-sirgas bbox=-70.78,7.05,-70.71,7.1

@@ -1,0 +1,1 @@
+coordinate_system=swiss_oblique_mercator azimuth=0.571661194444444 eastf=658377.437 gamma=0.571661194444444 latf=27.5188288055556 lonf=52.6035391666667 northf=3044969.194 scale=0.999895934 datum=rassadiran bbox=52.5,27.39,52.71,27.61

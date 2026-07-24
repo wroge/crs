@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=schwarzeck bbox=8.24,-30.64,25.27,-16.95

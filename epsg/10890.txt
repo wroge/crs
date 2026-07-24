@@ -1,0 +1,1 @@
+coordinate_system=geocentric datum=etrs89-dnk bbox=3.24,54.36,16.51,58.27

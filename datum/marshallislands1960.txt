@@ -1,0 +1,2 @@
+spheroid=hough1960
+accuracy=6.0 bbox=162.27,8.66,167.82,19.38 operation=geocentric_translations tx=102.0 ty=52.0 tz=-38.0

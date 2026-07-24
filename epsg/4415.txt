@@ -1,0 +1,1 @@
+coordinate_system=lambert_conformal_conic_2sp eastf=500000.0 latf=-9.0 lonf=26.0 northf=500000.0 sp1=-6.5 sp2=-11.5 datum=katanga1955 bbox=21.74,-13.46,30.78,-4.99

@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=mhastonshore bbox=10.53,-6.04,13.1,-4.38

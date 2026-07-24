@@ -1,0 +1,1 @@
+coordinate_system=lambert_conformal_conic_2sp eastf=150000.0 latf=90.0 northf=5400000.0 sp1=49.8333333333333 sp2=51.1666666666667 datum=bd50brussels bbox=2.5,49.5,6.4,51.51

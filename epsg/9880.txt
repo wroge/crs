@@ -1,0 +1,1 @@
+coordinate_system=transverse_mercator eastf=226574.2032 latf=53.35 lonf=-1.9 northf=390894.838 scale=1.0 datum=moldor11-irf bbox=-2.4,53.25,-1.39,53.55

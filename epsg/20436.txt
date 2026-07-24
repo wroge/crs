@@ -1,0 +1,1 @@
+coordinate_system=transverse_mercator eastf=500000.0 lonf=33.0 scale=0.9996 datum=ainelabd bbox=34.51,26.82,36,29.38

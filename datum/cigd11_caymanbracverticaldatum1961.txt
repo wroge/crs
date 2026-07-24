@@ -1,0 +1,2 @@
+spheroid=grs1980
+accuracy=0.03 bbox=-79.92,19.66,-79.69,19.78 target=cigd11 operation=vertical_grid grid=CBGM0811.TXT

@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=sirgas-consir17p01 bbox=-122.19,-59.87,-25.28,32.72

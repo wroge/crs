@@ -1,0 +1,1 @@
+coordinate_system=transverse_mercator eastf=14200.0 latf=-25.0685526111111 lonf=-130.112967111111 northf=15500.0 scale=1.0 datum=pitcairn2006 bbox=-130.16,-25.14,-130.01,-25

@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=fairisle bbox=-1.76,59.45,-1.5,59.6

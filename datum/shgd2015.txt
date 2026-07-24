@@ -1,0 +1,2 @@
+spheroid=grs1980
+accuracy=1 bbox=-5.85,-16.08,-5.59,-15.85 operation=geocentric_translations

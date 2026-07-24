@@ -1,0 +1,1 @@
+coordinate_system=transverse_mercator eastf=1300000.0 lonf=68.5166666666667 northf=14743.5 scale=1.0 datum=kyrg-06 bbox=69.24,39.51,70.02,40.22

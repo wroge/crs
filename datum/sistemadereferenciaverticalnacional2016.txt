@@ -1,0 +1,2 @@
+spheroid=wgs84
+accuracy=0.05 bbox=-73.59,-55.11,-53.65,-21.78 target=posgar2007 operation=vertical_grid grid=ar_ign_GEOIDE-Ar16.tif

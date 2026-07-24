@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=makassarjakarta bbox=118.71,-6.54,120.78,-1.88

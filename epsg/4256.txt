@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=mahe1971 bbox=55.3,-4.86,55.59,-4.5

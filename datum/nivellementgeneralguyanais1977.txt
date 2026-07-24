@@ -1,0 +1,2 @@
+spheroid=grs1980
+accuracy=998.0 bbox=-54.61,2.11,-51.61,5.81 target=rgfg95 operation=vertical_grid grid=fr_ign_ggguy15.tif

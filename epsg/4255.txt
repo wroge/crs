@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=heratnorth bbox=60.5,29.4,74.92,38.48

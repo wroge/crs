@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=guadeloupe1988 bbox=-61.85,15.88,-61.15,16.55

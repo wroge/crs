@@ -1,0 +1,4 @@
+spheroid=wgs84
+accuracy=2 bbox=-180,-90,180,90 operation=geocentric_translations
+accuracy=3.0 bbox=93.41,-60.55,173.34,-8.47 target=gda2020 operation=geocentric_translations
+accuracy=6 bbox=112.85,-43.7,153.69,-9.86 target=gda2020 operation=geocentric_translations

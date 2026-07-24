@@ -1,0 +1,1 @@
+coordinate_system=transverse_mercator eastf=243839.76814520717 latf=6.66666666666667 lonf=-12.0 northf=182879.8261089054 scale=1.0 datum=sierraleone1924 bbox=-13.34,8.32,-13.13,8.55

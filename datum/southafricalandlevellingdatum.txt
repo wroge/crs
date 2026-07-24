@@ -1,0 +1,2 @@
+spheroid=grs1980
+accuracy=0.07 bbox=16.45,-34.88,32.95,-22.13 target=itrf2005 operation=vertical_grid grid=za_cdngi_sageoid2010.tif

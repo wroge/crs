@@ -1,0 +1,1 @@
+coordinate_system=transverse_mercator eastf=578.55 lonf=-63.0 northf=-1930396.26 scale=0.9996 datum=sinteustatius bbox=-63.05,17.41,-62.88,17.58

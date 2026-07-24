@@ -1,0 +1,3 @@
+spheroid=bessel1841
+accuracy=0.05 bbox=9.53,46.4,17.17,49.02 target=mgi operation=vertical_grid grid=at_bev_GEOID_BESSEL_Oesterreich.tif
+accuracy=0.05 bbox=9.53,46.4,17.17,49.02 target=etrs89 operation=vertical_grid grid=at_bev_GEOID_GRS80_Oesterreich.tif

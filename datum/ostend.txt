@@ -1,0 +1,2 @@
+spheroid=grs1980
+accuracy=0.02 bbox=2.5,49.5,6.4,51.51 target=etrs89 operation=vertical_grid grid=be_ign_hBG18.tif

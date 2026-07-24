@@ -1,0 +1,1 @@
+coordinate_system=transverse_mercator eastf=500000.0 lonf=-84.0 scale=0.9999 datum=cr-sirgasepoch2014.59 bbox=-85.97,7.98,-82.53,11.22

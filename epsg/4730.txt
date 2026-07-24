@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=santo1965 bbox=166.47,-17.32,168.71,-14.57

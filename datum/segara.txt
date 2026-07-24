@@ -1,0 +1,4 @@
+spheroid=bessel1841
+accuracy=5.0 bbox=114.55,-4.24,117.99,0 operation=geocentric_translations tx=-387.06 ty=636.53 tz=46.29
+accuracy=10.0 bbox=116.96,-0.06,119.06,4.29 operation=geocentric_translations tx=-403.4 ty=681.12 tz=46.56
+bbox=114.55,-4.24,119.06,4.29 operation=geocentric_translations tx=-403.0 ty=684.0 tz=41.0

@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=gan1970 bbox=72.81,-0.69,73.69,7.08

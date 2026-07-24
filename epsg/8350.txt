@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=gr96_greenlandverticalreference2016 bbox=-75,58,-6.99,85.01

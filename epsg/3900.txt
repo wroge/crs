@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=n2000 bbox=19.24,59.75,31.59,70.09

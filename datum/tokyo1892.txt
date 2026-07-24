@@ -1,0 +1,2 @@
+spheroid=bessel1841
+accuracy=0.0 bbox=124.53,33.14,131.01,38.64 target=korean1985 operation=longitude_rotation lon=0.0028902777777777776

@@ -1,0 +1,1 @@
+coordinate_system=transverse_mercator latf=54.4685 lonf=9.233 scale=1.0 datum=ostenfeld-irf bbox=8.37,54.8,10.16,55.47

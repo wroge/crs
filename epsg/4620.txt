@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=point58 bbox=-17.19,10.26,30.42,15.7

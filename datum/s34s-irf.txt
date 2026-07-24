@@ -1,0 +1,2 @@
+spheroid=international1924
+accuracy=0.03 bbox=10.79,54.51,12.87,56.79 target=etrs89 operation=horizontal_grid grid=dk_sdfi_s34s_2022.tif inverse

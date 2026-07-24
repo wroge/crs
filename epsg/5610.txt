@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=croatianverticalreferencedatum1971 bbox=13.43,42.34,19.43,46.54

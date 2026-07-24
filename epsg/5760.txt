@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=bluff1955 bbox=168.01,-46.71,168.86,-46.26

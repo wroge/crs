@@ -1,0 +1,2 @@
+spheroid=grs1980
+accuracy=1 bbox=34.44,16.29,55.67,32.16 operation=position_vector rx=-0.008393000000000003 ry=0.0007490000000000001 rz=-0.010276

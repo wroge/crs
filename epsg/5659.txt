@@ -1,0 +1,1 @@
+coordinate_system=transverse_mercator eastf=500053.0 lonf=9.0 northf=-3999820.0 scale=0.9996 datum=montemario bbox=9.19,43.73,12.76,45.14

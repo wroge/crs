@@ -1,0 +1,3 @@
+spheroid=international1924
+accuracy=2.5 bbox=-67.49,3.56,-59.8,10.8 operation=geocentric_translations tx=-273.5 ty=110.6 tz=-357.9
+accuracy=15.0 bbox=-73.38,0.64,-59.8,12.25 operation=molodensky_badekas tx=-270.933 ty=115.599 tz=-360.226 rx=-5.266 ry=-1.238 rz=2.381 ds=-5.109 px=2464351.59 py=-5783466.61 pz=974809.81

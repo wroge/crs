@@ -1,0 +1,1 @@
+coordinate_system=albers_equal_area latf=50.0 lonf=-154.0 sp1=55.0 sp2=65.0 datum=nad83nsrs2007 bbox=172.42,51.3,-129.99,71.4

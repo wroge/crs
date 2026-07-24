@@ -1,0 +1,6 @@
+spheroid=grs1980
+accuracy=1.02 bbox=165.87,-47.65,179.27,-33.89 target=nzgd2000 operation=velocity_grid grid=nz_linz_nzgd2000-20180701.json
+accuracy=1.03 bbox=165.87,-47.65,179.27,-33.89 target=nzgd2000 operation=velocity_grid grid=nz_linz_nzgd2000-20000101.json
+accuracy=1.03 bbox=165.87,-47.65,179.27,-33.89 target=nzgd2000 operation=velocity_grid grid=nz_linz_nzgd2000-20171201.json
+accuracy=3.11 bbox=112.85,-43.7,153.69,-9.86 target=gda94 operation=time_dependent_coordinate_frame tx=0.02454 ty=-0.03643 tz=-0.06812 rx=-0.0027359000000000003 ry=-0.0020431 rz=0.0003731 ds=0.006901 dtx=-0.0218 dty=0.00471 dtz=0.02627 drx=0.0020203 dry=0.0021735 drz=0.001629 dds=0.000388 epoch=1994.0
+accuracy=3.11 bbox=109.23,-47.2,163.2,-8.88 target=gda94 operation=time_dependent_coordinate_frame tx=0.02454 ty=-0.03643 tz=-0.06812 rx=-0.0027359000000000003 ry=-0.0020431 rz=0.0003731 ds=0.006901 dtx=-0.0218 dty=0.00471 dtz=0.02627 drx=0.0020203 dry=0.0021735 drz=0.001629 dds=0.000388 epoch=1994.0

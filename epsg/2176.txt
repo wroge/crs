@@ -1,0 +1,1 @@
+coordinate_system=transverse_mercator eastf=5500000.0 lonf=15.0 scale=0.999923 datum=etrf2000-pl bbox=14.14,50.26,16.5,55.35

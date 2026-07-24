@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=nad83fbn bbox=144.58,-14.59,-64.51,49.38

@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=lepouce1934 bbox=57.25,-20.57,57.85,-19.94

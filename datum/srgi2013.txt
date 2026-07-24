@@ -1,0 +1,2 @@
+spheroid=wgs84
+accuracy=0.2 bbox=92.01,-13.95,141.46,7.79 target=dgn95 operation=coordinate_frame tx=-0.2773 ty=0.0534 tz=0.4819 rx=0.01928575938410351 ry=-0.005899173458666956 rz=0.0019987059725343637 ds=-0.028 inverse

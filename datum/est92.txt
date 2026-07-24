@@ -1,0 +1,2 @@
+spheroid=grs1980
+accuracy=0.5 bbox=21.74,57.52,28.2,59.75 operation=coordinate_frame tx=0.055 ty=-0.541 tz=-0.185 rx=-0.0183 ry=0.0003 rz=0.007000000000000001 ds=-0.014

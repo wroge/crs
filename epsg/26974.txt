@@ -1,0 +1,1 @@
+coordinate_system=transverse_mercator eastf=900000.0 latf=37.5 lonf=-87.0833333333333 northf=250000.0 scale=0.999966667 datum=nad83 bbox=-88.1,37.77,-86.24,41.77

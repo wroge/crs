@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=s45b-irf bbox=14.59,54.94,15.25,55.38

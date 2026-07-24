@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=americansamoa1962 bbox=-170.88,-14.43,-169.38,-14.11

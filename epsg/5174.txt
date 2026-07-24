@@ -1,0 +1,1 @@
+coordinate_system=transverse_mercator eastf=200000.0 latf=38.0 lonf=127.002890277778 northf=500000.0 scale=1.0 datum=korean1985 bbox=126,33.96,128,38.33

@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=qatar1948 bbox=50.69,24.55,51.68,26.2

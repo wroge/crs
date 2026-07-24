@@ -1,0 +1,1 @@
+coordinate_system=transverse_mercator eastf=200000.0 lonf=28.4 northf=-5000000.0 scale=0.99994 datum=moldref99 bbox=26.63,45.44,30.13,48.47

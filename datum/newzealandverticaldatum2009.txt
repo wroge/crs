@@ -1,0 +1,2 @@
+spheroid=grs1980
+accuracy=0.1 bbox=160.6,-55.95,-171.2,-25.88 target=nzgd2000 operation=vertical_grid grid=nz_linz_nzgeoid2009.tif

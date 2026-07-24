@@ -1,0 +1,1 @@
+coordinate_system=modified_azimuthal_equidistant eastf=40000.0 latf=9.54670833333333 lonf=138.168744444444 northf=60000.0 datum=guam1963 bbox=137.99,9.39,138.27,9.69

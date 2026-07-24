@@ -1,0 +1,4 @@
+spheroid=clarke1866
+accuracy=5.0 bbox=-85.97,7.98,-82.53,11.22 operation=molodensky_badekas_pv tx=213.116 ty=9.358 tz=-74.946 rx=2.3514187912168985 ry=-0.06146691226163471 rz=6.394208993659987 ds=5.22 px=617749.7118 py=-6250547.7336 pz=1102063.6099
+accuracy=8.0 bbox=-85.97,7.98,-82.53,11.22 operation=geocentric_translations tx=213.11 ty=9.37 tz=-74.95
+accuracy=14.0 bbox=-92.29,7.98,-82.53,17.83 operation=geocentric_translations tx=205.0 ty=96.0 tz=-98.0

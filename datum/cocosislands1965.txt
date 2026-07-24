@@ -1,0 +1,2 @@
+spheroid=australiannationalspheroid
+accuracy=44.0 bbox=96.76,-12.27,96.99,-11.76 operation=geocentric_translations tx=-491.0 ty=-22.0 tz=435.0

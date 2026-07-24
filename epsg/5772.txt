@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=stewartisland1977 bbox=167.29,-47.33,168.34,-46.63

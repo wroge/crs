@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=ayabellelighthouse bbox=41.75,10.94,44.15,12.72

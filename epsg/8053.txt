@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=meansealevel bbox=167.65,15.56,-65.69,74.71

@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=lao1997 bbox=100.09,13.92,107.64,22.5

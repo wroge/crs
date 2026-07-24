@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=ign63hivaoa bbox=-139.23,-10.08,-138.75,-9.64

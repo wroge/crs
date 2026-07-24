@@ -1,0 +1,2 @@
+spheroid=everest18301937adjustment
+accuracy=21.0 bbox=97.34,5.63,105.64,20.46 operation=geocentric_translations tx=217.0 ty=823.0 tz=299.0

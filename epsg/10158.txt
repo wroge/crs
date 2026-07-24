@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=s34j-irf bbox=8,54.67,11.29,57.8

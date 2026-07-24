@@ -1,0 +1,2 @@
+spheroid=bessel1841
+accuracy=0.0 bbox=114.55,-4.24,119.06,4.29 target=segara operation=longitude_rotation lon=106.807719444444

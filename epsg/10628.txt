@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=wc05-irf bbox=-4.33,51.4,-0.04,55.92

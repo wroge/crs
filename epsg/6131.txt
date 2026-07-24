@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=littlecaymanverticaldatum1961 bbox=-80.14,19.63,-79.93,19.74

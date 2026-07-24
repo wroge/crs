@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=ordnancedatumnewlynorkneyisles bbox=-3.48,58.72,-2.34,59.41

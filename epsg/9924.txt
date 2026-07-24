@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=etrs89_deutscheshaupthoehennetz2016 bbox=5.86,47.27,15.04,55.09

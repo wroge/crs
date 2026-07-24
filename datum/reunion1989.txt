@@ -1,0 +1,2 @@
+spheroid=grs1980
+accuracy=0.1 bbox=55.16,-21.42,55.91,-20.81 target=rgr92 operation=vertical_grid grid=fr_ign_RAR07_bl.tif

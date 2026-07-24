@@ -1,0 +1,1 @@
+coordinate_system=transverse_mercator eastf=500000.0 lonf=165.0 northf=10000000.0 scale=0.9996 datum=ign72grandeterre bbox=163.92,-22.45,167.09,-20.03

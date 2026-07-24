@@ -1,0 +1,1 @@
+coordinate_system=cassini_soldner eastf=86501.46392052 latf=10.4416666666667 lonf=-61.3333333333333 northf=65379.0134283 datum=trinidad1903 bbox=-62.09,9.83,-60,11.51

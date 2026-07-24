@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=mountdillon bbox=-60.9,11.08,-60.44,11.41

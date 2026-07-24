@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=bogota1975bogota bbox=-79.1,-4.23,-66.87,12.52

@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=ign72grandeterre bbox=163.92,-22.45,167.09,-20.03

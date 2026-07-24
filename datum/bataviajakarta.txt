@@ -1,0 +1,2 @@
+spheroid=bessel1841
+accuracy=0.0 bbox=95.16,-8.91,115.77,5.97 target=batavia operation=longitude_rotation lon=106.807719444444

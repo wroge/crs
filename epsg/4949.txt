@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=lks-92 bbox=19.06,55.67,28.24,58.09

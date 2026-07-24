@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=nivellementgeneraldepolynesiefrancaise bbox=-152.39,-17.93,-149.09,-16.17

@@ -1,0 +1,2 @@
+spheroid=grs1980
+accuracy=0.008 bbox=-7.06,49.93,1.8,58.71 target=etrs89 operation=vertical_grid grid=uk_os_OSGM15_GB.tif

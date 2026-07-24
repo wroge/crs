@@ -1,0 +1,2 @@
+spheroid=krassowsky1940
+accuracy=2.0 bbox=100.09,13.92,107.64,22.5 target=lao1997 operation=geocentric_translations tx=-2.227 ty=6.524 tz=2.178

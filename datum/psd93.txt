@@ -1,0 +1,4 @@
+spheroid=clarke1880rgs
+accuracy=0.5 bbox=56.5,19.58,59.02,21.17 operation=position_vector tx=-191.808 ty=-250.512 tz=167.861 rx=-0.792 ry=-1.653 rz=8.558 ds=20.703
+accuracy=0.5 bbox=51.99,16.59,59.91,26.58 operation=position_vector tx=-180.624 ty=-225.516 tz=173.919 rx=-0.81 ry=-1.898 rz=8.336 ds=16.71006
+accuracy=1.2 bbox=51.99,16.59,59.91,26.58 target=wgs72 operation=position_vector tx=-182.046 ty=-225.604 tz=168.884 rx=-0.616 ry=-1.655 rz=7.824 ds=16.641

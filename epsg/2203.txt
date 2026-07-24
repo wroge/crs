@@ -1,0 +1,1 @@
+coordinate_system=transverse_mercator eastf=500000.0 lonf=-63.0 scale=0.9996 datum=regven bbox=-66,0.64,-58.95,16.75

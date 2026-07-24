@@ -1,0 +1,8 @@
+*.log
+scripts/
+cmd/
+docs/
+tmp/
+coverage.txt
+testgrids/
+.cache/

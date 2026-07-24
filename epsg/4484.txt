@@ -1,0 +1,1 @@
+coordinate_system=transverse_mercator eastf=500000.0 lonf=-117.0 scale=0.9996 datum=mexicoitrf92 bbox=-122.19,15.01,-114,32.72

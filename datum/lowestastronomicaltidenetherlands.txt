@@ -1,0 +1,2 @@
+spheroid=grs1980
+accuracy=0.1 bbox=2.53,51.32,7.21,55.77 target=etrs89 operation=vertical_grid grid=nllat2018.gtx

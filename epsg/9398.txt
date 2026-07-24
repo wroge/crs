@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=tenerife bbox=-16.96,27.93,-16.08,28.63

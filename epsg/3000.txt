@@ -1,0 +1,1 @@
+coordinate_system=mercator_a eastf=3900000.0 lonf=110.0 northf=900000.0 scale=0.997 datum=segara bbox=114.55,-4.24,119.06,4.29

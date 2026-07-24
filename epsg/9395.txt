@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=lanzarote bbox=-13.95,28.78,-13.37,29.47

@@ -1,0 +1,2 @@
+spheroid=wgs84
+accuracy=0.2 bbox=52.09,27.63,52.26,27.81 operation=geocentric_translations ty=-0.15 tz=0.68

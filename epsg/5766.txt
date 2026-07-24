@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=nelson1955 bbox=171.82,-42.44,174.46,-40.44

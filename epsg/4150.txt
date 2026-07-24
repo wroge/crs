@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=ch1903plus bbox=5.95,45.81,10.5,47.81

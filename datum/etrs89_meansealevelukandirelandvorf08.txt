@@ -1,0 +1,2 @@
+spheroid=grs1980
+accuracy=0.3 bbox=-16.1,47.42,3.4,63.89 target=etrs89 operation=vertical_grid grid=VORF-UK08_ETRF_to_MSL.vrf

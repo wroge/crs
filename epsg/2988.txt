@@ -1,0 +1,1 @@
+coordinate_system=transverse_mercator eastf=500000.0 lonf=-177.0 northf=10000000.0 scale=0.9996 datum=mop78 bbox=-176.25,-13.41,-176.07,-13.16

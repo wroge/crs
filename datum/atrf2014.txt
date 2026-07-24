@@ -1,0 +1,5 @@
+spheroid=grs1980
+accuracy=0.03 bbox=93.41,-60.55,173.34,-8.47 target=gda2020 operation=time_dependent_coordinate_frame drx=0.0015037899999999999 dry=0.00118346 drz=0.00120716 epoch=2020.0
+accuracy=0.035 bbox=93.41,-60.55,173.34,-8.47 target=gda94 operation=time_dependent_coordinate_frame tx=-0.06155 ty=0.01087 tz=0.04019 rx=0.039492400000000004 ry=0.0327221 rz=0.0328979 ds=0.009994 drx=0.0015037899999999999 dry=0.00118346 drz=0.00120716 epoch=2020.0
+accuracy=3.03 bbox=112.85,-43.7,153.69,-9.86 target=gda2020 operation=time_dependent_coordinate_frame drx=0.0015037899999999999 dry=0.00118346 drz=0.00120716 epoch=2020.0
+accuracy=3.035 bbox=112.85,-43.7,153.69,-9.86 target=gda94 operation=time_dependent_coordinate_frame tx=-0.06155 ty=0.01087 tz=0.04019 rx=0.039492400000000004 ry=0.0327221 rz=0.0328979 ds=0.009994 drx=0.0015037899999999999 dry=0.00118346 drz=0.00120716 epoch=2020.0

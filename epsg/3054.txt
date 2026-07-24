@@ -1,0 +1,1 @@
+coordinate_system=transverse_mercator eastf=500000.0 lonf=-27.0 scale=0.9996 datum=hjorsey1955 bbox=-24.66,64.71,-24,65.85

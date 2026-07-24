@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=campoinchauspe bbox=-73.59,-54.93,-53.65,-21.78

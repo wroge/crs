@@ -1,0 +1,1 @@
+coordinate_system=transverse_mercator eastf=700000.0 latf=30.0 lonf=27.0 northf=200000.0 scale=1.0 datum=egypt1907 bbox=24.7,28.18,29,31.68

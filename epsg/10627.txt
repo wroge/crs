@@ -1,0 +1,1 @@
+coordinate_system=transverse_mercator datum=ecml14-irf_ordnancedatumnewlyn eastf=108021.121 latf=53.8 lonf=-1.6 northf=263196.8721 scale=1.0 bbox=-3.45,51.45,0.05,56.1

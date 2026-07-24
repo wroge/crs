@@ -1,0 +1,1 @@
+coordinate_system=transverse_mercator eastf=500000.0 lonf=57.0 scale=0.9996 datum=southeastisland1943 bbox=55.15,-4.86,56.01,-3.66

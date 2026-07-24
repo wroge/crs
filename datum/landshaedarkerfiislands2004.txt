@@ -1,0 +1,4 @@
+spheroid=grs1980
+accuracy=0.05 bbox=-24.66,63.24,-13.38,66.62 target=isn93 operation=vertical_grid grid=is_lmi_Icegeoid_ISN93.tif
+accuracy=0.05 bbox=-24.66,63.24,-13.38,66.62 target=isn2016 operation=vertical_grid grid=is_lmi_Icegeoid_ISN2016.tif
+accuracy=0.05 bbox=-24.66,63.24,-13.38,66.62 target=isn2004 operation=vertical_grid grid=is_lmi_Icegeoid_ISN2004.tif

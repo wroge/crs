@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=nationalgeodeticverticaldatum1929 bbox=-124.79,24.41,-66.91,49.38

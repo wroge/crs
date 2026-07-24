@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=nea74noumea bbox=166.35,-22.37,166.54,-22.19

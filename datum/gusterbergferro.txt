@@ -1,0 +1,2 @@
+spheroid=zach1812
+accuracy=0 bbox=-180,-90,180,90 operation=longitude_rotation lon=-17.6666666666667

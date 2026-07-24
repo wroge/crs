@@ -1,0 +1,6 @@
+spheroid=clarke1866
+accuracy=1.0 bbox=31.91,-26.87,34.5,-23.91 operation=coordinate_frame tx=-82.875 ty=-57.097 tz=-156.768 rx=2.158 ry=-1.524 rz=0.982 ds=-0.359
+accuracy=3.0 bbox=30.21,-19.91,39.18,-14.01 operation=coordinate_frame tx=-73.472 ty=-51.66 tz=-112.482 rx=-0.9530000000000001 ry=-4.6 rz=2.368 ds=0.586
+accuracy=4.0 bbox=31.29,-24.91,35.65,-19.74 operation=coordinate_frame tx=-138.527 ty=-91.999 tz=-114.591 rx=0.14 ry=-3.363 rz=2.217 ds=11.748
+accuracy=10.0 bbox=34.36,-16.94,40.9,-10.42 operation=coordinate_frame tx=219.315 ty=168.975 tz=-166.145 rx=-0.198 ry=-5.926 rz=2.356 ds=-57.104
+accuracy=17.0 bbox=30.21,-26.87,40.9,-10.42 operation=geocentric_translations tx=-80.0 ty=-100.0 tz=-228.0

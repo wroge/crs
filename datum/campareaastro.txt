@@ -1,0 +1,2 @@
+spheroid=international1924
+bbox=165.73,-77.94,167.43,-77.17 operation=geocentric_translations tx=-104.0 ty=-129.0 tz=239.0

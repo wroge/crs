@@ -1,0 +1,1 @@
+coordinate_system=polar_stereographic_b eastf=6000000.0 latf=-71.0 lonf=70.0 northf=6000000.0 datum=wgs84 bbox=45,-90,160,-60

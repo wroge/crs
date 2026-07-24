@@ -1,0 +1,1 @@
+coordinate_system=transverse_mercator eastf=1000000.0 latf=4.59620322222222 lonf=-77.0775077694444 northf=1000000.0 scale=1.0 datum=magna-sirgas2018 bbox=-78.59,0.03,-75.58,10.21

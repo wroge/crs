@@ -1,0 +1,3 @@
+spheroid=wgs84
+accuracy=0.11 bbox=-180,-90,180,90 operation=vertical_grid grid=Und_min1x1_egm2008_isw=82_WGS84_TideFree
+accuracy=0.113 bbox=-180,-90,180,90 operation=vertical_grid grid=us_nga_egm08_25.tif

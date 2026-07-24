@@ -1,0 +1,2 @@
+spheroid=international1924
+accuracy=1.0 bbox=-150,-17.63,-149.73,-17.41 operation=position_vector tx=218.769 ty=150.75 tz=176.75 rx=3.5231 ry=2.0037 rz=1.288 ds=10.9817

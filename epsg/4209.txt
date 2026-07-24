@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=arc1950 bbox=19.99,-26.88,35.93,-8.19

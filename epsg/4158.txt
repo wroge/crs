@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=naparima1955 bbox=-61.98,9.99,-60.85,10.9

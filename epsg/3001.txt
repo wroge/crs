@@ -1,0 +1,1 @@
+coordinate_system=mercator_a eastf=3900000.0 lonf=110.0 northf=900000.0 scale=0.997 datum=batavia bbox=95.16,-8.91,115.77,5.97

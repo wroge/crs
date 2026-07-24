@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=slovenia1996_slovenianverticalsystem2000 bbox=13.38,45.42,16.61,46.88

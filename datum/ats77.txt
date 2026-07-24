@@ -1,0 +1,10 @@
+spheroid=averageterrestrialsystem1977
+accuracy=1.5 bbox=-64.49,45.9,-61.9,47.09 operation=horizontal_grid grid=ca_nrc_PE7783V2.tif
+accuracy=1.5 bbox=-69.05,44.56,-63.7,48.07 operation=horizontal_grid grid=ca_nrc_NB7783v2.tif
+accuracy=1.5 bbox=-66.28,43.41,-59.73,47.08 operation=horizontal_grid grid=NS778301.gsb
+accuracy=1.56 bbox=-64.49,45.9,-61.9,47.08 operation=horizontal_grid grid=ca_nrc_PE7783V2.tif
+accuracy=1.56 bbox=-66.28,44.56,-63.7,47.08 operation=horizontal_grid grid=ca_nrc_NB7783v2.tif
+accuracy=3 bbox=-64.49,45.9,-63.7,47.09 operation=horizontal_grid grid=ca_nrc_NB7783v2.tif
+accuracy=3 bbox=-64.49,45.9,-63.7,47.09 operation=horizontal_grid grid=ca_nrc_PE7783V2.tif
+accuracy=3 bbox=-64.49,45.9,-61.9,47.08 operation=horizontal_grid grid=NS778301.gsb
+accuracy=3 bbox=-66.28,44.56,-63.7,47.08 operation=horizontal_grid grid=NS778301.gsb

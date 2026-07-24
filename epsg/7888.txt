@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=jamestown1971 bbox=-5.85,-16.08,-5.59,-15.85

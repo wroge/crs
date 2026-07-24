@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=osgb70 bbox=-8.82,49.79,1.92,60.94

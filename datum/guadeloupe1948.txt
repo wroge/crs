@@ -1,0 +1,3 @@
+spheroid=international1924
+accuracy=0.1 bbox=-61.85,15.8,-60.97,16.55 operation=position_vector tx=-472.29 ty=-5.63 tz=-304.12 rx=0.4362 ry=-0.8374 rz=0.2563 ds=1.8984
+accuracy=10.0 bbox=-61.85,15.8,-60.97,16.55 operation=geocentric_translations tx=-467.0 ty=-16.0 tz=-300.0

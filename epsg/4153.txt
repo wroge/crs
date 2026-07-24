@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=rassadiran bbox=52.5,27.39,52.71,27.61

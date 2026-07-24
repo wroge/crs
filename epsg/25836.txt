@@ -1,0 +1,1 @@
+coordinate_system=transverse_mercator eastf=500000.0 lonf=33.0 scale=0.9996 datum=etrs89 bbox=30,42.56,36.01,84.01

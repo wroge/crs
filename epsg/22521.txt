@@ -1,0 +1,1 @@
+coordinate_system=transverse_mercator eastf=500000.0 lonf=-57.0 northf=10000000.0 scale=0.9996 datum=corregoalegre1970-72 bbox=-58.16,-31.91,-54,-17.99

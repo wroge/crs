@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=dominica1945 bbox=-61.55,15.14,-61.2,15.69

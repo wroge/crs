@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=nad27cgq77 bbox=-79.85,44.99,-57.1,62.62

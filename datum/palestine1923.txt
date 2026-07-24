@@ -1,0 +1,3 @@
+spheroid=clarke1880benoit
+accuracy=1.5 bbox=34.17,29.45,35.69,33.28 target=israel1993 operation=geocentric_translations tx=-181.0 ty=-122.0 tz=225.0
+accuracy=2.0 bbox=34.17,29.45,35.69,33.28 operation=position_vector tx=-275.7224 ty=94.7824 tz=340.8944 rx=-8.001 ry=-4.42 rz=-11.821 ds=1.0

@@ -1,0 +1,2 @@
+spheroid=besselmodified
+accuracy=0.0 bbox=4.39,57.9,31.32,71.24 target=ngo1948 operation=longitude_rotation lon=10.7229166666667

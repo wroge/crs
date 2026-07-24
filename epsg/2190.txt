@@ -1,0 +1,1 @@
+coordinate_system=transverse_mercator eastf=500000.0 lonf=-27.0 scale=0.9996 datum=azoresoriental1940 bbox=-25.92,36.87,-24.72,37.96

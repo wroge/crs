@@ -1,0 +1,1 @@
+coordinate_system=lambert_conformal_conic_2sp latf=-55.0 lonf=-37.0 sp1=-54.0 sp2=-54.75 datum=wgs84 bbox=-38.08,-54.95,-35.74,-53.93

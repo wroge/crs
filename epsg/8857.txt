@@ -1,0 +1,1 @@
+coordinate_system=equal_earth datum=wgs84 bbox=-180,-90,180,90

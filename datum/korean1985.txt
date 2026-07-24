@@ -1,0 +1,2 @@
+spheroid=bessel1841
+accuracy=1.0 bbox=124.53,33.14,131.01,38.64 operation=molodensky_badekas tx=-145.907 ty=505.034 tz=685.756 rx=-1.162 ry=2.347 rz=1.5919999999999999 ds=6.342 px=-3159521.31 py=4068151.32 pz=3748113.85

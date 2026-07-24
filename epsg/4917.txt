@@ -1,0 +1,1 @@
+coordinate_system=geocentric datum=itrf96 bbox=-180,-90,180,90

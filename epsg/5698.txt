@@ -1,0 +1,1 @@
+coordinate_system=lambert_conformal_conic_2sp datum=rgf93v1_nivellementgeneraldelafrance-ign69 eastf=700000.0 latf=46.5 lonf=3.0 northf=6600000.0 sp1=49.0 sp2=44.0 bbox=-4.87,42.33,8.23,51.14

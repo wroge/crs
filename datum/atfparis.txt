@@ -1,0 +1,2 @@
+spheroid=plessis1817
+accuracy=0 bbox=-180,-90,180,90 operation=longitude_rotation lon=2.33720833333333

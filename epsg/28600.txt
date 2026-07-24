@@ -1,0 +1,1 @@
+coordinate_system=transverse_mercator eastf=200000.0 latf=24.45 lonf=51.2166666666667 northf=300000.0 scale=0.99999 datum=qatar1974 bbox=50.69,24.55,51.68,26.2

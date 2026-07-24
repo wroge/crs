@@ -1,0 +1,1 @@
+coordinate_system=geocentric datum=atrf2014 bbox=93.41,-60.55,173.34,-8.47

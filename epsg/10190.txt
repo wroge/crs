@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=nivellementgeneraldelalgerie2022 bbox=-8.67,18.97,11.99,37.14

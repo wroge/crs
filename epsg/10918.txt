@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=derivedcaliforniaorthometricheightsof1988epoch2025 bbox=-124.45,32.53,-114.12,42.01

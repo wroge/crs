@@ -1,0 +1,1 @@
+coordinate_system=geocentric datum=gdm2000 bbox=98.02,0.85,119.61,7.81

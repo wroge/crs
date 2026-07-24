@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=regven bbox=-73.38,0.64,-58.95,16.75

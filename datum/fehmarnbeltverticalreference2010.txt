@@ -1,0 +1,2 @@
+spheroid=grs1980
+accuracy=0.1 bbox=11.17,54.42,11.51,54.76 target=feh2010 operation=vertical_grid grid=fehmarn_geoid10.gri

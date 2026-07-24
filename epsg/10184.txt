@@ -1,0 +1,1 @@
+coordinate_system=transverse_mercator datum=dopw22-irf_ordnancedatumnewlyn eastf=64859.6557 latf=52.7 lonf=-4.15 northf=122266.5277 scale=1.0 bbox=-4.51,52.45,-3.8,53.01

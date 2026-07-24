@@ -1,0 +1,1 @@
+coordinate_system=transverse_mercator eastf=18500000.0 lonf=105.0 scale=1.0 datum=hanoi1972 bbox=102.14,8.33,108,23.4

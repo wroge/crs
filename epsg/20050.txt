@@ -1,0 +1,1 @@
+coordinate_system=swiss_oblique_mercator azimuth=58.0 eastf=457200.0 gamma=58.0 latf=40.8333333333333 lonf=-74.0 northf=457200.0 scale=0.99999 datum=nad832011 bbox=-78.51,38.64,-70.48,42.74

@@ -1,0 +1,1 @@
+coordinate_system=oblique_stereographic eastf=3501000.0 latf=53.5833333333333 lonf=17.0083333333333 northf=5999000.0 scale=0.9998 datum=pulkovo194258 bbox=14.14,52.16,20,54.89

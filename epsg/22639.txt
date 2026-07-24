@@ -1,0 +1,1 @@
+coordinate_system=oblique_stereographic eastf=400000.0 latf=47.25 lonf=-63.0 northf=800000.0 scale=0.999912 datum=nad83csrsv6 bbox=-64.49,45.9,-61.9,47.09

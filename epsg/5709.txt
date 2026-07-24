@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=normaalamsterdamspeil bbox=2.53,50.75,7.22,55.77

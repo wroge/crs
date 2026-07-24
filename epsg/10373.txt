@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=horta bbox=-28.9,38.46,-28.54,38.7

@@ -1,0 +1,1 @@
+coordinate_system=transverse_mercator lonf=31.0 northf=-5000000.0 scale=1.0 datum=mgiferro bbox=11.83,46.4,14.84,48.79

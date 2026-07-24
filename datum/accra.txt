@@ -1,0 +1,5 @@
+spheroid=waroffice
+accuracy=6.0 bbox=-3.25,4.67,1.23,11.16 operation=geocentric_translations tx=-170.0 ty=33.0 tz=326.0
+accuracy=25.0 bbox=-3.79,1.4,2.1,6.06 operation=position_vector tx=-171.16 ty=17.29 tz=325.21 rz=0.8139999999999998 ds=-0.38
+accuracy=25.0 bbox=-3.79,1.4,2.1,11.16 operation=geocentric_translations tx=-199.0 ty=32.0 tz=322.0
+accuracy=26.0 bbox=-3.79,1.4,2.1,6.06 target=wgs72be operation=geocentric_translations tx=-171.16 ty=17.29 tz=323.31

@@ -1,0 +1,1 @@
+coordinate_system=transverse_mercator eastf=499980.204 lonf=-81.0 northf=-206.121 scale=0.9995987 datum=natrf2022 bbox=-84.09,23.82,-81.17,29.94

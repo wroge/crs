@@ -1,0 +1,1 @@
+coordinate_system=geocentric datum=isn2004 bbox=-30.87,59.96,-5.55,69.59

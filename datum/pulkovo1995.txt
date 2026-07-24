@@ -1,0 +1,2 @@
+spheroid=krassowsky1940
+accuracy=1.0 bbox=18.92,39.87,-168.97,85.19 operation=coordinate_frame tx=24.47 ty=-130.89 tz=-81.56 rz=-0.13 ds=-0.22

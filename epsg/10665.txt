@@ -1,0 +1,1 @@
+coordinate_system=transverse_mercator eastf=300000.0 lonf=-51.0 northf=5000000.0 scale=0.999995 datum=sirgas2000 bbox=-51.3,-30.27,-51.01,-29.93

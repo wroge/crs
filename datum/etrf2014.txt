@@ -1,0 +1,11 @@
+spheroid=grs1980
+accuracy=0.003 bbox=3.24,53.89,31.77,71.39 target=nkg_etrf14 operation=velocity_grid grid=eur_nkg_nkgrf17vel.tif epoch=2000.0
+accuracy=0.1 bbox=-16.1,33.26,38.01,84.73 target=etrs89 operation=geocentric_translations
+accuracy=0.12 bbox=3.34,54.36,8.88,55.92 target=nkg_etrf14 operation=velocity_grid grid=eur_nkg_nkgrf17vel.tif epoch=2000.0
+accuracy=0.2 bbox=3.34,53.49,8.88,55.92 target=etrs89 operation=geocentric_translations
+accuracy=1.004 bbox=10.03,54.96,24.17,69.07 target=nkg_etrf14 operation=velocity_grid grid=eur_nkg_nkgrf17vel.tif epoch=2000.0
+accuracy=1.005 bbox=20.37,57.52,28.2,60 target=nkg_etrf14 operation=velocity_grid grid=eur_nkg_nkgrf17vel.tif epoch=2000.0
+accuracy=1.005 bbox=19.08,58.84,31.59,70.09 target=nkg_etrf14 operation=velocity_grid grid=eur_nkg_nkgrf17vel.tif epoch=2000.0
+accuracy=1.008 bbox=4.39,57.9,31.32,71.24 target=nkg_etrf14 operation=velocity_grid grid=eur_nkg_nkgrf17vel.tif epoch=2000.0
+accuracy=1.011 bbox=19.02,53.89,26.82,56.45 target=nkg_etrf14 operation=velocity_grid grid=eur_nkg_nkgrf17vel.tif epoch=2000.0
+bbox=-180,-90,180,90 target=nkg_etrf14 operation=geocentric_translations

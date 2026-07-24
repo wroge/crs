@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=portmoresby2008 bbox=144.4,-10.42,149.67,-6.67

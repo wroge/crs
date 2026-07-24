@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=gbk19-irf bbox=-4.65,55.55,-4.05,55.95

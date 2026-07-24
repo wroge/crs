@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=kyrg-06 bbox=69.24,39.19,80.29,43.22

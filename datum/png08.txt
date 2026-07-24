@@ -1,0 +1,2 @@
+spheroid=grs1980
+accuracy=0.2 bbox=140,-12,158.01,0.01 target=png94 operation=vertical_grid grid=PNG08.DAT

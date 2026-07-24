@@ -1,0 +1,4 @@
+spheroid=bessel1841
+accuracy=0.0 bbox=9.53,46.4,17.17,49.02 target=mgi operation=longitude_rotation lon=-17.6666666666667
+accuracy=1.0 bbox=13.38,40.85,23.04,46.88 target=mgi1901 operation=longitude_rotation lon=-17.6627833333333
+accuracy=0 bbox=-180,-90,180,90 operation=longitude_rotation lon=-17.6666666666667

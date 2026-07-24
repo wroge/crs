@@ -1,0 +1,1 @@
+coordinate_system=geocentric datum=gsk-2011 bbox=18.92,39.87,-168.97,85.19

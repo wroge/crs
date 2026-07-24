@@ -1,0 +1,2 @@
+spheroid=clarke1880ign
+accuracy=0.0 bbox=7.49,30.23,11.59,37.4 target=carthage operation=longitude_rotation lon=2.3372291699999908

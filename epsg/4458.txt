@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=dunedin-bluff1960 bbox=166.37,-46.73,169.95,-44.52

@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=indian1954 bbox=92.2,5.63,105.64,28.55

@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=carthage bbox=7.49,30.23,13.67,38.41

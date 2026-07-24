@@ -1,0 +1,29 @@
+spheroid=grs1980
+accuracy=0.0 bbox=-16.1,33.26,38.01,84.73 target=etrf2014 operation=time_dependent_position_vector rx=0.0017850000000000001 ry=0.011151000000000001 rz=-0.016170000000000004 drx=8.5e-05 dry=0.000531 drz=-0.0007700000000000001 epoch=2010.0
+accuracy=0.0 bbox=-16.1,33.26,38.01,84.73 target=etrf2014 operation=time_dependent_position_vector drx=8.5e-05 dry=0.000531 drz=-0.0007700000000000001 epoch=1989.0
+accuracy=0.01 bbox=-180,-90,180,90 target=itrf2008 operation=time_dependent_position_vector tx=-0.0016 ty=-0.0019 tz=-0.0024 ds=2e-05 dtz=0.0001 dds=-3e-05 epoch=2010.0 inverse
+accuracy=0.12 bbox=3.34,54.36,8.88,55.92 target=etrf2014 operation=time_dependent_position_vector drx=8.5e-05 dry=0.000531 drz=-0.0007700000000000001 epoch=1989.0
+accuracy=1.36 bbox=-87.01,23.82,-73.57,25.51 target=itrf2008 operation=time_dependent_position_vector tx=-0.0016 ty=-0.0019 tz=-0.0024 ds=2e-05 dtz=0.0001 dds=-3e-05 epoch=2010.0 inverse
+accuracy=2.16 bbox=-87.01,23.82,-81.17,25.51 target=itrf2008 operation=time_dependent_position_vector tx=-0.0016 ty=-0.0019 tz=-0.0024 ds=2e-05 dtz=0.0001 dds=-3e-05 epoch=2010.0 inverse
+accuracy=2.51 bbox=-88.48,30.14,-84.89,35.02 target=itrf2008 operation=time_dependent_position_vector tx=-0.0016 ty=-0.0019 tz=-0.0024 ds=2e-05 dtz=0.0001 dds=-3e-05 epoch=2010.0 inverse
+accuracy=2.51 bbox=-91.65,30.01,-88.09,35.01 target=itrf2008 operation=time_dependent_position_vector tx=-0.0016 ty=-0.0019 tz=-0.0024 ds=2e-05 dtz=0.0001 dds=-3e-05 epoch=2010.0 inverse
+accuracy=2.51 bbox=-94.05,28.85,-88.75,33.03 target=itrf2008 operation=time_dependent_position_vector tx=-0.0016 ty=-0.0019 tz=-0.0024 ds=2e-05 dtz=0.0001 dds=-3e-05 epoch=2010.0 inverse
+accuracy=2.51 bbox=-87.63,24.41,-79.97,31.01 target=itrf2008 operation=time_dependent_position_vector tx=-0.0016 ty=-0.0019 tz=-0.0024 ds=2e-05 dtz=0.0001 dds=-3e-05 epoch=2010.0 inverse
+accuracy=2.51 bbox=-100,25.83,-93.5,34.58 target=itrf2008 operation=time_dependent_position_vector tx=-0.0016 ty=-0.0019 tz=-0.0024 ds=2e-05 dtz=0.0001 dds=-3e-05 epoch=2010.0 inverse
+accuracy=3.01 bbox=-88.48,30.14,-84.89,30.25 target=itrf2008 operation=time_dependent_position_vector tx=-0.0016 ty=-0.0019 tz=-0.0024 ds=2e-05 dtz=0.0001 dds=-3e-05 epoch=2010.0 inverse
+accuracy=3.01 bbox=-91.65,30.01,-88.09,30.25 target=itrf2008 operation=time_dependent_position_vector tx=-0.0016 ty=-0.0019 tz=-0.0024 ds=2e-05 dtz=0.0001 dds=-3e-05 epoch=2010.0 inverse
+accuracy=3.01 bbox=-94.05,28.85,-88.75,30.25 target=itrf2008 operation=time_dependent_position_vector tx=-0.0016 ty=-0.0019 tz=-0.0024 ds=2e-05 dtz=0.0001 dds=-3e-05 epoch=2010.0 inverse
+accuracy=3.01 bbox=-97.22,25.83,-93.5,30.25 target=itrf2008 operation=time_dependent_position_vector tx=-0.0016 ty=-0.0019 tz=-0.0024 ds=2e-05 dtz=0.0001 dds=-3e-05 epoch=2010.0 inverse
+accuracy=3.01 bbox=-87.63,24.41,-81.17,30.25 target=itrf2008 operation=time_dependent_position_vector tx=-0.0016 ty=-0.0019 tz=-0.0024 ds=2e-05 dtz=0.0001 dds=-3e-05 epoch=2010.0 inverse
+accuracy=5.36 bbox=-97.22,25.97,-95,28.97 target=itrf2008 operation=time_dependent_position_vector tx=-0.0016 ty=-0.0019 tz=-0.0024 ds=2e-05 dtz=0.0001 dds=-3e-05 epoch=2010.0 inverse
+accuracy=5.36 bbox=-95,25.61,-87.25,30.23 target=itrf2008 operation=time_dependent_position_vector tx=-0.0016 ty=-0.0019 tz=-0.0024 ds=2e-05 dtz=0.0001 dds=-3e-05 epoch=2010.0 inverse
+accuracy=5.36 bbox=-87.25,23.82,-81.17,30.25 target=itrf2008 operation=time_dependent_position_vector tx=-0.0016 ty=-0.0019 tz=-0.0024 ds=2e-05 dtz=0.0001 dds=-3e-05 epoch=2010.0 inverse
+accuracy=5.36 bbox=-124.79,23.82,-66.91,49.38 target=itrf2008 operation=time_dependent_position_vector tx=-0.0016 ty=-0.0019 tz=-0.0024 ds=2e-05 dtz=0.0001 dds=-3e-05 epoch=2010.0 inverse
+accuracy=6.16 bbox=-97.22,23.82,-81.17,30.25 target=itrf2008 operation=time_dependent_position_vector tx=-0.0016 ty=-0.0019 tz=-0.0024 ds=2e-05 dtz=0.0001 dds=-3e-05 epoch=2010.0 inverse
+accuracy=7.36 bbox=-124.79,25.83,-89.64,49.05 target=itrf2008 operation=time_dependent_position_vector tx=-0.0016 ty=-0.0019 tz=-0.0024 ds=2e-05 dtz=0.0001 dds=-3e-05 epoch=2010.0 inverse
+accuracy=8.16 bbox=-97.22,25.83,-89.64,30.25 target=itrf2008 operation=time_dependent_position_vector tx=-0.0016 ty=-0.0019 tz=-0.0024 ds=2e-05 dtz=0.0001 dds=-3e-05 epoch=2010.0 inverse
+accuracy=10.36 bbox=-124.79,24.41,-66.91,49.38 target=itrf2008 operation=time_dependent_position_vector tx=-0.0016 ty=-0.0019 tz=-0.0024 ds=2e-05 dtz=0.0001 dds=-3e-05 epoch=2010.0 inverse
+accuracy=11.16 bbox=-97.22,24.41,-81.17,30.25 target=itrf2008 operation=time_dependent_position_vector tx=-0.0016 ty=-0.0019 tz=-0.0024 ds=2e-05 dtz=0.0001 dds=-3e-05 epoch=2010.0 inverse
+accuracy=11.36 bbox=-97.22,24.41,-66.91,49.38 target=itrf2008 operation=time_dependent_position_vector tx=-0.0016 ty=-0.0019 tz=-0.0024 ds=2e-05 dtz=0.0001 dds=-3e-05 epoch=2010.0 inverse
+accuracy=12.36 bbox=-118.47,23.82,-86.68,32.72 target=itrf2008 operation=time_dependent_position_vector tx=-0.0016 ty=-0.0019 tz=-0.0024 ds=2e-05 dtz=0.0001 dds=-3e-05 epoch=2010.0 inverse
+accuracy=13.16 bbox=-97.22,23.82,-86.68,30.25 target=itrf2008 operation=time_dependent_position_vector tx=-0.0016 ty=-0.0019 tz=-0.0024 ds=2e-05 dtz=0.0001 dds=-3e-05 epoch=2010.0 inverse

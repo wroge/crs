@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=rgf93v2b_nivellementgeneraldelafrance-ign78 bbox=8.5,41.31,9.63,43.07

@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=greenlandlocalmeansealevel2022 bbox=-73.29,59.74,-11.81,83.67

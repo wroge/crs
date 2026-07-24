@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=kertau1968 bbox=99.59,1.13,105.82,7.81

@@ -1,0 +1,2 @@
+spheroid=grs1980
+accuracy=0.5 bbox=3.25,54.36,16.51,58.27 target=etrs89 operation=vertical_grid grid=dk_sdfi_dkmsl_2022.tif

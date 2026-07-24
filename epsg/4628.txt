@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=tahiti52 bbox=-150,-17.93,-149.09,-17.41

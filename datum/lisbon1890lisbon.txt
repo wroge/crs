@@ -1,0 +1,2 @@
+spheroid=bessel1841
+accuracy=0.0 bbox=-9.56,36.95,-6.19,42.16 target=lisbon1890 operation=longitude_rotation lon=-9.13190611111111

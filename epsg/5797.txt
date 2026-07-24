@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=aioc1995 bbox=48.66,37.89,51.73,42.59

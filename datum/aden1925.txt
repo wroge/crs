@@ -1,0 +1,2 @@
+spheroid=clarke1880rgs
+bbox=43.37,12.54,53.14,19 operation=geocentric_translations tx=-24.0 ty=-203.0 tz=268.0

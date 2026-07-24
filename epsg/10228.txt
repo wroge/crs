@@ -1,0 +1,1 @@
+coordinate_system=transverse_mercator datum=mals09-irf_ordnancedatumnewlyn eastf=175262.1809 latf=52.2 lonf=-1.15 northf=174688.2508 scale=1.0 bbox=-2.26,51.45,-0.05,52.91

@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=nzgd2000 bbox=160.6,-55.95,-171.2,-25.88

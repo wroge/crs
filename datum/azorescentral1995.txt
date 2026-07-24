@@ -1,0 +1,11 @@
+spheroid=international1924
+accuracy=1.0 bbox=-28.9,38.46,-28.54,38.7 operation=coordinate_frame tx=-104.0 ty=162.924 tz=-38.882 rx=0.075 ry=0.071 rz=-0.051 ds=-0.338
+accuracy=1.0 bbox=-27.44,38.57,-26.97,38.86 operation=coordinate_frame tx=-105.854 ty=165.589 tz=-38.312 rx=0.003 ry=0.026 rz=-0.024 ds=-0.048
+accuracy=1.0 bbox=-28.61,38.32,-27.98,38.61 operation=coordinate_frame tx=-95.323 ty=166.098 tz=-69.942 rx=0.215 ry=1.031 rz=-0.047 ds=1.922
+accuracy=1.0 bbox=-28.37,38.48,-27.71,38.8 operation=coordinate_frame tx=-100.306 ty=161.246 tz=-48.761 rx=0.192 ry=0.385 rz=-0.076 ds=0.131
+accuracy=1.0 bbox=-28.9,38.32,-26.97,39.14 operation=coordinate_frame tx=-103.088 ty=162.481 tz=-28.276 rx=-0.167 ry=-0.082 rz=-0.168 ds=-1.504
+accuracy=5.0 bbox=-28.9,38.46,-28.54,38.7 operation=geocentric_translations tx=-106.248 ty=166.244 tz=-37.845
+accuracy=5.0 bbox=-27.44,38.57,-26.97,38.86 operation=geocentric_translations tx=-106.301 ty=166.27 tz=-37.916
+accuracy=5.0 bbox=-28.61,38.32,-27.98,38.61 operation=geocentric_translations tx=-106.044 ty=166.655 tz=-37.876
+accuracy=5.0 bbox=-28.37,38.48,-27.71,38.8 operation=geocentric_translations tx=-106.253 ty=166.239 tz=-37.854
+accuracy=5.0 bbox=-28.9,38.32,-26.97,39.14 operation=geocentric_translations tx=-106.226 ty=166.366 tz=-37.893

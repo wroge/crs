@@ -1,0 +1,7 @@
+spheroid=everest18301962definition
+accuracy=1.0 bbox=64,21.05,68.24,25.39 operation=geocentric_translations tx=275.57 ty=676.78 tz=229.6
+accuracy=3.0 bbox=66.83,24.69,68,25.76 operation=geocentric_translations tx=271.905 ty=669.593 tz=231.495
+accuracy=3.0 bbox=68.24,25.88,69.3,27.67 operation=geocentric_translations tx=274.164 ty=677.282 tz=226.704
+accuracy=3.0 bbox=67.74,24,69.87,25.64 operation=geocentric_translations tx=278.9 ty=684.39 tz=226.05
+accuracy=3.0 bbox=68.27,24.16,71.14,28.61 operation=coordinate_frame tx=230.25 ty=632.76 tz=161.03 rx=-1.114 ry=1.115 rz=1.212 ds=12.584
+bbox=60.86,23.64,77.83,37.07 operation=geocentric_translations tx=283.0 ty=682.0 tz=231.0

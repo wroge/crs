@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=wgs84g1150 bbox=-180,-90,180,90

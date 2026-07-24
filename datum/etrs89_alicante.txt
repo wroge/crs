@@ -1,0 +1,2 @@
+spheroid=grs1980
+accuracy=0.05 bbox=-9.37,35.95,3.39,43.82 target=etrs89 operation=vertical_grid grid=es_ign_egm08-rednap.tif

@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=deutscheshaupthoehennetz1985 bbox=5.86,47.27,13.84,55.09

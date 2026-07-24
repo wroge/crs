@@ -1,0 +1,2 @@
+spheroid=clarke1866
+accuracy=2.0 bbox=-95.16,41.67,-74.35,56.9 operation=horizontal_grid grid=ca_nrc_MAY76V20.tif

@@ -1,0 +1,1 @@
+coordinate_system=transverse_mercator datum=osgb36_ordnancedatumnewlyn eastf=400000.0 latf=49.0 lonf=-2.0 northf=-100000.0 scale=0.9996012717 bbox=-7.06,49.93,1.8,58.71

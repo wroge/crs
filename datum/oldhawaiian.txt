@@ -1,0 +1,9 @@
+spheroid=clarke1866
+accuracy=0.2 bbox=-160.3,18.87,-154.74,22.29 target=nad83 operation=horizontal_grid grid=us_noaa_hawaii.tif
+accuracy=0.2 bbox=-160.3,18.87,-154.74,22.29 target=nad83 operation=horizontal_grid grid=us_noaa_nadcon5_ohd_nad83_1986_hawaii.tif
+accuracy=2.0 bbox=-160.3,18.87,-154.74,22.29 operation=horizontal_grid grid=us_noaa_hawaii.tif
+accuracy=14.0 bbox=-158.33,21.2,-157.61,21.75 operation=geocentric_translations tx=58.0 ty=-283.0 tz=-182.0
+accuracy=35.0 bbox=-159.85,21.81,-159.23,22.29 operation=geocentric_translations tx=45.0 ty=-290.0 tz=-172.0
+accuracy=38.0 bbox=-160.3,18.87,-154.74,22.29 operation=geocentric_translations tx=61.0 ty=-285.0 tz=-181.0
+accuracy=44.0 bbox=-157.36,20.45,-155.93,21.26 operation=geocentric_translations tx=65.0 ty=-290.0 tz=-190.0
+accuracy=44.0 bbox=-156.1,18.87,-154.74,20.33 operation=geocentric_translations tx=89.0 ty=-279.0 tz=-183.0

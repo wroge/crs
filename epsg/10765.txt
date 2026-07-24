@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=bonaire2004_bonaireverticaldatum bbox=-68.47,11.97,-68.14,12.36

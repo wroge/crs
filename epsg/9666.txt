@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=lithuanianheightsystem2007 bbox=20.86,53.89,26.82,56.45

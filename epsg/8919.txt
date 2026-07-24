@@ -1,0 +1,1 @@
+coordinate_system=geocentric datum=sirgas-condgf01p02 bbox=-122.19,-59.87,-25.28,32.72

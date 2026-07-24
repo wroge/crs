@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=mgiferro bbox=9.53,40.85,23.04,49.02

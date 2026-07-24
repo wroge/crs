@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=hutzushan1950 bbox=119.25,21.87,122.06,25.34

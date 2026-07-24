@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=ign1992ld bbox=-61.13,16.26,-60.97,16.38

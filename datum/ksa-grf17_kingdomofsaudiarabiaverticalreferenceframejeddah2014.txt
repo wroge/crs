@@ -1,0 +1,3 @@
+spheroid=grs1980
+accuracy=0.02 bbox=34.51,16.37,55.67,32.16 target=ksa-grf17 operation=vertical_grid grid=KSA-GEOID21.gra
+accuracy=0.1 bbox=34.51,16.37,55.67,32.16 target=ksa-grf17 operation=vertical_grid grid=KSA-GEOID17.gra

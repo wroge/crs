@@ -1,0 +1,1 @@
+coordinate_system=transverse_mercator eastf=500000.0 lonf=-153.0 scale=0.9996 datum=wgs72be bbox=-156,0,-150,84

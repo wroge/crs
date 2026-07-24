@@ -1,0 +1,4 @@
+spheroid=krassowsky1940
+accuracy=2.0 bbox=9.92,50.2,15.04,54.74 operation=coordinate_frame tx=24.0 ty=-123.0 tz=-94.0 rx=-0.02 ry=0.25 rz=0.13 ds=1.1
+accuracy=4.0 bbox=16.11,45.74,22.9,48.58 operation=geocentric_translations tx=28.0 ty=-121.0 tz=-77.0
+accuracy=5.0 bbox=12.09,47.73,22.56,51.06 operation=geocentric_translations tx=26.0 ty=-121.0 tz=-78.0

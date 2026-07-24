@@ -1,0 +1,1 @@
+coordinate_system=transverse_mercator eastf=500000.0 lonf=-54.0 scale=0.9996 datum=zanderij bbox=-57.25,5.34,-52.66,9.35

@@ -1,0 +1,3 @@
+spheroid=grs1980
+accuracy=0.035 bbox=12.36,36.59,15.71,38.35 target=etrs89 operation=vertical_grid grid=geo_igm_mar06.grd
+accuracy=0.035 bbox=12.36,36.59,15.71,38.35 target=etrs89 operation=vertical_offset dh=0.141

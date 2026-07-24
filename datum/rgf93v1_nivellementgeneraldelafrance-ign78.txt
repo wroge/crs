@@ -1,0 +1,4 @@
+spheroid=grs1980
+accuracy=0.02 bbox=8.5,41.31,9.63,43.07 target=rgf93v1 operation=vertical_grid grid=fr_ign_RAC23.tif
+accuracy=0.05 bbox=8.5,41.31,9.63,43.07 target=rgf93v1 operation=vertical_grid grid=fr_ign_RAC09.tif
+accuracy=0.5 bbox=8.5,41.31,9.63,43.07 target=rgf93v1 operation=vertical_grid grid=ggf97a_corse.txt

@@ -1,0 +1,1 @@
+coordinate_system=polar_stereographic_c eastf=300000.0 latf=-67.0 lonf=140.0 northf=200000.0 datum=perroud1950 bbox=136,-67.13,142,-65.61

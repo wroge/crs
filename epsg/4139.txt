@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=puertorico bbox=-67.97,17.62,-64.25,18.78

@@ -1,0 +1,2 @@
+spheroid=grs1980
+accuracy=0.5 bbox=-90.45,2.15,-81.43,11.77 target=cr05 operation=coordinate_frame tx=-0.16959 ty=0.35312 tz=0.51846 rx=-0.03385 ry=0.16325 rz=-0.03446 ds=0.03693 inverse

@@ -1,0 +1,3 @@
+spheroid=clarke1866
+accuracy=5.0 bbox=144.58,13.18,145.01,13.7 operation=horizontal_grid grid=us_noaa_guhpgn.tif
+accuracy=6.0 bbox=144.58,13.18,145.01,13.7 operation=geocentric_translations tx=-100.0 ty=-248.0 tz=259.0

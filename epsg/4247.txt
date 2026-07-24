@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=lacanoa bbox=-73.38,0.64,-59.8,12.25

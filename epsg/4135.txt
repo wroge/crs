@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=oldhawaiian bbox=-160.3,18.87,-154.74,22.29

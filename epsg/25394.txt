@@ -1,0 +1,1 @@
+coordinate_system=transverse_mercator eastf=500000.0 lonf=123.0 scale=0.99995 datum=luzon1911 bbox=121.74,6.35,124.29,18.58

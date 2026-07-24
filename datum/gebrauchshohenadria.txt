@@ -1,0 +1,2 @@
+spheroid=grs1980
+accuracy=0.07 bbox=9.53,46.4,17.17,49.02 target=etrs89 operation=vertical_grid grid=at_bev_GEOID_GRS80_Oesterreich.tif

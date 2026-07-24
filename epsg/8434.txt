@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=macaoheightdatum bbox=113.52,22.06,113.68,22.23

@@ -1,0 +1,1 @@
+coordinate_system=guam_projection eastf=50000.0 latf=13.4724663527778 lonf=144.748750705556 northf=50000.0 datum=guam1963 bbox=144.58,13.18,145.01,13.7

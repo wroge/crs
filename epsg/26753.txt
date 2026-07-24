@@ -1,0 +1,1 @@
+coordinate_system=lambert_conformal_conic_2sp eastf=609601.219202438 latf=39.3333333333333 lonf=-105.5 sp1=39.7166666666667 sp2=40.7833333333333 datum=nad27 bbox=-109.06,39.56,-102.04,41.01

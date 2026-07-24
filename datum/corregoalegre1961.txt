@@ -1,0 +1,2 @@
+spheroid=international1924
+accuracy=2.0 bbox=-58.16,-27.5,-38.82,-14.99 operation=horizontal_grid grid=br_ibge_CA61_003.tif

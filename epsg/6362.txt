@@ -1,0 +1,1 @@
+coordinate_system=lambert_conformal_conic_2sp eastf=2500000.0 latf=12.0 lonf=-102.0 sp1=17.5 sp2=29.5 datum=mexicoitrf92 bbox=-122.19,12.1,-84.64,32.72

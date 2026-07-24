@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=flannanisles bbox=-7.75,58.21,-7.46,58.35

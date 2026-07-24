@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=guamverticaldatumof2004 bbox=144.58,13.18,145.01,13.7

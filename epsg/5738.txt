@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=hongkongprincipaldatum bbox=113.82,22.19,114.39,22.56

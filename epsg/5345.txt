@@ -1,0 +1,1 @@
+coordinate_system=transverse_mercator eastf=3500000.0 latf=-90.0 lonf=-66.0 scale=1.0 datum=posgar2007 bbox=-67.5,-55.11,-64.49,-21.78

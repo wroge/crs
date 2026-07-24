@@ -1,0 +1,1 @@
+coordinate_system=lambert_azimuthal_equal_area eastf=4321000.0 latf=52.0 lonf=10.0 northf=3210000.0 datum=etrs89 bbox=-35.58,24.6,44.83,84.73

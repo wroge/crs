@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=ignastro1960 bbox=-17.08,14.72,-4.8,27.3

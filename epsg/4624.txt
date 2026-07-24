@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=rgfg95 bbox=-54.61,2.11,-49.45,8.88

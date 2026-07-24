@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=blacksea bbox=39.99,41.04,46.72,43.59

@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=ign56lifou bbox=166.98,-21.24,167.52,-20.62

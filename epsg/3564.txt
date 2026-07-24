@@ -1,0 +1,1 @@
+coordinate_system=transverse_mercator eastf=152400.3048006095 latf=21.8333333333333 lonf=-159.5 scale=0.99999 datum=oldhawaiian bbox=-159.85,21.81,-159.23,22.29

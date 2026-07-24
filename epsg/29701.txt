@@ -1,0 +1,1 @@
+coordinate_system=laborde_oblique_mercator azimuth=18.89999999999992 eastf=400000.0 latf=-18.89999999999992 lonf=44.09999999999982 northf=800000.0 scale=0.9995 datum=tananariveparis bbox=43.18,-25.64,50.56,-11.89

@@ -1,0 +1,2 @@
+spheroid=grs1980
+accuracy=0.05 bbox=-56.48,46.69,-56.07,47.19 target=rgspm06 operation=vertical_grid grid=fr_ign_RASPM2018.tif

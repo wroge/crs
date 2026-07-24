@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=feh2010_fehmarnbeltverticalreference2010 bbox=11.17,54.42,11.51,54.76

@@ -1,0 +1,1 @@
+coordinate_system=transverse_mercator eastf=15500000.0 lonf=87.0 scale=1.0 datum=xian1980 bbox=84,27.32,90,49.18

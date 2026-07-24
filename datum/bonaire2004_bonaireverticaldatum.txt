@@ -1,0 +1,2 @@
+spheroid=grs1980
+accuracy=0.25 bbox=-68.47,11.97,-68.14,12.36 target=bonaire2004 operation=vertical_grid grid=nl_nsgi_bongeo2004.tif

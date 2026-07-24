@@ -1,0 +1,1 @@
+coordinate_system=american_polyconic eastf=914391.7962 latf=8.25 lonf=-81.0 northf=999404.7217154861 datum=panama-colon1911 bbox=-83.04,7.15,-77.19,9.68

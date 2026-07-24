@@ -1,0 +1,22 @@
+spheroid=grs1980
+accuracy=9 bbox=-71.77,-32,-69.77,-31.99 target=sad69 operation=geocentric_translations tx=64.0 tz=32.0
+accuracy=9 bbox=-71.77,-32,-69.77,-31.99 target=sad69 operation=geocentric_translations tx=59.0 ty=11.0 tz=52.0
+accuracy=9 bbox=-72.87,-36,-70.39,-35.99 target=sad69 operation=geocentric_translations tx=72.0 ty=-10.0 tz=32.0
+accuracy=9 bbox=-72.87,-36,-69.77,-31.99 target=sad69 operation=geocentric_translations tx=64.0 tz=32.0
+accuracy=9 bbox=-71.77,-32,-67,-17.5 target=sad69 operation=geocentric_translations tx=59.0 ty=11.0 tz=52.0
+accuracy=10 bbox=-72.87,-35.71,-69.77,-31.99 target=sad69 operation=geocentric_translations tx=64.0 tz=32.0
+accuracy=11 bbox=-74.83,-55.96,-66.33,-51.99 target=sad69 operation=geocentric_translations tx=79.0 ty=-13.0 tz=14.0
+accuracy=12 bbox=-72.87,-36,-70.39,-35.99 target=sad69 operation=geocentric_translations tx=64.0 tz=32.0
+accuracy=12 bbox=-74.48,-43.5,-70.39,-35.99 target=sad69 operation=geocentric_translations tx=72.0 ty=-10.0 tz=32.0
+accuracy=14 bbox=-71.77,-18.35,-68.67,-17.5 target=sad69 operation=geocentric_translations tx=59.0 ty=11.0 tz=52.0
+accuracy=14 bbox=-73.59,-52.43,-66.33,-51.99 target=sad69 operation=geocentric_translations tx=79.0 ty=-13.0 tz=14.0
+accuracy=14 bbox=-73.59,-43.5,-70.39,-35.99 target=sad69 operation=geocentric_translations tx=72.0 ty=-10.0 tz=32.0
+accuracy=14 bbox=-71.77,-32,-67,-21.78 target=sad69 operation=geocentric_translations tx=59.0 ty=11.0 tz=52.0
+accuracy=21 bbox=-70.79,-18.35,-68.67,-17.5 target=psad56 operation=geocentric_translations tx=302.0 ty=-272.0 tz=360.0
+accuracy=22 bbox=-72.87,-36,-70.39,-35.99 target=psad56 operation=geocentric_translations tx=352.0 ty=-403.0 tz=287.0
+accuracy=22 bbox=-72.87,-36,-70.39,-35.99 target=psad56 operation=geocentric_translations tx=328.0 ty=-340.0 tz=329.0
+accuracy=22 bbox=-70.79,-26,-67,-17.5 target=psad56 operation=geocentric_translations tx=302.0 ty=-272.0 tz=360.0
+accuracy=22 bbox=-72.87,-36,-68.28,-26 target=psad56 operation=geocentric_translations tx=328.0 ty=-340.0 tz=329.0
+accuracy=24 bbox=-69.66,-22.91,-67,-17.5 target=psad56 operation=geocentric_translations tx=302.0 ty=-272.0 tz=360.0
+accuracy=31 bbox=-69.66,-22.91,-67,-17.5 target=sad69 operation=geocentric_translations tx=59.0 ty=11.0 tz=52.0
+accuracy=47 bbox=-74.48,-43.5,-70.39,-35.99 target=psad56 operation=geocentric_translations tx=352.0 ty=-403.0 tz=287.0

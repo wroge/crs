@@ -1,0 +1,1 @@
+coordinate_system=cassini_soldner latf=5.96467271388889 lonf=100.636371111111 datum=gdm2000 bbox=99.59,5.08,101.12,6.72

@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=abidjan1987 bbox=-8.61,1.02,-2.48,10.74

@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=sld99 bbox=79.64,5.86,81.95,9.88

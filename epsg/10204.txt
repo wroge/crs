@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=diba15-irf bbox=-1.46,51.57,-1.15,52.11

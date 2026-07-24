@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=etrf2014 bbox=-16.1,33.26,38.01,84.73

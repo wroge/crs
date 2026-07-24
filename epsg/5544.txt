@@ -1,0 +1,1 @@
+coordinate_system=geocentric datum=png94 bbox=139.2,-14.75,162.81,2.58

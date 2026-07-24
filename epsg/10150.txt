@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=meansealevelukandirelandvorf08 bbox=-16.1,47.42,3.4,63.89

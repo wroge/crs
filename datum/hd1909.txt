@@ -1,0 +1,2 @@
+spheroid=bessel1841
+accuracy=3.0 bbox=16.11,45.74,22.9,48.58 operation=coordinate_frame tx=595.48 ty=121.69 tz=515.35 rx=-4.115 ry=2.9383 rz=-0.8529999999999999 ds=-3.408

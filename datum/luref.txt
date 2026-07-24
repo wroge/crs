@@ -1,0 +1,3 @@
+spheroid=international1924
+accuracy=1.0 bbox=5.73,49.44,6.53,50.19 operation=molodensky_badekas tx=-265.8867 ty=76.9851 tz=20.2667 rx=0.33746 ry=3.09264 rz=-2.53861 ds=0.4598 px=4103620.3943 py=440486.4235 pz=4846923.4558
+accuracy=1.0 bbox=5.73,49.44,6.53,50.19 operation=coordinate_frame tx=-189.6806 ty=18.3463 tz=-42.7695 rx=0.33746 ry=3.09264 rz=-2.53861 ds=0.4598

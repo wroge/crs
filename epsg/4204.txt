@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=ainelabd bbox=34.51,16.37,55.67,32.16

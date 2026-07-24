@@ -1,0 +1,2 @@
+spheroid=grs1980
+accuracy=0.0 bbox=-3.6,51.35,-3.12,51.81 target=etrs89 operation=horizontal_grid grid=TN15-ETRS89-to-GWWAB22-IRF.gsb inverse

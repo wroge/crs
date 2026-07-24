@@ -1,0 +1,1 @@
+coordinate_system=transverse_mercator eastf=2500000.0 latf=-90.0 lonf=-69.0 scale=1.0 datum=chosmalal1914 bbox=-70.51,-43.41,-67.49,-31.91

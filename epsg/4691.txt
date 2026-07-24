@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=moorea87 bbox=-150,-17.63,-149.73,-17.41

@@ -1,0 +1,1 @@
+coordinate_system=equal_earth lonf=150.0 datum=wgs84 bbox=-29.99,-90,-30.01,90

@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=arc1960 bbox=28.85,-11.75,41.91,4.63

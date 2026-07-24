@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=lake bbox=-72.4,8.72,-70.78,11.04

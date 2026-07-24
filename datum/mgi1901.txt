@@ -1,0 +1,9 @@
+spheroid=bessel1841
+accuracy=1.0 bbox=19.97,41.85,21.8,43.25 operation=position_vector tx=628.54052 ty=192.2538 tz=498.43507 rx=-13.79189 ry=-0.81467 rz=41.21533 ds=-17.40368
+accuracy=1.0 bbox=13.38,45.42,16.61,46.88 operation=coordinate_frame tx=476.08 ty=125.947 tz=417.81 rx=-4.610862 ry=-2.388137 rz=11.942335 ds=9.896638
+accuracy=1.0 bbox=15.74,42.56,19.62,45.27 operation=position_vector tx=489.88 ty=183.912 tz=533.711 rx=5.76545 ry=4.69994 rz=-12.58211 ds=1.00646
+accuracy=1.0 bbox=18.81,42.23,23.01,46.19 operation=coordinate_frame tx=577.84843 ty=165.45019 tz=390.43652 rx=-4.93131 ry=0.9605200000000002 rz=13.05072 ds=7.86546
+accuracy=1.0 bbox=13.43,42.34,19.43,46.54 operation=position_vector tx=551.7 ty=162.9 tz=467.9 rx=6.04 ry=1.9600000000000002 rz=-11.38 ds=-4.82
+accuracy=2.0 bbox=20.45,40.85,23.04,42.36 operation=coordinate_frame tx=521.748 ty=229.489 tz=590.921 rx=-4.029 ry=-4.488 rz=15.520999999999999 ds=-9.78
+accuracy=5.0 bbox=13.38,40.85,23.04,46.88 operation=geocentric_translations tx=682.0 ty=-203.0 tz=480.0
+accuracy=10.0 bbox=18.45,41.79,20.38,43.56 operation=geocentric_translations tx=695.5 ty=-216.6 tz=491.1

@@ -1,0 +1,2 @@
+spheroid=grs1980
+accuracy=0.05 bbox=-2.21,60.06,-1.95,60.2 target=etrs89 operation=vertical_grid grid=OSTN02_OSGM02_GB.txt

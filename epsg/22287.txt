@@ -1,0 +1,1 @@
+coordinate_system=transverse_mercator lonf=27.0 scale=1.0 datum=cape bbox=26,-33.83,28,-22.92

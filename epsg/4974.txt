@@ -1,0 +1,1 @@
+coordinate_system=geocentric datum=sirgas1995 bbox=-113.21,-59.87,-26,16.75

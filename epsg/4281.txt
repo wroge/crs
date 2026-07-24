@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=palestine1923 bbox=34.17,29.18,39.31,33.38

@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=saotome bbox=6.41,-0.04,6.82,0.46

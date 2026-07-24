@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=cws13-irf bbox=-3.16,52.5,-2.65,53.26

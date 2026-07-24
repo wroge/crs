@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=rgrdc2005 bbox=11.79,-13.46,29.81,-3.41

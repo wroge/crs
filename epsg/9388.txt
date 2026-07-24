@@ -1,0 +1,1 @@
+coordinate_system=transverse_mercator datum=abinva96_2020-irf_ordnancedatumnewlyn eastf=155828.702 latf=57.4 lonf=-3.2 northf=115225.707 scale=1.0 bbox=-4.31,57.1,-2.1,57.71

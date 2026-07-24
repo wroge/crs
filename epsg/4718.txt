@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=solomon1968 bbox=155.62,-10.9,162.44,-6.55

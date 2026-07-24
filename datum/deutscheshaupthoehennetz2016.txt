@@ -1,0 +1,2 @@
+spheroid=grs1980
+accuracy=0.02 bbox=3.34,47.27,15.04,55.92 target=etrs89slashdref91slash2016 operation=vertical_grid grid=de_bkg_gcg2016.tif

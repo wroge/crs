@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=etrs89-noreuref89_svalbardverticaldatum2024 bbox=6.49005,74.3208,33.50985,81.8504

@@ -1,0 +1,1 @@
+coordinate_system=transverse_mercator eastf=2500000.0 latf=-90.0 lonf=-69.0 scale=1.0 datum=pampadelcastillo bbox=-70.5,-50.34,-67.49,-42.49

@@ -1,0 +1,2 @@
+spheroid=clarke1866
+accuracy=1.5 bbox=-170.51,57.06,-170.04,57.28 operation=horizontal_grid grid=us_noaa_stpaul.tif

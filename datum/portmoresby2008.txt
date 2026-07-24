@@ -1,0 +1,4 @@
+spheroid=wgs84
+accuracy=0.11 bbox=144.4,-10.42,149.67,-6.67 target=egm2008geoid operation=vertical_offset dh=-0.93
+accuracy=0.11 bbox=144.4,-10.42,149.67,-6.67 operation=vertical_grid grid=Und_min1x1_egm2008_isw=82_WGS84_TideFree
+accuracy=0.113 bbox=144.4,-10.42,149.67,-6.67 operation=vertical_grid grid=us_nga_egm08_25.tif

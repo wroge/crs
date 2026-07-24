@@ -1,0 +1,2 @@
+spheroid=international1924
+accuracy=0 bbox=-180,-90,180,90 operation=longitude_rotation lon=4.367975

@@ -1,0 +1,2 @@
+spheroid=clarke1880internationalfoot
+accuracy=5.0 bbox=177.19,-18.32,178.75,-17.25 operation=geocentric_translations tx=98.0 ty=390.0 tz=-22.0

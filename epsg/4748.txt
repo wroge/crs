@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=vanualevu1915 bbox=178.42,-17.07,-179.77,-16.1

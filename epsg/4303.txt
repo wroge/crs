@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=tc1948 bbox=51.56,22.63,56.03,25.34

@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=rgm04 bbox=43.68,-14.49,46.7,-11.33

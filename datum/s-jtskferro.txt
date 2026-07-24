@@ -1,0 +1,5 @@
+spheroid=bessel1841
+accuracy=0.0 bbox=12.09,47.73,22.56,51.06 target=s-jtsk operation=longitude_rotation lon=-17.6666666666667
+accuracy=1.0 bbox=16.84,47.73,22.56,49.61 target=s-jtsk operation=longitude_rotation lon=-17.6666666666667
+accuracy=1.0 bbox=12.09,48.58,18.86,51.06 target=s-jtsk operation=longitude_rotation lon=-17.6666666666667
+accuracy=0 bbox=-180,-90,180,90 operation=longitude_rotation lon=-17.6666666666667

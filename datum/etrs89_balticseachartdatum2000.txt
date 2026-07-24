@@ -1,0 +1,2 @@
+spheroid=grs1980
+accuracy=0.05 bbox=8.5,53.88,30.23,65.92 target=etrs89 operation=vertical_grid grid=BSCD2000.txt

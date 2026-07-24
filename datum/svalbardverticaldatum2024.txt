@@ -1,0 +1,2 @@
+spheroid=grs1980
+accuracy=1.0 bbox=6.49005,74.3208,33.50985,81.8504 target=etrs89-noreuref89 operation=vertical_grid grid=no_kv_Svalbard_EUREF89_SVD2024.tif

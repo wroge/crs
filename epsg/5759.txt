@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=auckland1946 bbox=174,-37.67,176.17,-36.12

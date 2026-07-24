@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=etrs89_europeanverticalreferenceframe2000austria bbox=9.53,46.4,17.17,49.02

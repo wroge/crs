@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=st87ouvea bbox=166.44,-20.77,166.71,-20.34

@@ -1,0 +1,2 @@
+spheroid=bessel1841
+accuracy=0.0 bbox=19.57,34.88,28.3,41.75 target=greek operation=longitude_rotation lon=23.7163375

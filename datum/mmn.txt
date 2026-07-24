@@ -1,0 +1,2 @@
+spheroid=international1924
+accuracy=2.5 bbox=-68.64,-55.11,-63.73,-52.59 operation=geocentric_translations tx=-9.5 ty=122.9 tz=138.2

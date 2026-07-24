@@ -1,0 +1,1 @@
+coordinate_system=transverse_mercator eastf=200000.0 latf=-9.0 lonf=24.0 northf=500000.0 scale=1.0 datum=katanga1955 bbox=21.74,-11.72,25.51,-6.32

@@ -1,0 +1,3 @@
+spheroid=grs1980
+accuracy=0.1 bbox=-61.39,15.8,-61.13,16.05 target=rgaf09 operation=vertical_grid grid=fr_ign_RAMG2016.tif
+accuracy=0.2 bbox=-61.39,15.8,-61.13,16.05 target=rraf1991 operation=vertical_grid grid=fr_ign_ggg00_mgv2.tif

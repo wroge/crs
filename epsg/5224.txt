@@ -1,0 +1,1 @@
+coordinate_system=krovak_modified alpha=30.2881397222222 eastf=5000000.0 latf=49.5 lonf=42.5 northf=5000000.0 scale=0.9999 datum=s-jtskslash05ferro bbox=12.09,48.58,18.86,51.06

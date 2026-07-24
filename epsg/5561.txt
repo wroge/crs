@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=ucs-2000 bbox=22.15,43.18,40.18,52.38

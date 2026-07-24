@@ -1,0 +1,1 @@
+coordinate_system=geocentric datum=cigd11 bbox=-83.6,17.58,-78.72,20.68

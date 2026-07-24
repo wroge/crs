@@ -1,0 +1,2 @@
+spheroid=krassowsky1940
+accuracy=5.0 bbox=105.49,9.03,107.58,11.04 operation=geocentric_translations tx=-17.51 ty=-108.32 tz=-62.39

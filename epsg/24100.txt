@@ -1,0 +1,1 @@
+coordinate_system=lambert_conformal_conic eastf=167638.49597000002 latf=18.0 lonf=-77.0 northf=121918.90616000001 scale=1.0 datum=jamaica1875 bbox=-78.43,17.64,-76.17,18.58

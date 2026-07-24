@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=douglas bbox=-4.87,54.02,-4.27,54.44

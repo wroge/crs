@@ -1,0 +1,1 @@
+coordinate_system=geocentric datum=nad83marp00 bbox=129.48,1.64,149.55,23.9

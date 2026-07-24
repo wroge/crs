@@ -1,0 +1,1 @@
+coordinate_system=lambert_conformal_conic eastf=152400.3048006095 latf=-14.2666666666667 lonf=-170.0 northf=95169.31165862326 scale=1.0 datum=americansamoa1962 bbox=-170.88,-14.43,-169.38,-14.11

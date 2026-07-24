@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=taiwanverticaldatum2001 bbox=119.99,21.87,122.06,25.34

@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=egypt1930 bbox=24.7,21.97,36.95,31.68

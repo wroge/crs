@@ -1,0 +1,2 @@
+spheroid=grs1980
+accuracy=1 bbox=10.93,55.28,24.17,69.07 target=sweref99 operation=vertical_grid grid=se_lantmateriet_SWEN17_RH2000.tif

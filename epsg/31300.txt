@@ -1,0 +1,1 @@
+coordinate_system=lambert_conformal_conic_2sp_belgium eastf=150000.01256 latf=90.0 lonf=4.35693972222222 northf=5400088.4378 sp1=49.8333333333333 sp2=51.1666666666667 datum=bd72 bbox=2.5,49.5,6.4,51.51

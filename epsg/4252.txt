@@ -1,0 +1,1 @@
+coordinate_system=geographic datum=lome bbox=-0.15,2.91,2.42,11.14
