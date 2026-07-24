@@ -1,7 +1,7 @@
 # crs
 
 [![Coverage](https://wroge.github.io/crs/badges/coverage.svg)](https://wroge.github.io/crs/)
-[![go.dev reference](https://img.shields.io/badge/go.dev-reference-007d9c?logo=go&logoColor=white)](https://pkg.go.dev/github.com/wroge/crs/v2@v0.0.1)
+[![go.dev reference](https://img.shields.io/badge/go.dev-reference-007d9c?logo=go&logoColor=white)](https://pkg.go.dev/github.com/wroge/crs@v0.0.1)
 
 ```sh
 go get github.com/wroge/crs@v0.0.1
