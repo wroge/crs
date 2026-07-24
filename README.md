@@ -3,7 +3,7 @@
 [![Coverage](https://wroge.github.io/crs/badges/coverage.svg)](https://wroge.github.io/crs/)
 
 ```sh
-go get github.com/wroge/crs
+go get github.com/wroge/crs@v0.0.1
 ```
 
 Go library for coordinate reference systems, map projections, and datum
