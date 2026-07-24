@@ -23,18 +23,16 @@ jobs:
           go test -count=1 -timeout 30m -coverprofile=coverage.out ./...
           go tool cover -html=coverage.out -o coverage.html
 
-      - name: Generate coverage badge
-        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
-        uses: tj-actions/coverage-badge-go@v2
-        with:
-          filename: coverage.out
-
-      # Action legt z.B. coverage_badge.svg im Workspace ab — ggf. Dateiname prüfen
       - name: Prepare pages folder
         if: github.ref == 'refs/heads/main' && github.event_name == 'push'
         run: |
           mkdir -p pages/badges
-          cp coverage_badge.svg pages/badges/coverage.svg
+          pct=$(go tool cover -func=coverage.out | awk '/total:/{gsub(/%/,"",$NF); print $NF}')
+          color=red
+          awk "BEGIN{exit !($pct >= 70)}" && color=brightgreen
+          awk "BEGIN{exit !($pct >= 30 && $pct < 70)}" && color=yellow
+          curl -fsSL "https://img.shields.io/badge/coverage-${pct}%25-${color}" \
+            -o pages/badges/coverage.svg
           cp coverage.html pages/index.html
 
       - name: Publish to GitHub Pages
