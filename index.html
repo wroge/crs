@@ -7859,7 +7859,7 @@ func loadVerticalGrid(name string) (grid *verticalGridData, err error) <span cla
 
         switch strings.ToLower(path.Ext(name)) </span>{
         case ".tif":<span class="cov8" title="1">
-                return ParseVerticalGridTIFF(r)</span>
+                return parseVerticalGridTIFF(r)</span>
         default:<span class="cov0" title="0">
                 return nil, fmt.Errorf("crs: unsupported vertical grid extension %q", path.Ext(name))</span>
         }
@@ -7909,8 +7909,8 @@ func (g *verticalGridData) Undulation(lon, lat float64) (float64, error) <span c
         return n, nil</span>
 }
 
-// ParseVerticalGridTIFF reads a PROJ vertical/geoid GeoTIFF (GTG).
-func ParseVerticalGridTIFF(r io.Reader) (*verticalGridData, error) <span class="cov8" title="1">{
+// parseVerticalGridTIFF reads a PROJ vertical/geoid GeoTIFF (GTG).
+func parseVerticalGridTIFF(r io.Reader) (*verticalGridData, error) <span class="cov8" title="1">{
         data, err := io.ReadAll(r)
         if err != nil </span><span class="cov0" title="0">{
                 return nil, err
