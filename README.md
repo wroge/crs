@@ -23,15 +23,9 @@ east, north, h, err := transform(10.0, 50.0, 0)
 Axis conventions: geographic `lon, lat, h`; projected `east, north, h`;
 geocentric `x, y, z`.
 
-## Time-dependent transforms
-
-```go
-transform, err := crs.TransformAt(9989, 9069, 2010.0) // coordinate epoch (decimal year)
-```
-
 ## Geodetic grids
 
-Some datum transforms need grid files. Provide them via CDN and/or local sources:
+Some datum (nad83, osgb36, ...) transforms need grid files. Provide them via CDN and/or local sources:
 
 ```go
 crs.SetGridCDN("https://cdn.proj.org/")                          // download on demand
@@ -42,6 +36,12 @@ crs.RegisterGridFS("", embedFS)       // or an fs.FS (e.g. embed.FS)
 ```
 
 Lookup order: registered directories, then filesystems, then CDN.
+
+## Time-dependent transforms
+
+```go
+transform, err := crs.TransformAt(9989, 9069, 2010.0) // coordinate epoch (decimal year)
+```
 
 ## License
 
