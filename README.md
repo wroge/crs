@@ -1,5 +1,7 @@
 # crs
 
+[![Coverage](https://wroge.github.io/crs/badges/coverage.svg)](https://wroge.github.io/crs/)
+
 Go library for coordinate reference systems, map projections, and datum
 transformations. Supports the majority of EPSG codes (thousands of embedded
 definitions).
