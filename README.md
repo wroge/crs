@@ -1,10 +1,10 @@
 # crs
 
 [![Coverage](https://wroge.github.io/crs/badges/coverage.svg)](https://wroge.github.io/crs/)
-[![go.dev reference](https://img.shields.io/badge/go.dev-reference-007d9c?logo=go&logoColor=white)](https://pkg.go.dev/github.com/wroge/crs@v0.0.2)
+[![go.dev reference](https://img.shields.io/badge/go.dev-reference-007d9c?logo=go&logoColor=white)](https://pkg.go.dev/github.com/wroge/crs@v0.0.3)
 
 ```sh
-go get github.com/wroge/crs@v0.0.2
+go get github.com/wroge/crs@v0.0.3
 ```
 
 Go library for coordinate reference systems, map projections, and datum
