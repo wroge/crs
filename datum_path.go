@@ -11,6 +11,10 @@ import (
 
 const maxPathHops = 8
 
+// isHubEquivalent reports whether d may be treated as a free identity hop to/from
+// WGS84. Datums with no exported ops (typically PROJ-ballpark-only in the wild)
+// stay hub-equivalent so CRS remain reachable without exporting ballpark edges.
+// Published null hubs with accuracy/bbox use operation=identity instead of empty.
 func isHubEquivalent(d Datum) bool {
 	return len(d.Transformations) == 0
 }
@@ -41,23 +45,28 @@ var (
 func ensureReverseIndex() {
 	reverseOnce.Do(func() {
 		reverseIndex = make(map[string][]revEdge)
+
 		entries, err := fs.ReadDir(datumDir, "datum")
 		if err != nil {
 			return
 		}
+
 		for _, e := range entries {
 			if e.IsDir() || !strings.HasSuffix(e.Name(), ".txt") {
 				continue
 			}
+
 			name := strings.TrimSuffix(e.Name(), ".txt")
 			d, err := loadDatum(name)
 			if err != nil {
 				continue
 			}
+
 			for i, t := range d.Transformations {
 				if t.Target == nil || t.Operation == nil {
 					continue
 				}
+
 				tgt := strings.ToLower(t.Target.Name)
 				reverseIndex[tgt] = append(reverseIndex[tgt], revEdge{owner: name, index: i})
 			}
@@ -73,13 +82,17 @@ func datumName(d Datum) string {
 // Forward and inverse candidates are already ordered by the owner's transformation sort
 // (accuracy, then area); we emit one best edge per neighbor for Dijkstra, but
 // edgesBetween returns all candidates for apply.
-func outgoingEdges(node string, lon, lat float64, excluded map[edgeKey]bool) []graphEdge {
+// Time-specific Helmerts are included only when hasCoordEpoch and coordEpoch match.
+func outgoingEdges(node string, lon, lat float64, excluded map[edgeKey]bool, hasCoordEpoch bool, coordEpoch float64) []graphEdge {
 	ensureReverseIndex()
 
 	d, err := loadDatum(node)
 	if err != nil {
 		return nil
 	}
+
+	// AoU bboxes are Greenwich-based; lon may be relative to this node's PM.
+	glon := lon + d.primeMeridianLongitude()
 
 	best := make(map[string]graphEdge) // neighbor -> best edge
 
@@ -97,13 +110,20 @@ func outgoingEdges(node string, lon, lat float64, excluded map[edgeKey]bool) []g
 		if t.Target == nil || t.Operation == nil {
 			continue
 		}
-		if !t.BoundingBox.Contains(lon, lat) {
+
+		if !timeSpecificAllowed(t.Operation, hasCoordEpoch, coordEpoch) {
 			continue
 		}
+
+		if !t.BoundingBox.Contains(glon, lat) {
+			continue
+		}
+
 		tgt := strings.ToLower(t.Target.Name)
 		if tgt == "" || tgt == node {
 			continue
 		}
+
 		consider(graphEdge{
 			key:      edgeKey{owner: node, index: i, inverse: false},
 			to:       tgt,
@@ -117,13 +137,20 @@ func outgoingEdges(node string, lon, lat float64, excluded map[edgeKey]bool) []g
 		if err != nil || rev.index < 0 || rev.index >= len(owner.Transformations) {
 			continue
 		}
+
 		t := owner.Transformations[rev.index]
 		if t.Target == nil || t.Operation == nil {
 			continue
 		}
-		if !t.BoundingBox.Contains(lon, lat) {
+
+		if !timeSpecificAllowed(t.Operation, hasCoordEpoch, coordEpoch) {
 			continue
 		}
+
+		if !t.BoundingBox.Contains(glon, lat) {
+			continue
+		}
+
 		consider(graphEdge{
 			key:      edgeKey{owner: rev.owner, index: rev.index, inverse: true},
 			to:       rev.owner,
@@ -136,54 +163,72 @@ func outgoingEdges(node string, lon, lat float64, excluded map[edgeKey]bool) []g
 	for _, e := range best {
 		out = append(out, e)
 	}
+
 	return out
 }
 
 // edgesBetween returns all covering edges from→to (forward and inverse), in
 // owner transformation order (accuracy ascending within each owner list).
-func edgesBetween(from, to string, lon, lat float64, excluded map[edgeKey]bool) []graphEdge {
+func edgesBetween(from, to string, lon, lat float64, excluded map[edgeKey]bool, hasCoordEpoch bool, coordEpoch float64) []graphEdge {
 	ensureReverseIndex()
 	from = strings.ToLower(from)
 	to = strings.ToLower(to)
 
 	var out []graphEdge
 
-	d, err := loadDatum(from)
-	if err == nil {
-		for i, t := range d.Transformations {
+	glon := lon
+	if fromDatum, err := loadDatum(from); err == nil {
+		glon = lon + fromDatum.primeMeridianLongitude()
+		for i, t := range fromDatum.Transformations {
 			if t.Target == nil || t.Operation == nil {
 				continue
 			}
+
+			if !timeSpecificAllowed(t.Operation, hasCoordEpoch, coordEpoch) {
+				continue
+			}
+
 			if !strings.EqualFold(t.Target.Name, to) {
 				continue
 			}
-			if !t.BoundingBox.Contains(lon, lat) {
+
+			if !t.BoundingBox.Contains(glon, lat) {
 				continue
 			}
+
 			k := edgeKey{owner: from, index: i, inverse: false}
 			if excluded[k] {
 				continue
 			}
+
 			out = append(out, graphEdge{key: k, to: to, accuracy: t.Accuracy, inverse: false})
 		}
 	}
 
-	toDatum, err := loadDatum(to)
-	if err == nil {
+	if toDatum, err := loadDatum(to); err == nil {
+		// Inverse edge: coordinates remain in `from`'s frame (Greenwich AoU check).
 		for i, t := range toDatum.Transformations {
 			if t.Target == nil || t.Operation == nil {
 				continue
 			}
+
+			if !timeSpecificAllowed(t.Operation, hasCoordEpoch, coordEpoch) {
+				continue
+			}
+
 			if !strings.EqualFold(t.Target.Name, from) {
 				continue
 			}
-			if !t.BoundingBox.Contains(lon, lat) {
+
+			if !t.BoundingBox.Contains(glon, lat) {
 				continue
 			}
+
 			k := edgeKey{owner: to, index: i, inverse: true}
 			if excluded[k] {
 				continue
 			}
+
 			out = append(out, graphEdge{key: k, to: to, accuracy: t.Accuracy, inverse: true})
 		}
 	}
@@ -209,26 +254,39 @@ type pqItem struct {
 
 type pathPQ []pqItem
 
-func (p pathPQ) Len() int { return len(p) }
+func (p pathPQ) Len() int {
+	return len(p)
+}
+
 func (p pathPQ) Less(i, j int) bool {
 	if p[i].cost != p[j].cost {
 		return p[i].cost < p[j].cost
 	}
+
 	if p[i].hops != p[j].hops {
 		return p[i].hops < p[j].hops
 	}
+
 	if p[i].hub != p[j].hub {
 		return !p[i].hub && p[j].hub
 	}
+
 	return p[i].idx < p[j].idx
 }
-func (p pathPQ) Swap(i, j int) { p[i], p[j] = p[j], p[i] }
-func (p *pathPQ) Push(x any)   { *p = append(*p, x.(pqItem)) }
+func (p pathPQ) Swap(i, j int) {
+	p[i], p[j] = p[j], p[i]
+}
+
+func (p *pathPQ) Push(x any) {
+	*p = append(*p, x.(pqItem))
+}
+
 func (p *pathPQ) Pop() any {
 	old := *p
 	n := len(old)
 	item := old[n-1]
 	*p = old[:n-1]
+
 	return item
 }
 
@@ -236,27 +294,33 @@ func betterPath(aCost float64, aHops int, aHub bool, bCost float64, bHops int, b
 	if aCost != bCost {
 		return aCost < bCost
 	}
+
 	if aHops != bHops {
 		return aHops < bHops
 	}
+
 	if aHub != bHub {
 		return !aHub && bHub
 	}
+
 	return false
 }
 
 // findBestPath finds a minimum accumulated-accuracy path from→to covering (lon,lat).
-func findBestPath(from, to Datum, lon, lat float64, excluded map[edgeKey]bool) ([]string, error) {
+func findBestPath(from, to Datum, lon, lat float64, excluded map[edgeKey]bool, hasCoordEpoch bool, coordEpoch float64) ([]string, error) {
 	ensureReverseIndex()
 
 	start := datumName(from)
 	goal := datumName(to)
+
 	if start == "" || goal == "" {
 		return nil, UnsupportedError{Err: errors.New("missing datum name")}
 	}
+
 	if start == goal {
 		return []string{start}, nil
 	}
+
 	if excluded == nil {
 		excluded = map[edgeKey]bool{}
 	}
@@ -264,10 +328,12 @@ func findBestPath(from, to Datum, lon, lat float64, excluded map[edgeKey]bool) (
 	// Datums with no published ops are treated as WGS84-equivalent (identity hops).
 	searchFrom, searchTo := from, to
 	prefix, suffix := "", ""
+
 	if start != "wgs84" && isHubEquivalent(from) {
 		prefix = start
 		searchFrom = WGS84
 	}
+
 	if goal != "wgs84" && isHubEquivalent(to) {
 		suffix = goal
 		searchTo = WGS84
@@ -277,11 +343,12 @@ func findBestPath(from, to Datum, lon, lat float64, excluded map[edgeKey]bool) (
 	coreGoal := datumName(searchTo)
 
 	var core []string
+
 	if coreStart == coreGoal {
 		core = []string{coreStart}
 	} else {
 		var err error
-		core, err = findBestPathCore(coreStart, coreGoal, lon, lat, excluded)
+		core, err = findBestPathCore(coreStart, coreGoal, lon, lat, excluded, hasCoordEpoch, coordEpoch)
 		if err != nil {
 			return nil, err
 		}
@@ -291,10 +358,12 @@ func findBestPath(from, to Datum, lon, lat float64, excluded map[edgeKey]bool) (
 	if prefix != "" {
 		path = append(path, prefix)
 	}
+
 	path = append(path, core...)
 	if suffix != "" {
 		path = append(path, suffix)
 	}
+
 	return dedupeConsecutive(path), nil
 }
 
@@ -302,16 +371,18 @@ func dedupeConsecutive(path []string) []string {
 	if len(path) == 0 {
 		return path
 	}
+
 	out := []string{path[0]}
 	for _, n := range path[1:] {
 		if n != out[len(out)-1] {
 			out = append(out, n)
 		}
 	}
+
 	return out
 }
 
-func findBestPathCore(start, goal string, lon, lat float64, excluded map[edgeKey]bool) ([]string, error) {
+func findBestPathCore(start, goal string, lon, lat float64, excluded map[edgeKey]bool, hasCoordEpoch bool, coordEpoch float64) ([]string, error) {
 	nodes := []pathNode{{
 		name: start,
 		cost: 0,
@@ -336,7 +407,7 @@ func findBestPathCore(start, goal string, lon, lat float64, excluded map[edgeKey
 			continue
 		}
 
-		for _, e := range outgoingEdges(cur.name, lon, lat, excluded) {
+		for _, e := range outgoingEdges(cur.name, lon, lat, excluded, hasCoordEpoch, coordEpoch) {
 			nextCost := cur.cost + e.accuracy
 			nextHops := cur.hops + 1
 			viaHub := cur.viaHub
@@ -397,14 +468,14 @@ func applyEdge(from Datum, e graphEdge, lon, lat, h float64) (float64, float64, 
 	return t.ToDatum(owner.Spheroid, lon, lat, h)
 }
 
-func applyHop(fromName, toName string, lon, lat, h float64, excluded map[edgeKey]bool) (float64, float64, float64, []edgeKey, error) {
+func applyHop(fromName, toName string, lon, lat, h float64, excluded map[edgeKey]bool, hasCoordEpoch bool, coordEpoch float64) (float64, float64, float64, []edgeKey, error) {
 	from, err := loadDatum(fromName)
 	if err != nil {
 		return 0, 0, 0, nil, err
 	}
 	toDatum, toErr := loadDatum(toName)
 
-	cands := edgesBetween(fromName, toName, lon, lat, excluded)
+	cands := edgesBetween(fromName, toName, lon, lat, excluded, hasCoordEpoch, coordEpoch)
 	if len(cands) == 0 {
 		// Identity hop between WGS84 and a hub-equivalent datum (no published ops).
 		if toErr == nil && identityHopAllowed(from, toDatum, fromName, toName) {
@@ -438,20 +509,24 @@ func identityHopAllowed(from, to Datum, fromName, toName string) bool {
 	return fromEq && toEq
 }
 
-func applyPath(nodes []string, lon, lat, h float64, excluded map[edgeKey]bool) (float64, float64, float64, []edgeKey, error) {
+func applyPath(nodes []string, lon, lat, h float64, excluded map[edgeKey]bool, hasCoordEpoch bool, coordEpoch float64) (float64, float64, float64, []edgeKey, error) {
 	if len(nodes) < 2 {
 		return lon, lat, h, nil, nil
 	}
 
 	var failed []edgeKey
+
 	for i := 0; i < len(nodes)-1; i++ {
 		var tried []edgeKey
 		var err error
-		lon, lat, h, tried, err = applyHop(nodes[i], nodes[i+1], lon, lat, h, excluded)
+
+		lon, lat, h, tried, err = applyHop(nodes[i], nodes[i+1], lon, lat, h, excluded, hasCoordEpoch, coordEpoch)
+
 		failed = append(failed, tried...)
 		if err != nil {
 			return 0, 0, 0, failed, err
 		}
 	}
+
 	return lon, lat, h, nil, nil
 }

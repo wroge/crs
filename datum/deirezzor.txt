@@ -4,4 +4,4 @@ accuracy=1.0 bbox=40.5,35.79,41.39,36.5 operation=geocentric_translations tx=-19
 accuracy=5.0 bbox=39.3,34.49,40.81,35.9 operation=geocentric_translations tx=-187.5 ty=14.1 tz=237.6
 accuracy=5.0 bbox=35.61,32.31,42.38,37.3 operation=geocentric_translations tx=-190.421 ty=8.532 tz=238.69
 accuracy=6.0 bbox=39.3,34.49,40.81,35.9 target=wgs72be operation=geocentric_translations tx=-174.6 ty=-3.1 tz=236.2
-bbox=39.15,35.33,40.41,35.9 operation=position_vector tx=-175.09 ty=1.218 tz=238.831 rx=-0.047 ry=0.019 rz=0.808 ds=0.1698
+accuracy=999 bbox=39.15,35.33,40.41,35.9 operation=position_vector tx=-175.09 ty=1.218 tz=238.831 rx=-0.047 ry=0.019 rz=0.808 ds=0.1698

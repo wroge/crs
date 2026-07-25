@@ -2,4 +2,3 @@ spheroid=pz-90
 accuracy=0.03 bbox=18.92,39.87,-168.97,85.19 target=gsk-2011 operation=time_specific_coordinate_frame ty=0.014 tz=-0.008 rx=-0.0005620000000000001 ry=-1.9e-05 rz=5.3e-05 ds=-0.0006 epoch=2011.0 inverse
 accuracy=0.2 bbox=-180,-90,180,90 target=pz-90 operation=coordinate_frame tx=-1.443 ty=0.156 tz=0.222 rx=-0.0023 ry=0.00354 rz=-0.13421000000000002 ds=-0.228 inverse
 accuracy=0.7 bbox=18.92,39.87,-168.97,85.19 target=pz-90 operation=coordinate_frame tx=-1.443 ty=0.156 tz=0.222 rx=-0.0023 ry=0.00354 rz=-0.13421000000000002 ds=-0.228 inverse
-bbox=-180,-90,180,90 target=gsk-2011 operation=geocentric_translations

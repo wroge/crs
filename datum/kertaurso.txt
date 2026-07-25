@@ -1,2 +1,2 @@
 spheroid=everest1830rso1969
-accuracy=0.0 bbox=99.59,1.13,104.6,6.72 target=kertau1968 operation=geocentric_translations
+accuracy=0.0 bbox=99.59,1.13,104.6,6.72 target=kertau1968 operation=identity

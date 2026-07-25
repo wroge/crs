@@ -31,5 +31,5 @@ accuracy=44.0 bbox=14.27,35.74,14.63,36.05 operation=geocentric_translations tx=
 accuracy=44.0 bbox=8.08,38.82,9.89,41.31 operation=geocentric_translations tx=-97.0 ty=-103.0 tz=-120.0
 accuracy=44.0 bbox=7.49,30.23,13.67,38.41 operation=geocentric_translations tx=-112.0 ty=-77.0 tz=-145.0
 accuracy=44.0 bbox=19.57,34.88,28.3,41.75 operation=geocentric_translations tx=-84.0 ty=-95.0 tz=-130.0
-bbox=19.57,34.88,28.3,41.75 operation=geocentric_translations tx=-86.0 ty=-92.2 tz=-127.5
-bbox=34.17,16.37,55.67,37.39 operation=geocentric_translations tx=-103.0 ty=-106.0 tz=-141.0
+accuracy=999 bbox=19.57,34.88,28.3,41.75 operation=geocentric_translations tx=-86.0 ty=-92.2 tz=-127.5
+accuracy=999 bbox=34.17,16.37,55.67,37.39 operation=geocentric_translations tx=-103.0 ty=-106.0 tz=-141.0

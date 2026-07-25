@@ -11,38 +11,38 @@ import (
 )
 
 // VerticalGrid is a geoid / vertical undulation grid (PROJ vgridshift / GTG).
-// Grid samples are the geographic→vertical offset δ (metres): H = h + δ.
-// For a classical geoid undulation N (H = h − N), the grid stores δ = −N.
+// Grid samples are the geoid undulation N (metres), matching PROJ egm08-style
+// grids used with +inv +proj=vgridshift: H = h − N, h = H + N.
 type VerticalGrid string
 
 func (vg VerticalGrid) String() string {
 	return fmt.Sprintf("operation=vertical_grid grid=%s", string(vg))
 }
 
-// ToTarget implements [Operation]: orthometric → ellipsoidal (h = H − δ).
+// ToTarget implements [Operation]: orthometric → ellipsoidal (h = H + N).
 func (vg VerticalGrid) ToTarget(source, target Spheroid, lon, lat, h float64) (float64, float64, float64, error) {
 	grid, err := loadVerticalGrid(string(vg))
 	if err != nil {
 		return 0, 0, 0, err
 	}
-	d, err := grid.Undulation(lon, lat)
+	n, err := grid.Undulation(lon, lat)
 	if err != nil {
 		return 0, 0, 0, err
 	}
-	return lon, lat, h - d, nil
+	return lon, lat, h + n, nil
 }
 
-// FromTarget implements [Operation]: ellipsoidal → orthometric (H = h + δ).
+// FromTarget implements [Operation]: ellipsoidal → orthometric (H = h − N).
 func (vg VerticalGrid) FromTarget(source, target Spheroid, lon0, lat0, h0 float64) (float64, float64, float64, error) {
 	grid, err := loadVerticalGrid(string(vg))
 	if err != nil {
 		return 0, 0, 0, err
 	}
-	d, err := grid.Undulation(lon0, lat0)
+	n, err := grid.Undulation(lon0, lat0)
 	if err != nil {
 		return 0, 0, 0, err
 	}
-	return lon0, lat0, h0 + d, nil
+	return lon0, lat0, h0 - n, nil
 }
 
 type verticalGridData struct {

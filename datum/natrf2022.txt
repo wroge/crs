@@ -1,2 +1,2 @@
 spheroid=grs1980
-accuracy=1 bbox=167.65,23.81,-40.73,86.46 operation=geocentric_translations
+accuracy=1 bbox=167.65,23.81,-40.73,86.46 operation=identity

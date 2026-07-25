@@ -67,6 +67,7 @@ func (crs CoordinateReferenceSystem) Intersects(bbox ...BoundingBox) (Coordinate
 
 // AtEpoch evaluates time-dependent datum operations at the given coordinate epoch
 // (decimal year), mirroring Intersects as a pre-Transform datum rewrite.
+// Time-specific Helmerts are only kept when epoch matches their transformation epoch.
 func (crs CoordinateReferenceSystem) AtEpoch(epoch float64) CoordinateReferenceSystem {
 	crs.Datum = crs.Datum.AtEpoch(epoch)
 	return crs

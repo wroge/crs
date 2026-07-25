@@ -13,15 +13,8 @@ var spheroidDir embed.FS
 
 var spheroidStore sync.Map
 
-func RegisterSpheroid(name string, s Spheroid) {
-	name = strings.ToLower(strings.TrimSpace(name))
-	if name == "" {
-		return
-	}
-	if s.Name == "" {
-		s.Name = name
-	}
-	spheroidStore.Store(name, s)
+func RegisterSpheroid(s Spheroid) {
+	spheroidStore.Store(s.Name, s)
 }
 
 func loadSpheroid(name string) (s Spheroid, err error) {

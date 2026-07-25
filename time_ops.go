@@ -1,8 +1,41 @@
 package crs
 
+import "math"
+
+// timeSpecificEpochTol is the max |coordEpoch − TransformationEpoch| (years)
+// for a time-specific Helmert to participate in path selection.
+const timeSpecificEpochTol = 1e-6
+
 type TimeSpecificPositionVector struct {
 	Tx, Ty, Tz, Rx, Ry, Rz, Ds float64
 	TransformationEpoch        float64
+}
+
+// timeSpecificEpoch returns the transformation epoch when op is (or wraps)
+// TimeSpecificPositionVector.
+func timeSpecificEpoch(op Operation) (epoch float64, ok bool) {
+	switch o := op.(type) {
+	case TimeSpecificPositionVector:
+		return o.TransformationEpoch, true
+	case Inverse:
+		return timeSpecificEpoch(o.Operation)
+	default:
+		return 0, false
+	}
+}
+
+// timeSpecificAllowed reports whether a time-specific op may be used for the
+// given coordinate epoch. Non-time-specific ops always return true.
+// Without a coordinate epoch (Transform), time-specific edges are excluded.
+func timeSpecificAllowed(op Operation, hasCoordEpoch bool, coordEpoch float64) bool {
+	te, isTS := timeSpecificEpoch(op)
+	if !isTS {
+		return true
+	}
+	if !hasCoordEpoch {
+		return false
+	}
+	return math.Abs(coordEpoch-te) <= timeSpecificEpochTol
 }
 
 func (t TimeSpecificPositionVector) String() string {

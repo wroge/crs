@@ -18,7 +18,8 @@ func (cs HyperbolicCassiniSoldner) String() string {
 }
 
 func (cs HyperbolicCassiniSoldner) FromGeographic(s Spheroid, lon, lat, h float64) (float64, float64, float64) {
-	base := CassiniSoldner{Lonf: cs.Lonf, Latf: cs.Latf, Eastf: cs.Eastf, Northf: cs.Northf}
+	base := CassiniSoldner(cs)
+
 	east, north, h := base.FromGeographic(s, lon, lat, h)
 	phi := radian(lat)
 	sinPhi := math.Sin(phi)
@@ -54,7 +55,7 @@ func (cs HyperbolicCassiniSoldner) ToGeographic(s Spheroid, east, north, h float
 		}
 	}
 
-	base := CassiniSoldner{Lonf: cs.Lonf, Latf: cs.Latf, Eastf: cs.Eastf, Northf: cs.Northf}
+	base := CassiniSoldner(cs)
 
 	return base.ToGeographic(s, east, cs.Northf+x, h)
 }

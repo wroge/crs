@@ -34,17 +34,19 @@ func (t Transformation) String() string {
 }
 
 func (t Transformation) ToWGS84(source Spheroid, lon, lat, h float64) (float64, float64, float64, error) {
-	return t.toWGS84Visited(source, lon, lat, h, nil)
+	return t.toWGS84Visited(source, lon, lat, h, nil, 0)
 }
 
-func (t Transformation) toWGS84Visited(source Spheroid, lon, lat, h float64, visited map[string]bool) (float64, float64, float64, error) {
+// toWGS84Visited applies this hop toward WGS 84. greenwichLon is lon expressed east
+// of Greenwich for area-of-use checks; lon itself may be relative to a local PM.
+func (t Transformation) toWGS84Visited(source Spheroid, lon, lat, h float64, visited map[string]bool, greenwichLon float64) (float64, float64, float64, error) {
 	if err := t.requireTarget(); err != nil {
 		return 0, 0, 0, err
 	}
 
-	if !t.BoundingBox.Contains(lon, lat) {
+	if !t.BoundingBox.Contains(greenwichLon, lat) {
 		return 0, 0, 0, OutOfBoundsError{
-			Err: fmt.Errorf("[%f,%f]: %s", lon, lat, t.BoundingBox),
+			Err: fmt.Errorf("[%f,%f]: %s", greenwichLon, lat, t.BoundingBox),
 		}
 	}
 

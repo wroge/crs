@@ -1,7 +1,7 @@
 spheroid=grs1980
-accuracy=0.1 bbox=-16.1,33.26,38.01,84.73 target=etrs89 operation=geocentric_translations
+accuracy=0.1 bbox=-16.1,33.26,38.01,84.73 target=etrs89 operation=identity
 accuracy=0.105 bbox=3.34,54.36,8.88,55.92 target=etrs89 operation=velocity_grid grid=eur_nkg_nkgrf03vel_realigned.tif dt=-5.296
 accuracy=0.105 bbox=3.34,54.36,8.88,55.92 target=etrs89 operation=velocity_grid grid=eur_nkg_nkgrf17vel.tif dt=15.829
-accuracy=0.2 bbox=3.34,53.49,8.88,55.92 target=etrs89 operation=geocentric_translations
+accuracy=0.2 bbox=3.34,53.49,8.88,55.92 target=etrs89 operation=identity
 accuracy=1.005 bbox=3.24,54.36,16.51,58.27 target=etrs89 operation=velocity_grid grid=eur_nkg_nkgrf03vel_realigned.tif dt=-5.296
 accuracy=1.005 bbox=3.24,54.36,16.51,58.27 target=etrs89 operation=velocity_grid grid=eur_nkg_nkgrf17vel.tif dt=15.829

@@ -1,3 +1,1 @@
 spheroid=grs1980
-accuracy=0.01 bbox=-113.21,-59.87,-26,16.75 target=sirgas1995 operation=time_specific_position_vector epoch=1995.4
-bbox=-180,-90,180,90 target=sirgas1995 operation=geocentric_translations

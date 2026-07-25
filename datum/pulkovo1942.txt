@@ -9,4 +9,4 @@ accuracy=5.0 bbox=39.99,37.89,51.73,43.59 operation=position_vector tx=686.1 ty=
 accuracy=9.0 bbox=21.74,57.52,28.2,59.75 operation=coordinate_frame tx=21.58719 ty=-97.54127 tz=-60.92546 rx=-1.01378 ry=-0.58117 rz=-0.2348 ds=-4.6121
 accuracy=9.0 bbox=20.86,53.89,26.82,56.45 operation=coordinate_frame tx=-40.595 ty=-18.55 tz=-69.339 rx=-2.508 ry=-1.832 rz=2.611 ds=-4.299
 accuracy=44.0 bbox=46.49,40.59,87.35,55.45 operation=geocentric_translations tx=15.0 ty=-130.0 tz=-84.0
-bbox=19.58,41.19,-168.97,81.91 operation=geocentric_translations tx=28.0 ty=-130.0 tz=-95.0
+accuracy=999 bbox=19.58,41.19,-168.97,81.91 operation=geocentric_translations tx=28.0 ty=-130.0 tz=-95.0

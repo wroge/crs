@@ -4,4 +4,3 @@ accuracy=1.56 bbox=-66.28,44.56,-63.7,47.08 target=ats77 operation=horizontal_gr
 accuracy=1.56 bbox=-66.28,43.41,-59.73,47.08 target=ats77 operation=horizontal_grid grid=ca_nrc_NS778302.tif inverse
 accuracy=1.6 bbox=-59.48,46.56,-57.1,51.68 target=nad83 operation=horizontal_grid grid=NLCSRSV4A.GSB inverse
 accuracy=4.1 bbox=-59.48,46.56,-52.54,51.68 target=nad83 operation=horizontal_grid grid=NLCSRSV4A.GSB inverse
-bbox=-180,-90,180,90 target=nad832011 operation=geocentric_translations

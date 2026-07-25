@@ -23,6 +23,9 @@ func (b BoundingBox) String() string {
 	return fmt.Sprintf("%s,%s,%s,%s", formatFloat(b.MinLon), formatFloat(b.MinLat), formatFloat(b.MaxLon), formatFloat(b.MaxLat))
 }
 
+// Contains reports whether (lon, lat) lies in the box. Longitude must be east of
+// Greenwich (EPSG area-of-use convention). When the point is relative to a local
+// prime meridian, pass lon + datum.primeMeridianLongitude().
 func (b BoundingBox) Contains(lon, lat float64) bool {
 	if b.MaxLat < b.MinLat {
 		return false

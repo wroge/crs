@@ -27,15 +27,8 @@ var datumDir embed.FS
 
 var datumStore sync.Map
 
-func RegisterDatum(name string, d Datum) {
-	name = strings.ToLower(strings.TrimSpace(name))
-	if name == "" {
-		return
-	}
-	if d.Name == "" {
-		d.Name = name
-	}
-	datumStore.Store(name, d)
+func RegisterDatum(d Datum) {
+	datumStore.Store(d.Name, d)
 }
 
 func loadDatum(name string) (d Datum, err error) {
@@ -268,6 +261,8 @@ func (pp parts) asOperation() (Operation, error) {
 		op = PositionVector{
 			Tx: pp.floatOrZero("tx"), Ty: pp.floatOrZero("ty"), Tz: pp.floatOrZero("tz"),
 		}
+	case "identity":
+		op = Identity{}
 	case "longitude_rotation":
 		op = LongitudeRotation{Lon: pp.floatOrZero("lon")}
 	case "geographic_offset":
@@ -414,6 +409,11 @@ type Datum struct {
 	Name            string
 	Spheroid        Spheroid
 	Transformations []Transformation
+
+	// coordinateEpoch is set by AtEpoch / TransformAt. When hasCoordinateEpoch
+	// is false (plain Transform), time-specific Helmerts are excluded from paths.
+	coordinateEpoch    float64
+	hasCoordinateEpoch bool
 }
 
 func (d Datum) String() string {
@@ -443,34 +443,53 @@ func (d Datum) Intersects(bbox ...BoundingBox) (Datum, error) {
 	if len(t) == 0 {
 		// No published hub ops cover this area (e.g. Guam1963 on Yap). Keep the
 		// spheroid so same-datum projection still works; cross-datum will fail later.
-		return Datum{Name: d.Name, Spheroid: d.Spheroid}, nil
+		return Datum{
+			Name:               d.Name,
+			Spheroid:           d.Spheroid,
+			coordinateEpoch:    d.coordinateEpoch,
+			hasCoordinateEpoch: d.hasCoordinateEpoch,
+		}, nil
 	}
 
 	return Datum{
-		Name:            d.Name,
-		Spheroid:        d.Spheroid,
-		Transformations: t,
+		Name:               d.Name,
+		Spheroid:           d.Spheroid,
+		Transformations:    t,
+		coordinateEpoch:    d.coordinateEpoch,
+		hasCoordinateEpoch: d.hasCoordinateEpoch,
 	}, nil
 }
 
 // AtEpoch returns a copy of d with time-dependent operations evaluated at epoch
 // (decimal year). TimeDependentPositionVector becomes PositionVector; VelocityGrid
-// with a non-zero Epoch gets Dt = epoch - Epoch.
+// with a non-zero Epoch gets Dt = epoch - Epoch. Time-specific Helmerts that do
+// not match epoch are dropped from the in-memory list (pathfinding also gates them).
 func (d Datum) AtEpoch(epoch float64) Datum {
+	out := Datum{
+		Name:               d.Name,
+		Spheroid:           d.Spheroid,
+		coordinateEpoch:    epoch,
+		hasCoordinateEpoch: true,
+	}
+
 	if len(d.Transformations) == 0 {
-		return d
+		return out
 	}
 
-	ts := slices.Clone(d.Transformations)
-	for i := range ts {
-		ts[i].Operation = operationAtEpoch(ts[i].Operation, epoch)
+	ts := make([]Transformation, 0, len(d.Transformations))
+	for _, t := range d.Transformations {
+		op := operationAtEpoch(t.Operation, epoch)
+		if !timeSpecificAllowed(op, true, epoch) {
+			continue
+		}
+
+		t.Operation = op
+		ts = append(ts, t)
 	}
 
-	return Datum{
-		Name:            d.Name,
-		Spheroid:        d.Spheroid,
-		Transformations: ts,
-	}
+	out.Transformations = ts
+	
+	return out
 }
 
 func operationAtEpoch(op Operation, epoch float64) Operation {
@@ -483,10 +502,24 @@ func operationAtEpoch(op Operation, epoch float64) Operation {
 		if o.Epoch != 0 {
 			o.Dt = epoch - o.Epoch
 		}
+
 		return o
 	default:
 		return op
 	}
+}
+
+// primeMeridianLongitude is degrees east of Greenwich for this datum's prime
+// meridian, taken from a longitude_rotation hop (0 when the datum is Greenwich-based).
+// EPSG areas of use are Greenwich-oriented; use lon+primeMeridianLongitude() for Contains.
+func (d Datum) primeMeridianLongitude() float64 {
+	for _, t := range d.Transformations {
+		if lr, ok := t.Operation.(LongitudeRotation); ok {
+			return lr.Lon
+		}
+	}
+
+	return 0
 }
 
 func (d Datum) ToWGS84(lon, lat, h float64) (float64, float64, float64, error) {
@@ -512,9 +545,14 @@ func (d Datum) toWGS84Visited(lon, lat, h float64, visited map[string]bool) (flo
 
 	defer delete(visited, d.Name)
 
+	glon := lon + d.primeMeridianLongitude()
 	var lastErr error
 	for _, t := range d.Transformations {
-		lon0, lat0, h0, err := t.toWGS84Visited(d.Spheroid, lon, lat, h, visited)
+		if !timeSpecificAllowed(t.Operation, d.hasCoordinateEpoch, d.coordinateEpoch) {
+			continue
+		}
+
+		lon0, lat0, h0, err := t.toWGS84Visited(d.Spheroid, lon, lat, h, visited, glon)
 		if err != nil {
 			lastErr = err
 			continue
@@ -557,6 +595,10 @@ func (d Datum) fromWGS84Visited(lon0, lat0, h0 float64, visited map[string]bool)
 
 	var lastErr error
 	for _, t := range d.Transformations {
+		if !timeSpecificAllowed(t.Operation, d.hasCoordinateEpoch, d.coordinateEpoch) {
+			continue
+		}
+		
 		lon, lat, h, err := t.fromWGS84Visited(d.Spheroid, lon0, lat0, h0, visited)
 		if err != nil {
 			lastErr = err
@@ -580,11 +622,17 @@ func (d Datum) TransformTo(target Datum, lon, lat, h float64) (float64, float64,
 		return lon, lat, h, nil
 	}
 
+	hasEpoch := d.hasCoordinateEpoch || target.hasCoordinateEpoch
+	epoch := d.coordinateEpoch
+	if target.hasCoordinateEpoch {
+		epoch = target.coordinateEpoch
+	}
+
 	excluded := make(map[edgeKey]bool)
 	var lastErr error
 
 	for {
-		path, err := findBestPath(d, target, lon, lat, excluded)
+		path, err := findBestPath(d, target, lon, lat, excluded, hasEpoch, epoch)
 		if err != nil {
 			if lastErr != nil {
 				return 0, 0, 0, lastErr
@@ -592,7 +640,7 @@ func (d Datum) TransformTo(target Datum, lon, lat, h float64) (float64, float64,
 			return 0, 0, 0, err
 		}
 
-		outLon, outLat, outH, failed, err := applyPath(path, lon, lat, h, excluded)
+		outLon, outLat, outH, failed, err := applyPath(path, lon, lat, h, excluded, hasEpoch, epoch)
 		if err == nil {
 			return outLon, outLat, outH, nil
 		}

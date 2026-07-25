@@ -1,4 +1,4 @@
 spheroid=grs1980
 accuracy=3 bbox=112.85,-43.7,153.69,-9.86 operation=horizontal_grid grid=au_icsm_GDA94_GDA2020_conformal_and_distortion.tif inverse
-accuracy=3 bbox=93.41,-60.55,173.34,-8.47 operation=geocentric_translations
+accuracy=3 bbox=93.41,-60.55,173.34,-8.47 operation=identity
 accuracy=3 bbox=93.41,-60.55,173.34,-8.47 operation=coordinate_frame tx=0.06155 ty=-0.01087 tz=-0.04019 rx=-0.039492400000000004 ry=-0.0327221 rz=-0.0328979 ds=-0.009994 inverse

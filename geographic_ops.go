@@ -1,5 +1,8 @@
 package crs
 
+// LongitudeRotation shifts longitude between a local prime meridian and Greenwich
+// (or another Greenwich-oriented sibling). Lon is degrees east of Greenwich for
+// the local meridian: ToTarget adds Lon (local → Greenwich-oriented), FromTarget subtracts.
 type LongitudeRotation struct {
 	Lon float64
 }
@@ -14,6 +17,22 @@ func (l LongitudeRotation) ToTarget(source, target Spheroid, lon, lat, h float64
 
 func (l LongitudeRotation) FromTarget(source, target Spheroid, lon0, lat0, h0 float64) (float64, float64, float64, error) {
 	return lon0 - l.Lon, lat0, h0, nil
+}
+
+// Identity is a published null datum link (e.g. EPSG:1149): coordinates unchanged,
+// kept so accuracy and area-of-use still participate in path selection.
+type Identity struct{}
+
+func (Identity) String() string {
+	return "identity"
+}
+
+func (Identity) ToTarget(source, target Spheroid, lon, lat, h float64) (float64, float64, float64, error) {
+	return lon, lat, h, nil
+}
+
+func (Identity) FromTarget(source, target Spheroid, lon0, lat0, h0 float64) (float64, float64, float64, error) {
+	return lon0, lat0, h0, nil
 }
 
 type GeographicOffset struct {

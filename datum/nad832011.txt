@@ -1,15 +1,15 @@
 spheroid=grs1980
-accuracy=2 bbox=167.65,14.92,-63.88,74.71 operation=geocentric_translations
-accuracy=2.16 bbox=-87.01,23.82,-81.17,25.51 target=nad83 operation=geocentric_translations
-accuracy=3.01 bbox=-88.48,30.14,-84.89,30.25 target=nad83 operation=geocentric_translations
-accuracy=3.01 bbox=-91.65,30.01,-88.09,30.25 target=nad83 operation=geocentric_translations
-accuracy=3.01 bbox=-94.05,28.85,-88.75,30.25 target=nad83 operation=geocentric_translations
-accuracy=3.01 bbox=-97.22,25.83,-93.5,30.25 target=nad83 operation=geocentric_translations
-accuracy=3.01 bbox=-87.63,24.41,-81.17,30.25 target=nad83 operation=geocentric_translations
-accuracy=6.16 bbox=-97.22,25.97,-95,28.97 target=nad83 operation=geocentric_translations
-accuracy=6.16 bbox=-95,25.61,-87.25,30.23 target=nad83 operation=geocentric_translations
-accuracy=6.16 bbox=-87.25,23.82,-81.17,30.25 target=nad83 operation=geocentric_translations
-accuracy=6.16 bbox=-97.22,23.82,-81.17,30.25 target=nad83 operation=geocentric_translations
-accuracy=8.16 bbox=-97.22,25.83,-89.64,30.25 target=nad83 operation=geocentric_translations
-accuracy=11.16 bbox=-97.22,24.41,-81.17,30.25 target=nad83 operation=geocentric_translations
-accuracy=13.16 bbox=-97.22,23.82,-86.68,30.25 target=nad83 operation=geocentric_translations
+accuracy=2 bbox=167.65,14.92,-63.88,74.71 operation=identity
+accuracy=2.16 bbox=-87.01,23.82,-81.17,25.51 target=nad83 operation=identity
+accuracy=3.01 bbox=-88.48,30.14,-84.89,30.25 target=nad83 operation=identity
+accuracy=3.01 bbox=-91.65,30.01,-88.09,30.25 target=nad83 operation=identity
+accuracy=3.01 bbox=-94.05,28.85,-88.75,30.25 target=nad83 operation=identity
+accuracy=3.01 bbox=-97.22,25.83,-93.5,30.25 target=nad83 operation=identity
+accuracy=3.01 bbox=-87.63,24.41,-81.17,30.25 target=nad83 operation=identity
+accuracy=6.16 bbox=-97.22,25.97,-95,28.97 target=nad83 operation=identity
+accuracy=6.16 bbox=-95,25.61,-87.25,30.23 target=nad83 operation=identity
+accuracy=6.16 bbox=-87.25,23.82,-81.17,30.25 target=nad83 operation=identity
+accuracy=6.16 bbox=-97.22,23.82,-81.17,30.25 target=nad83 operation=identity
+accuracy=8.16 bbox=-97.22,25.83,-89.64,30.25 target=nad83 operation=identity
+accuracy=11.16 bbox=-97.22,24.41,-81.17,30.25 target=nad83 operation=identity
+accuracy=13.16 bbox=-97.22,23.82,-86.68,30.25 target=nad83 operation=identity

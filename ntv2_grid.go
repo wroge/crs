@@ -61,14 +61,13 @@ func RegisterGridDir(dir string) {
 	}
 
 	gridMu.Lock()
-	defer gridMu.Unlock()
-
 	gridSearchDirs = append(gridSearchDirs, dir)
+	gridMu.Unlock()
 }
 
 func RegisterGridFS(prefix string, fsys fs.FS) {
 	if fsys == nil {
-		panic("wgs84: RegisterGridFS: fsys is nil")
+		panic("crs: RegisterGridFS: fsys is nil")
 	}
 
 	if prefix == "/" {
@@ -76,13 +75,14 @@ func RegisterGridFS(prefix string, fsys fs.FS) {
 	}
 
 	gridMu.Lock()
-	defer gridMu.Unlock()
 
 	gridFS = append(gridFS, gridFilesystem{prefix: prefix, fsys: fsys})
 
 	sort.Slice(gridFS, func(i, j int) bool {
 		return len(gridFS[i].prefix) > len(gridFS[j].prefix)
 	})
+
+	gridMu.Unlock()
 }
 
 func gridFilename(p string) string {
@@ -128,17 +128,17 @@ func openGridReader(name string) (io.ReadCloser, error) {
 	}
 
 	if cdnBase == "" {
-		return nil, fmt.Errorf("wgs84: grid %q not found", name)
+		return nil, fmt.Errorf("crs: grid %q not found", name)
 	}
 
 	resp, err := gridHTTPClient.Get(cdnBase + name)
 	if err != nil {
-		return nil, fmt.Errorf("wgs84: grid %q not found", name)
+		return nil, fmt.Errorf("crs: grid %q not found", name)
 	}
 
 	if resp.StatusCode == http.StatusNotFound {
 		_ = resp.Body.Close()
-		return nil, fmt.Errorf("wgs84: grid %q not found", name)
+		return nil, fmt.Errorf("crs: grid %q not found", name)
 	}
 
 	if resp.StatusCode != http.StatusOK {
@@ -212,7 +212,7 @@ func loadGrid(name string) (grid *horizontalGridData, err error) {
 	case ".gsb":
 		return parseGridShiftBinary(r)
 	default:
-		return nil, fmt.Errorf("wgs84: unknown grid extension %q", path.Ext(name))
+		return nil, fmt.Errorf("crs: unknown grid extension %q", path.Ext(name))
 	}
 }
 

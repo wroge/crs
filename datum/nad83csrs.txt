@@ -1,6 +1,6 @@
 spheroid=grs1980
 accuracy=1.0 bbox=-141.01,38.21,-40.73,86.46 operation=coordinate_frame tx=-0.991 ty=1.9072 tz=0.5129 rx=-0.0257899075194932 ry=-0.009650098960270402 rz=-0.01165994323234211
-accuracy=2.0 bbox=-141.01,38.21,-40.73,86.46 operation=geocentric_translations
+accuracy=2.0 bbox=-141.01,38.21,-40.73,86.46 operation=identity
 accuracy=3.0 bbox=-67.75,40,-43.99,64.21 operation=coordinate_frame tx=-0.991 ty=1.9072 tz=0.5129 rx=-0.0257899075194932 ry=-0.009650098960270402 rz=-0.01165994323234211
 accuracy=4.75 bbox=-67.75,40,-66.91,49.38 operation=coordinate_frame tx=-0.991 ty=1.9072 tz=0.5129 rx=-0.0257899075194932 ry=-0.009650098960270402 rz=-0.01165994323234211
 accuracy=5.3 bbox=-67.75,44.56,-63.7,48.07 operation=coordinate_frame tx=-0.991 ty=1.9072 tz=0.5129 rx=-0.0257899075194932 ry=-0.009650098960270402 rz=-0.01165994323234211

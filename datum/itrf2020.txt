@@ -8,4 +8,3 @@ accuracy=1.005 bbox=19.08,58.84,31.59,70.09 target=etrf2014 operation=time_depen
 accuracy=1.008 bbox=4.39,57.9,31.32,71.24 target=etrf2014 operation=time_dependent_position_vector tx=-0.0014 ty=-0.0009000000000000001 tz=0.0014 rx=0.00221 ry=0.013806 rz=-0.020020000000000003 ds=-0.00042 dty=-0.0001 dtz=0.0002 drx=8.5e-05 dry=0.000531 drz=-0.0007700000000000001 epoch=2015.0
 accuracy=1.011 bbox=19.02,53.89,26.82,56.45 target=etrf2014 operation=time_dependent_position_vector tx=-0.0014 ty=-0.0009000000000000001 tz=0.0014 rx=0.00221 ry=0.013806 rz=-0.020020000000000003 ds=-0.00042 dty=-0.0001 dtz=0.0002 drx=8.5e-05 dry=0.000531 drz=-0.0007700000000000001 epoch=2015.0
 accuracy=2.15 bbox=139.2,-12,149.67,-4.98 target=png94 operation=time_dependent_coordinate_frame drx=0.0013242 dry=0.0012787999999999999 drz=0.0011675 epoch=1994.0
-bbox=-180,-90,180,90 target=png94 operation=geocentric_translations
