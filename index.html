@@ -69,9 +69,9 @@
 				
 				<option value="file6">github.com/wroge/crs/crs.go (69.6%)</option>
 				
-				<option value="file7">github.com/wroge/crs/datum.go (60.7%)</option>
+				<option value="file7">github.com/wroge/crs/datum.go (63.5%)</option>
 				
-				<option value="file8">github.com/wroge/crs/datum_path.go (85.8%)</option>
+				<option value="file8">github.com/wroge/crs/datum_path.go (86.4%)</option>
 				
 				<option value="file9">github.com/wroge/crs/epsg_loader.go (81.4%)</option>
 				
@@ -85,7 +85,7 @@
 				
 				<option value="file14">github.com/wroge/crs/geographic.go (66.7%)</option>
 				
-				<option value="file15">github.com/wroge/crs/geographic_ops.go (58.3%)</option>
+				<option value="file15">github.com/wroge/crs/geographic_ops.go (60.0%)</option>
 				
 				<option value="file16">github.com/wroge/crs/helmert_exact.go (97.1%)</option>
 				
@@ -129,11 +129,11 @@
 				
 				<option value="file36">github.com/wroge/crs/molodensky_badekas.go (92.3%)</option>
 				
-				<option value="file37">github.com/wroge/crs/ntv2_grid.go (57.1%)</option>
+				<option value="file37">github.com/wroge/crs/ntv2_grid.go (58.8%)</option>
 				
 				<option value="file38">github.com/wroge/crs/ntv2_gsb.go (0.0%)</option>
 				
-				<option value="file39">github.com/wroge/crs/ntv2_tif.go (71.2%)</option>
+				<option value="file39">github.com/wroge/crs/ntv2_tif.go (74.2%)</option>
 				
 				<option value="file40">github.com/wroge/crs/nzmg.go (97.1%)</option>
 				
@@ -151,9 +151,9 @@
 				
 				<option value="file47">github.com/wroge/crs/spheroid.go (68.4%)</option>
 				
-				<option value="file48">github.com/wroge/crs/spheroid_loader.go (62.5%)</option>
+				<option value="file48">github.com/wroge/crs/spheroid_loader.go (78.9%)</option>
 				
-				<option value="file49">github.com/wroge/crs/time_ops.go (77.8%)</option>
+				<option value="file49">github.com/wroge/crs/time_ops.go (89.5%)</option>
 				
 				<option value="file50">github.com/wroge/crs/tmerc.go (66.9%)</option>
 				
@@ -161,7 +161,7 @@
 				
 				<option value="file52">github.com/wroge/crs/tunisia.go (90.0%)</option>
 				
-				<option value="file53">github.com/wroge/crs/velocity_grid.go (0.0%)</option>
+				<option value="file53">github.com/wroge/crs/velocity_grid.go (3.2%)</option>
 				
 				<option value="file54">github.com/wroge/crs/vertical_grid.go (80.6%)</option>
 				
@@ -361,6 +361,9 @@ func (b BoundingBox) String() string <span class="cov0" title="0">{
         return fmt.Sprintf("%s,%s,%s,%s", formatFloat(b.MinLon), formatFloat(b.MinLat), formatFloat(b.MaxLon), formatFloat(b.MaxLat))
 }</span>
 
+// Contains reports whether (lon, lat) lies in the box. Longitude must be east of
+// Greenwich (EPSG area-of-use convention). When the point is relative to a local
+// prime meridian, pass lon + datum.primeMeridianLongitude().
 func (b BoundingBox) Contains(lon, lat float64) bool <span class="cov8" title="1">{
         if b.MaxLat &lt; b.MinLat </span><span class="cov0" title="0">{
                 return false
@@ -736,6 +739,7 @@ func (crs CoordinateReferenceSystem) Intersects(bbox ...BoundingBox) (Coordinate
 
 // AtEpoch evaluates time-dependent datum operations at the given coordinate epoch
 // (decimal year), mirroring Intersects as a pre-Transform datum rewrite.
+// Time-specific Helmerts are only kept when epoch matches their transformation epoch.
 func (crs CoordinateReferenceSystem) AtEpoch(epoch float64) CoordinateReferenceSystem <span class="cov8" title="1">{
         crs.Datum = crs.Datum.AtEpoch(epoch)
         return crs
@@ -845,16 +849,9 @@ var datumDir embed.FS
 
 var datumStore sync.Map
 
-func RegisterDatum(name string, d Datum) <span class="cov0" title="0">{
-        name = strings.ToLower(strings.TrimSpace(name))
-        if name == "" </span><span class="cov0" title="0">{
-                return
-        }</span>
-        <span class="cov0" title="0">if d.Name == "" </span><span class="cov0" title="0">{
-                d.Name = name
-        }</span>
-        <span class="cov0" title="0">datumStore.Store(name, d)</span>
-}
+func RegisterDatum(d Datum) <span class="cov0" title="0">{
+        datumStore.Store(d.Name, d)
+}</span>
 
 func loadDatum(name string) (d Datum, err error) <span class="cov8" title="1">{
         name = strings.ToLower(name)
@@ -1086,6 +1083,8 @@ func (pp parts) asOperation() (Operation, error) <span class="cov8" title="1">{
                 op = PositionVector{
                         Tx: pp.floatOrZero("tx"), Ty: pp.floatOrZero("ty"), Tz: pp.floatOrZero("tz"),
                 }</span>
+        case "identity":<span class="cov8" title="1">
+                op = Identity{}</span>
         case "longitude_rotation":<span class="cov8" title="1">
                 op = LongitudeRotation{Lon: pp.floatOrZero("lon")}</span>
         case "geographic_offset":<span class="cov8" title="1">
@@ -1232,6 +1231,11 @@ type Datum struct {
         Name            string
         Spheroid        Spheroid
         Transformations []Transformation
+
+        // coordinateEpoch is set by AtEpoch / TransformAt. When hasCoordinateEpoch
+        // is false (plain Transform), time-specific Helmerts are excluded from paths.
+        coordinateEpoch    float64
+        hasCoordinateEpoch bool
 }
 
 func (d Datum) String() string <span class="cov0" title="0">{
@@ -1261,50 +1265,83 @@ func (d Datum) Intersects(bbox ...BoundingBox) (Datum, error) <span class="cov8"
         <span class="cov8" title="1">if len(t) == 0 </span><span class="cov8" title="1">{
                 // No published hub ops cover this area (e.g. Guam1963 on Yap). Keep the
                 // spheroid so same-datum projection still works; cross-datum will fail later.
-                return Datum{Name: d.Name, Spheroid: d.Spheroid}, nil
+                return Datum{
+                        Name:               d.Name,
+                        Spheroid:           d.Spheroid,
+                        coordinateEpoch:    d.coordinateEpoch,
+                        hasCoordinateEpoch: d.hasCoordinateEpoch,
+                }, nil
         }</span>
 
         <span class="cov8" title="1">return Datum{
-                Name:            d.Name,
-                Spheroid:        d.Spheroid,
-                Transformations: t,
+                Name:               d.Name,
+                Spheroid:           d.Spheroid,
+                Transformations:    t,
+                coordinateEpoch:    d.coordinateEpoch,
+                hasCoordinateEpoch: d.hasCoordinateEpoch,
         }, nil</span>
 }
 
 // AtEpoch returns a copy of d with time-dependent operations evaluated at epoch
 // (decimal year). TimeDependentPositionVector becomes PositionVector; VelocityGrid
-// with a non-zero Epoch gets Dt = epoch - Epoch.
+// with a non-zero Epoch gets Dt = epoch - Epoch. Time-specific Helmerts that do
+// not match epoch are dropped from the in-memory list (pathfinding also gates them).
 func (d Datum) AtEpoch(epoch float64) Datum <span class="cov8" title="1">{
-        if len(d.Transformations) == 0 </span><span class="cov0" title="0">{
-                return d
+        out := Datum{
+                Name:               d.Name,
+                Spheroid:           d.Spheroid,
+                coordinateEpoch:    epoch,
+                hasCoordinateEpoch: true,
+        }
+
+        if len(d.Transformations) == 0 </span><span class="cov8" title="1">{
+                return out
         }</span>
 
-        <span class="cov8" title="1">ts := slices.Clone(d.Transformations)
-        for i := range ts </span><span class="cov8" title="1">{
-                ts[i].Operation = operationAtEpoch(ts[i].Operation, epoch)
-        }</span>
+        <span class="cov8" title="1">ts := make([]Transformation, 0, len(d.Transformations))
+        for _, t := range d.Transformations </span><span class="cov8" title="1">{
+                op := operationAtEpoch(t.Operation, epoch)
+                if !timeSpecificAllowed(op, true, epoch) </span><span class="cov0" title="0">{
+                        continue</span>
+                }
 
-        <span class="cov8" title="1">return Datum{
-                Name:            d.Name,
-                Spheroid:        d.Spheroid,
-                Transformations: ts,
-        }</span>
+                <span class="cov8" title="1">t.Operation = op
+                ts = append(ts, t)</span>
+        }
+
+        <span class="cov8" title="1">out.Transformations = ts
+        
+        return out</span>
 }
 
 func operationAtEpoch(op Operation, epoch float64) Operation <span class="cov8" title="1">{
         switch o := op.(type) </span>{
         case TimeDependentPositionVector:<span class="cov8" title="1">
                 return o.at(epoch)</span>
-        case Inverse:<span class="cov0" title="0">
+        case Inverse:<span class="cov8" title="1">
                 return Inverse{Operation: operationAtEpoch(o.Operation, epoch)}</span>
         case VelocityGrid:<span class="cov8" title="1">
                 if o.Epoch != 0 </span><span class="cov8" title="1">{
                         o.Dt = epoch - o.Epoch
                 }</span>
+
                 <span class="cov8" title="1">return o</span>
         default:<span class="cov8" title="1">
                 return op</span>
         }
+}
+
+// primeMeridianLongitude is degrees east of Greenwich for this datum's prime
+// meridian, taken from a longitude_rotation hop (0 when the datum is Greenwich-based).
+// EPSG areas of use are Greenwich-oriented; use lon+primeMeridianLongitude() for Contains.
+func (d Datum) primeMeridianLongitude() float64 <span class="cov8" title="1">{
+        for _, t := range d.Transformations </span><span class="cov8" title="1">{
+                if lr, ok := t.Operation.(LongitudeRotation); ok </span><span class="cov8" title="1">{
+                        return lr.Lon
+                }</span>
+        }
+
+        <span class="cov8" title="1">return 0</span>
 }
 
 func (d Datum) ToWGS84(lon, lat, h float64) (float64, float64, float64, error) <span class="cov0" title="0">{
@@ -1330,9 +1367,14 @@ func (d Datum) toWGS84Visited(lon, lat, h float64, visited map[string]bool) (flo
 
         defer delete(visited, d.Name)
 
+        glon := lon + d.primeMeridianLongitude()
         var lastErr error
         for _, t := range d.Transformations </span><span class="cov0" title="0">{
-                lon0, lat0, h0, err := t.toWGS84Visited(d.Spheroid, lon, lat, h, visited)
+                if !timeSpecificAllowed(t.Operation, d.hasCoordinateEpoch, d.coordinateEpoch) </span><span class="cov0" title="0">{
+                        continue</span>
+                }
+
+                <span class="cov0" title="0">lon0, lat0, h0, err := t.toWGS84Visited(d.Spheroid, lon, lat, h, visited, glon)
                 if err != nil </span><span class="cov0" title="0">{
                         lastErr = err
                         continue</span>
@@ -1375,7 +1417,11 @@ func (d Datum) fromWGS84Visited(lon0, lat0, h0 float64, visited map[string]bool)
 
         var lastErr error
         for _, t := range d.Transformations </span><span class="cov0" title="0">{
-                lon, lat, h, err := t.fromWGS84Visited(d.Spheroid, lon0, lat0, h0, visited)
+                if !timeSpecificAllowed(t.Operation, d.hasCoordinateEpoch, d.coordinateEpoch) </span><span class="cov0" title="0">{
+                        continue</span>
+                }
+                
+                <span class="cov0" title="0">lon, lat, h, err := t.fromWGS84Visited(d.Spheroid, lon0, lat0, h0, visited)
                 if err != nil </span><span class="cov0" title="0">{
                         lastErr = err
                         continue</span>
@@ -1398,11 +1444,17 @@ func (d Datum) TransformTo(target Datum, lon, lat, h float64) (float64, float64,
                 return lon, lat, h, nil
         }</span>
 
+        <span class="cov8" title="1">hasEpoch := d.hasCoordinateEpoch || target.hasCoordinateEpoch
+        epoch := d.coordinateEpoch
+        if target.hasCoordinateEpoch </span><span class="cov8" title="1">{
+                epoch = target.coordinateEpoch
+        }</span>
+
         <span class="cov8" title="1">excluded := make(map[edgeKey]bool)
         var lastErr error
 
         for </span><span class="cov8" title="1">{
-                path, err := findBestPath(d, target, lon, lat, excluded)
+                path, err := findBestPath(d, target, lon, lat, excluded, hasEpoch, epoch)
                 if err != nil </span><span class="cov0" title="0">{
                         if lastErr != nil </span><span class="cov0" title="0">{
                                 return 0, 0, 0, lastErr
@@ -1410,7 +1462,7 @@ func (d Datum) TransformTo(target Datum, lon, lat, h float64) (float64, float64,
                         <span class="cov0" title="0">return 0, 0, 0, err</span>
                 }
 
-                <span class="cov8" title="1">outLon, outLat, outH, failed, err := applyPath(path, lon, lat, h, excluded)
+                <span class="cov8" title="1">outLon, outLat, outH, failed, err := applyPath(path, lon, lat, h, excluded, hasEpoch, epoch)
                 if err == nil </span><span class="cov8" title="1">{
                         return outLon, outLat, outH, nil
                 }</span>
@@ -1447,6 +1499,10 @@ import (
 
 const maxPathHops = 8
 
+// isHubEquivalent reports whether d may be treated as a free identity hop to/from
+// WGS84. Datums with no exported ops (typically PROJ-ballpark-only in the wild)
+// stay hub-equivalent so CRS remain reachable without exporting ballpark edges.
+// Published null hubs with accuracy/bbox use operation=identity instead of empty.
 func isHubEquivalent(d Datum) bool <span class="cov8" title="1">{
         return len(d.Transformations) == 0
 }</span>
@@ -1477,23 +1533,28 @@ var (
 func ensureReverseIndex() <span class="cov8" title="1">{
         reverseOnce.Do(func() </span><span class="cov8" title="1">{
                 reverseIndex = make(map[string][]revEdge)
+
                 entries, err := fs.ReadDir(datumDir, "datum")
                 if err != nil </span><span class="cov0" title="0">{
                         return
                 }</span>
+
                 <span class="cov8" title="1">for _, e := range entries </span><span class="cov8" title="1">{
                         if e.IsDir() || !strings.HasSuffix(e.Name(), ".txt") </span><span class="cov0" title="0">{
                                 continue</span>
                         }
+
                         <span class="cov8" title="1">name := strings.TrimSuffix(e.Name(), ".txt")
                         d, err := loadDatum(name)
                         if err != nil </span><span class="cov0" title="0">{
                                 continue</span>
                         }
+
                         <span class="cov8" title="1">for i, t := range d.Transformations </span><span class="cov8" title="1">{
                                 if t.Target == nil || t.Operation == nil </span><span class="cov0" title="0">{
                                         continue</span>
                                 }
+
                                 <span class="cov8" title="1">tgt := strings.ToLower(t.Target.Name)
                                 reverseIndex[tgt] = append(reverseIndex[tgt], revEdge{owner: name, index: i})</span>
                         }
@@ -1509,7 +1570,8 @@ func datumName(d Datum) string <span class="cov8" title="1">{
 // Forward and inverse candidates are already ordered by the owner's transformation sort
 // (accuracy, then area); we emit one best edge per neighbor for Dijkstra, but
 // edgesBetween returns all candidates for apply.
-func outgoingEdges(node string, lon, lat float64, excluded map[edgeKey]bool) []graphEdge <span class="cov8" title="1">{
+// Time-specific Helmerts are included only when hasCoordEpoch and coordEpoch match.
+func outgoingEdges(node string, lon, lat float64, excluded map[edgeKey]bool, hasCoordEpoch bool, coordEpoch float64) []graphEdge <span class="cov8" title="1">{
         ensureReverseIndex()
 
         d, err := loadDatum(node)
@@ -1517,7 +1579,10 @@ func outgoingEdges(node string, lon, lat float64, excluded map[edgeKey]bool) []g
                 return nil
         }</span>
 
-        <span class="cov8" title="1">best := make(map[string]graphEdge) // neighbor -&gt; best edge
+        // AoU bboxes are Greenwich-based; lon may be relative to this node's PM.
+        <span class="cov8" title="1">glon := lon + d.primeMeridianLongitude()
+
+        best := make(map[string]graphEdge) // neighbor -&gt; best edge
 
         consider := func(e graphEdge) </span><span class="cov8" title="1">{
                 if excluded[e.key] </span><span class="cov0" title="0">{
@@ -1533,13 +1598,20 @@ func outgoingEdges(node string, lon, lat float64, excluded map[edgeKey]bool) []g
                 if t.Target == nil || t.Operation == nil </span><span class="cov0" title="0">{
                         continue</span>
                 }
-                <span class="cov8" title="1">if !t.BoundingBox.Contains(lon, lat) </span><span class="cov8" title="1">{
+
+                <span class="cov8" title="1">if !timeSpecificAllowed(t.Operation, hasCoordEpoch, coordEpoch) </span><span class="cov8" title="1">{
                         continue</span>
                 }
+
+                <span class="cov8" title="1">if !t.BoundingBox.Contains(glon, lat) </span><span class="cov8" title="1">{
+                        continue</span>
+                }
+
                 <span class="cov8" title="1">tgt := strings.ToLower(t.Target.Name)
                 if tgt == "" || tgt == node </span><span class="cov0" title="0">{
                         continue</span>
                 }
+
                 <span class="cov8" title="1">consider(graphEdge{
                         key:      edgeKey{owner: node, index: i, inverse: false},
                         to:       tgt,
@@ -1553,13 +1625,20 @@ func outgoingEdges(node string, lon, lat float64, excluded map[edgeKey]bool) []g
                 if err != nil || rev.index &lt; 0 || rev.index &gt;= len(owner.Transformations) </span><span class="cov0" title="0">{
                         continue</span>
                 }
+
                 <span class="cov8" title="1">t := owner.Transformations[rev.index]
                 if t.Target == nil || t.Operation == nil </span><span class="cov0" title="0">{
                         continue</span>
                 }
-                <span class="cov8" title="1">if !t.BoundingBox.Contains(lon, lat) </span><span class="cov8" title="1">{
+
+                <span class="cov8" title="1">if !timeSpecificAllowed(t.Operation, hasCoordEpoch, coordEpoch) </span><span class="cov8" title="1">{
                         continue</span>
                 }
+
+                <span class="cov8" title="1">if !t.BoundingBox.Contains(glon, lat) </span><span class="cov8" title="1">{
+                        continue</span>
+                }
+
                 <span class="cov8" title="1">consider(graphEdge{
                         key:      edgeKey{owner: rev.owner, index: rev.index, inverse: true},
                         to:       rev.owner,
@@ -1572,54 +1651,72 @@ func outgoingEdges(node string, lon, lat float64, excluded map[edgeKey]bool) []g
         for _, e := range best </span><span class="cov8" title="1">{
                 out = append(out, e)
         }</span>
+
         <span class="cov8" title="1">return out</span>
 }
 
 // edgesBetween returns all covering edges from→to (forward and inverse), in
 // owner transformation order (accuracy ascending within each owner list).
-func edgesBetween(from, to string, lon, lat float64, excluded map[edgeKey]bool) []graphEdge <span class="cov8" title="1">{
+func edgesBetween(from, to string, lon, lat float64, excluded map[edgeKey]bool, hasCoordEpoch bool, coordEpoch float64) []graphEdge <span class="cov8" title="1">{
         ensureReverseIndex()
         from = strings.ToLower(from)
         to = strings.ToLower(to)
 
         var out []graphEdge
 
-        d, err := loadDatum(from)
-        if err == nil </span><span class="cov8" title="1">{
-                for i, t := range d.Transformations </span><span class="cov8" title="1">{
+        glon := lon
+        if fromDatum, err := loadDatum(from); err == nil </span><span class="cov8" title="1">{
+                glon = lon + fromDatum.primeMeridianLongitude()
+                for i, t := range fromDatum.Transformations </span><span class="cov8" title="1">{
                         if t.Target == nil || t.Operation == nil </span><span class="cov0" title="0">{
                                 continue</span>
                         }
+
+                        <span class="cov8" title="1">if !timeSpecificAllowed(t.Operation, hasCoordEpoch, coordEpoch) </span><span class="cov8" title="1">{
+                                continue</span>
+                        }
+
                         <span class="cov8" title="1">if !strings.EqualFold(t.Target.Name, to) </span><span class="cov8" title="1">{
                                 continue</span>
                         }
-                        <span class="cov8" title="1">if !t.BoundingBox.Contains(lon, lat) </span><span class="cov8" title="1">{
+
+                        <span class="cov8" title="1">if !t.BoundingBox.Contains(glon, lat) </span><span class="cov8" title="1">{
                                 continue</span>
                         }
+
                         <span class="cov8" title="1">k := edgeKey{owner: from, index: i, inverse: false}
                         if excluded[k] </span><span class="cov0" title="0">{
                                 continue</span>
                         }
+
                         <span class="cov8" title="1">out = append(out, graphEdge{key: k, to: to, accuracy: t.Accuracy, inverse: false})</span>
                 }
         }
 
-        <span class="cov8" title="1">toDatum, err := loadDatum(to)
-        if err == nil </span><span class="cov8" title="1">{
+        <span class="cov8" title="1">if toDatum, err := loadDatum(to); err == nil </span><span class="cov8" title="1">{
+                // Inverse edge: coordinates remain in `from`'s frame (Greenwich AoU check).
                 for i, t := range toDatum.Transformations </span><span class="cov8" title="1">{
                         if t.Target == nil || t.Operation == nil </span><span class="cov0" title="0">{
                                 continue</span>
                         }
+
+                        <span class="cov8" title="1">if !timeSpecificAllowed(t.Operation, hasCoordEpoch, coordEpoch) </span><span class="cov8" title="1">{
+                                continue</span>
+                        }
+
                         <span class="cov8" title="1">if !strings.EqualFold(t.Target.Name, from) </span><span class="cov8" title="1">{
                                 continue</span>
                         }
-                        <span class="cov8" title="1">if !t.BoundingBox.Contains(lon, lat) </span><span class="cov8" title="1">{
+
+                        <span class="cov8" title="1">if !t.BoundingBox.Contains(glon, lat) </span><span class="cov8" title="1">{
                                 continue</span>
                         }
+
                         <span class="cov8" title="1">k := edgeKey{owner: to, index: i, inverse: true}
                         if excluded[k] </span><span class="cov0" title="0">{
                                 continue</span>
                         }
+
                         <span class="cov8" title="1">out = append(out, graphEdge{key: k, to: to, accuracy: t.Accuracy, inverse: true})</span>
                 }
         }
@@ -1645,26 +1742,39 @@ type pqItem struct {
 
 type pathPQ []pqItem
 
-func (p pathPQ) Len() int <span class="cov8" title="1">{ return len(p) }</span>
+func (p pathPQ) Len() int <span class="cov8" title="1">{
+        return len(p)
+}</span>
+
 func (p pathPQ) Less(i, j int) bool <span class="cov8" title="1">{
         if p[i].cost != p[j].cost </span><span class="cov8" title="1">{
                 return p[i].cost &lt; p[j].cost
         }</span>
+
         <span class="cov8" title="1">if p[i].hops != p[j].hops </span><span class="cov8" title="1">{
                 return p[i].hops &lt; p[j].hops
         }</span>
+
         <span class="cov8" title="1">if p[i].hub != p[j].hub </span><span class="cov0" title="0">{
                 return !p[i].hub &amp;&amp; p[j].hub
         }</span>
+
         <span class="cov8" title="1">return p[i].idx &lt; p[j].idx</span>
 }
-func (p pathPQ) Swap(i, j int) <span class="cov8" title="1">{ p[i], p[j] = p[j], p[i] }</span>
-func (p *pathPQ) Push(x any)   <span class="cov8" title="1">{ *p = append(*p, x.(pqItem)) }</span>
+func (p pathPQ) Swap(i, j int) <span class="cov8" title="1">{
+        p[i], p[j] = p[j], p[i]
+}</span>
+
+func (p *pathPQ) Push(x any) <span class="cov8" title="1">{
+        *p = append(*p, x.(pqItem))
+}</span>
+
 func (p *pathPQ) Pop() any <span class="cov8" title="1">{
         old := *p
         n := len(old)
         item := old[n-1]
         *p = old[:n-1]
+
         return item
 }</span>
 
@@ -1672,27 +1782,33 @@ func betterPath(aCost float64, aHops int, aHub bool, bCost float64, bHops int, b
         if aCost != bCost </span><span class="cov8" title="1">{
                 return aCost &lt; bCost
         }</span>
+
         <span class="cov8" title="1">if aHops != bHops </span><span class="cov8" title="1">{
                 return aHops &lt; bHops
         }</span>
+
         <span class="cov8" title="1">if aHub != bHub </span><span class="cov0" title="0">{
                 return !aHub &amp;&amp; bHub
         }</span>
+
         <span class="cov8" title="1">return false</span>
 }
 
 // findBestPath finds a minimum accumulated-accuracy path from→to covering (lon,lat).
-func findBestPath(from, to Datum, lon, lat float64, excluded map[edgeKey]bool) ([]string, error) <span class="cov8" title="1">{
+func findBestPath(from, to Datum, lon, lat float64, excluded map[edgeKey]bool, hasCoordEpoch bool, coordEpoch float64) ([]string, error) <span class="cov8" title="1">{
         ensureReverseIndex()
 
         start := datumName(from)
         goal := datumName(to)
+
         if start == "" || goal == "" </span><span class="cov0" title="0">{
                 return nil, UnsupportedError{Err: errors.New("missing datum name")}
         }</span>
+
         <span class="cov8" title="1">if start == goal </span><span class="cov0" title="0">{
                 return []string{start}, nil
         }</span>
+
         <span class="cov8" title="1">if excluded == nil </span><span class="cov0" title="0">{
                 excluded = map[edgeKey]bool{}
         }</span>
@@ -1700,10 +1816,12 @@ func findBestPath(from, to Datum, lon, lat float64, excluded map[edgeKey]bool) (
         // Datums with no published ops are treated as WGS84-equivalent (identity hops).
         <span class="cov8" title="1">searchFrom, searchTo := from, to
         prefix, suffix := "", ""
+
         if start != "wgs84" &amp;&amp; isHubEquivalent(from) </span><span class="cov8" title="1">{
                 prefix = start
                 searchFrom = WGS84
         }</span>
+
         <span class="cov8" title="1">if goal != "wgs84" &amp;&amp; isHubEquivalent(to) </span><span class="cov8" title="1">{
                 suffix = goal
                 searchTo = WGS84
@@ -1713,11 +1831,12 @@ func findBestPath(from, to Datum, lon, lat float64, excluded map[edgeKey]bool) (
         coreGoal := datumName(searchTo)
 
         var core []string
+
         if coreStart == coreGoal </span><span class="cov8" title="1">{
                 core = []string{coreStart}
         }</span> else<span class="cov8" title="1"> {
                 var err error
-                core, err = findBestPathCore(coreStart, coreGoal, lon, lat, excluded)
+                core, err = findBestPathCore(coreStart, coreGoal, lon, lat, excluded, hasCoordEpoch, coordEpoch)
                 if err != nil </span><span class="cov0" title="0">{
                         return nil, err
                 }</span>
@@ -1727,10 +1846,12 @@ func findBestPath(from, to Datum, lon, lat float64, excluded map[edgeKey]bool) (
         if prefix != "" </span><span class="cov8" title="1">{
                 path = append(path, prefix)
         }</span>
+
         <span class="cov8" title="1">path = append(path, core...)
         if suffix != "" </span><span class="cov8" title="1">{
                 path = append(path, suffix)
         }</span>
+
         <span class="cov8" title="1">return dedupeConsecutive(path), nil</span>
 }
 
@@ -1738,16 +1859,18 @@ func dedupeConsecutive(path []string) []string <span class="cov8" title="1">{
         if len(path) == 0 </span><span class="cov0" title="0">{
                 return path
         }</span>
+
         <span class="cov8" title="1">out := []string{path[0]}
         for _, n := range path[1:] </span><span class="cov8" title="1">{
                 if n != out[len(out)-1] </span><span class="cov8" title="1">{
                         out = append(out, n)
                 }</span>
         }
+
         <span class="cov8" title="1">return out</span>
 }
 
-func findBestPathCore(start, goal string, lon, lat float64, excluded map[edgeKey]bool) ([]string, error) <span class="cov8" title="1">{
+func findBestPathCore(start, goal string, lon, lat float64, excluded map[edgeKey]bool, hasCoordEpoch bool, coordEpoch float64) ([]string, error) <span class="cov8" title="1">{
         nodes := []pathNode{{
                 name: start,
                 cost: 0,
@@ -1772,7 +1895,7 @@ func findBestPathCore(start, goal string, lon, lat float64, excluded map[edgeKey
                         continue</span>
                 }
 
-                <span class="cov8" title="1">for _, e := range outgoingEdges(cur.name, lon, lat, excluded) </span><span class="cov8" title="1">{
+                <span class="cov8" title="1">for _, e := range outgoingEdges(cur.name, lon, lat, excluded, hasCoordEpoch, coordEpoch) </span><span class="cov8" title="1">{
                         nextCost := cur.cost + e.accuracy
                         nextHops := cur.hops + 1
                         viaHub := cur.viaHub
@@ -1833,14 +1956,14 @@ func applyEdge(from Datum, e graphEdge, lon, lat, h float64) (float64, float64, 
         return t.ToDatum(owner.Spheroid, lon, lat, h)</span>
 }
 
-func applyHop(fromName, toName string, lon, lat, h float64, excluded map[edgeKey]bool) (float64, float64, float64, []edgeKey, error) <span class="cov8" title="1">{
+func applyHop(fromName, toName string, lon, lat, h float64, excluded map[edgeKey]bool, hasCoordEpoch bool, coordEpoch float64) (float64, float64, float64, []edgeKey, error) <span class="cov8" title="1">{
         from, err := loadDatum(fromName)
         if err != nil </span><span class="cov0" title="0">{
                 return 0, 0, 0, nil, err
         }</span>
         <span class="cov8" title="1">toDatum, toErr := loadDatum(toName)
 
-        cands := edgesBetween(fromName, toName, lon, lat, excluded)
+        cands := edgesBetween(fromName, toName, lon, lat, excluded, hasCoordEpoch, coordEpoch)
         if len(cands) == 0 </span><span class="cov8" title="1">{
                 // Identity hop between WGS84 and a hub-equivalent datum (no published ops).
                 if toErr == nil &amp;&amp; identityHopAllowed(from, toDatum, fromName, toName) </span><span class="cov8" title="1">{
@@ -1874,21 +1997,25 @@ func identityHopAllowed(from, to Datum, fromName, toName string) bool <span clas
         return fromEq &amp;&amp; toEq
 }</span>
 
-func applyPath(nodes []string, lon, lat, h float64, excluded map[edgeKey]bool) (float64, float64, float64, []edgeKey, error) <span class="cov8" title="1">{
+func applyPath(nodes []string, lon, lat, h float64, excluded map[edgeKey]bool, hasCoordEpoch bool, coordEpoch float64) (float64, float64, float64, []edgeKey, error) <span class="cov8" title="1">{
         if len(nodes) &lt; 2 </span><span class="cov0" title="0">{
                 return lon, lat, h, nil, nil
         }</span>
 
         <span class="cov8" title="1">var failed []edgeKey
+
         for i := 0; i &lt; len(nodes)-1; i++ </span><span class="cov8" title="1">{
                 var tried []edgeKey
                 var err error
-                lon, lat, h, tried, err = applyHop(nodes[i], nodes[i+1], lon, lat, h, excluded)
+
+                lon, lat, h, tried, err = applyHop(nodes[i], nodes[i+1], lon, lat, h, excluded, hasCoordEpoch, coordEpoch)
+
                 failed = append(failed, tried...)
                 if err != nil </span><span class="cov0" title="0">{
                         return 0, 0, 0, failed, err
                 }</span>
         }
+
         <span class="cov8" title="1">return lon, lat, h, nil, nil</span>
 }
 </pre>
@@ -2446,6 +2573,9 @@ func (g Geographic) ToGeographic(s Spheroid, lon, lat, h float64) (float64, floa
 		
 		<pre class="file" id="file15" style="display: none">package crs
 
+// LongitudeRotation shifts longitude between a local prime meridian and Greenwich
+// (or another Greenwich-oriented sibling). Lon is degrees east of Greenwich for
+// the local meridian: ToTarget adds Lon (local → Greenwich-oriented), FromTarget subtracts.
 type LongitudeRotation struct {
         Lon float64
 }
@@ -2460,6 +2590,22 @@ func (l LongitudeRotation) ToTarget(source, target Spheroid, lon, lat, h float64
 
 func (l LongitudeRotation) FromTarget(source, target Spheroid, lon0, lat0, h0 float64) (float64, float64, float64, error) <span class="cov8" title="1">{
         return lon0 - l.Lon, lat0, h0, nil
+}</span>
+
+// Identity is a published null datum link (e.g. EPSG:1149): coordinates unchanged,
+// kept so accuracy and area-of-use still participate in path selection.
+type Identity struct{}
+
+func (Identity) String() string <span class="cov0" title="0">{
+        return "identity"
+}</span>
+
+func (Identity) ToTarget(source, target Spheroid, lon, lat, h float64) (float64, float64, float64, error) <span class="cov8" title="1">{
+        return lon, lat, h, nil
+}</span>
+
+func (Identity) FromTarget(source, target Spheroid, lon0, lat0, h0 float64) (float64, float64, float64, error) <span class="cov8" title="1">{
+        return lon0, lat0, h0, nil
 }</span>
 
 type GeographicOffset struct {
@@ -2981,7 +3127,8 @@ func (cs HyperbolicCassiniSoldner) String() string <span class="cov0" title="0">
 }</span>
 
 func (cs HyperbolicCassiniSoldner) FromGeographic(s Spheroid, lon, lat, h float64) (float64, float64, float64) <span class="cov8" title="1">{
-        base := CassiniSoldner{Lonf: cs.Lonf, Latf: cs.Latf, Eastf: cs.Eastf, Northf: cs.Northf}
+        base := CassiniSoldner(cs)
+
         east, north, h := base.FromGeographic(s, lon, lat, h)
         phi := radian(lat)
         sinPhi := math.Sin(phi)
@@ -3017,7 +3164,7 @@ func (cs HyperbolicCassiniSoldner) ToGeographic(s Spheroid, east, north, h float
                 }
         }
 
-        <span class="cov8" title="1">base := CassiniSoldner{Lonf: cs.Lonf, Latf: cs.Latf, Eastf: cs.Eastf, Northf: cs.Northf}
+        <span class="cov8" title="1">base := CassiniSoldner(cs)
 
         return base.ToGeographic(s, east, cs.Northf+x, h)</span>
 }
@@ -4585,14 +4732,13 @@ func RegisterGridDir(dir string) <span class="cov0" title="0">{
         }</span>
 
         <span class="cov0" title="0">gridMu.Lock()
-        defer gridMu.Unlock()
-
-        gridSearchDirs = append(gridSearchDirs, dir)</span>
+        gridSearchDirs = append(gridSearchDirs, dir)
+        gridMu.Unlock()</span>
 }
 
 func RegisterGridFS(prefix string, fsys fs.FS) <span class="cov0" title="0">{
         if fsys == nil </span><span class="cov0" title="0">{
-                panic("wgs84: RegisterGridFS: fsys is nil")</span>
+                panic("crs: RegisterGridFS: fsys is nil")</span>
         }
 
         <span class="cov0" title="0">if prefix == "/" </span><span class="cov0" title="0">{
@@ -4600,13 +4746,14 @@ func RegisterGridFS(prefix string, fsys fs.FS) <span class="cov0" title="0">{
         }</span>
 
         <span class="cov0" title="0">gridMu.Lock()
-        defer gridMu.Unlock()
 
         gridFS = append(gridFS, gridFilesystem{prefix: prefix, fsys: fsys})
 
         sort.Slice(gridFS, func(i, j int) bool </span><span class="cov0" title="0">{
                 return len(gridFS[i].prefix) &gt; len(gridFS[j].prefix)
         }</span>)
+
+        <span class="cov0" title="0">gridMu.Unlock()</span>
 }
 
 func gridFilename(p string) string <span class="cov8" title="1">{
@@ -4652,17 +4799,17 @@ func openGridReader(name string) (io.ReadCloser, error) <span class="cov8" title
         }
 
         <span class="cov8" title="1">if cdnBase == "" </span><span class="cov0" title="0">{
-                return nil, fmt.Errorf("wgs84: grid %q not found", name)
+                return nil, fmt.Errorf("crs: grid %q not found", name)
         }</span>
 
         <span class="cov8" title="1">resp, err := gridHTTPClient.Get(cdnBase + name)
         if err != nil </span><span class="cov0" title="0">{
-                return nil, fmt.Errorf("wgs84: grid %q not found", name)
+                return nil, fmt.Errorf("crs: grid %q not found", name)
         }</span>
 
         <span class="cov8" title="1">if resp.StatusCode == http.StatusNotFound </span><span class="cov8" title="1">{
                 _ = resp.Body.Close()
-                return nil, fmt.Errorf("wgs84: grid %q not found", name)
+                return nil, fmt.Errorf("crs: grid %q not found", name)
         }</span>
 
         <span class="cov8" title="1">if resp.StatusCode != http.StatusOK </span><span class="cov0" title="0">{
@@ -4736,7 +4883,7 @@ func loadGrid(name string) (grid *horizontalGridData, err error) <span class="co
         case ".gsb":<span class="cov0" title="0">
                 return parseGridShiftBinary(r)</span>
         default:<span class="cov0" title="0">
-                return nil, fmt.Errorf("wgs84: unknown grid extension %q", path.Ext(name))</span>
+                return nil, fmt.Errorf("crs: unknown grid extension %q", path.Ext(name))</span>
         }
 }
 
@@ -4813,7 +4960,7 @@ func (g *horizontalGridData) selectSubgrid(lon, lat float64) int <span class="co
 }
 
 func (g *horizontalGridData) deepestSubgridRec(idx int, phi, lam float64, seen map[int]bool) int <span class="cov8" title="1">{
-        if seen[idx] </span><span class="cov0" title="0">{
+        if seen[idx] </span><span class="cov8" title="1">{
                 return idx
         }</span>
 
@@ -4827,7 +4974,7 @@ func (g *horizontalGridData) deepestSubgridRec(idx int, phi, lam float64, seen m
                         continue</span>
                 }
 
-                <span class="cov0" title="0">if deeper := g.deepestSubgridRec(i, phi, lam, seen); deeper &gt;= 0 </span><span class="cov0" title="0">{
+                <span class="cov8" title="1">if deeper := g.deepestSubgridRec(i, phi, lam, seen); deeper &gt;= 0 </span><span class="cov8" title="1">{
                         best = deeper
                 }</span>
         }
@@ -5369,7 +5516,7 @@ func (p *tifParser) ifdInline(e ifdEntry) bool <span class="cov8" title="1">{
         return sz &gt; 0 &amp;&amp; int(e.count)*sz &lt;= 4
 }</span>
 
-func (p *tifParser) ifdInlineU16(e ifdEntry, i int) uint16 <span class="cov0" title="0">{
+func (p *tifParser) ifdInlineU16(e ifdEntry, i int) uint16 <span class="cov8" title="1">{
         var b [4]byte
         p.order.PutUint32(b[:], e.val)
 
@@ -5386,7 +5533,7 @@ func (p *tifParser) tagLong(tags map[uint16]ifdEntry, tag uint16) uint32 <span c
                 if e.count == 1 </span><span class="cov8" title="1">{
                         return uint32(uint16(e.val))
                 }</span>
-                <span class="cov8" title="1">if p.ifdInline(e) </span><span class="cov0" title="0">{
+                <span class="cov8" title="1">if p.ifdInline(e) </span><span class="cov8" title="1">{
                         return uint32(p.ifdInlineU16(e, 0))
                 }</span>
                 <span class="cov8" title="1">return uint32(p.u16(int(e.val)))</span>
@@ -5747,16 +5894,16 @@ func (p *tifParser) tagLongArray(tags map[uint16]ifdEntry, tag uint16) []uint32 
                 switch e.typ </span>{
                 case 3:<span class="cov8" title="1">
                         return []uint32{uint32(uint16(e.val))}</span>
-                case 4:<span class="cov0" title="0">
+                case 4:<span class="cov8" title="1">
                         return []uint32{e.val}</span>
                 }
         }
 
-        <span class="cov8" title="1">if p.ifdInline(e) </span><span class="cov0" title="0">{
+        <span class="cov8" title="1">if p.ifdInline(e) </span><span class="cov8" title="1">{
                 out := make([]uint32, e.count)
-                for i := range e.count </span><span class="cov0" title="0">{
+                for i := range e.count </span><span class="cov8" title="1">{
                         switch e.typ </span>{
-                        case 3:<span class="cov0" title="0">
+                        case 3:<span class="cov8" title="1">
                                 out[i] = uint32(p.ifdInlineU16(e, int(i)))</span>
                         case 4:<span class="cov0" title="0">
                                 out[i] = e.val</span>
@@ -5765,7 +5912,7 @@ func (p *tifParser) tagLongArray(tags map[uint16]ifdEntry, tag uint16) []uint32 
                         }
                 }
 
-                <span class="cov0" title="0">return out</span>
+                <span class="cov8" title="1">return out</span>
         }
 
         <span class="cov8" title="1">off := int(e.val)
@@ -6964,16 +7111,9 @@ var spheroidDir embed.FS
 
 var spheroidStore sync.Map
 
-func RegisterSpheroid(name string, s Spheroid) <span class="cov0" title="0">{
-        name = strings.ToLower(strings.TrimSpace(name))
-        if name == "" </span><span class="cov0" title="0">{
-                return
-        }</span>
-        <span class="cov0" title="0">if s.Name == "" </span><span class="cov0" title="0">{
-                s.Name = name
-        }</span>
-        <span class="cov0" title="0">spheroidStore.Store(name, s)</span>
-}
+func RegisterSpheroid(s Spheroid) <span class="cov0" title="0">{
+        spheroidStore.Store(s.Name, s)
+}</span>
 
 func loadSpheroid(name string) (s Spheroid, err error) <span class="cov8" title="1">{
         name = strings.ToLower(strings.TrimSpace(name))
@@ -7012,9 +7152,42 @@ func loadSpheroid(name string) (s Spheroid, err error) <span class="cov8" title=
 		
 		<pre class="file" id="file49" style="display: none">package crs
 
+import "math"
+
+// timeSpecificEpochTol is the max |coordEpoch − TransformationEpoch| (years)
+// for a time-specific Helmert to participate in path selection.
+const timeSpecificEpochTol = 1e-6
+
 type TimeSpecificPositionVector struct {
         Tx, Ty, Tz, Rx, Ry, Rz, Ds float64
         TransformationEpoch        float64
+}
+
+// timeSpecificEpoch returns the transformation epoch when op is (or wraps)
+// TimeSpecificPositionVector.
+func timeSpecificEpoch(op Operation) (epoch float64, ok bool) <span class="cov8" title="1">{
+        switch o := op.(type) </span>{
+        case TimeSpecificPositionVector:<span class="cov8" title="1">
+                return o.TransformationEpoch, true</span>
+        case Inverse:<span class="cov8" title="1">
+                return timeSpecificEpoch(o.Operation)</span>
+        default:<span class="cov8" title="1">
+                return 0, false</span>
+        }
+}
+
+// timeSpecificAllowed reports whether a time-specific op may be used for the
+// given coordinate epoch. Non-time-specific ops always return true.
+// Without a coordinate epoch (Transform), time-specific edges are excluded.
+func timeSpecificAllowed(op Operation, hasCoordEpoch bool, coordEpoch float64) bool <span class="cov8" title="1">{
+        te, isTS := timeSpecificEpoch(op)
+        if !isTS </span><span class="cov8" title="1">{
+                return true
+        }</span>
+        <span class="cov8" title="1">if !hasCoordEpoch </span><span class="cov8" title="1">{
+                return false
+        }</span>
+        <span class="cov8" title="1">return math.Abs(coordEpoch-te) &lt;= timeSpecificEpochTol</span>
 }
 
 func (t TimeSpecificPositionVector) String() string <span class="cov0" title="0">{
@@ -7374,17 +7547,19 @@ func (t Transformation) String() string <span class="cov0" title="0">{
 }</span>
 
 func (t Transformation) ToWGS84(source Spheroid, lon, lat, h float64) (float64, float64, float64, error) <span class="cov0" title="0">{
-        return t.toWGS84Visited(source, lon, lat, h, nil)
+        return t.toWGS84Visited(source, lon, lat, h, nil, 0)
 }</span>
 
-func (t Transformation) toWGS84Visited(source Spheroid, lon, lat, h float64, visited map[string]bool) (float64, float64, float64, error) <span class="cov0" title="0">{
+// toWGS84Visited applies this hop toward WGS 84. greenwichLon is lon expressed east
+// of Greenwich for area-of-use checks; lon itself may be relative to a local PM.
+func (t Transformation) toWGS84Visited(source Spheroid, lon, lat, h float64, visited map[string]bool, greenwichLon float64) (float64, float64, float64, error) <span class="cov0" title="0">{
         if err := t.requireTarget(); err != nil </span><span class="cov0" title="0">{
                 return 0, 0, 0, err
         }</span>
 
-        <span class="cov0" title="0">if !t.BoundingBox.Contains(lon, lat) </span><span class="cov0" title="0">{
+        <span class="cov0" title="0">if !t.BoundingBox.Contains(greenwichLon, lat) </span><span class="cov0" title="0">{
                 return 0, 0, 0, OutOfBoundsError{
-                        Err: fmt.Errorf("[%f,%f]: %s", lon, lat, t.BoundingBox),
+                        Err: fmt.Errorf("[%f,%f]: %s", greenwichLon, lat, t.BoundingBox),
                 }
         }</span>
 
@@ -7516,17 +7691,17 @@ func (v VelocityGrid) String() string <span class="cov0" title="0">{
 }</span>
 
 // ToTarget implements [Operation]: apply +dt · V in geocentric space.
-func (v VelocityGrid) ToTarget(source, target Spheroid, lon, lat, h float64) (float64, float64, float64, error) <span class="cov0" title="0">{
+func (v VelocityGrid) ToTarget(source, target Spheroid, lon, lat, h float64) (float64, float64, float64, error) <span class="cov8" title="1">{
         return v.apply(source, target, lon, lat, h, v.Dt)
 }</span>
 
 // FromTarget implements [Operation]: apply −dt · V.
-func (v VelocityGrid) FromTarget(source, target Spheroid, lon0, lat0, h0 float64) (float64, float64, float64, error) <span class="cov0" title="0">{
+func (v VelocityGrid) FromTarget(source, target Spheroid, lon0, lat0, h0 float64) (float64, float64, float64, error) <span class="cov8" title="1">{
         return v.apply(source, target, lon0, lat0, h0, -v.Dt)
 }</span>
 
-func (v VelocityGrid) apply(source, target Spheroid, lon, lat, h, dt float64) (float64, float64, float64, error) <span class="cov0" title="0">{
-        if dt == 0 </span><span class="cov0" title="0">{
+func (v VelocityGrid) apply(source, target Spheroid, lon, lat, h, dt float64) (float64, float64, float64, error) <span class="cov8" title="1">{
+        if dt == 0 </span><span class="cov8" title="1">{
                 return lon, lat, h, nil
         }</span>
         <span class="cov0" title="0">grid, err := loadVelocityGrid(v.Grid)
@@ -7788,38 +7963,38 @@ import (
 )
 
 // VerticalGrid is a geoid / vertical undulation grid (PROJ vgridshift / GTG).
-// Grid samples are the geographic→vertical offset δ (metres): H = h + δ.
-// For a classical geoid undulation N (H = h − N), the grid stores δ = −N.
+// Grid samples are the geoid undulation N (metres), matching PROJ egm08-style
+// grids used with +inv +proj=vgridshift: H = h − N, h = H + N.
 type VerticalGrid string
 
 func (vg VerticalGrid) String() string <span class="cov0" title="0">{
         return fmt.Sprintf("operation=vertical_grid grid=%s", string(vg))
 }</span>
 
-// ToTarget implements [Operation]: orthometric → ellipsoidal (h = H − δ).
+// ToTarget implements [Operation]: orthometric → ellipsoidal (h = H + N).
 func (vg VerticalGrid) ToTarget(source, target Spheroid, lon, lat, h float64) (float64, float64, float64, error) <span class="cov8" title="1">{
         grid, err := loadVerticalGrid(string(vg))
         if err != nil </span><span class="cov8" title="1">{
                 return 0, 0, 0, err
         }</span>
-        <span class="cov8" title="1">d, err := grid.Undulation(lon, lat)
+        <span class="cov8" title="1">n, err := grid.Undulation(lon, lat)
         if err != nil </span><span class="cov0" title="0">{
                 return 0, 0, 0, err
         }</span>
-        <span class="cov8" title="1">return lon, lat, h - d, nil</span>
+        <span class="cov8" title="1">return lon, lat, h + n, nil</span>
 }
 
-// FromTarget implements [Operation]: ellipsoidal → orthometric (H = h + δ).
+// FromTarget implements [Operation]: ellipsoidal → orthometric (H = h − N).
 func (vg VerticalGrid) FromTarget(source, target Spheroid, lon0, lat0, h0 float64) (float64, float64, float64, error) <span class="cov8" title="1">{
         grid, err := loadVerticalGrid(string(vg))
         if err != nil </span><span class="cov8" title="1">{
                 return 0, 0, 0, err
         }</span>
-        <span class="cov8" title="1">d, err := grid.Undulation(lon0, lat0)
+        <span class="cov8" title="1">n, err := grid.Undulation(lon0, lat0)
         if err != nil </span><span class="cov0" title="0">{
                 return 0, 0, 0, err
         }</span>
-        <span class="cov8" title="1">return lon0, lat0, h0 + d, nil</span>
+        <span class="cov8" title="1">return lon0, lat0, h0 - n, nil</span>
 }
 
 type verticalGridData struct {
