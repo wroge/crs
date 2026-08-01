@@ -40,7 +40,7 @@ func loadEPSG(code int) (c CoordinateReferenceSystem, err error) {
 		return c, err
 	}
 
-	return Parse(string(data))
+	return parseCoordinateReferenceSystem(string(data))
 }
 
 func parseBoundingBox(s string) (BoundingBox, bool) {
@@ -86,14 +86,26 @@ func newEPSGParams(fields map[string]string) epsgParams {
 	return p
 }
 
+func (p epsgParams) ifStr(str string, then, els float64) float64 {
+	if _, ok := p.str[str]; ok {
+		return then
+	}
+
+	return els
+}
+
 func (p epsgParams) float(keys ...string) float64 {
+	return p.floatOr(0, keys...)
+}
+
+func (p epsgParams) floatOr(def float64, keys ...string) float64 {
 	for _, k := range keys {
 		if v, ok := p.f[k]; ok {
 			return v
 		}
 	}
 
-	return 0
+	return def
 }
 
 func buildConversion(name string, fields map[string]string) (Conversion, error) {
@@ -105,30 +117,15 @@ func buildConversion(name string, fields map[string]string) (Conversion, error) 
 	case "geocentric":
 		return Geocentric{}, nil
 	case "transverse_mercator":
-		scale := p.float("scale")
-		if scale == 0 {
-			scale = 1
-		}
-
 		return TransverseMercator{
-			Lonf: p.float("lonf"), Latf: p.float("latf"), Scale: scale,
+			Lonf: p.float("lonf"), Latf: p.float("latf"), Scale: p.floatOr(1, "scale"),
 			Eastf: p.float("eastf"), Northf: p.float("northf"),
 			ZoneWidth: p.float("zone_width"),
 		}, nil
 	case "utm":
-		zone := int(p.float("zone"))
-		if zone < 1 || zone > 60 {
-			return nil, fmt.Errorf("utm zone must be 1..60, got %d", zone)
-		}
-
-		northf := 0.0
-		if _, ok := p.str["southern"]; ok {
-			northf = 1e7
-		}
-
 		return TransverseMercator{
-			Lonf: float64(zone)*6 - 183, Scale: 0.9996,
-			Eastf: 500000, Northf: northf,
+			Lonf: p.float("zone")*6 - 183, Scale: 0.9996,
+			Eastf: 500000, Northf: p.ifStr("southern", 1e7, 0),
 		}, nil
 	case "web_mercator":
 		return WebMercator{
@@ -136,23 +133,13 @@ func buildConversion(name string, fields map[string]string) (Conversion, error) 
 			Eastf: p.float("eastf"), Northf: p.float("northf"),
 		}, nil
 	case "lambert_conformal_conic":
-		scale := p.float("scale")
-		if scale == 0 {
-			scale = 1
-		}
-
 		return LambertConformalConic{
-			Lonf: p.float("lonf"), Latf: p.float("latf"), Scale: scale,
+			Lonf: p.float("lonf"), Latf: p.float("latf"), Scale: p.floatOr(1, "scale"),
 			Eastf: p.float("eastf"), Northf: p.float("northf"),
 		}, nil
 	case "lambert_conformal_conic_1sp_variant_b":
-		scale := p.float("scale")
-		if scale == 0 {
-			scale = 1
-		}
-
 		return LambertConformalConic1SPVariantB{
-			Lonf: p.float("lonf"), Lat0: p.float("lat0"), Latf: p.float("latf"), Scale: scale,
+			Lonf: p.float("lonf"), Lat0: p.float("lat0"), Latf: p.float("latf"), Scale: p.floatOr(1, "scale"),
 			Eastf: p.float("eastf"), Northf: p.float("northf"),
 		}, nil
 	case "lambert_conformal_conic_2sp":
@@ -171,13 +158,8 @@ func buildConversion(name string, fields map[string]string) (Conversion, error) 
 			Eastf: p.float("eastf"), Northf: p.float("northf"),
 		}, nil
 	case "lambert_conic_near_conformal":
-		scale := p.float("scale")
-		if scale == 0 {
-			scale = 1
-		}
-
 		return LambertConicNearConformal{
-			Lonf: p.float("lonf"), Latf: p.float("latf"), Scale: scale,
+			Lonf: p.float("lonf"), Latf: p.float("latf"), Scale: p.floatOr(1, "scale"),
 			Eastf: p.float("eastf"), Northf: p.float("northf"),
 		}, nil
 	case "lambert_azimuthal_equal_area":
@@ -313,14 +295,9 @@ func buildConversion(name string, fields map[string]string) (Conversion, error) 
 			Eastf: p.float("eastf"), Northf: p.float("northf"),
 		}, nil
 	case "local_orthographic":
-		scale := p.float("scale")
-		if scale == 0 {
-			scale = 1
-		}
-
 		return LocalOrthographic{
 			Lonf: p.float("lonf"), Latf: p.float("latf"),
-			Azimuth: p.float("azimuth", "alpha"), Scale: scale,
+			Azimuth: p.float("azimuth", "alpha"), Scale: p.floatOr(1, "scale"),
 			Eastf: p.float("eastf"), Northf: p.float("northf"),
 		}, nil
 	case "tunisia_mining_grid":

@@ -52,9 +52,7 @@ transform, err := crs.TransformAt(4326, 4258, 2014.81) // regional time_specific
 
 This library succeeds [github.com/wroge/wgs84](https://github.com/wroge/wgs84).
 
-Much of the conversion and transformation math comes from *EPSG Guidance Note 7, part 2* (Coordinate Conversions and Transformations including Formulas, revised September 2019) implemented by hand with help from AI tools. Where results diverged from [PROJ](https://proj.org/), those differences were often found (and sometimes fixed) with the same tooling.
-
-I am documenting that explicitly: AI was used heavily while building this. That does not replace checking the code. Implementations are compared against each other and there is an extensive test suite aimed at catching disagreements with PROJ.
+Much of the conversion and transformation math comes from *EPSG Guidance Note 7, part 2* (Coordinate Conversions and Transformations including Formulas, revised September 2019) implemented by hand. Where results diverged from [PROJ](https://proj.org/), those differences were fixed with help from AI tools.
 
 This package is not a full PROJ drop-in, and PROJ still covers more ground. For many Go applications, a self-contained implementation like this is enough.
 

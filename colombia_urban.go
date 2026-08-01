@@ -4,7 +4,6 @@ import (
 	"math"
 )
 
-// ColombiaUrban is EPSG method 1052 (PROJ +proj=col_urban).
 type ColombiaUrban struct {
 	Lonf, Latf, Eastf, Northf, H0 float64
 }

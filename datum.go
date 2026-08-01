@@ -488,7 +488,7 @@ func (d Datum) AtEpoch(epoch float64) Datum {
 	}
 
 	out.Transformations = ts
-	
+
 	return out
 }
 
@@ -598,7 +598,7 @@ func (d Datum) fromWGS84Visited(lon0, lat0, h0 float64, visited map[string]bool)
 		if !timeSpecificAllowed(t.Operation, d.hasCoordinateEpoch, d.coordinateEpoch) {
 			continue
 		}
-		
+
 		lon, lat, h, err := t.fromWGS84Visited(d.Spheroid, lon0, lat0, h0, visited)
 		if err != nil {
 			lastErr = err
@@ -657,6 +657,7 @@ func (d Datum) TransformTo(target Datum, lon, lat, h float64) (float64, float64,
 				grew = true
 			}
 		}
+
 		if !grew {
 			return 0, 0, 0, lastErr
 		}

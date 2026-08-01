@@ -4,7 +4,6 @@ import (
 	"math"
 )
 
-// CassiniSoldner is EPSG method 9806 (PROJ +proj=cass).
 type CassiniSoldner struct {
 	Lonf, Latf, Eastf, Northf float64
 }

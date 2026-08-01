@@ -51,6 +51,7 @@ func sign(x float64) float64 {
 	if x < 0 {
 		return -1
 	}
+
 	return 1
 }
 
@@ -58,9 +59,11 @@ func clamp(x, min, max float64) float64 {
 	if x < min {
 		return min
 	}
+
 	if x > max {
 		return max
 	}
+
 	return x
 }
 
