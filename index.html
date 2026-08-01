@@ -67,13 +67,13 @@
 				
 				<option value="file5">github.com/wroge/crs/colombia_urban.go (96.8%)</option>
 				
-				<option value="file6">github.com/wroge/crs/crs.go (69.6%)</option>
+				<option value="file6">github.com/wroge/crs/crs.go (63.3%)</option>
 				
-				<option value="file7">github.com/wroge/crs/datum.go (63.5%)</option>
+				<option value="file7">github.com/wroge/crs/datum.go (63.9%)</option>
 				
 				<option value="file8">github.com/wroge/crs/datum_path.go (86.4%)</option>
 				
-				<option value="file9">github.com/wroge/crs/epsg_loader.go (81.4%)</option>
+				<option value="file9">github.com/wroge/crs/epsg_loader.go (87.5%)</option>
 				
 				<option value="file10">github.com/wroge/crs/eqc.go (93.3%)</option>
 				
@@ -507,7 +507,6 @@ import (
         "math"
 )
 
-// CassiniSoldner is EPSG method 9806 (PROJ +proj=cass).
 type CassiniSoldner struct {
         Lonf, Latf, Eastf, Northf float64
 }
@@ -611,7 +610,6 @@ import (
         "math"
 )
 
-// ColombiaUrban is EPSG method 1052 (PROJ +proj=col_urban).
 type ColombiaUrban struct {
         Lonf, Latf, Eastf, Northf, H0 float64
 }
@@ -711,12 +709,38 @@ func (crs CoordinateReferenceSystem) String() string <span class="cov0" title="0
         ).String()
 }</span>
 
-func (crs CoordinateReferenceSystem) TransformTo(to CoordinateReferenceSystem) Func <span class="cov8" title="1">{
-        return func(a, b, c float64) (float64, float64, float64, error) </span><span class="cov8" title="1">{
+func (crs CoordinateReferenceSystem) TransformTo(to CoordinateReferenceSystem) (Func, error) <span class="cov8" title="1">{
+        var err error
+
+        crs, err = crs.Intersects(to.BoundingBox)
+        if err != nil </span><span class="cov0" title="0">{
+                return nil, err
+        }</span>
+
+        <span class="cov8" title="1">to, err = to.Intersects(crs.BoundingBox)
+        if err != nil </span><span class="cov0" title="0">{
+                return nil, err
+        }</span>
+
+        <span class="cov8" title="1">return func(a, b, c float64) (float64, float64, float64, error) </span><span class="cov8" title="1">{
                 lon, lat, h := crs.Conversion.ToGeographic(crs.Datum.Spheroid, a, b, c)
 
-                if crs.Datum.Name != to.Datum.Name </span><span class="cov8" title="1">{
+                // EPSG may publish different areas of use for geographic vs projected CRS
+                // that share a datum (e.g. Guam 1963 geographic vs Yap Islands). Same-datum
+                // hops are allowed when the point lies in either CRS extent.
+                inFrom := crs.BoundingBox.Contains(lon, lat)
+                inTo := to.BoundingBox.Contains(lon, lat)
+                if crs.Datum.Name == to.Datum.Name </span><span class="cov8" title="1">{
+                        if !inFrom &amp;&amp; !inTo </span><span class="cov0" title="0">{
+                                return 0, 0, 0, fmt.Errorf("out of bounds: [%f,%f]", lon, lat)
+                        }</span>
+                } else<span class="cov8" title="1"> if !inFrom || !inTo </span><span class="cov0" title="0">{
+                        return 0, 0, 0, fmt.Errorf("out of bounds: [%f,%f]", lon, lat)
+                }</span>
+
+                <span class="cov8" title="1">if crs.Datum.Name != to.Datum.Name </span><span class="cov8" title="1">{
                         var err error
+
                         lon, lat, h, err = crs.Datum.TransformTo(to.Datum, lon, lat, h)
                         if err != nil </span><span class="cov0" title="0">{
                                 return 0, 0, 0, err
@@ -724,8 +748,9 @@ func (crs CoordinateReferenceSystem) TransformTo(to CoordinateReferenceSystem) F
                 }
 
                 <span class="cov8" title="1">a1, b1, c1 := to.Conversion.FromGeographic(to.Datum.Spheroid, lon, lat, h)
+
                 return a1, b1, c1, nil</span>
-        }
+        }, nil
 }
 
 func (crs CoordinateReferenceSystem) Intersects(bbox ...BoundingBox) (CoordinateReferenceSystem, error) <span class="cov8" title="1">{
@@ -733,7 +758,9 @@ func (crs CoordinateReferenceSystem) Intersects(bbox ...BoundingBox) (Coordinate
         if err != nil </span><span class="cov0" title="0">{
                 return crs, err
         }</span>
+
         <span class="cov8" title="1">crs.Datum = datum
+
         return crs, nil</span>
 }
 
@@ -742,6 +769,7 @@ func (crs CoordinateReferenceSystem) Intersects(bbox ...BoundingBox) (Coordinate
 // Time-specific Helmerts are only kept when epoch matches their transformation epoch.
 func (crs CoordinateReferenceSystem) AtEpoch(epoch float64) CoordinateReferenceSystem <span class="cov8" title="1">{
         crs.Datum = crs.Datum.AtEpoch(epoch)
+
         return crs
 }</span>
 
@@ -749,74 +777,56 @@ type CRS interface {
         CoordinateReferenceSystem | int | string
 }
 
-func Parse[C CRS](crs C) (CoordinateReferenceSystem, error) <span class="cov8" title="1">{
+func Load[C CRS](crs C, intersects ...BoundingBox) (CoordinateReferenceSystem, error) <span class="cov8" title="1">{
         switch c := any(crs).(type) </span>{
         case int:<span class="cov8" title="1">
-                return loadEPSG(c)</span>
-        case string:<span class="cov8" title="1">
-                return parseCoordinateReferenceSystem(c)</span>
+                out, err := loadEPSG(c)
+                if err != nil </span><span class="cov0" title="0">{
+                        return CoordinateReferenceSystem{}, err
+                }</span>
+
+                <span class="cov8" title="1">return out.Intersects(intersects...)</span>
+        case string:<span class="cov0" title="0">
+                out, err := parseCoordinateReferenceSystem(c)
+                if err != nil </span><span class="cov0" title="0">{
+                        return CoordinateReferenceSystem{}, err
+                }</span>
+
+                <span class="cov0" title="0">return out.Intersects(intersects...)</span>
         case CoordinateReferenceSystem:<span class="cov0" title="0">
-                return c, nil</span>
+                return c.Intersects(intersects...)</span>
         }
 
         <span class="cov0" title="0">return CoordinateReferenceSystem{}, fmt.Errorf("invalid crs")</span>
 }
 
 func Transform[F, T CRS](from F, to T, intersects ...BoundingBox) (Func, error) <span class="cov8" title="1">{
-        fromCRS, err := Parse(from)
+        fromCRS, err := Load(from, intersects...)
         if err != nil </span><span class="cov0" title="0">{
                 return nil, err
         }</span>
 
-        <span class="cov8" title="1">toCRS, err := Parse(to)
+        <span class="cov8" title="1">toCRS, err := Load(to, intersects...)
         if err != nil </span><span class="cov0" title="0">{
                 return nil, err
         }</span>
 
-        <span class="cov8" title="1">if fromCRS.Datum.Name != toCRS.Datum.Name </span><span class="cov8" title="1">{
-                intersects = append(intersects, fromCRS.BoundingBox, toCRS.BoundingBox)
-
-                fromCRS, err = fromCRS.Intersects(intersects...)
-                if err != nil </span><span class="cov0" title="0">{
-                        return nil, err
-                }</span>
-
-                <span class="cov8" title="1">toCRS, err = toCRS.Intersects(intersects...)
-                if err != nil </span><span class="cov0" title="0">{
-                        return nil, err
-                }</span>
-        }
-
-        <span class="cov8" title="1">return fromCRS.TransformTo(toCRS), nil</span>
+        <span class="cov8" title="1">return fromCRS.TransformTo(toCRS)</span>
 }
 
 // TransformAt is Transform with both datums evaluated at epoch (decimal year).
 func TransformAt[F, T CRS](from F, to T, epoch float64, intersects ...BoundingBox) (Func, error) <span class="cov8" title="1">{
-        fromCRS, err := Parse(from)
+        fromCRS, err := Load(from, intersects...)
         if err != nil </span><span class="cov0" title="0">{
                 return nil, err
         }</span>
 
-        <span class="cov8" title="1">toCRS, err := Parse(to)
+        <span class="cov8" title="1">toCRS, err := Load(to, intersects...)
         if err != nil </span><span class="cov0" title="0">{
                 return nil, err
         }</span>
 
-        <span class="cov8" title="1">if fromCRS.Datum.Name != toCRS.Datum.Name </span><span class="cov8" title="1">{
-                intersects = append(intersects, fromCRS.BoundingBox, toCRS.BoundingBox)
-
-                fromCRS, err = fromCRS.Intersects(intersects...)
-                if err != nil </span><span class="cov0" title="0">{
-                        return nil, err
-                }</span>
-
-                <span class="cov8" title="1">toCRS, err = toCRS.Intersects(intersects...)
-                if err != nil </span><span class="cov0" title="0">{
-                        return nil, err
-                }</span>
-        }
-
-        <span class="cov8" title="1">return fromCRS.AtEpoch(epoch).TransformTo(toCRS.AtEpoch(epoch)), nil</span>
+        <span class="cov8" title="1">return fromCRS.AtEpoch(epoch).TransformTo(toCRS.AtEpoch(epoch))</span>
 }
 </pre>
 		
@@ -1243,7 +1253,7 @@ func (d Datum) String() string <span class="cov0" title="0">{
 }</span>
 
 func (d Datum) Intersects(bbox ...BoundingBox) (Datum, error) <span class="cov8" title="1">{
-        if len(bbox) == 0 </span><span class="cov0" title="0">{
+        if len(bbox) == 0 </span><span class="cov8" title="1">{
                 return d, nil
         }</span>
 
@@ -1310,7 +1320,7 @@ func (d Datum) AtEpoch(epoch float64) Datum <span class="cov8" title="1">{
         }
 
         <span class="cov8" title="1">out.Transformations = ts
-        
+
         return out</span>
 }
 
@@ -1420,7 +1430,7 @@ func (d Datum) fromWGS84Visited(lon0, lat0, h0 float64, visited map[string]bool)
                 if !timeSpecificAllowed(t.Operation, d.hasCoordinateEpoch, d.coordinateEpoch) </span><span class="cov0" title="0">{
                         continue</span>
                 }
-                
+
                 <span class="cov0" title="0">lon, lat, h, err := t.fromWGS84Visited(d.Spheroid, lon0, lat0, h0, visited)
                 if err != nil </span><span class="cov0" title="0">{
                         lastErr = err
@@ -1479,6 +1489,7 @@ func (d Datum) TransformTo(target Datum, lon, lat, h float64) (float64, float64,
                                 grew = true
                         }</span>
                 }
+
                 <span class="cov0" title="0">if !grew </span><span class="cov0" title="0">{
                         return 0, 0, 0, lastErr
                 }</span>
@@ -2062,7 +2073,7 @@ func loadEPSG(code int) (c CoordinateReferenceSystem, err error) <span class="co
                 return c, err
         }</span>
 
-        <span class="cov8" title="1">return Parse(string(data))</span>
+        <span class="cov8" title="1">return parseCoordinateReferenceSystem(string(data))</span>
 }
 
 func parseBoundingBox(s string) (BoundingBox, bool) <span class="cov8" title="1">{
@@ -2108,14 +2119,26 @@ func newEPSGParams(fields map[string]string) epsgParams <span class="cov8" title
         <span class="cov8" title="1">return p</span>
 }
 
+func (p epsgParams) ifStr(str string, then, els float64) float64 <span class="cov0" title="0">{
+        if _, ok := p.str[str]; ok </span><span class="cov0" title="0">{
+                return then
+        }</span>
+
+        <span class="cov0" title="0">return els</span>
+}
+
 func (p epsgParams) float(keys ...string) float64 <span class="cov8" title="1">{
+        return p.floatOr(0, keys...)
+}</span>
+
+func (p epsgParams) floatOr(def float64, keys ...string) float64 <span class="cov8" title="1">{
         for _, k := range keys </span><span class="cov8" title="1">{
                 if v, ok := p.f[k]; ok </span><span class="cov8" title="1">{
                         return v
                 }</span>
         }
 
-        <span class="cov8" title="1">return 0</span>
+        <span class="cov8" title="1">return def</span>
 }
 
 func buildConversion(name string, fields map[string]string) (Conversion, error) <span class="cov8" title="1">{
@@ -2127,30 +2150,15 @@ func buildConversion(name string, fields map[string]string) (Conversion, error) 
         case "geocentric":<span class="cov8" title="1">
                 return Geocentric{}, nil</span>
         case "transverse_mercator":<span class="cov8" title="1">
-                scale := p.float("scale")
-                if scale == 0 </span><span class="cov0" title="0">{
-                        scale = 1
-                }</span>
-
-                <span class="cov8" title="1">return TransverseMercator{
-                        Lonf: p.float("lonf"), Latf: p.float("latf"), Scale: scale,
+                return TransverseMercator{
+                        Lonf: p.float("lonf"), Latf: p.float("latf"), Scale: p.floatOr(1, "scale"),
                         Eastf: p.float("eastf"), Northf: p.float("northf"),
                         ZoneWidth: p.float("zone_width"),
                 }, nil</span>
         case "utm":<span class="cov0" title="0">
-                zone := int(p.float("zone"))
-                if zone &lt; 1 || zone &gt; 60 </span><span class="cov0" title="0">{
-                        return nil, fmt.Errorf("utm zone must be 1..60, got %d", zone)
-                }</span>
-
-                <span class="cov0" title="0">northf := 0.0
-                if _, ok := p.str["southern"]; ok </span><span class="cov0" title="0">{
-                        northf = 1e7
-                }</span>
-
-                <span class="cov0" title="0">return TransverseMercator{
-                        Lonf: float64(zone)*6 - 183, Scale: 0.9996,
-                        Eastf: 500000, Northf: northf,
+                return TransverseMercator{
+                        Lonf: p.float("zone")*6 - 183, Scale: 0.9996,
+                        Eastf: 500000, Northf: p.ifStr("southern", 1e7, 0),
                 }, nil</span>
         case "web_mercator":<span class="cov8" title="1">
                 return WebMercator{
@@ -2158,23 +2166,13 @@ func buildConversion(name string, fields map[string]string) (Conversion, error) 
                         Eastf: p.float("eastf"), Northf: p.float("northf"),
                 }, nil</span>
         case "lambert_conformal_conic":<span class="cov8" title="1">
-                scale := p.float("scale")
-                if scale == 0 </span><span class="cov0" title="0">{
-                        scale = 1
-                }</span>
-
-                <span class="cov8" title="1">return LambertConformalConic{
-                        Lonf: p.float("lonf"), Latf: p.float("latf"), Scale: scale,
+                return LambertConformalConic{
+                        Lonf: p.float("lonf"), Latf: p.float("latf"), Scale: p.floatOr(1, "scale"),
                         Eastf: p.float("eastf"), Northf: p.float("northf"),
                 }, nil</span>
         case "lambert_conformal_conic_1sp_variant_b":<span class="cov8" title="1">
-                scale := p.float("scale")
-                if scale == 0 </span><span class="cov0" title="0">{
-                        scale = 1
-                }</span>
-
-                <span class="cov8" title="1">return LambertConformalConic1SPVariantB{
-                        Lonf: p.float("lonf"), Lat0: p.float("lat0"), Latf: p.float("latf"), Scale: scale,
+                return LambertConformalConic1SPVariantB{
+                        Lonf: p.float("lonf"), Lat0: p.float("lat0"), Latf: p.float("latf"), Scale: p.floatOr(1, "scale"),
                         Eastf: p.float("eastf"), Northf: p.float("northf"),
                 }, nil</span>
         case "lambert_conformal_conic_2sp":<span class="cov8" title="1">
@@ -2193,13 +2191,8 @@ func buildConversion(name string, fields map[string]string) (Conversion, error) 
                         Eastf: p.float("eastf"), Northf: p.float("northf"),
                 }, nil</span>
         case "lambert_conic_near_conformal":<span class="cov8" title="1">
-                scale := p.float("scale")
-                if scale == 0 </span><span class="cov0" title="0">{
-                        scale = 1
-                }</span>
-
-                <span class="cov8" title="1">return LambertConicNearConformal{
-                        Lonf: p.float("lonf"), Latf: p.float("latf"), Scale: scale,
+                return LambertConicNearConformal{
+                        Lonf: p.float("lonf"), Latf: p.float("latf"), Scale: p.floatOr(1, "scale"),
                         Eastf: p.float("eastf"), Northf: p.float("northf"),
                 }, nil</span>
         case "lambert_azimuthal_equal_area":<span class="cov8" title="1">
@@ -2335,14 +2328,9 @@ func buildConversion(name string, fields map[string]string) (Conversion, error) 
                         Eastf: p.float("eastf"), Northf: p.float("northf"),
                 }, nil</span>
         case "local_orthographic":<span class="cov8" title="1">
-                scale := p.float("scale")
-                if scale == 0 </span><span class="cov0" title="0">{
-                        scale = 1
-                }</span>
-
-                <span class="cov8" title="1">return LocalOrthographic{
+                return LocalOrthographic{
                         Lonf: p.float("lonf"), Latf: p.float("latf"),
-                        Azimuth: p.float("azimuth", "alpha"), Scale: scale,
+                        Azimuth: p.float("azimuth", "alpha"), Scale: p.floatOr(1, "scale"),
                         Eastf: p.float("eastf"), Northf: p.float("northf"),
                 }, nil</span>
         case "tunisia_mining_grid":<span class="cov8" title="1">
@@ -2791,6 +2779,7 @@ func sign(x float64) float64 <span class="cov8" title="1">{
         if x &lt; 0 </span><span class="cov0" title="0">{
                 return -1
         }</span>
+
         <span class="cov8" title="1">return 1</span>
 }
 
@@ -2798,9 +2787,11 @@ func clamp(x, min, max float64) float64 <span class="cov8" title="1">{
         if x &lt; min </span><span class="cov0" title="0">{
                 return min
         }</span>
+
         <span class="cov8" title="1">if x &gt; max </span><span class="cov0" title="0">{
                 return max
         }</span>
+
         <span class="cov8" title="1">return x</span>
 }
 
