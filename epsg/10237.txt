@@ -1,1 +1,1 @@
-conversion=geographic datum=syc20-irf bbox=-2.91,52.65,-2.3,53.16
+conversion=geographic datum=syc20-irf unit=degree bbox=-2.91,52.65,-2.3,53.16

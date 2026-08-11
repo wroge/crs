@@ -1,1 +1,1 @@
-conversion=geographic datum=solomon1968 bbox=155.62,-10.9,162.44,-6.55
+conversion=geographic datum=solomon1968 unit=degree bbox=155.62,-10.9,162.44,-6.55

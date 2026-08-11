@@ -1,1 +1,1 @@
-conversion=geographic datum=korean1995 bbox=124.53,33.14,131.01,38.64
+conversion=geographic datum=korean1995 unit=degree bbox=124.53,33.14,131.01,38.64

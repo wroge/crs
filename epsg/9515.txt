@@ -1,1 +1,1 @@
-conversion=geographic datum=regcan95_lanzarote bbox=-13.95,28.78,-13.37,29.47
+conversion=geographic datum=regcan95_lanzarote unit=degree bbox=-13.95,28.78,-13.37,29.47

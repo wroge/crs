@@ -1,1 +1,1 @@
-conversion=geographic datum=etrf2000-pl bbox=14.14,49,24.15,55.93
+conversion=geographic datum=etrf2000-pl unit=degree bbox=14.14,49,24.15,55.93

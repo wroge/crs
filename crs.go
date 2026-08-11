@@ -29,6 +29,7 @@ type CoordinateReferenceSystem struct {
 	Conversion  Conversion
 	Datum       Datum
 	BoundingBox BoundingBox
+	Unit        Unit
 }
 
 func (crs CoordinateReferenceSystem) String() string {
@@ -36,7 +37,16 @@ func (crs CoordinateReferenceSystem) String() string {
 		"conversion", crs.Conversion,
 		"bbox", crs.BoundingBox,
 		"datum", crs.Datum.Name,
+		"unit", crs.Unit,
 	).String()
+}
+
+// WithUnit returns a copy of crs that expects/returns coordinates in u.
+// Projection parameters and internal maths stay in metres/degrees.
+func (crs CoordinateReferenceSystem) WithUnit(u Unit) CoordinateReferenceSystem {
+	crs.Unit = u
+
+	return crs
 }
 
 func (crs CoordinateReferenceSystem) TransformTo(to CoordinateReferenceSystem) (Func, error) {
@@ -52,7 +62,21 @@ func (crs CoordinateReferenceSystem) TransformTo(to CoordinateReferenceSystem) (
 		return nil, err
 	}
 
+	fromUnit := crs.Unit
+	if fromUnit.Name == "" {
+		fromUnit = defaultUnit(crs.Conversion)
+	}
+
+	toUnit := to.Unit
+	if toUnit.Name == "" {
+		toUnit = defaultUnit(to.Conversion)
+	}
+
+	_, fromGeocentric := crs.Conversion.(Geocentric)
+	_, toGeocentric := to.Conversion.(Geocentric)
+
 	return func(a, b, c float64) (float64, float64, float64, error) {
+		a, b, c = fromUnit.toInternal(a, b, c, fromGeocentric)
 		lon, lat, h := crs.Conversion.ToGeographic(crs.Datum.Spheroid, a, b, c)
 
 		// EPSG may publish different areas of use for geographic vs projected CRS
@@ -78,6 +102,7 @@ func (crs CoordinateReferenceSystem) TransformTo(to CoordinateReferenceSystem) (
 		}
 
 		a1, b1, c1 := to.Conversion.FromGeographic(to.Datum.Spheroid, lon, lat, h)
+		a1, b1, c1 = toUnit.fromInternal(a1, b1, c1, toGeocentric)
 
 		return a1, b1, c1, nil
 	}, nil

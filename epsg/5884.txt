@@ -1,1 +1,1 @@
-conversion=geocentric datum=tgd2005 bbox=-179.08,-25.68,-171.28,-14.14
+conversion=geocentric datum=tgd2005 unit=m bbox=-179.08,-25.68,-171.28,-14.14

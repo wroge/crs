@@ -1,1 +1,1 @@
-conversion=geographic datum=gisborne1926 bbox=176.41,-39.04,178.63,-37.49
+conversion=geographic datum=gisborne1926 unit=degree bbox=176.41,-39.04,178.63,-37.49

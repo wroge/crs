@@ -1,1 +1,1 @@
-conversion=geographic datum=schwarzeck bbox=8.24,-30.64,25.27,-16.95
+conversion=geographic datum=schwarzeck unit=degree bbox=8.24,-30.64,25.27,-16.95

@@ -1,1 +1,1 @@
-conversion=geographic datum=douala1948 bbox=8.45,2.16,10.4,4.99
+conversion=geographic datum=douala1948 unit=degree bbox=8.45,2.16,10.4,4.99

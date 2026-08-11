@@ -1,1 +1,1 @@
-conversion=geographic datum=wspg-irf bbox=-1.25,54.35,-0.45,54.7
+conversion=geographic datum=wspg-irf unit=degree bbox=-1.25,54.35,-0.45,54.7

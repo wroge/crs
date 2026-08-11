@@ -1,1 +1,1 @@
-conversion=geographic datum=itrf2005_southafricalandlevellingdatum bbox=16.45,-34.88,32.95,-22.13
+conversion=geographic datum=itrf2005_southafricalandlevellingdatum unit=degree bbox=16.45,-34.88,32.95,-22.13

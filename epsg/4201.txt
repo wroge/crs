@@ -1,1 +1,1 @@
-conversion=geographic datum=adindan bbox=21.82,3.4,47.99,22.24
+conversion=geographic datum=adindan unit=degree bbox=21.82,3.4,47.99,22.24

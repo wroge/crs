@@ -1,1 +1,1 @@
-conversion=geographic datum=lanzarote bbox=-13.95,28.78,-13.37,29.47
+conversion=geographic datum=lanzarote unit=degree bbox=-13.95,28.78,-13.37,29.47

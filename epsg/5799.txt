@@ -1,1 +1,1 @@
-conversion=geographic datum=dvr90height bbox=7.98,54.5,15.28,57.81
+conversion=geographic datum=dvr90height unit=degree bbox=7.98,54.5,15.28,57.81

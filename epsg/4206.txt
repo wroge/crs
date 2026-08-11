@@ -1,1 +1,1 @@
-conversion=geographic datum=agadez bbox=0.16,11.69,16,23.53
+conversion=geographic datum=agadez unit=degree bbox=0.16,11.69,16,23.53

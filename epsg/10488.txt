@@ -1,1 +1,1 @@
-conversion=geographic datum=etrs89_danskvertikalreference19902023 bbox=7.98,54.5,15.28,57.81
+conversion=geographic datum=etrs89_danskvertikalreference19902023 unit=degree bbox=7.98,54.5,15.28,57.81

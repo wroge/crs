@@ -1,1 +1,1 @@
-conversion=geographic datum=biheight bbox=-10.85,49.75,2.01,61.01
+conversion=geographic datum=biheight unit=degree bbox=-10.85,49.75,2.01,61.01

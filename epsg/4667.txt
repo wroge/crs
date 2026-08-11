@@ -1,1 +1,1 @@
-conversion=geographic datum=ikbd-92 bbox=46.36,29.06,48.61,30.32
+conversion=geographic datum=ikbd-92 unit=degree bbox=46.36,29.06,48.61,30.32

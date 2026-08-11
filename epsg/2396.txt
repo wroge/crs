@@ -1,1 +1,1 @@
-conversion=transverse_mercator eastf=9500000.0 lonf=51.0 scale=1.0 datum=southyemen bbox=48,13.94,53.14,19
+conversion=transverse_mercator eastf=9500000.0 lonf=51.0 scale=1.0 datum=southyemen unit=m bbox=48,13.94,53.14,19

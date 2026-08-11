@@ -1,1 +1,1 @@
-conversion=geographic datum=cigd11_littlecaymanverticaldatum1961 bbox=-80.14,19.63,-79.93,19.74
+conversion=geographic datum=cigd11_littlecaymanverticaldatum1961 unit=degree bbox=-80.14,19.63,-79.93,19.74

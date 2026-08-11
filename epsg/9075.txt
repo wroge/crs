@@ -1,1 +1,1 @@
-conversion=geographic datum=nad83pacp00 bbox=157.47,-17.56,-151.27,31.8
+conversion=geographic datum=nad83pacp00 unit=degree bbox=157.47,-17.56,-151.27,31.8

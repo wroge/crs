@@ -1,1 +1,1 @@
-conversion=geographic datum=lerwick bbox=-1.78,59.83,-0.67,60.87
+conversion=geographic datum=lerwick unit=degree bbox=-1.78,59.83,-0.67,60.87

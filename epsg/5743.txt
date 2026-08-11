@@ -1,1 +1,1 @@
-conversion=geographic datum=foula bbox=-2.21,60.06,-1.95,60.2
+conversion=geographic datum=foula unit=degree bbox=-2.21,60.06,-1.95,60.2

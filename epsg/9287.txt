@@ -1,1 +1,1 @@
-conversion=geographic datum=lowestastronomicaltidenetherlands bbox=2.53,51.32,7.21,55.77
+conversion=geographic datum=lowestastronomicaltidenetherlands unit=degree bbox=2.53,51.32,7.21,55.77

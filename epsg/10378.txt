@@ -1,1 +1,1 @@
-conversion=geographic datum=pontadelgada bbox=-25.92,37.65,-25.08,37.96
+conversion=geographic datum=pontadelgada unit=degree bbox=-25.92,37.65,-25.08,37.96

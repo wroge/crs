@@ -1,1 +1,1 @@
-conversion=geocentric datum=htrs96 bbox=13,41.62,19.43,46.54
+conversion=geocentric datum=htrs96 unit=m bbox=13,41.62,19.43,46.54

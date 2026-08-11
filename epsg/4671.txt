@@ -1,1 +1,1 @@
-conversion=geographic datum=voirol1879 bbox=-2.95,31.99,9.09,37.14
+conversion=geographic datum=voirol1879 unit=degree bbox=-2.95,31.99,9.09,37.14

@@ -1,1 +1,1 @@
-conversion=geographic datum=pn84 bbox=-18.22,27.58,-16.08,28.9
+conversion=geographic datum=pn84 unit=degree bbox=-18.22,27.58,-16.08,28.9

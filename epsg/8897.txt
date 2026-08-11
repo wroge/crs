@@ -1,1 +1,1 @@
-conversion=geographic datum=epsgexamplewellboreverticaldatum bbox=-180,-90,180,90
+conversion=geographic datum=epsgexamplewellboreverticaldatum unit=degree bbox=-180,-90,180,90

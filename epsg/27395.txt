@@ -1,1 +1,1 @@
-conversion=transverse_mercator latf=58.0 lonf=6.16666666666667 scale=1.0 datum=ngo1948oslo bbox=15.05,66.15,18.89,70.27
+conversion=transverse_mercator latf=58.0 lonf=6.16666666666667 scale=1.0 datum=ngo1948oslo unit=m bbox=15.05,66.15,18.89,70.27

@@ -1,1 +1,1 @@
-conversion=geographic datum=ig05slash12intermediatecrs bbox=34.17,29.45,35.69,33.28
+conversion=geographic datum=ig05slash12intermediatecrs unit=degree bbox=34.17,29.45,35.69,33.28

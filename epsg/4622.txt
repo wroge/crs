@@ -1,1 +1,1 @@
-conversion=geographic datum=guadeloupe1948 bbox=-61.85,15.8,-60.97,16.55
+conversion=geographic datum=guadeloupe1948 unit=degree bbox=-61.85,15.8,-60.97,16.55

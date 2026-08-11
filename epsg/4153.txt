@@ -1,1 +1,1 @@
-conversion=geographic datum=rassadiran bbox=52.5,27.39,52.71,27.61
+conversion=geographic datum=rassadiran unit=degree bbox=52.5,27.39,52.71,27.61

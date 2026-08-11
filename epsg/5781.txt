@@ -1,1 +1,1 @@
-conversion=geographic datum=constanta bbox=20.26,43.62,29.74,48.27
+conversion=geographic datum=constanta unit=degree bbox=20.26,43.62,29.74,48.27

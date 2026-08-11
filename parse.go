@@ -235,11 +235,10 @@ func (pp parts) asCRSCompact() (CoordinateReferenceSystem, error) {
 	}
 
 	if bboxStr, ok := fields["bbox"]; ok {
-		bbox, ok := parseBoundingBox(bboxStr)
+		c.BoundingBox, ok = parseBoundingBox(bboxStr)
 		if !ok {
 			return c, fmt.Errorf("invalid bbox: %s", bboxStr)
 		}
-		c.BoundingBox = bbox
 	} else {
 		c.BoundingBox = World
 	}
@@ -262,6 +261,7 @@ func (pp parts) asCRSCompact() (CoordinateReferenceSystem, error) {
 		if err != nil {
 			return c, fmt.Errorf("spheroid %s: %w", fields["spheroid"], err)
 		}
+
 		c.Datum = Datum{Spheroid: s}
 	default:
 		a, okA := parseFloatField(fields, "a")
@@ -270,6 +270,7 @@ func (pp parts) asCRSCompact() (CoordinateReferenceSystem, error) {
 		if !okA || !okFi {
 			return c, fmt.Errorf("missing datum or spheroid (need datum=, spheroid=, or a= and fi=)")
 		}
+
 		c.Datum = Datum{Spheroid: Spheroid{A: a, Fi: fi}}
 	}
 
@@ -278,7 +279,28 @@ func (pp parts) asCRSCompact() (CoordinateReferenceSystem, error) {
 		return c, fmt.Errorf("datum: %w", err)
 	}
 
+	if err := assignCRSUnit(&c, fields["unit"]); err != nil {
+		return c, err
+	}
+
 	return c, nil
+}
+
+func assignCRSUnit(c *CoordinateReferenceSystem, name string) error {
+	if name == "" {
+		c.Unit = defaultUnit(c.Conversion)
+
+		return nil
+	}
+
+	u, err := parseUnit(name)
+	if err != nil {
+		return err
+	}
+
+	c.Unit = u
+
+	return nil
 }
 
 func parseFloatField(fields map[string]string, key string) (float64, bool) {
@@ -344,6 +366,10 @@ func (pp parts) asCRSExpanded() (CoordinateReferenceSystem, error) {
 	c.Datum, err = c.Datum.Intersects(c.BoundingBox)
 	if err != nil {
 		return c, fmt.Errorf("datum: %w", err)
+	}
+
+	if err := assignCRSUnit(&c, fields["unit"]); err != nil {
+		return c, err
 	}
 
 	return c, nil

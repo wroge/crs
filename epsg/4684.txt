@@ -1,1 +1,1 @@
-conversion=geographic datum=gan1970 bbox=72.81,-0.69,73.69,7.08
+conversion=geographic datum=gan1970 unit=degree bbox=72.81,-0.69,73.69,7.08

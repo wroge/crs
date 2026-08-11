@@ -1,1 +1,1 @@
-conversion=geographic datum=leigon bbox=-3.79,1.4,2.1,11.16
+conversion=geographic datum=leigon unit=degree bbox=-3.79,1.4,2.1,11.16

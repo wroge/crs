@@ -1,1 +1,1 @@
-conversion=geographic datum=bissau bbox=-16.77,10.87,-13.64,12.69
+conversion=geographic datum=bissau unit=degree bbox=-16.77,10.87,-13.64,12.69

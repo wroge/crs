@@ -1,1 +1,1 @@
-conversion=geographic datum=ed50 bbox=-16.1,25.71,48.61,84.73
+conversion=geographic datum=ed50 unit=degree bbox=-16.1,25.71,48.61,84.73

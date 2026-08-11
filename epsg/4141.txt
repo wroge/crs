@@ -1,1 +1,1 @@
-conversion=geographic datum=israel1993 bbox=34.17,29.45,35.69,33.28
+conversion=geographic datum=israel1993 unit=degree bbox=34.17,29.45,35.69,33.28

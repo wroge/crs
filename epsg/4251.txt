@@ -1,1 +1,1 @@
-conversion=geographic datum=liberia1964 bbox=-11.52,4.29,-7.36,8.52
+conversion=geographic datum=liberia1964 unit=degree bbox=-11.52,4.29,-7.36,8.52

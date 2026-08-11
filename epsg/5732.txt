@@ -1,1 +1,1 @@
-conversion=geographic datum=belfastlough bbox=-8.18,53.96,-5.34,55.36
+conversion=geographic datum=belfastlough unit=degree bbox=-8.18,53.96,-5.34,55.36

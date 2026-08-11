@@ -1,1 +1,1 @@
-conversion=transverse_mercator eastf=500000.0 lonf=111.0 scale=1.0 datum=xian1980 bbox=109.5,18.11,112.5,45.11
+conversion=transverse_mercator eastf=500000.0 lonf=111.0 scale=1.0 datum=xian1980 unit=m bbox=109.5,18.11,112.5,45.11

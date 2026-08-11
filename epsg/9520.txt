@@ -1,1 +1,1 @@
-conversion=geographic datum=ksa-grf17_kingdomofsaudiarabiaverticalreferenceframejeddah2014 bbox=34.51,16.37,55.67,32.16
+conversion=geographic datum=ksa-grf17_kingdomofsaudiarabiaverticalreferenceframejeddah2014 unit=degree bbox=34.51,16.37,55.67,32.16

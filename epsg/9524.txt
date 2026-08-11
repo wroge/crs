@@ -1,1 +1,1 @@
-conversion=geographic datum=nad83ma11_guamverticaldatumof2004 bbox=144.58,13.18,145.01,13.7
+conversion=geographic datum=nad83ma11_guamverticaldatumof2004 unit=degree bbox=144.58,13.18,145.01,13.7

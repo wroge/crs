@@ -1,1 +1,1 @@
-conversion=geographic datum=lome bbox=-0.15,2.91,2.42,11.14
+conversion=geographic datum=lome unit=degree bbox=-0.15,2.91,2.42,11.14

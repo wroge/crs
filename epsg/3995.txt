@@ -1,1 +1,1 @@
-conversion=polar_stereographic_b latf=71.0 datum=wgs84 bbox=-180,60,180,90
+conversion=polar_stereographic_b latf=71.0 datum=wgs84 unit=m bbox=-180,60,180,90

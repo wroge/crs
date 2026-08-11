@@ -1,1 +1,1 @@
-conversion=geocentric datum=twd97 bbox=114.32,17.36,123.61,26.96
+conversion=geocentric datum=twd97 unit=m bbox=114.32,17.36,123.61,26.96

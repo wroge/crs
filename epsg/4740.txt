@@ -1,1 +1,1 @@
-conversion=geographic datum=pz-90 bbox=-180,-90,180,90
+conversion=geographic datum=pz-90 unit=degree bbox=-180,-90,180,90

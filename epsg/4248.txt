@@ -1,1 +1,1 @@
-conversion=geographic datum=psad56 bbox=-81.41,-43.5,-47.99,12.68
+conversion=geographic datum=psad56 unit=degree bbox=-81.41,-43.5,-47.99,12.68

@@ -1,1 +1,1 @@
-conversion=geographic datum=reunion1947 bbox=55.16,-21.42,55.91,-20.81
+conversion=geographic datum=reunion1947 unit=degree bbox=55.16,-21.42,55.91,-20.81

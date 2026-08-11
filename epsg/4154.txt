@@ -1,1 +1,1 @@
-conversion=geographic datum=ed50ed77 bbox=44.03,23.34,63.34,39.78
+conversion=geographic datum=ed50ed77 unit=degree bbox=44.03,23.34,63.34,39.78

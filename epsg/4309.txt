@@ -1,1 +1,1 @@
-conversion=geographic datum=yacare bbox=-58.49,-35,-53.09,-30.09
+conversion=geographic datum=yacare unit=degree bbox=-58.49,-35,-53.09,-30.09

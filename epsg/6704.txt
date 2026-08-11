@@ -1,1 +1,1 @@
-conversion=geocentric datum=rdn2008 bbox=5.93,34.76,18.99,47.1
+conversion=geocentric datum=rdn2008 unit=m bbox=5.93,34.76,18.99,47.1

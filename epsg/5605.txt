@@ -1,1 +1,1 @@
-conversion=geographic datum=huahinesau2001 bbox=-151.11,-16.87,-150.89,-16.63
+conversion=geographic datum=huahinesau2001 unit=degree bbox=-151.11,-16.87,-150.89,-16.63

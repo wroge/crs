@@ -1,1 +1,1 @@
-conversion=geographic datum=europeanverticalreferenceframe2007poland bbox=14.14,49,24.15,54.89
+conversion=geographic datum=europeanverticalreferenceframe2007poland unit=degree bbox=14.14,49,24.15,54.89

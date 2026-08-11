@@ -1,1 +1,1 @@
-conversion=geographic datum=moldor11-irf bbox=-2.4,53.25,-1.39,53.55
+conversion=geographic datum=moldor11-irf unit=degree bbox=-2.4,53.25,-1.39,53.55

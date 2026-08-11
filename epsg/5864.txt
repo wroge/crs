@@ -1,1 +1,1 @@
-conversion=geographic datum=meanlowerlowwaterspringtides bbox=-180,-90,180,90
+conversion=geographic datum=meanlowerlowwaterspringtides unit=degree bbox=-180,-90,180,90

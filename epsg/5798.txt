@@ -1,1 +1,1 @@
-conversion=geographic datum=egm84geoid bbox=-180,-90,180,90
+conversion=geographic datum=egm84geoid unit=degree bbox=-180,-90,180,90

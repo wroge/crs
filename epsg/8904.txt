@@ -1,1 +1,1 @@
-conversion=geographic datum=taiwanverticaldatum2001 bbox=119.99,21.87,122.06,25.34
+conversion=geographic datum=taiwanverticaldatum2001 unit=degree bbox=119.99,21.87,122.06,25.34

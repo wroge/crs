@@ -1,1 +1,1 @@
-conversion=geographic datum=lao1997 bbox=100.09,13.92,107.64,22.5
+conversion=geographic datum=lao1997 unit=degree bbox=100.09,13.92,107.64,22.5

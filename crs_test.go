@@ -1137,16 +1137,16 @@ var transformCases = []transformCase{
 		CoversCS: "",
 		CoversOp: "",
 		In: [4]transformPt{
-			{A: 6391492.7000784, B: 256145.93168765, C: 0.0},
-			{A: 3047667.43614953, B: -2795318.32893628, C: 0.0},
-			{A: -10159416.98628322, B: -2649122.678003, C: 0.0},
-			{A: -5489112.53564817, B: -2210511.07512891, C: 0.0},
+			{A: 6391492.7000784, B: 242079.41879695, C: 0.0},
+			{A: 3047667.43614953, B: -2632900.19080149, C: 0.0},
+			{A: -10159416.98628322, B: -2496063.00672166, C: 0.0},
+			{A: -5489112.53564817, B: -2084727.00975375, C: 0.0},
 		},
 		Want: [4]transformPt{
-			{A: 57.41575581, B: 2.30037979, C: 0.0},
-			{A: 27.37766239, B: -24.34347573, C: 0.0},
-			{A: -91.26359557, B: -23.14135971, C: 0.0},
-			{A: -49.30953687, B: -19.47136661, C: 0.0},
+			{A: 57.41575581, B: 2.17411449, C: 0.0},
+			{A: 27.37766239, B: -23.0072894, C: 0.0},
+			{A: -91.26359557, B: -21.87115619, C: 0.0},
+			{A: -49.30953687, B: -18.40260493, C: 0.0},
 		},
 	},
 	{
@@ -1421,19 +1421,37 @@ func transformTolForEPSG(code int) float64 {
 
 func makeTransform(t *testing.T, from, to int, epoch float64) Func {
 	t.Helper()
-	var (
-		f   Func
-		err error
-	)
-	if epoch != 0 {
-		f, err = TransformAt(from, to, epoch)
-	} else {
-		f, err = Transform(from, to)
+	fromCRS, err := Load(from)
+	if err != nil {
+		t.Fatalf("Load(%d): %v", from, err)
 	}
+	toCRS, err := Load(to)
+	if err != nil {
+		t.Fatalf("Load(%d): %v", to, err)
+	}
+	// Goldens are embedded in degrees / metres; pin I/O units for this suite.
+	// Native axis units (us-ft, grad, …) are covered separately in unit_test.go.
+	fromCRS = withCanonicalTestUnit(fromCRS)
+	toCRS = withCanonicalTestUnit(toCRS)
+	if epoch != 0 {
+		fromCRS = fromCRS.AtEpoch(epoch)
+		toCRS = toCRS.AtEpoch(epoch)
+	}
+	f, err := fromCRS.TransformTo(toCRS)
 	if err != nil {
 		t.Fatalf("Transform(%d,%d): %v", from, to, err)
 	}
 	return f
+}
+
+func withCanonicalTestUnit(c CoordinateReferenceSystem) CoordinateReferenceSystem {
+	if c.Unit.IsAngular() {
+		return c.WithUnit(Degree)
+	}
+	if c.Unit.IsLength() {
+		return c.WithUnit(Metre)
+	}
+	return c
 }
 
 func checkTransformPt(t *testing.T, label string, i int, gotA, gotB, gotC float64, want transformPt, tol, htol float64, checkC bool) {

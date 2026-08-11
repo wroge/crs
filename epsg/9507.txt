@@ -1,1 +1,1 @@
-conversion=geographic datum=etrs89_ibiza bbox=1.12,38.77,1.68,39.17
+conversion=geographic datum=etrs89_ibiza unit=degree bbox=1.12,38.77,1.68,39.17

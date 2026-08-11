@@ -1,1 +1,1 @@
-conversion=geographic datum=campareaastro bbox=165.73,-77.94,167.43,-77.17
+conversion=geographic datum=campareaastro unit=degree bbox=165.73,-77.94,167.43,-77.17

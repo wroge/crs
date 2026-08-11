@@ -1,1 +1,1 @@
-conversion=geographic datum=indianspringlowwater bbox=-180,-90,180,90
+conversion=geographic datum=indianspringlowwater unit=degree bbox=-180,-90,180,90

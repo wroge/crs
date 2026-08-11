@@ -1,1 +1,1 @@
-conversion=geographic datum=bukitrimpah bbox=105.07,-3.3,108.35,-1.44
+conversion=geographic datum=bukitrimpah unit=degree bbox=105.07,-3.3,108.35,-1.44

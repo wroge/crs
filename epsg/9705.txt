@@ -1,1 +1,1 @@
-conversion=geographic datum=wgs84_meansealevel bbox=-180,-90,180,90
+conversion=geographic datum=wgs84_meansealevel unit=degree bbox=-180,-90,180,90

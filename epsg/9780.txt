@@ -1,1 +1,1 @@
-conversion=geocentric datum=rgf93v2b bbox=-9.86,41.15,10.38,51.56
+conversion=geocentric datum=rgf93v2b unit=m bbox=-9.86,41.15,10.38,51.56

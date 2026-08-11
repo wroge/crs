@@ -1,1 +1,1 @@
-conversion=geographic datum=sierraleone1924 bbox=-13.34,8.32,-13.13,8.55
+conversion=geographic datum=sierraleone1924 unit=degree bbox=-13.34,8.32,-13.13,8.55

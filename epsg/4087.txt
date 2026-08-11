@@ -1,1 +1,1 @@
-conversion=equidistant_cylindrical datum=wgs84 bbox=-180,-90,180,90
+conversion=equidistant_cylindrical datum=wgs84 unit=m bbox=-180,-90,180,90

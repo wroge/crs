@@ -1,1 +1,1 @@
-conversion=geographic datum=point58 bbox=-17.19,10.26,30.42,15.7
+conversion=geographic datum=point58 unit=degree bbox=-17.19,10.26,30.42,15.7

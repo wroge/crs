@@ -1,1 +1,1 @@
-conversion=geographic datum=mporaloko bbox=7.03,-6.37,14.52,2.32
+conversion=geographic datum=mporaloko unit=degree bbox=7.03,-6.37,14.52,2.32

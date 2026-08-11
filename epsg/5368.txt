@@ -1,1 +1,1 @@
-conversion=geocentric datum=macariosolis bbox=-84.32,5,-77.04,12.51
+conversion=geocentric datum=macariosolis unit=m bbox=-84.32,5,-77.04,12.51

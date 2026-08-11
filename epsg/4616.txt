@@ -1,1 +1,1 @@
-conversion=geographic datum=selvagemgrande bbox=-16.11,29.98,-15.79,30.21
+conversion=geographic datum=selvagemgrande unit=degree bbox=-16.11,29.98,-15.79,30.21

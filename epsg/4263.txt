@@ -1,1 +1,1 @@
-conversion=geographic datum=minna bbox=2.66,1.92,14.65,13.9
+conversion=geographic datum=minna unit=degree bbox=2.66,1.92,14.65,13.9

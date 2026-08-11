@@ -1,1 +1,1 @@
-conversion=geographic datum=luref bbox=5.73,49.44,6.53,50.19
+conversion=geographic datum=luref unit=degree bbox=5.73,49.44,6.53,50.19

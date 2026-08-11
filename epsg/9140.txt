@@ -1,1 +1,1 @@
-conversion=geographic datum=kosovaref01 bbox=19.97,41.85,21.8,43.25
+conversion=geographic datum=kosovaref01 unit=degree bbox=19.97,41.85,21.8,43.25

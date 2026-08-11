@@ -1,1 +1,1 @@
-conversion=geographic datum=wgs84g873 bbox=-180,-90,180,90
+conversion=geographic datum=wgs84g873 unit=degree bbox=-180,-90,180,90

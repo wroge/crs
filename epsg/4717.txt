@@ -1,1 +1,1 @@
-conversion=geographic datum=capecanaveral bbox=-82.33,20.86,-72.68,30.83
+conversion=geographic datum=capecanaveral unit=degree bbox=-82.33,20.86,-72.68,30.83

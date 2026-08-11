@@ -1,1 +1,1 @@
-conversion=geographic datum=midway1961 bbox=-177.45,28.13,-177.31,28.28
+conversion=geographic datum=midway1961 unit=degree bbox=-177.45,28.13,-177.31,28.28

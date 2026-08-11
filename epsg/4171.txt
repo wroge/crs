@@ -1,1 +1,1 @@
-conversion=geographic datum=rgf93v1 bbox=-9.86,41.15,10.38,51.56
+conversion=geographic datum=rgf93v1 unit=degree bbox=-9.86,41.15,10.38,51.56

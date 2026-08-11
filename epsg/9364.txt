@@ -1,1 +1,1 @@
-conversion=geographic datum=tpen11-irf bbox=-3.14,53.32,-1.34,53.9
+conversion=geographic datum=tpen11-irf unit=degree bbox=-3.14,53.32,-1.34,53.9

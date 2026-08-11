@@ -1,1 +1,1 @@
-conversion=transverse_mercator latf=-22.0 lonf=11.0 scale=1.0 datum=schwarzeck bbox=11.66,-18.53,12,-17.15
+conversion=transverse_mercator latf=-22.0 lonf=11.0 scale=1.0 datum=schwarzeck unit=german_legal_metre bbox=11.66,-18.53,12,-17.15

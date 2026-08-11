@@ -1,1 +1,1 @@
-conversion=geographic datum=gambia bbox=-16.88,13.05,-13.79,13.83
+conversion=geographic datum=gambia unit=degree bbox=-16.88,13.05,-13.79,13.83

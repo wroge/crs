@@ -1,1 +1,1 @@
-conversion=geographic datum=rgfg95_nivellementgeneralguyanais1977 bbox=-54.61,2.11,-51.61,5.81
+conversion=geographic datum=rgfg95_nivellementgeneralguyanais1977 unit=degree bbox=-54.61,2.11,-51.61,5.81

@@ -1,1 +1,1 @@
-conversion=geographic datum=nad2776 bbox=-95.16,41.67,-74.35,56.9
+conversion=geographic datum=nad2776 unit=degree bbox=-95.16,41.67,-74.35,56.9

@@ -1,1 +1,1 @@
-conversion=geographic datum=tararu1952 bbox=175.44,-37.21,175.99,-36.78
+conversion=geographic datum=tararu1952 unit=degree bbox=175.44,-37.21,175.99,-36.78

@@ -20,7 +20,7 @@ if err != nil {
 east, north, h, err := transform(10.0, 50.0, 0)
 ```
 
-Conventions: geographic `lon, lat, h` (**unit: degrees**), projected `east, north, h` (**unit: metre**), geocentric `x, y, z`.
+Conventions: geographic `lon, lat, h`, projected `east, north, h`, geocentric `x, y, z`.
 
 ## Geodetic grids
 

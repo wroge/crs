@@ -1,1 +1,1 @@
-conversion=geographic datum=nivellementgeneraldelafrance-lallemand bbox=-4.87,42.33,8.23,51.14
+conversion=geographic datum=nivellementgeneraldelafrance-lallemand unit=degree bbox=-4.87,42.33,8.23,51.14

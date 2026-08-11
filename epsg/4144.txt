@@ -1,1 +1,1 @@
-conversion=geographic datum=kalianpur1937 bbox=60.86,8.02,101.17,37.07
+conversion=geographic datum=kalianpur1937 unit=degree bbox=60.86,8.02,101.17,37.07

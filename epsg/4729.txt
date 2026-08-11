@@ -1,1 +1,1 @@
-conversion=geographic datum=pitcairn1967 bbox=-130.16,-25.14,-130.01,-25
+conversion=geographic datum=pitcairn1967 unit=degree bbox=-130.16,-25.14,-130.01,-25

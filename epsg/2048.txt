@@ -1,1 +1,1 @@
-conversion=transverse_mercator lonf=19.0 scale=1.0 datum=hartebeesthoek94 bbox=17.99,-34.88,20,-28.38
+conversion=transverse_mercator lonf=19.0 scale=1.0 datum=hartebeesthoek94 unit=m bbox=17.99,-34.88,20,-28.38

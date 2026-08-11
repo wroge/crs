@@ -1,1 +1,1 @@
-conversion=geographic datum=jouik1961 bbox=-17.08,19.37,-15.88,21.34
+conversion=geographic datum=jouik1961 unit=degree bbox=-17.08,19.37,-15.88,21.34

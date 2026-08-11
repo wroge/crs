@@ -1,1 +1,1 @@
-conversion=geographic datum=easterisland1967 bbox=-109.51,-27.25,-109.16,-27.01
+conversion=geographic datum=easterisland1967 unit=degree bbox=-109.51,-27.25,-109.16,-27.01

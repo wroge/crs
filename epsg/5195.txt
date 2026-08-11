@@ -1,1 +1,1 @@
-conversion=geographic datum=trieste bbox=13.38,40.85,23.04,46.88
+conversion=geographic datum=trieste unit=degree bbox=13.38,40.85,23.04,46.88

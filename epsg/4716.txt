@@ -1,1 +1,1 @@
-conversion=geographic datum=phoenixislands1966 bbox=-174.6,-4.76,-170.66,-2.68
+conversion=geographic datum=phoenixislands1966 unit=degree bbox=-174.6,-4.76,-170.66,-2.68

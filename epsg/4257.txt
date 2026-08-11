@@ -1,1 +1,1 @@
-conversion=geographic datum=makassar bbox=118.71,-6.54,120.78,-1.88
+conversion=geographic datum=makassar unit=degree bbox=118.71,-6.54,120.78,-1.88

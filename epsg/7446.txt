@@ -1,1 +1,1 @@
-conversion=geographic datum=famagusta1960 bbox=32.2,34.59,34.65,35.74
+conversion=geographic datum=famagusta1960 unit=degree bbox=32.2,34.59,34.65,35.74

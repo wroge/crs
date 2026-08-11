@@ -1,1 +1,1 @@
-conversion=geographic datum=rgaf09 bbox=-63.66,14.08,-57.52,18.54
+conversion=geographic datum=rgaf09 unit=degree bbox=-63.66,14.08,-57.52,18.54

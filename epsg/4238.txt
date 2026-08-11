@@ -1,1 +1,1 @@
-conversion=geographic datum=id74 bbox=95.16,-10.98,141.01,5.97
+conversion=geographic datum=id74 unit=degree bbox=95.16,-10.98,141.01,5.97

@@ -1,1 +1,1 @@
-conversion=geographic datum=kousseri bbox=14.17,11.7,15.09,12.77
+conversion=geographic datum=kousseri unit=degree bbox=14.17,11.7,15.09,12.77

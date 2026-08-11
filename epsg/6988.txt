@@ -1,1 +1,1 @@
-conversion=geocentric datum=ig05slash12intermediatecrs bbox=34.17,29.45,35.69,33.28
+conversion=geocentric datum=ig05slash12intermediatecrs unit=m bbox=34.17,29.45,35.69,33.28

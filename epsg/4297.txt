@@ -1,1 +1,1 @@
-conversion=geographic datum=tananarive bbox=42.53,-26.59,51.03,-11.69
+conversion=geographic datum=tananarive unit=degree bbox=42.53,-26.59,51.03,-11.69

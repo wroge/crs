@@ -1,1 +1,1 @@
-conversion=geographic datum=chua bbox=-62.57,-31.91,-47.1,-15.37
+conversion=geographic datum=chua unit=degree bbox=-62.57,-31.91,-47.1,-15.37

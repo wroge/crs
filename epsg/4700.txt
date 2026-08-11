@@ -1,1 +1,1 @@
-conversion=geographic datum=ignastro1960 bbox=-17.08,14.72,-4.8,27.3
+conversion=geographic datum=ignastro1960 unit=degree bbox=-17.08,14.72,-4.8,27.3

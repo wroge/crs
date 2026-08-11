@@ -1,1 +1,1 @@
-conversion=geographic datum=yoff bbox=-20.22,10.64,-11.36,16.7
+conversion=geographic datum=yoff unit=degree bbox=-20.22,10.64,-11.36,16.7

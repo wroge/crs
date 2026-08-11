@@ -1,1 +1,1 @@
-conversion=geographic datum=etrs89-dnk bbox=3.24,54.36,16.51,58.27
+conversion=geographic datum=etrs89-dnk unit=degree bbox=3.24,54.36,16.51,58.27

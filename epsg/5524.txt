@@ -1,1 +1,1 @@
-conversion=geographic datum=corregoalegre1961 bbox=-58.16,-27.5,-38.82,-14.99
+conversion=geographic datum=corregoalegre1961 unit=degree bbox=-58.16,-27.5,-38.82,-14.99

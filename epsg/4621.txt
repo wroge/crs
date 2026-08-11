@@ -1,1 +1,1 @@
-conversion=geographic datum=fortmarigot bbox=-63.21,17.82,-62.73,18.17
+conversion=geographic datum=fortmarigot unit=degree bbox=-63.21,17.82,-62.73,18.17

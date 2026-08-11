@@ -1,1 +1,1 @@
-conversion=geographic datum=tahaasau2001 bbox=-151.63,-16.72,-151.36,-16.5
+conversion=geographic datum=tahaasau2001 unit=degree bbox=-151.63,-16.72,-151.36,-16.5

@@ -1,1 +1,1 @@
-conversion=geographic datum=igs14 bbox=-180,-90,180,90
+conversion=geographic datum=igs14 unit=degree bbox=-180,-90,180,90

@@ -1,1 +1,1 @@
-conversion=geographic datum=tananariveparis bbox=43.18,-25.64,50.56,-11.89
+conversion=geographic datum=tananariveparis unit=grad bbox=43.18,-25.64,50.56,-11.89

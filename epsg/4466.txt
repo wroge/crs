@@ -1,1 +1,1 @@
-conversion=geographic datum=rgspm06 bbox=-57.1,43.41,-55.9,47.37
+conversion=geographic datum=rgspm06 unit=degree bbox=-57.1,43.41,-55.9,47.37
