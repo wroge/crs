@@ -67,7 +67,7 @@
 				
 				<option value="file5">github.com/wroge/crs/colombia_urban.go (96.8%)</option>
 				
-				<option value="file6">github.com/wroge/crs/crs.go (63.3%)</option>
+				<option value="file6">github.com/wroge/crs/crs.go (52.8%)</option>
 				
 				<option value="file7">github.com/wroge/crs/datum.go (63.9%)</option>
 				
@@ -139,7 +139,7 @@
 				
 				<option value="file41">github.com/wroge/crs/oblique_stereo.go (96.5%)</option>
 				
-				<option value="file42">github.com/wroge/crs/parse.go (55.4%)</option>
+				<option value="file42">github.com/wroge/crs/parse.go (54.8%)</option>
 				
 				<option value="file43">github.com/wroge/crs/polar_stereo.go (91.9%)</option>
 				
@@ -161,13 +161,15 @@
 				
 				<option value="file52">github.com/wroge/crs/tunisia.go (90.0%)</option>
 				
-				<option value="file53">github.com/wroge/crs/velocity_grid.go (3.2%)</option>
+				<option value="file53">github.com/wroge/crs/unit.go (69.4%)</option>
 				
-				<option value="file54">github.com/wroge/crs/vertical_grid.go (80.6%)</option>
+				<option value="file54">github.com/wroge/crs/velocity_grid.go (3.2%)</option>
 				
-				<option value="file55">github.com/wroge/crs/vertical_offset.go (11.1%)</option>
+				<option value="file55">github.com/wroge/crs/vertical_grid.go (80.6%)</option>
 				
-				<option value="file56">github.com/wroge/crs/webmercator.go (90.9%)</option>
+				<option value="file56">github.com/wroge/crs/vertical_offset.go (11.1%)</option>
+				
+				<option value="file57">github.com/wroge/crs/webmercator.go (90.9%)</option>
 				
 				</select>
 			</div>
@@ -699,6 +701,7 @@ type CoordinateReferenceSystem struct {
         Conversion  Conversion
         Datum       Datum
         BoundingBox BoundingBox
+        Unit        Unit
 }
 
 func (crs CoordinateReferenceSystem) String() string <span class="cov0" title="0">{
@@ -706,7 +709,16 @@ func (crs CoordinateReferenceSystem) String() string <span class="cov0" title="0
                 "conversion", crs.Conversion,
                 "bbox", crs.BoundingBox,
                 "datum", crs.Datum.Name,
+                "unit", crs.Unit,
         ).String()
+}</span>
+
+// WithUnit returns a copy of crs that expects/returns coordinates in u.
+// Projection parameters and internal maths stay in metres/degrees.
+func (crs CoordinateReferenceSystem) WithUnit(u Unit) CoordinateReferenceSystem <span class="cov8" title="1">{
+        crs.Unit = u
+
+        return crs
 }</span>
 
 func (crs CoordinateReferenceSystem) TransformTo(to CoordinateReferenceSystem) (Func, error) <span class="cov8" title="1">{
@@ -722,7 +734,21 @@ func (crs CoordinateReferenceSystem) TransformTo(to CoordinateReferenceSystem) (
                 return nil, err
         }</span>
 
-        <span class="cov8" title="1">return func(a, b, c float64) (float64, float64, float64, error) </span><span class="cov8" title="1">{
+        <span class="cov8" title="1">fromUnit := crs.Unit
+        if fromUnit.Name == "" </span><span class="cov0" title="0">{
+                fromUnit = defaultUnit(crs.Conversion)
+        }</span>
+
+        <span class="cov8" title="1">toUnit := to.Unit
+        if toUnit.Name == "" </span><span class="cov0" title="0">{
+                toUnit = defaultUnit(to.Conversion)
+        }</span>
+
+        <span class="cov8" title="1">_, fromGeocentric := crs.Conversion.(Geocentric)
+        _, toGeocentric := to.Conversion.(Geocentric)
+
+        return func(a, b, c float64) (float64, float64, float64, error) </span><span class="cov8" title="1">{
+                a, b, c = fromUnit.toInternal(a, b, c, fromGeocentric)
                 lon, lat, h := crs.Conversion.ToGeographic(crs.Datum.Spheroid, a, b, c)
 
                 // EPSG may publish different areas of use for geographic vs projected CRS
@@ -748,6 +774,7 @@ func (crs CoordinateReferenceSystem) TransformTo(to CoordinateReferenceSystem) (
                 }
 
                 <span class="cov8" title="1">a1, b1, c1 := to.Conversion.FromGeographic(to.Datum.Spheroid, lon, lat, h)
+                a1, b1, c1 = toUnit.fromInternal(a1, b1, c1, toGeocentric)
 
                 return a1, b1, c1, nil</span>
         }, nil
@@ -800,33 +827,33 @@ func Load[C CRS](crs C, intersects ...BoundingBox) (CoordinateReferenceSystem, e
         <span class="cov0" title="0">return CoordinateReferenceSystem{}, fmt.Errorf("invalid crs")</span>
 }
 
-func Transform[F, T CRS](from F, to T, intersects ...BoundingBox) (Func, error) <span class="cov8" title="1">{
+func Transform[F, T CRS](from F, to T, intersects ...BoundingBox) (Func, error) <span class="cov0" title="0">{
         fromCRS, err := Load(from, intersects...)
         if err != nil </span><span class="cov0" title="0">{
                 return nil, err
         }</span>
 
-        <span class="cov8" title="1">toCRS, err := Load(to, intersects...)
+        <span class="cov0" title="0">toCRS, err := Load(to, intersects...)
         if err != nil </span><span class="cov0" title="0">{
                 return nil, err
         }</span>
 
-        <span class="cov8" title="1">return fromCRS.TransformTo(toCRS)</span>
+        <span class="cov0" title="0">return fromCRS.TransformTo(toCRS)</span>
 }
 
 // TransformAt is Transform with both datums evaluated at epoch (decimal year).
-func TransformAt[F, T CRS](from F, to T, epoch float64, intersects ...BoundingBox) (Func, error) <span class="cov8" title="1">{
+func TransformAt[F, T CRS](from F, to T, epoch float64, intersects ...BoundingBox) (Func, error) <span class="cov0" title="0">{
         fromCRS, err := Load(from, intersects...)
         if err != nil </span><span class="cov0" title="0">{
                 return nil, err
         }</span>
 
-        <span class="cov8" title="1">toCRS, err := Load(to, intersects...)
+        <span class="cov0" title="0">toCRS, err := Load(to, intersects...)
         if err != nil </span><span class="cov0" title="0">{
                 return nil, err
         }</span>
 
-        <span class="cov8" title="1">return fromCRS.AtEpoch(epoch).TransformTo(toCRS.AtEpoch(epoch))</span>
+        <span class="cov0" title="0">return fromCRS.AtEpoch(epoch).TransformTo(toCRS.AtEpoch(epoch))</span>
 }
 </pre>
 		
@@ -6404,11 +6431,10 @@ func (pp parts) asCRSCompact() (CoordinateReferenceSystem, error) <span class="c
         }</span>
 
         <span class="cov8" title="1">if bboxStr, ok := fields["bbox"]; ok </span><span class="cov8" title="1">{
-                bbox, ok := parseBoundingBox(bboxStr)
+                c.BoundingBox, ok = parseBoundingBox(bboxStr)
                 if !ok </span><span class="cov0" title="0">{
                         return c, fmt.Errorf("invalid bbox: %s", bboxStr)
                 }</span>
-                <span class="cov8" title="1">c.BoundingBox = bbox</span>
         } else<span class="cov0" title="0"> {
                 c.BoundingBox = World
         }</span>
@@ -6431,6 +6457,7 @@ func (pp parts) asCRSCompact() (CoordinateReferenceSystem, error) <span class="c
                 if err != nil </span><span class="cov0" title="0">{
                         return c, fmt.Errorf("spheroid %s: %w", fields["spheroid"], err)
                 }</span>
+
                 <span class="cov0" title="0">c.Datum = Datum{Spheroid: s}</span>
         default:<span class="cov0" title="0">
                 a, okA := parseFloatField(fields, "a")
@@ -6439,6 +6466,7 @@ func (pp parts) asCRSCompact() (CoordinateReferenceSystem, error) <span class="c
                 if !okA || !okFi </span><span class="cov0" title="0">{
                         return c, fmt.Errorf("missing datum or spheroid (need datum=, spheroid=, or a= and fi=)")
                 }</span>
+
                 <span class="cov0" title="0">c.Datum = Datum{Spheroid: Spheroid{A: a, Fi: fi}}</span>
         }
 
@@ -6447,7 +6475,28 @@ func (pp parts) asCRSCompact() (CoordinateReferenceSystem, error) <span class="c
                 return c, fmt.Errorf("datum: %w", err)
         }</span>
 
+        <span class="cov8" title="1">if err := assignCRSUnit(&amp;c, fields["unit"]); err != nil </span><span class="cov0" title="0">{
+                return c, err
+        }</span>
+
         <span class="cov8" title="1">return c, nil</span>
+}
+
+func assignCRSUnit(c *CoordinateReferenceSystem, name string) error <span class="cov8" title="1">{
+        if name == "" </span><span class="cov0" title="0">{
+                c.Unit = defaultUnit(c.Conversion)
+
+                return nil
+        }</span>
+
+        <span class="cov8" title="1">u, err := parseUnit(name)
+        if err != nil </span><span class="cov0" title="0">{
+                return err
+        }</span>
+
+        <span class="cov8" title="1">c.Unit = u
+
+        return nil</span>
 }
 
 func parseFloatField(fields map[string]string, key string) (float64, bool) <span class="cov0" title="0">{
@@ -6513,6 +6562,10 @@ func (pp parts) asCRSExpanded() (CoordinateReferenceSystem, error) <span class="
         <span class="cov0" title="0">c.Datum, err = c.Datum.Intersects(c.BoundingBox)
         if err != nil </span><span class="cov0" title="0">{
                 return c, fmt.Errorf("datum: %w", err)
+        }</span>
+
+        <span class="cov0" title="0">if err := assignCRSUnit(&amp;c, fields["unit"]); err != nil </span><span class="cov0" title="0">{
+                return c, err
         }</span>
 
         <span class="cov0" title="0">return c, nil</span>
@@ -7655,6 +7708,158 @@ func (cs TunisiaMiningGrid) ToGeographic(_ Spheroid, east, north, h float64) (fl
 		<pre class="file" id="file53" style="display: none">package crs
 
 import (
+        "fmt"
+        "math"
+        "strings"
+)
+
+// Unit is an axis I/O unit. Projection parameters stay in metres/degrees internally;
+// Unit only scales caller coordinates on Transform entry/exit.
+//
+// For length units, ToSI is metres per unit. For angular units, ToSI is radians per unit.
+type Unit struct {
+        Name string
+        ToSI float64
+}
+
+func (u Unit) String() string <span class="cov0" title="0">{
+        if u.Name == "" </span><span class="cov0" title="0">{
+                return ""
+        }</span>
+
+        <span class="cov0" title="0">return u.Name</span>
+}
+
+func (u Unit) IsAngular() bool <span class="cov8" title="1">{
+        return u.Name == "degree" || u.Name == "grad"
+}</span>
+
+func (u Unit) IsLength() bool <span class="cov8" title="1">{
+        return u.Name != "" &amp;&amp; !u.IsAngular()
+}</span>
+
+var (
+        Degree = Unit{Name: "degree", ToSI: math.Pi / 180}
+        Grad   = Unit{Name: "grad", ToSI: math.Pi / 200}
+
+        Metre            = Unit{Name: "m", ToSI: 1}
+        Kilometre        = Unit{Name: "km", ToSI: 1000}
+        Foot             = Unit{Name: "ft", ToSI: 0.3048}
+        USSurveyFoot     = Unit{Name: "us-ft", ToSI: 1200.0 / 3937.0}
+        GermanLegalMetre = Unit{Name: "german_legal_metre", ToSI: 1.0000135965}
+        ClarkeFoot       = Unit{Name: "clarke_foot", ToSI: 0.3047972654}
+        GoldCoastFoot    = Unit{Name: "gold_coast_foot", ToSI: 0.3047997101815088}
+        SearsFoot        = Unit{Name: "sears_foot", ToSI: 0.3047994715386762}
+        BritishFoot1936  = Unit{Name: "british_foot_1936", ToSI: 0.3048007491}
+        Link             = Unit{Name: "link", ToSI: 0.201168}
+        ClarkeLink       = Unit{Name: "clarke_link", ToSI: 0.201166195164}
+        IndianYard       = Unit{Name: "indian_yard", ToSI: 0.9143985307444408}
+        SearsYard        = Unit{Name: "sears_yard", ToSI: 0.9143984146160287}
+        ClarkeYard       = Unit{Name: "clarke_yard", ToSI: 0.9143917962}
+        SearsChain       = Unit{Name: "sears_chain", ToSI: 20.116765121552632}
+        SearsChainTrunc  = Unit{Name: "sears_chain_truncated", ToSI: 20.116756}
+)
+
+var unitsByName = map[string]Unit{
+        Degree.Name:           Degree,
+        Grad.Name:             Grad,
+        Metre.Name:            Metre,
+        "metre":               Metre,
+        "meter":               Metre,
+        Kilometre.Name:        Kilometre,
+        Foot.Name:             Foot,
+        "foot":                Foot,
+        USSurveyFoot.Name:     USSurveyFoot,
+        GermanLegalMetre.Name: GermanLegalMetre,
+        ClarkeFoot.Name:       ClarkeFoot,
+        GoldCoastFoot.Name:    GoldCoastFoot,
+        SearsFoot.Name:        SearsFoot,
+        BritishFoot1936.Name:  BritishFoot1936,
+        Link.Name:             Link,
+        ClarkeLink.Name:       ClarkeLink,
+        IndianYard.Name:       IndianYard,
+        SearsYard.Name:        SearsYard,
+        ClarkeYard.Name:       ClarkeYard,
+        SearsChain.Name:       SearsChain,
+        SearsChainTrunc.Name:  SearsChainTrunc,
+}
+
+func parseUnit(name string) (Unit, error) <span class="cov8" title="1">{
+        name = strings.ToLower(strings.TrimSpace(name))
+        if name == "" </span><span class="cov0" title="0">{
+                return Unit{}, fmt.Errorf("empty unit")
+        }</span>
+
+        <span class="cov8" title="1">if u, ok := unitsByName[name]; ok </span><span class="cov8" title="1">{
+                return u, nil
+        }</span>
+
+        <span class="cov0" title="0">return Unit{}, fmt.Errorf("unknown unit: %s", name)</span>
+}
+
+func defaultUnit(cs Conversion) Unit <span class="cov0" title="0">{
+        switch cs.(type) </span>{
+        case Geographic:<span class="cov0" title="0">
+                return Degree</span>
+        case Geocentric:<span class="cov0" title="0">
+                return Metre</span>
+        default:<span class="cov0" title="0">
+                return Metre</span>
+        }
+}
+
+// toInternal scales caller axis values into library units (degrees / metres).
+func (u Unit) toInternal(a, b, c float64, scaleHeight bool) (float64, float64, float64) <span class="cov8" title="1">{
+        if u.Name == "" </span><span class="cov0" title="0">{
+                return a, b, c
+        }</span>
+
+        <span class="cov8" title="1">if u.IsAngular() </span><span class="cov8" title="1">{
+                factor := u.ToSI / Degree.ToSI // unit → degrees
+
+                a, b = a*factor, b*factor
+
+                return a, b, c
+        }</span>
+
+        <span class="cov8" title="1">a, b = a*u.ToSI, b*u.ToSI
+
+        if scaleHeight </span><span class="cov8" title="1">{
+                c *= u.ToSI
+        }</span>
+
+        <span class="cov8" title="1">return a, b, c</span>
+}
+
+// fromInternal scales library units (degrees / metres) into caller axis units.
+func (u Unit) fromInternal(a, b, c float64, scaleHeight bool) (float64, float64, float64) <span class="cov8" title="1">{
+        if u.Name == "" </span><span class="cov0" title="0">{
+                return a, b, c
+        }</span>
+
+        <span class="cov8" title="1">if u.IsAngular() </span><span class="cov8" title="1">{
+                factor := Degree.ToSI / u.ToSI // degrees → unit
+
+                a, b = a*factor, b*factor
+
+                return a, b, c
+        }</span>
+
+        <span class="cov8" title="1">inv := 1 / u.ToSI
+
+        a, b = a*inv, b*inv
+
+        if scaleHeight </span><span class="cov8" title="1">{
+                c *= inv
+        }</span>
+
+        <span class="cov8" title="1">return a, b, c</span>
+}
+</pre>
+		
+		<pre class="file" id="file54" style="display: none">package crs
+
+import (
         "errors"
         "fmt"
         "io"
@@ -7941,7 +8146,7 @@ func (p *tifParser) readVelocityIFD(off uint32) (*velocityGridData, uint32, erro
 }
 </pre>
 		
-		<pre class="file" id="file54" style="display: none">package crs
+		<pre class="file" id="file55" style="display: none">package crs
 
 import (
         "errors"
@@ -8181,7 +8386,7 @@ func (p *tifParser) readVerticalIFD(off uint32) (*verticalGridData, uint32, erro
 }
 </pre>
 		
-		<pre class="file" id="file55" style="display: none">package crs
+		<pre class="file" id="file56" style="display: none">package crs
 
 import (
         "math"
@@ -8254,7 +8459,7 @@ func (o VerticalOffsetAndSlope) FromTarget(source, target Spheroid, lon0, lat0, 
 }</span>
 </pre>
 		
-		<pre class="file" id="file56" style="display: none">package crs
+		<pre class="file" id="file57" style="display: none">package crs
 
 import (
         "math"
