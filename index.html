@@ -67,11 +67,11 @@
 				
 				<option value="file5">github.com/wroge/crs/colombia_urban.go (96.8%)</option>
 				
-				<option value="file6">github.com/wroge/crs/crs.go (57.5%)</option>
+				<option value="file6">github.com/wroge/crs/crs.go (60.3%)</option>
 				
-				<option value="file7">github.com/wroge/crs/datum.go (63.9%)</option>
+				<option value="file7">github.com/wroge/crs/datum.go (64.8%)</option>
 				
-				<option value="file8">github.com/wroge/crs/datum_path.go (87.0%)</option>
+				<option value="file8">github.com/wroge/crs/datum_path.go (89.1%)</option>
 				
 				<option value="file9">github.com/wroge/crs/epsg_loader.go (92.5%)</option>
 				
@@ -131,7 +131,7 @@
 				
 				<option value="file37">github.com/wroge/crs/molodensky_badekas.go (92.3%)</option>
 				
-				<option value="file38">github.com/wroge/crs/ntv2_grid.go (68.7%)</option>
+				<option value="file38">github.com/wroge/crs/ntv2_grid.go (62.6%)</option>
 				
 				<option value="file39">github.com/wroge/crs/ntv2_gsb.go (0.0%)</option>
 				
@@ -792,7 +792,7 @@ func (crs CoordinateReferenceSystem) TransformTo(to CoordinateReferenceSystem) (
                         if !inFrom &amp;&amp; !inTo </span><span class="cov0" title="0">{
                                 return 0, 0, 0, fmt.Errorf("out of bounds: [%f,%f]", lon, lat)
                         }</span>
-                } else<span class="cov8" title="1"> if !inFrom || !inTo </span><span class="cov0" title="0">{
+                } else<span class="cov8" title="1"> if !inFrom || !inTo </span><span class="cov8" title="1">{
                         return 0, 0, 0, fmt.Errorf("out of bounds: [%f,%f]", lon, lat)
                 }</span>
 
@@ -800,7 +800,7 @@ func (crs CoordinateReferenceSystem) TransformTo(to CoordinateReferenceSystem) (
                         var err error
 
                         lon, lat, h, err = crs.Datum.TransformTo(to.Datum, lon, lat, h)
-                        if err != nil </span><span class="cov0" title="0">{
+                        if err != nil </span><span class="cov8" title="1">{
                                 return 0, 0, 0, err
                         }</span>
                 }
@@ -1524,11 +1524,11 @@ func (d Datum) TransformTo(target Datum, lon, lat, h float64) (float64, float64,
 
         for </span><span class="cov8" title="1">{
                 path, err := findBestPath(d, target, lon, lat, excluded, hasEpoch, epoch)
-                if err != nil </span><span class="cov0" title="0">{
+                if err != nil </span><span class="cov8" title="1">{
                         if lastErr != nil </span><span class="cov0" title="0">{
                                 return 0, 0, 0, lastErr
                         }</span>
-                        <span class="cov0" title="0">return 0, 0, 0, err</span>
+                        <span class="cov8" title="1">return 0, 0, 0, err</span>
                 }
 
                 <span class="cov8" title="1">outLon, outLat, outH, failed, err := applyPath(path, lon, lat, h, excluded, hasEpoch, epoch)
@@ -1665,7 +1665,7 @@ func outgoingEdges(node string, lon, lat float64, excluded map[edgeKey]bool, has
         }
 
         <span class="cov8" title="1">for i, t := range d.Transformations </span><span class="cov8" title="1">{
-                if t.Target == nil || t.Operation == nil </span><span class="cov0" title="0">{
+                if t.Target == nil || t.Operation == nil || !selectableOperation(t.Operation) </span><span class="cov8" title="1">{
                         continue</span>
                 }
 
@@ -1697,7 +1697,7 @@ func outgoingEdges(node string, lon, lat float64, excluded map[edgeKey]bool, has
                 }
 
                 <span class="cov8" title="1">t := owner.Transformations[rev.index]
-                if t.Target == nil || t.Operation == nil </span><span class="cov0" title="0">{
+                if t.Target == nil || t.Operation == nil || !selectableOperation(t.Operation) </span><span class="cov8" title="1">{
                         continue</span>
                 }
 
@@ -1915,7 +1915,7 @@ func findBestPath(from, to Datum, lon, lat float64, excluded map[edgeKey]bool, h
         }</span> else<span class="cov8" title="1"> {
                 var err error
                 core, err = findBestPathCore(coreStart, coreGoal, lon, lat, excluded, hasCoordEpoch, coordEpoch)
-                if err != nil </span><span class="cov0" title="0">{
+                if err != nil </span><span class="cov8" title="1">{
                         return nil, err
                 }</span>
         }
@@ -1977,7 +1977,7 @@ func findBestPathCore(start, goal string, lon, lat float64, excluded map[edgeKey
                         nextCost := cur.cost + e.accuracy
                         nextHops := cur.hops + 1
                         viaHub := cur.viaHub
-                        if cur.name == "wgs84" &amp;&amp; start != "wgs84" </span><span class="cov0" title="0">{
+                        if cur.name == "wgs84" &amp;&amp; start != "wgs84" </span><span class="cov8" title="1">{
                                 viaHub = true
                         }</span>
 
@@ -2002,7 +2002,7 @@ func findBestPathCore(start, goal string, lon, lat float64, excluded map[edgeKey
                 }
         }
 
-        <span class="cov0" title="0">return nil, UnsupportedError{Err: fmt.Errorf("no transformation path from %s to %s", start, goal)}</span>
+        <span class="cov8" title="1">return nil, UnsupportedError{Err: fmt.Errorf("no transformation path from %s to %s", start, goal)}</span>
 }
 
 func reconstructPath(nodes []pathNode, idx int) []string <span class="cov8" title="1">{
@@ -4963,7 +4963,7 @@ func openGridReader(name string) (io.ReadCloser, error) <span class="cov8" title
                         continue</span>
                 }
 
-                <span class="cov8" title="1">if f, err := os.Open(filepath.Join(dir, name)); err == nil </span><span class="cov0" title="0">{
+                <span class="cov8" title="1">if f, err := os.Open(filepath.Join(dir, name)); err == nil </span><span class="cov8" title="1">{
                         return f, nil
                 }</span>
         }
@@ -4993,39 +4993,39 @@ func openGridReader(name string) (io.ReadCloser, error) <span class="cov8" title
                 return nil, fmt.Errorf("crs: grid %q not found", name)
         }</span>
 
-        <span class="cov8" title="1">if resp.StatusCode != http.StatusOK </span><span class="cov0" title="0">{
+        <span class="cov0" title="0">if resp.StatusCode != http.StatusOK </span><span class="cov0" title="0">{
                 _ = resp.Body.Close()
                 return nil, fmt.Errorf("cdn: grid %q: HTTP %s", name, resp.Status)
         }</span>
 
-        <span class="cov8" title="1">if cacheDir == "" </span><span class="cov0" title="0">{
+        <span class="cov0" title="0">if cacheDir == "" </span><span class="cov0" title="0">{
                 return resp.Body, nil
         }</span>
 
-        <span class="cov8" title="1">data, err := io.ReadAll(resp.Body)
+        <span class="cov0" title="0">data, err := io.ReadAll(resp.Body)
         _ = resp.Body.Close()
         if err != nil </span><span class="cov0" title="0">{
                 return nil, err
         }</span>
 
-        <span class="cov8" title="1">final := filepath.Join(cacheDir, name)
+        <span class="cov0" title="0">final := filepath.Join(cacheDir, name)
         tmp := final + ".tmp"
 
         if err = os.MkdirAll(cacheDir, 0o755); err != nil </span><span class="cov0" title="0">{
                 return io.NopCloser(bytes.NewReader(data)), nil
         }</span>
 
-        <span class="cov8" title="1">if err = os.WriteFile(tmp, data, 0o644); err != nil </span><span class="cov0" title="0">{
+        <span class="cov0" title="0">if err = os.WriteFile(tmp, data, 0o644); err != nil </span><span class="cov0" title="0">{
                 return io.NopCloser(bytes.NewReader(data)), nil
         }</span>
 
-        <span class="cov8" title="1">if err = os.Rename(tmp, final); err != nil </span><span class="cov0" title="0">{
+        <span class="cov0" title="0">if err = os.Rename(tmp, final); err != nil </span><span class="cov0" title="0">{
                 _ = os.Remove(tmp)
 
                 return io.NopCloser(bytes.NewReader(data)), nil
         }</span>
 
-        <span class="cov8" title="1">if f, err := os.Open(final); err == nil </span><span class="cov8" title="1">{
+        <span class="cov0" title="0">if f, err := os.Open(final); err == nil </span><span class="cov0" title="0">{
                 return f, nil
         }</span>
 
