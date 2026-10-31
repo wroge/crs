@@ -48,9 +48,7 @@ func footpointLatitude(s Spheroid, m float64) float64 {
 
 func (cs CassiniSoldner) FromGeographic(s Spheroid, lon, lat, h float64) (float64, float64, float64) {
 	phi := radian(lat)
-	lam := radian(lon)
 	phi0 := radian(cs.Latf)
-	lam0 := radian(cs.Lonf)
 
 	sinPhi, cosPhi := math.Sincos(phi)
 	e2 := s.E2()
@@ -58,7 +56,7 @@ func (cs CassiniSoldner) FromGeographic(s Spheroid, lon, lat, h float64) (float6
 	t := math.Tan(phi)
 	t2 := t * t
 	c := e2 * cosPhi * cosPhi / (1 - e2)
-	a := (lam - lam0) * cosPhi
+	a := deltaLon(lon, cs.Lonf) * cosPhi
 	a2 := a * a
 	a3 := a2 * a
 	a4 := a2 * a2

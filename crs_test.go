@@ -12,7 +12,9 @@ import (
 	"testing"
 )
 
-var cache = flag.Bool("cache", false, "cache grids")
+// Grids are stored under ./.cache (gitignored). CI restores that directory.
+// -cache=false keeps the previous download-only behaviour.
+var cache = flag.Bool("cache", true, "cache grids under ./.cache")
 
 func TestMain(m *testing.M) {
 	flag.Parse()
@@ -588,10 +590,10 @@ var transformCases = []transformCase{
 			{A: -4.14953775, B: -18.13248039, C: 0.0},
 		},
 		Want: [4]transformPt{
-			{A: 2590986.89736177, B: 5305105.70238144, C: 0.0},
-			{A: 5890869.24828364, B: 6710275.82727871, C: 0.0},
-			{A: 3468988.59623391, B: 7390179.26185188, C: 0.0},
-			{A: 2808781.3909655, B: 3020333.56731599, C: 0.0},
+			{A: 2591027.07343396, B: 5310164.44164079, C: 0.0},
+			{A: 5890925.66637192, B: 6705768.98464155, C: 0.0},
+			{A: 3468215.72952056, B: 7382267.91512091, C: 0.0},
+			{A: 2808531.26850418, B: 3039436.32614133, C: 0.0},
 		},
 	},
 	{
@@ -753,16 +755,16 @@ var transformCases = []transformCase{
 		CoversCS: "tunisia_mining_grid",
 		CoversOp: "",
 		In: [4]transformPt{
-			{A: 9.4132243, B: 34.01450455, C: 0.0},
-			{A: 8.99029263, B: 35.32465959, C: 0.0},
-			{A: 9.98471429, B: 34.81838543, C: 0.0},
-			{A: 9.90151402, B: 34.87376435, C: 0.0},
+			{A: 8.2, B: 34.01450455, C: 0.0},
+			{A: 7.5, B: 35.32465959, C: 0.0},
+			{A: 8.8, B: 34.81838543, C: 0.0},
+			{A: 9.0, B: 34.87376435, C: 0.0},
 		},
 		Want: [4]transformPt{
-			{A: 485403.21002843, B: 479570.03932019, C: 0.0},
-			{A: 446837.42598719, B: 624924.78947692, C: 0.0},
-			{A: 537515.55061979, B: 568756.3581082, C: 0.0},
-			{A: 529928.78528822, B: 574900.35499359, C: 0.0},
+			{A: 374773.17284457, B: 479570.03938538, C: 0.0},
+			{A: 310942.41553823, B: 624924.78948246, C: 0.0},
+			{A: 429485.25053573, B: 568756.35768571, C: 0.0},
+			{A: 447722.60976611, B: 574900.35502304, C: 0.0},
 		},
 	},
 	{
@@ -987,10 +989,10 @@ var transformCases = []transformCase{
 			{A: 14.3459583, B: 37.43302753, C: 100.0},
 		},
 		Want: [4]transformPt{
-			{A: 13.63490925, B: 37.5206217, C: 100.0},
-			{A: 13.03081594, B: 37.24498089, C: 100.0},
-			{A: 13.89407518, B: 37.55446393, C: 100.0},
-			{A: 14.3459583, B: 37.43302753, C: 100.0},
+			{A: 13.63490925, B: 37.5206217, C: 99.859},
+			{A: 13.03081594, B: 37.24498089, C: 99.859},
+			{A: 13.89407518, B: 37.55446393, C: 99.859},
+			{A: 14.3459583, B: 37.43302753, C: 99.859},
 		},
 	},
 	{
@@ -1402,8 +1404,8 @@ func heightTol(op string) float64 {
 		return 0.05
 	}
 	if op == "vertical_offset" {
-		// PROJ may omit a same-accuracy vertical offset that the library applies.
-		return 0.2
+		// EPSG:4937→9724 applies the Catania vertical offset dh=0.141.
+		return 0.02
 	}
 	if op == "velocity_grid" {
 		// NKG velocity grids: library/PROJ may pick different grid files.

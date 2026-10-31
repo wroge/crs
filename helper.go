@@ -21,6 +21,17 @@ func radian(g float64) float64 {
 	return g * math.Pi / 180
 }
 
+// wrapPi reduces rad to (−π, π].
+func wrapPi(rad float64) float64 {
+	return math.Remainder(rad, 2*math.Pi)
+}
+
+// deltaLon is λ−λ0 in radians, reduced to (−π, π].
+// Central-meridian formulas use the short arc, including across the antimeridian.
+func deltaLon(lon, lon0 float64) float64 {
+	return wrapPi(radian(lon - lon0))
+}
+
 func intPow(val float64, times int) float64 {
 	result := 1.0
 

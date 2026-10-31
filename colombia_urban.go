@@ -35,7 +35,7 @@ func (cs ColombiaUrban) consts(s Spheroid) (A, B, C, D, rho0, h0a float64) {
 func (cs ColombiaUrban) FromGeographic(s Spheroid, lon, lat, h float64) (float64, float64, float64) {
 	A, B, _, _, rho0, h0a := cs.consts(s)
 	phi := radian(lat)
-	dLam := radian(lon - cs.Lonf)
+	dLam := deltaLon(lon, cs.Lonf)
 	sinPhi := math.Sin(phi)
 	nu := 1 / math.Sqrt(1-s.E2()*sinPhi*sinPhi)
 	lamNuCos := dLam * nu * math.Cos(phi)

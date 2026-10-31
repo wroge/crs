@@ -65,7 +65,7 @@ func (cs ObliqueStereographic) conformalLat(s Spheroid, phi, c, n float64) float
 func (cs ObliqueStereographic) FromGeographic(s Spheroid, lon, lat, h float64) (float64, float64, float64) {
 	k := cs.consts(s)
 	chi := cs.conformalLat(s, radian(lat), k.c, k.n)
-	dLam := k.n * (radian(lon) - k.lon0)
+	dLam := k.n * wrapPi(radian(lon)-k.lon0)
 	B := 1 + math.Sin(chi)*math.Sin(k.chi0) + math.Cos(chi)*math.Cos(k.chi0)*math.Cos(dLam)
 	east := cs.Eastf + 2*k.R*k.k0*math.Cos(chi)*math.Sin(dLam)/B
 	north := cs.Northf + 2*k.R*k.k0*(math.Sin(chi)*math.Cos(k.chi0)-math.Cos(chi)*math.Sin(k.chi0)*math.Cos(dLam))/B

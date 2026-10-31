@@ -188,6 +188,10 @@ func edgesBetween(from, to string, lon, lat float64, excluded map[edgeKey]bool, 
 				continue
 			}
 
+			if !selectableOperation(t.Operation) {
+				continue
+			}
+
 			if !strings.EqualFold(t.Target.Name, to) {
 				continue
 			}
@@ -213,6 +217,10 @@ func edgesBetween(from, to string, lon, lat float64, excluded map[edgeKey]bool, 
 			}
 
 			if !timeSpecificAllowed(t.Operation, hasCoordEpoch, coordEpoch) {
+				continue
+			}
+
+			if !selectableOperation(t.Operation) {
 				continue
 			}
 

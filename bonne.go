@@ -27,7 +27,7 @@ func (cs BonneSouthOrientated) am1(s Spheroid) float64 {
 func (cs BonneSouthOrientated) FromGeographic(s Spheroid, lon, lat, h float64) (float64, float64, float64) {
 	phi1 := radian(cs.Latf)
 	phi := radian(lat)
-	lam := radian(lon) - radian(cs.Lonf)
+	lam := deltaLon(lon, cs.Lonf)
 	am1 := cs.am1(s)
 	m1 := meridianDistance(s, phi1) / s.A
 	m := meridianDistance(s, phi) / s.A

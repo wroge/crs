@@ -1,6 +1,8 @@
 package crs
 
 import (
+	"bytes"
+	"encoding/binary"
 	"errors"
 	"fmt"
 	"io"
@@ -80,12 +82,110 @@ func loadVerticalGrid(name string) (grid *verticalGridData, err error) {
 	}
 	defer r.Close() //nolint:errcheck
 
+	data, err := io.ReadAll(r)
+	if err != nil {
+		return nil, err
+	}
+	return parseVerticalGrid(name, data)
+}
+
+// selectableOperation reports whether a datum edge can be chosen.
+// EPSG still names legacy .grd vertical grids. Those files are not on the
+// grid CDN and are not GeoTIFF or GTX, so the next operation is used.
+func selectableOperation(op Operation) bool {
+	vg, ok := op.(VerticalGrid)
+	if !ok {
+		return true
+	}
+	return strings.ToLower(path.Ext(gridFilename(string(vg)))) != ".grd"
+}
+
+func parseVerticalGrid(name string, data []byte) (*verticalGridData, error) {
+	if looksLikeTIFF(data) {
+		return parseVerticalGridTIFF(bytes.NewReader(data))
+	}
+
 	switch strings.ToLower(path.Ext(name)) {
-	case ".tif":
-		return parseVerticalGridTIFF(r)
+	case ".gtx", ".grd":
+		return parseVerticalGridGTX(data)
+	case ".tif", ".tiff":
+		return nil, fmt.Errorf("crs: %s is not a TIFF vertical grid", name)
 	default:
 		return nil, fmt.Errorf("crs: unsupported vertical grid extension %q", path.Ext(name))
 	}
+}
+
+func looksLikeTIFF(data []byte) bool {
+	if len(data) < 8 {
+		return false
+	}
+	var order binary.ByteOrder
+	switch string(data[:2]) {
+	case "II":
+		order = binary.LittleEndian
+	case "MM":
+		order = binary.BigEndian
+	default:
+		return false
+	}
+	return order.Uint16(data[2:4]) == 42
+}
+
+// parseVerticalGridGTX reads a NOAA GTX geoid grid (big-endian).
+// Row 0 of the file is the southern edge. The returned grid uses the same
+// north-first layout as a GeoTIFF vertical grid.
+func parseVerticalGridGTX(data []byte) (*verticalGridData, error) {
+	if len(data) < 40 {
+		return nil, fmt.Errorf("gtx: short header")
+	}
+
+	yOrigin := math.Float64frombits(binary.BigEndian.Uint64(data[0:8]))
+	xOrigin := math.Float64frombits(binary.BigEndian.Uint64(data[8:16]))
+	yStep := math.Float64frombits(binary.BigEndian.Uint64(data[16:24]))
+	xStep := math.Float64frombits(binary.BigEndian.Uint64(data[24:32]))
+	rows := int(int32(binary.BigEndian.Uint32(data[32:36])))
+	cols := int(int32(binary.BigEndian.Uint32(data[36:40])))
+
+	if cols <= 0 || rows <= 0 || xStep <= 0 || yStep <= 0 ||
+		xOrigin < -360 || xOrigin > 360 || yOrigin < -90 || yOrigin > 90 {
+		return nil, fmt.Errorf("gtx: invalid header")
+	}
+	if xOrigin >= 180 {
+		xOrigin -= 360
+	}
+
+	if cols > (len(data)-40)/4/rows {
+		return nil, fmt.Errorf("gtx: truncated grid")
+	}
+	n := rows * cols
+
+	values := make([]float32, n)
+	for row := range rows {
+		src := (rows - 1 - row) * cols
+		dst := row * cols
+		for col := range cols {
+			off := 40 + (src+col)*4
+			v := math.Float32frombits(binary.BigEndian.Uint32(data[off : off+4]))
+			if gtxNodata(v) {
+				v = float32(math.NaN())
+			}
+			values[dst+col] = v
+		}
+	}
+
+	return &verticalGridData{
+		LonUL:   xOrigin,
+		LatUL:   yOrigin + float64(rows-1)*yStep,
+		DLon:    xStep,
+		DLat:    yStep,
+		Columns: cols,
+		Rows:    rows,
+		Values:  values,
+	}, nil
+}
+
+func gtxNodata(v float32) bool {
+	return v > 1000 || v < -1000 || v == float32(-88.88880)
 }
 
 // Undulation returns geoid undulation N in metres at (lon, lat) degrees.

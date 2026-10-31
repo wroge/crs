@@ -64,20 +64,20 @@ func (cs HotineObliqueMercatorA) FromGeographic(s Spheroid, lon, lat, h float64)
 	e := s.E()
 	c := cs.consts(s)
 	phi := radian(lat)
-	lambda := radian(lon)
+	dLam := wrapPi(radian(lon) - c.lon0)
 
 	t := math.Tan(math.Pi/4-phi/2) /
 		math.Pow((1-e*math.Sin(phi))/(1+e*math.Sin(phi)), e/2)
 	Q := c.H / math.Pow(t, c.B)
 	S := (Q - 1/Q) / 2
 	T := (Q + 1/Q) / 2
-	V := math.Sin(c.B * (lambda - c.lon0))
+	V := math.Sin(c.B * dLam)
 	U := (-V*math.Cos(c.gamma0) + S*math.Sin(c.gamma0)) / T
 
 	v := c.A * math.Log((1-U)/(1+U)) / (2 * c.B)
 	u := c.A * math.Atan2(
 		S*math.Cos(c.gamma0)+V*math.Sin(c.gamma0),
-		math.Cos(c.B*(lambda-c.lon0)),
+		math.Cos(c.B*dLam),
 	) / c.B
 
 	east := v*math.Cos(c.gammaC) + u*math.Sin(c.gammaC) + cs.Eastf

@@ -96,7 +96,7 @@ func (cs GuamProjection) String() string {
 
 func (cs GuamProjection) FromGeographic(s Spheroid, lon, lat, h float64) (float64, float64, float64) {
 	phi := radian(lat)
-	dLam := radian(lon) - radian(cs.Lonf)
+	dLam := deltaLon(lon, cs.Lonf)
 	sinPhi, cosPhi := math.Sincos(phi)
 
 	t := math.Sqrt(1 - s.E2()*sinPhi*sinPhi)

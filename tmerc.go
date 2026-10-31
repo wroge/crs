@@ -63,7 +63,12 @@ func (cs TransverseMercator) fixedLonf(lonf float64) TransverseMercator {
 
 func (cs TransverseMercator) FromGeographic(s Spheroid, lon, lat, h float64) (float64, float64, float64) {
 	if cs.ZoneWidth > 0 {
-		return cs.fixedLonf(cs.centralMeridian(cs.zone(lon))).FromGeographic(s, lon, lat, h)
+		// EPSG method 9824 prefixes the zone number onto the easting
+		// (zone 32 → 32_000_000 + local easting) so the inverse can recover the zone.
+		z := cs.zone(lon)
+		east, north, h := cs.fixedLonf(cs.centralMeridian(z)).FromGeographic(s, lon, lat, h)
+
+		return float64(z)*1e6 + east, north, h
 	}
 
 	phiO := radian(cs.Latf)
@@ -129,37 +134,15 @@ func (cs TransverseMercator) FromGeographic(s Spheroid, lon, lat, h float64) (fl
 func (cs TransverseMercator) ToGeographic(s Spheroid, east, north, h float64) (float64, float64, float64) {
 	if cs.ZoneWidth > 0 {
 		nZones := int(math.Round(360 / cs.ZoneWidth))
-		bestDist := math.Inf(1)
-		bestLon, bestLat, bestH := 0.0, 0.0, h
-		found := false
-
-		for z := 1; z <= nZones; z++ {
-			lon, lat, hOut := cs.fixedLonf(cs.centralMeridian(z)).ToGeographic(s, east, north, h)
-			minLon := cs.Lonf + float64(z-1)*cs.ZoneWidth
-			maxLon := minLon + cs.ZoneWidth
-			lonN := lon
-			for lonN < cs.Lonf {
-				lonN += 360
-			}
-			for lonN >= cs.Lonf+360 {
-				lonN -= 360
-			}
-			if lonN < minLon || lonN >= maxLon {
-				continue
-			}
-			dist := math.Abs(lon - cs.centralMeridian(z))
-			if dist < bestDist {
-				bestDist = dist
-				bestLon, bestLat, bestH = lon, lat, hOut
-				found = true
-			}
+		z := int(math.Floor(east / 1e6))
+		if z < 1 {
+			z = 1
+		}
+		if z > nZones {
+			z = nZones
 		}
 
-		if found {
-			return bestLon, bestLat, bestH
-		}
-		
-		return cs.fixedLonf(cs.centralMeridian(1)).ToGeographic(s, east, north, h)
+		return cs.fixedLonf(cs.centralMeridian(z)).ToGeographic(s, east-float64(z)*1e6, north, h)
 	}
 
 	phiO := radian(cs.Latf)

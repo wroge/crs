@@ -57,7 +57,7 @@ func (cs LabordeObliqueMercator) FromGeographic(s Spheroid, lon, lat, h float64)
 	q := cs.consts(s)
 	e := s.E()
 	phi := radian(lat)
-	lam := radian(lon - cs.Lonf)
+	lam := deltaLon(lon, cs.Lonf)
 
 	V1 := q.A * math.Log(math.Tan(math.Pi/4+0.5*phi))
 	t := e * math.Sin(phi)

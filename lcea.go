@@ -26,7 +26,7 @@ func (cs LambertCylindricalEqualArea) k0(s Spheroid) float64 {
 
 func (cs LambertCylindricalEqualArea) FromGeographic(s Spheroid, lon, lat, h float64) (float64, float64, float64) {
 	k0 := cs.k0(s)
-	east := cs.Eastf + s.A*k0*(radian(lon)-radian(cs.Lonf))
+	east := cs.Eastf + s.A*k0*deltaLon(lon, cs.Lonf)
 	north := cs.Northf + s.A*0.5*authalicQ(math.Sin(radian(lat)), s.E(), s.E2())/k0
 
 	return east, north, h
@@ -58,7 +58,7 @@ func (cs LambertCylindricalEqualAreaSpherical) String() string {
 func (cs LambertCylindricalEqualAreaSpherical) FromGeographic(s Spheroid, lon, lat, h float64) (float64, float64, float64) {
 	r := s.A
 	k0 := math.Cos(radian(cs.Sp1))
-	east := cs.Eastf + r*k0*(radian(lon)-radian(cs.Lonf))
+	east := cs.Eastf + r*k0*deltaLon(lon, cs.Lonf)
 	north := cs.Northf + r*math.Sin(radian(lat))/k0
 
 	return east, north, h

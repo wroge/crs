@@ -51,7 +51,7 @@ func (cs LambertConicNearConformal) FromGeographic(s Spheroid, lon, lat, h float
 	S := meridianDistance(s, radian(lat))/s.A - q.m0
 	dr := lccaFS(S, q.c)
 	r := q.r0 - dr
-	lamL := (radian(lon) - radian(cs.Lonf)) * q.l
+	lamL := deltaLon(lon, cs.Lonf) * q.l
 	east := cs.Eastf + s.A*q.k0*(r*math.Sin(lamL))
 	north := cs.Northf + s.A*q.k0*(q.r0-r*math.Cos(lamL))
 

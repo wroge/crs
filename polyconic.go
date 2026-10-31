@@ -20,7 +20,7 @@ func (cs AmericanPolyconic) String() string {
 func (cs AmericanPolyconic) FromGeographic(s Spheroid, lon, lat, h float64) (float64, float64, float64) {
 	phi := radian(lat)
 	phi0 := radian(cs.Latf)
-	dLam := radian(lon - cs.Lonf)
+	dLam := deltaLon(lon, cs.Lonf)
 	m0 := meridianDistance(s, phi0)
 
 	if math.Abs(phi) <= 1e-10 {
@@ -51,7 +51,7 @@ func (cs AmericanPolyconic) ToGeographic(s Spheroid, east, north, h float64) (fl
 
 	r := y*y + x*x
 	phi := y
-	
+
 	for range 20 {
 		sinPhi, cosPhi := math.Sincos(phi)
 
@@ -80,6 +80,6 @@ func (cs AmericanPolyconic) ToGeographic(s Spheroid, east, north, h float64) (fl
 	}
 
 	lam := math.Asin(clamp(x*math.Tan(phi)*math.Sqrt(1-e2*sinPhi*sinPhi), -1, 1)) / sinPhi
-	
+
 	return degree(lam + radian(cs.Lonf)), degree(phi), h
 }

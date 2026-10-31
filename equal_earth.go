@@ -37,7 +37,7 @@ func (cs EqualEarth) FromGeographic(s Spheroid, lon, lat, h float64) (float64, f
 	psi2 := psi * psi
 	psi6 := psi2 * psi2 * psi2
 	a1, a2, a3, a4 := equalEarthA[0], equalEarthA[1], equalEarthA[2], equalEarthA[3]
-	lam := radian(lon - cs.Lonf)
+	lam := deltaLon(lon, cs.Lonf)
 	x := lam * math.Cos(psi) / (m * (a1 + 3*a2*psi2 + psi6*(7*a3+9*a4*psi2)))
 	y := psi * (a1 + a2*psi2 + psi6*(a3+a4*psi2))
 

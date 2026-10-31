@@ -79,11 +79,14 @@ func (crs CoordinateReferenceSystem) TransformTo(to CoordinateReferenceSystem) (
 		a, b, c = fromUnit.toInternal(a, b, c, fromGeocentric)
 		lon, lat, h := crs.Conversion.ToGeographic(crs.Datum.Spheroid, a, b, c)
 
+		// Areas of use are Greenwich longitudes. Geographic input and the
+		// inverse projection are relative to the source datum prime meridian.
 		// EPSG may publish different areas of use for geographic vs projected CRS
 		// that share a datum (e.g. Guam 1963 geographic vs Yap Islands). Same-datum
 		// hops are allowed when the point lies in either CRS extent.
-		inFrom := crs.BoundingBox.Contains(lon, lat)
-		inTo := to.BoundingBox.Contains(lon, lat)
+		glon := lon + crs.Datum.primeMeridianLongitude()
+		inFrom := crs.BoundingBox.Contains(glon, lat)
+		inTo := to.BoundingBox.Contains(glon, lat)
 		if crs.Datum.Name == to.Datum.Name {
 			if !inFrom && !inTo {
 				return 0, 0, 0, fmt.Errorf("out of bounds: [%f,%f]", lon, lat)

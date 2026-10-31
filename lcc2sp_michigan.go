@@ -48,7 +48,7 @@ func (cs LambertConformalConic2SPMichigan) FromGeographic(s Spheroid, lon, lat, 
 	phi := radian(lat)
 	t := math.Tan(math.Pi/4-phi/2) / math.Pow((1-s.E()*math.Sin(phi))/(1+s.E()*math.Sin(phi)), s.E()/2)
 	r := s.A * michiganEllipsoidScale * f * math.Pow(t, n)
-	theta := n * (radian(lon) - radian(cs.Lonf))
+	theta := n * deltaLon(lon, cs.Lonf)
 	east := cs.Eastf + r*math.Sin(theta)
 	north := cs.Northf + rf - r*math.Cos(theta)
 
@@ -57,20 +57,6 @@ func (cs LambertConformalConic2SPMichigan) FromGeographic(s Spheroid, lon, lat, 
 
 func (cs LambertConformalConic2SPMichigan) ToGeographic(s Spheroid, east, north, h float64) (float64, float64, float64) {
 	n, f, rf := cs.consts(s)
-	ri := math.Hypot(east-cs.Eastf, rf-(north-cs.Northf))
-	ti := math.Pow(ri/(s.A*michiganEllipsoidScale*f), 1/n)
-	theta := math.Atan2(east-cs.Eastf, rf-(north-cs.Northf))
 
-	phi := math.Pi/2 - 2*math.Atan(ti)
-
-	for range 6 {
-		next := math.Pi/2 - 2*math.Atan(ti*math.Pow((1-s.E()*math.Sin(phi))/(1+s.E()*math.Sin(phi)), s.E()/2))
-		if math.Abs(next-phi) < 1e-12 {
-			phi = next
-			break
-		}
-		phi = next
-	}
-	
-	return degree(theta/n + radian(cs.Lonf)), degree(phi), h
+	return lccInverse(s, east, north, h, cs.Eastf, cs.Northf, n, s.A*michiganEllipsoidScale*f, rf, cs.Lonf, 0)
 }

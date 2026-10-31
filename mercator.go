@@ -69,7 +69,7 @@ func mercatorFromGeographic(s Spheroid, lon, lat, h, lonf, eastf, northf, k0 flo
 	phi := radian(lat)
 	sinPhi := math.Sin(phi)
 
-	east := eastf + s.A*k0*(radian(lon)-radian(lonf))
+	east := eastf + s.A*k0*deltaLon(lon, lonf)
 	north := northf + s.A*k0*math.Log(
 		math.Tan(math.Pi/4+phi/2)*math.Pow((1-e*sinPhi)/(1+e*sinPhi), e/2),
 	)

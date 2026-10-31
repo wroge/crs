@@ -8,6 +8,21 @@ permissions:
   contents: write # nötig für Push nach gh-pages
 
 jobs:
+  lint:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-go@v5
+        with:
+          go-version-file: go.mod
+
+      - name: golangci-lint
+        uses: golangci/golangci-lint-action@v9
+        with:
+          version: v2.14.0
+
   test:
     runs-on: ubuntu-latest
     timeout-minutes: 45
@@ -17,6 +32,14 @@ jobs:
       - uses: actions/setup-go@v5
         with:
           go-version-file: go.mod
+
+      - name: Restore PROJ grid cache
+        uses: actions/cache@v4
+        with:
+          path: .cache
+          key: proj-grids-v1-${{ hashFiles('datum/*.txt', 'crs_test.go') }}
+          restore-keys: |
+            proj-grids-v1-
 
       - name: Test with coverage
         run: |

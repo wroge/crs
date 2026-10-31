@@ -50,14 +50,12 @@ func (aea AlbersEqualArea) consts(s Spheroid) (n, c, rf float64) {
 }
 
 func (aea AlbersEqualArea) FromGeographic(s Spheroid, lon, lat, h float64) (float64, float64, float64) {
-	lambdaf := radian(aea.Lonf)
 	n, c, rf := aea.consts(s)
 
-	lambda := radian(lon)
 	phi := radian(lat)
 	alpha := authalicQ(math.Sin(phi), s.E(), s.E2())
 
-	theta := n * (lambda - lambdaf)
+	theta := n * deltaLon(lon, aea.Lonf)
 	r := (s.A * math.Sqrt(c-n*alpha)) / n
 
 	east := aea.Eastf + r*math.Sin(theta)

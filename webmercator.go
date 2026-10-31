@@ -35,14 +35,12 @@ func mercatorM(phi float64) float64 {
 }
 
 func (cs WebMercator) FromGeographic(s Spheroid, lon, lat, h float64) (float64, float64, float64) {
-	lambda := radian(lon)
 	phi := radian(lat)
-	lambda0 := radian(cs.Lonf)
 	phi0 := radian(cs.Latf)
 	k := cs.k()
 	rk := k * s.A
 
-	east := cs.Eastf + rk*(lambda-lambda0)
+	east := cs.Eastf + rk*deltaLon(lon, cs.Lonf)
 	north := cs.Northf + rk*(mercatorM(phi)-mercatorM(phi0))
 
 	return east, north, h

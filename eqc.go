@@ -29,7 +29,7 @@ func (cs EquidistantCylindrical) rc(s Spheroid) float64 {
 func (cs EquidistantCylindrical) FromGeographic(s Spheroid, lon, lat, h float64) (float64, float64, float64) {
 	rc := cs.rc(s)
 	m0 := meridianDistance(s, radian(cs.Latf))
-	east := cs.Eastf + s.A*rc*(radian(lon)-radian(cs.Lonf))
+	east := cs.Eastf + s.A*rc*deltaLon(lon, cs.Lonf)
 	north := cs.Northf + meridianDistance(s, radian(lat)) - m0
 
 	return east, north, h

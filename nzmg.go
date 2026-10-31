@@ -72,7 +72,7 @@ func (cs NewZealandMapGrid) FromGeographic(s Spheroid, lon, lat, h float64) (flo
 	}
 
 	p *= dPhi
-	z := nzmgZpoly1(complex(p, radian(lon)-radian(cs.Lonf)))
+	z := nzmgZpoly1(complex(p, deltaLon(lon, cs.Lonf)))
 
 	return cs.Eastf + s.A*imag(z), cs.Northf + s.A*real(z), h
 }
@@ -100,6 +100,6 @@ func (cs NewZealandMapGrid) ToGeographic(s Spheroid, east, north, h float64) (fl
 	}
 
 	phi := radian(cs.Latf) + real(p)*phiNom*nzmgSec5ToRad
-	
+
 	return degree(lam + radian(cs.Lonf)), degree(phi), h
 }

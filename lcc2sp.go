@@ -28,7 +28,6 @@ func (lcc LambertConformalConic2SP) FromGeographic(s Spheroid, lon, lat, h float
 	phif := radian(lcc.Latf)
 	phi1 := radian(lcc.Sp1)
 	phi2 := radian(lcc.Sp2)
-	lambdaf := radian(lcc.Lonf)
 
 	tf := math.Tan(math.Pi/4-phif/2) / math.Pow((1-s.E()*math.Sin(phif))/(1+s.E()*math.Sin(phif)), s.E()/2)
 	t1 := math.Tan(math.Pi/4-phi1/2) / math.Pow((1-s.E()*math.Sin(phi1))/(1+s.E()*math.Sin(phi1)), s.E()/2)
@@ -48,12 +47,11 @@ func (lcc LambertConformalConic2SP) FromGeographic(s Spheroid, lon, lat, h float
 	rf := s.A * f * math.Pow(tf, n)
 
 	phi := radian(lat)
-	lambda := radian(lon)
 
 	t := math.Tan(math.Pi/4-phi/2) / math.Pow((1-s.E()*math.Sin(phi))/(1+s.E()*math.Sin(phi)), s.E()/2)
 
 	r := s.A * f * math.Pow(t, n)
-	theta := n * (lambda - lambdaf)
+	theta := n * deltaLon(lon, lcc.Lonf)
 
 	east := lcc.Eastf + r*math.Sin(theta)
 	north := lcc.Northf + rf - r*math.Cos(theta)
@@ -65,7 +63,6 @@ func (lcc LambertConformalConic2SP) ToGeographic(s Spheroid, east, north, h floa
 	phif := radian(lcc.Latf)
 	phi1 := radian(lcc.Sp1)
 	phi2 := radian(lcc.Sp2)
-	lambdaf := radian(lcc.Lonf)
 
 	tf := math.Tan(math.Pi/4-phif/2) / math.Pow((1-s.E()*math.Sin(phif))/(1+s.E()*math.Sin(phif)), s.E()/2)
 	t1 := math.Tan(math.Pi/4-phi1/2) / math.Pow((1-s.E()*math.Sin(phi1))/(1+s.E()*math.Sin(phi1)), s.E()/2)
@@ -84,25 +81,5 @@ func (lcc LambertConformalConic2SP) ToGeographic(s Spheroid, east, north, h floa
 	f := m1 / (n * math.Pow(t1, n))
 	rf := s.A * f * math.Pow(tf, n)
 
-	ri := math.Hypot(east-lcc.Eastf, rf-(north-lcc.Northf))
-
-	ti := math.Pow(ri/(s.A*f), 1/n)
-
-	theta := math.Atan2(east-lcc.Eastf, rf-(north-lcc.Northf))
-
-	phi := math.Pi/2 - 2*math.Atan(ti)
-
-	for range 6 {
-		next := math.Pi/2 - 2*math.Atan(ti*math.Pow((1-s.E()*math.Sin(phi))/(1+s.E()*math.Sin(phi)), s.E()/2))
-		if math.Abs(next-phi) < 1e-12 {
-			phi = next
-			break
-		}
-
-		phi = next
-	}
-
-	lambda := theta/n + lambdaf
-
-	return degree(lambda), degree(phi), h
+	return lccInverse(s, east, north, h, lcc.Eastf, lcc.Northf, n, s.A*f, rf, lcc.Lonf, 0)
 }
