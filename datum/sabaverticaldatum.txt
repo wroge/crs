@@ -1,1 +1,1 @@
-spheroid=wgs84
+spheroid=international1924

@@ -107,7 +107,7 @@ func outgoingEdges(node string, lon, lat float64, excluded map[edgeKey]bool, has
 	}
 
 	for i, t := range d.Transformations {
-		if t.Target == nil || t.Operation == nil {
+		if t.Target == nil || t.Operation == nil || !selectableOperation(t.Operation) {
 			continue
 		}
 
@@ -139,7 +139,7 @@ func outgoingEdges(node string, lon, lat float64, excluded map[edgeKey]bool, has
 		}
 
 		t := owner.Transformations[rev.index]
-		if t.Target == nil || t.Operation == nil {
+		if t.Target == nil || t.Operation == nil || !selectableOperation(t.Operation) {
 			continue
 		}
 

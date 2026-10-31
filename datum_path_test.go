@@ -30,9 +30,9 @@ func TestDatumPaths(t *testing.T) {
 		},
 		{
 			name: "vertical_offset",
-			from: 4937, to: 9724,
+			from: 9723, to: 9724,
 			lon: 13.63490925, lat: 37.5206217,
-			want: "etrs89 -> etrs89_catania1965 (inverse operation=vertical_offset dh=0.141)",
+			want: "etrs89_genoa1942 -> etrs89_catania1965 (inverse operation=vertical_offset dh=-0.141)",
 		},
 		{
 			name: "velocity_grid",
